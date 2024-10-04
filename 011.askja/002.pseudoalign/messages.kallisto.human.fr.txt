@@ -1,0 +1,314 @@
+
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 227,665
+[index] number of k-mers: 139,900,295
+[index] number of D-list k-mers: 5,477,475
+[quant] running in paired-end mode
+[quant] will process pair 1: /Users/adrian/research/011.askja/data/clean_fastq/HRH88_120DHA1A/HRH88_120DHA1A_HRH88_120DHA1A_R1_clean.fastq.gz
+                             /Users/adrian/research/011.askja/data/clean_fastq/HRH88_120DHA1A/HRH88_120DHA1A_HRH88_120DHA1A_R2_clean.fastq.gz
+[quant] finding pseudoalignments for the reads ...
+[progress] 1M reads processed (2.8% mapped)             [progress] 2M reads processed (2.8% mapped)             [progress] 3M reads processed (2.8% mapped)             [progress] 4M reads processed (2.8% mapped)             [progress] 5M reads processed (2.7% mapped)             [progress] 6M reads processed (2.7% mapped)             [progress] 7M reads processed (2.7% mapped)             [progress] 8M reads processed (2.7% mapped)             [progress] 9M reads processed (2.7% mapped)             [progress] 10M reads processed (2.7% mapped)             [progress] 11M reads processed (2.7% mapped)             [progress] 12M reads processed (2.7% mapped)             [progress] 13M reads processed (2.7% mapped)             [progress] 14M reads processed (2.7% mapped)             [progress] 15M reads processed (2.7% mapped)             [progress] 16M reads processed (2.7% mapped)             [progress] 17M reads processed (2.7% mapped)             [progress] 18M reads processed (2.7% mapped)             [progress] 19M reads processed (2.7% mapped)             [progress] 20M reads processed (2.7% mapped)             [progress] 21M reads processed (2.7% mapped)             [progress] 22M reads processed (2.7% mapped)             [progress] 23M reads processed (2.7% mapped)             [progress] 24M reads processed (2.7% mapped)             [progress] 25M reads processed (2.7% mapped)             [progress] 26M reads processed (2.7% mapped)             [progress] 27M reads processed (2.7% mapped)             [progress] 28M reads processed (2.7% mapped)             [progress] 29M reads processed (2.7% mapped)             [progress] 30M reads processed (2.7% mapped)             [progress] 31M reads processed (2.7% mapped)             [progress] 32M reads processed (2.7% mapped)             
+[quant] done 
+[quant] processed 32,576,754 reads, 889,414 reads pseudoaligned
+[quant] estimated average fragment length: 219.8
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 1,010 rounds
+[bstrp] number of EM bootstraps complete: 1[bstrp] number of EM bootstraps complete: 2[bstrp] number of EM bootstraps complete: 3[bstrp] number of EM bootstraps complete: 4
+
+
+real	4m42.474s
+user	18m4.403s
+sys	0m5.474s
+
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 227,665
+[index] number of k-mers: 139,900,295
+[index] number of D-list k-mers: 5,477,475
+[quant] running in paired-end mode
+[quant] will process pair 1: /Users/adrian/research/011.askja/data/clean_fastq/HRH88_120DHA2A/HRH88_120DHA2A_HRH88_120DHA2A_R1_clean.fastq.gz
+                             /Users/adrian/research/011.askja/data/clean_fastq/HRH88_120DHA2A/HRH88_120DHA2A_HRH88_120DHA2A_R2_clean.fastq.gz
+[quant] finding pseudoalignments for the reads ...
+[progress] 1M reads processed (2.7% mapped)             [progress] 2M reads processed (2.7% mapped)             [progress] 3M reads processed (2.7% mapped)             [progress] 4M reads processed (2.7% mapped)             [progress] 5M reads processed (2.7% mapped)             [progress] 6M reads processed (2.7% mapped)             [progress] 7M reads processed (2.7% mapped)             [progress] 8M reads processed (2.7% mapped)             [progress] 9M reads processed (2.7% mapped)             [progress] 10M reads processed (2.7% mapped)             [progress] 11M reads processed (2.7% mapped)             [progress] 12M reads processed (2.7% mapped)             [progress] 13M reads processed (2.7% mapped)             [progress] 14M reads processed (2.7% mapped)             [progress] 15M reads processed (2.7% mapped)             [progress] 16M reads processed (2.7% mapped)             [progress] 17M reads processed (2.7% mapped)             [progress] 18M reads processed (2.7% mapped)             [progress] 19M reads processed (2.7% mapped)             [progress] 20M reads processed (2.7% mapped)             [progress] 21M reads processed (2.7% mapped)             [progress] 22M reads processed (2.7% mapped)             [progress] 23M reads processed (2.7% mapped)             [progress] 24M reads processed (2.7% mapped)             [progress] 25M reads processed (2.7% mapped)             [progress] 26M reads processed (2.7% mapped)             [progress] 27M reads processed (2.7% mapped)             [progress] 28M reads processed (2.7% mapped)             [progress] 29M reads processed (2.7% mapped)             [progress] 30M reads processed (2.7% mapped)             [progress] 31M reads processed (2.7% mapped)             [progress] 32M reads processed (2.7% mapped)             
+[quant] done 
+[quant] processed 33,275,414 reads, 896,458 reads pseudoaligned
+[quant] estimated average fragment length: 236.3
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 992 rounds
+[bstrp] number of EM bootstraps complete: 1[bstrp] number of EM bootstraps complete: 2[bstrp] number of EM bootstraps complete: 3[bstrp] number of EM bootstraps complete: 4
+
+
+real	5m4.509s
+user	19m36.578s
+sys	0m5.827s
+
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 227,665
+[index] number of k-mers: 139,900,295
+[index] number of D-list k-mers: 5,477,475
+[quant] running in paired-end mode
+[quant] will process pair 1: /Users/adrian/research/011.askja/data/clean_fastq/HRH88_120DHA3A/HRH88_120DHA3A_HRH88_120DHA3A_R1_clean.fastq.gz
+                             /Users/adrian/research/011.askja/data/clean_fastq/HRH88_120DHA3A/HRH88_120DHA3A_HRH88_120DHA3A_R2_clean.fastq.gz
+[quant] finding pseudoalignments for the reads ...
+[progress] 1M reads processed (2.8% mapped)             [progress] 2M reads processed (2.9% mapped)             [progress] 3M reads processed (2.8% mapped)             [progress] 4M reads processed (2.8% mapped)             [progress] 5M reads processed (2.8% mapped)             [progress] 6M reads processed (2.8% mapped)             [progress] 7M reads processed (2.8% mapped)             [progress] 8M reads processed (2.8% mapped)             [progress] 9M reads processed (2.8% mapped)             [progress] 10M reads processed (2.8% mapped)             [progress] 11M reads processed (2.8% mapped)             [progress] 12M reads processed (2.8% mapped)             [progress] 13M reads processed (2.8% mapped)             [progress] 14M reads processed (2.8% mapped)             [progress] 15M reads processed (2.8% mapped)             [progress] 16M reads processed (2.8% mapped)             [progress] 17M reads processed (2.8% mapped)             [progress] 18M reads processed (2.8% mapped)             [progress] 19M reads processed (2.8% mapped)             [progress] 20M reads processed (2.8% mapped)             [progress] 21M reads processed (2.8% mapped)             [progress] 22M reads processed (2.8% mapped)             [progress] 23M reads processed (2.8% mapped)             [progress] 24M reads processed (2.8% mapped)             [progress] 25M reads processed (2.8% mapped)             [progress] 26M reads processed (2.8% mapped)             [progress] 27M reads processed (2.8% mapped)             [progress] 28M reads processed (2.8% mapped)             [progress] 29M reads processed (2.8% mapped)             [progress] 30M reads processed (2.8% mapped)             [progress] 31M reads processed (2.8% mapped)             [progress] 32M reads processed (2.8% mapped)             [progress] 33M reads processed (2.8% mapped)             [progress] 34M reads processed (2.8% mapped)             [progress] 35M reads processed (2.8% mapped)             
+[quant] done 
+[quant] processed 35,881,244 reads, 1,010,413 reads pseudoaligned
+[quant] estimated average fragment length: 221.6
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 1,009 rounds
+[bstrp] number of EM bootstraps complete: 1[bstrp] number of EM bootstraps complete: 2[bstrp] number of EM bootstraps complete: 3[bstrp] number of EM bootstraps complete: 4
+
+
+real	5m20.976s
+user	20m44.382s
+sys	0m5.126s
+
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 227,665
+[index] number of k-mers: 139,900,295
+[index] number of D-list k-mers: 5,477,475
+[quant] running in paired-end mode
+[quant] will process pair 1: /Users/adrian/research/011.askja/data/clean_fastq/HRH88_240DHA1A/HRH88_240DHA1A_HRH88_240DHA1A_R1_clean.fastq.gz
+                             /Users/adrian/research/011.askja/data/clean_fastq/HRH88_240DHA1A/HRH88_240DHA1A_HRH88_240DHA1A_R2_clean.fastq.gz
+[quant] finding pseudoalignments for the reads ...
+[progress] 1M reads processed (2.8% mapped)             [progress] 2M reads processed (2.8% mapped)             [progress] 3M reads processed (2.8% mapped)             [progress] 4M reads processed (2.8% mapped)             [progress] 5M reads processed (2.8% mapped)             [progress] 6M reads processed (2.8% mapped)             [progress] 7M reads processed (2.8% mapped)             [progress] 8M reads processed (2.8% mapped)             [progress] 9M reads processed (2.8% mapped)             [progress] 10M reads processed (2.8% mapped)             [progress] 11M reads processed (2.8% mapped)             [progress] 12M reads processed (2.8% mapped)             [progress] 13M reads processed (2.8% mapped)             [progress] 14M reads processed (2.8% mapped)             [progress] 15M reads processed (2.8% mapped)             [progress] 16M reads processed (2.8% mapped)             [progress] 17M reads processed (2.8% mapped)             [progress] 18M reads processed (2.8% mapped)             [progress] 19M reads processed (2.8% mapped)             [progress] 20M reads processed (2.8% mapped)             [progress] 21M reads processed (2.8% mapped)             [progress] 22M reads processed (2.8% mapped)             [progress] 23M reads processed (2.8% mapped)             [progress] 24M reads processed (2.8% mapped)             [progress] 25M reads processed (2.8% mapped)             [progress] 26M reads processed (2.8% mapped)             [progress] 27M reads processed (2.8% mapped)             [progress] 28M reads processed (2.8% mapped)             [progress] 29M reads processed (2.8% mapped)             [progress] 30M reads processed (2.8% mapped)             [progress] 31M reads processed (2.8% mapped)             [progress] 32M reads processed (2.8% mapped)             [progress] 33M reads processed (2.8% mapped)             [progress] 34M reads processed (2.8% mapped)             [progress] 35M reads processed (2.8% mapped)             
+[quant] done 
+[quant] processed 35,717,707 reads, 991,782 reads pseudoaligned
+[quant] estimated average fragment length: 226.1
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 1,139 rounds
+[bstrp] number of EM bootstraps complete: 1[bstrp] number of EM bootstraps complete: 2[bstrp] number of EM bootstraps complete: 3[bstrp] number of EM bootstraps complete: 4
+
+
+real	5m23.600s
+user	20m58.487s
+sys	0m4.515s
+
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 227,665
+[index] number of k-mers: 139,900,295
+[index] number of D-list k-mers: 5,477,475
+[quant] running in paired-end mode
+[quant] will process pair 1: /Users/adrian/research/011.askja/data/clean_fastq/HRH88_240DHA2A/HRH88_240DHA2A_HRH88_240DHA2A_R1_clean.fastq.gz
+                             /Users/adrian/research/011.askja/data/clean_fastq/HRH88_240DHA2A/HRH88_240DHA2A_HRH88_240DHA2A_R2_clean.fastq.gz
+[quant] finding pseudoalignments for the reads ...
+[progress] 1M reads processed (3.3% mapped)             [progress] 2M reads processed (3.3% mapped)             [progress] 3M reads processed (3.3% mapped)             [progress] 4M reads processed (3.2% mapped)             [progress] 5M reads processed (3.2% mapped)             [progress] 6M reads processed (3.2% mapped)             [progress] 7M reads processed (3.2% mapped)             [progress] 8M reads processed (3.2% mapped)             [progress] 9M reads processed (3.2% mapped)             [progress] 10M reads processed (3.2% mapped)             [progress] 11M reads processed (3.2% mapped)             [progress] 12M reads processed (3.2% mapped)             [progress] 13M reads processed (3.2% mapped)             [progress] 14M reads processed (3.2% mapped)             [progress] 15M reads processed (3.2% mapped)             [progress] 16M reads processed (3.2% mapped)             [progress] 17M reads processed (3.2% mapped)             [progress] 18M reads processed (3.2% mapped)             [progress] 19M reads processed (3.2% mapped)             [progress] 20M reads processed (3.2% mapped)             [progress] 21M reads processed (3.2% mapped)             [progress] 22M reads processed (3.2% mapped)             [progress] 23M reads processed (3.2% mapped)             [progress] 24M reads processed (3.2% mapped)             [progress] 25M reads processed (3.2% mapped)             [progress] 26M reads processed (3.2% mapped)             [progress] 27M reads processed (3.2% mapped)             [progress] 28M reads processed (3.2% mapped)             [progress] 29M reads processed (3.2% mapped)             [progress] 30M reads processed (3.2% mapped)             [progress] 31M reads processed (3.2% mapped)             [progress] 32M reads processed (3.2% mapped)             [progress] 33M reads processed (3.2% mapped)             [progress] 34M reads processed (3.2% mapped)             [progress] 35M reads processed (3.2% mapped)             
+[quant] done 
+[quant] processed 35,745,430 reads, 1,130,003 reads pseudoaligned
+[quant] estimated average fragment length: 222.9
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 1,028 rounds
+[bstrp] number of EM bootstraps complete: 1[bstrp] number of EM bootstraps complete: 2[bstrp] number of EM bootstraps complete: 3[bstrp] number of EM bootstraps complete: 4
+
+
+real	5m36.465s
+user	21m47.965s
+sys	0m4.658s
+
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 227,665
+[index] number of k-mers: 139,900,295
+[index] number of D-list k-mers: 5,477,475
+[quant] running in paired-end mode
+[quant] will process pair 1: /Users/adrian/research/011.askja/data/clean_fastq/HRH88_240DHA3A/HRH88_240DHA3A_HRH88_240DHA3A_R1_clean.fastq.gz
+                             /Users/adrian/research/011.askja/data/clean_fastq/HRH88_240DHA3A/HRH88_240DHA3A_HRH88_240DHA3A_R2_clean.fastq.gz
+[quant] finding pseudoalignments for the reads ...
+[progress] 1M reads processed (3.4% mapped)             [progress] 2M reads processed (3.3% mapped)             [progress] 3M reads processed (3.3% mapped)             [progress] 4M reads processed (3.3% mapped)             [progress] 5M reads processed (3.3% mapped)             [progress] 6M reads processed (3.3% mapped)             [progress] 7M reads processed (3.3% mapped)             [progress] 8M reads processed (3.3% mapped)             [progress] 9M reads processed (3.3% mapped)             [progress] 10M reads processed (3.3% mapped)             [progress] 11M reads processed (3.3% mapped)             [progress] 12M reads processed (3.3% mapped)             [progress] 13M reads processed (3.3% mapped)             [progress] 14M reads processed (3.3% mapped)             [progress] 15M reads processed (3.3% mapped)             [progress] 16M reads processed (3.3% mapped)             [progress] 17M reads processed (3.3% mapped)             [progress] 18M reads processed (3.3% mapped)             [progress] 19M reads processed (3.3% mapped)             [progress] 20M reads processed (3.3% mapped)             [progress] 21M reads processed (3.3% mapped)             [progress] 22M reads processed (3.3% mapped)             [progress] 23M reads processed (3.3% mapped)             [progress] 24M reads processed (3.3% mapped)             [progress] 25M reads processed (3.3% mapped)             [progress] 26M reads processed (3.3% mapped)             [progress] 27M reads processed (3.3% mapped)             [progress] 28M reads processed (3.3% mapped)             [progress] 29M reads processed (3.3% mapped)             [progress] 30M reads processed (3.3% mapped)             [progress] 31M reads processed (3.3% mapped)             [progress] 32M reads processed (3.3% mapped)             [progress] 33M reads processed (3.3% mapped)             [progress] 34M reads processed (3.3% mapped)             [progress] 35M reads processed (3.3% mapped)             
+[quant] done 
+[quant] processed 35,650,522 reads, 1,160,388 reads pseudoaligned
+[quant] estimated average fragment length: 220.2
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 1,021 rounds
+[bstrp] number of EM bootstraps complete: 1[bstrp] number of EM bootstraps complete: 2[bstrp] number of EM bootstraps complete: 3[bstrp] number of EM bootstraps complete: 4
+
+
+real	5m42.208s
+user	21m58.013s
+sys	0m6.003s
+
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 227,665
+[index] number of k-mers: 139,900,295
+[index] number of D-list k-mers: 5,477,475
+[quant] running in paired-end mode
+[quant] will process pair 1: /Users/adrian/research/011.askja/data/clean_fastq/HRH88_60DHA1A/HRH88_60DHA1A_HRH88_60DHA1A_R1_clean.fastq.gz
+                             /Users/adrian/research/011.askja/data/clean_fastq/HRH88_60DHA1A/HRH88_60DHA1A_HRH88_60DHA1A_R2_clean.fastq.gz
+[quant] finding pseudoalignments for the reads ...
+[progress] 1M reads processed (3.1% mapped)             [progress] 2M reads processed (3.1% mapped)             [progress] 3M reads processed (3.1% mapped)             [progress] 4M reads processed (3.1% mapped)             [progress] 5M reads processed (3.1% mapped)             [progress] 6M reads processed (3.1% mapped)             [progress] 7M reads processed (3.1% mapped)             [progress] 8M reads processed (3.1% mapped)             [progress] 9M reads processed (3.1% mapped)             [progress] 10M reads processed (3.1% mapped)             [progress] 11M reads processed (3.1% mapped)             [progress] 12M reads processed (3.1% mapped)             [progress] 13M reads processed (3.1% mapped)             [progress] 14M reads processed (3.1% mapped)             [progress] 15M reads processed (3.1% mapped)             [progress] 16M reads processed (3.1% mapped)             [progress] 17M reads processed (3.1% mapped)             [progress] 18M reads processed (3.1% mapped)             [progress] 19M reads processed (3.1% mapped)             [progress] 20M reads processed (3.1% mapped)             [progress] 21M reads processed (3.1% mapped)             [progress] 22M reads processed (3.1% mapped)             [progress] 23M reads processed (3.1% mapped)             [progress] 24M reads processed (3.1% mapped)             [progress] 25M reads processed (3.1% mapped)             [progress] 26M reads processed (3.1% mapped)             [progress] 27M reads processed (3.1% mapped)             [progress] 28M reads processed (3.1% mapped)             [progress] 29M reads processed (3.1% mapped)             [progress] 30M reads processed (3.1% mapped)             [progress] 31M reads processed (3.1% mapped)             [progress] 32M reads processed (3.1% mapped)             [progress] 33M reads processed (3.1% mapped)             [progress] 34M reads processed (3.1% mapped)             [progress] 35M reads processed (3.1% mapped)             
+[quant] done 
+[quant] processed 35,907,133 reads, 1,099,114 reads pseudoaligned
+[quant] estimated average fragment length: 226.5
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 982 rounds
+[bstrp] number of EM bootstraps complete: 1[bstrp] number of EM bootstraps complete: 2[bstrp] number of EM bootstraps complete: 3[bstrp] number of EM bootstraps complete: 4
+
+
+real	6m16.725s
+user	23m41.353s
+sys	0m9.676s
+
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 227,665
+[index] number of k-mers: 139,900,295
+[index] number of D-list k-mers: 5,477,475
+[quant] running in paired-end mode
+[quant] will process pair 1: /Users/adrian/research/011.askja/data/clean_fastq/HRH88_60DHA2A/HRH88_60DHA2A_HRH88_60DHA2A_R1_clean.fastq.gz
+                             /Users/adrian/research/011.askja/data/clean_fastq/HRH88_60DHA2A/HRH88_60DHA2A_HRH88_60DHA2A_R2_clean.fastq.gz
+[quant] finding pseudoalignments for the reads ...
+[progress] 1M reads processed (2.2% mapped)             [progress] 2M reads processed (2.2% mapped)             [progress] 3M reads processed (2.2% mapped)             [progress] 4M reads processed (2.2% mapped)             [progress] 5M reads processed (2.2% mapped)             [progress] 6M reads processed (2.2% mapped)             [progress] 7M reads processed (2.2% mapped)             [progress] 8M reads processed (2.2% mapped)             [progress] 9M reads processed (2.2% mapped)             [progress] 10M reads processed (2.2% mapped)             [progress] 11M reads processed (2.2% mapped)             [progress] 12M reads processed (2.2% mapped)             [progress] 13M reads processed (2.2% mapped)             [progress] 14M reads processed (2.2% mapped)             [progress] 15M reads processed (2.2% mapped)             [progress] 16M reads processed (2.2% mapped)             [progress] 17M reads processed (2.2% mapped)             [progress] 18M reads processed (2.2% mapped)             [progress] 19M reads processed (2.2% mapped)             [progress] 20M reads processed (2.2% mapped)             [progress] 21M reads processed (2.2% mapped)             [progress] 22M reads processed (2.2% mapped)             [progress] 23M reads processed (2.2% mapped)             [progress] 24M reads processed (2.2% mapped)             [progress] 25M reads processed (2.2% mapped)             [progress] 26M reads processed (2.2% mapped)             [progress] 27M reads processed (2.2% mapped)             [progress] 28M reads processed (2.2% mapped)             [progress] 29M reads processed (2.2% mapped)             [progress] 30M reads processed (2.2% mapped)             [progress] 31M reads processed (2.2% mapped)             [progress] 32M reads processed (2.2% mapped)             [progress] 33M reads processed (2.2% mapped)             [progress] 34M reads processed (2.2% mapped)             [progress] 35M reads processed (2.2% mapped)             
+[quant] done 
+[quant] processed 35,873,832 reads, 793,414 reads pseudoaligned
+[quant] estimated average fragment length: 243.0
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 983 rounds
+[bstrp] number of EM bootstraps complete: 1[bstrp] number of EM bootstraps complete: 2[bstrp] number of EM bootstraps complete: 3[bstrp] number of EM bootstraps complete: 4
+
+
+real	6m22.120s
+user	24m40.187s
+sys	0m6.761s
+
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 227,665
+[index] number of k-mers: 139,900,295
+[index] number of D-list k-mers: 5,477,475
+[quant] running in paired-end mode
+[quant] will process pair 1: /Users/adrian/research/011.askja/data/clean_fastq/HRH88_60DHA3A/HRH88_60DHA3A_HRH88_60DHA3A_R1_clean.fastq.gz
+                             /Users/adrian/research/011.askja/data/clean_fastq/HRH88_60DHA3A/HRH88_60DHA3A_HRH88_60DHA3A_R2_clean.fastq.gz
+[quant] finding pseudoalignments for the reads ...
+[progress] 1M reads processed (4.0% mapped)             [progress] 2M reads processed (4.0% mapped)             [progress] 3M reads processed (3.9% mapped)             [progress] 4M reads processed (4.0% mapped)             [progress] 5M reads processed (3.9% mapped)             [progress] 6M reads processed (3.9% mapped)             [progress] 7M reads processed (3.9% mapped)             [progress] 8M reads processed (3.9% mapped)             [progress] 9M reads processed (3.9% mapped)             [progress] 10M reads processed (3.9% mapped)             [progress] 11M reads processed (3.9% mapped)             [progress] 12M reads processed (3.9% mapped)             [progress] 13M reads processed (3.9% mapped)             [progress] 14M reads processed (3.9% mapped)             [progress] 15M reads processed (3.9% mapped)             [progress] 16M reads processed (3.9% mapped)             [progress] 17M reads processed (3.9% mapped)             [progress] 18M reads processed (3.9% mapped)             [progress] 19M reads processed (3.9% mapped)             [progress] 20M reads processed (3.9% mapped)             [progress] 21M reads processed (3.9% mapped)             [progress] 22M reads processed (3.9% mapped)             [progress] 23M reads processed (3.9% mapped)             [progress] 24M reads processed (3.9% mapped)             [progress] 25M reads processed (3.9% mapped)             [progress] 26M reads processed (3.9% mapped)             [progress] 27M reads processed (3.9% mapped)             [progress] 28M reads processed (3.9% mapped)             [progress] 29M reads processed (3.9% mapped)             [progress] 30M reads processed (3.9% mapped)             [progress] 31M reads processed (3.9% mapped)             [progress] 32M reads processed (3.9% mapped)             
+[quant] done 
+[quant] processed 33,162,020 reads, 1,303,545 reads pseudoaligned
+[quant] estimated average fragment length: 214.6
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 1,005 rounds
+[bstrp] number of EM bootstraps complete: 1[bstrp] number of EM bootstraps complete: 2[bstrp] number of EM bootstraps complete: 3[bstrp] number of EM bootstraps complete: 4
+
+
+real	6m8.448s
+user	23m38.303s
+sys	0m6.763s
+
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 227,665
+[index] number of k-mers: 139,900,295
+[index] number of D-list k-mers: 5,477,475
+[quant] running in paired-end mode
+[quant] will process pair 1: /Users/adrian/research/011.askja/data/clean_fastq/HRH88_CTRL1A/HRH88_CTRL1A_HRH88_CTRL1A_R1_clean.fastq.gz
+                             /Users/adrian/research/011.askja/data/clean_fastq/HRH88_CTRL1A/HRH88_CTRL1A_HRH88_CTRL1A_R2_clean.fastq.gz
+[quant] finding pseudoalignments for the reads ...
+[progress] 1M reads processed (2.2% mapped)             [progress] 2M reads processed (2.2% mapped)             [progress] 3M reads processed (2.2% mapped)             [progress] 4M reads processed (2.2% mapped)             [progress] 5M reads processed (2.2% mapped)             [progress] 6M reads processed (2.2% mapped)             [progress] 7M reads processed (2.2% mapped)             [progress] 8M reads processed (2.2% mapped)             [progress] 9M reads processed (2.2% mapped)             [progress] 10M reads processed (2.2% mapped)             [progress] 11M reads processed (2.2% mapped)             [progress] 12M reads processed (2.2% mapped)             [progress] 13M reads processed (2.2% mapped)             [progress] 14M reads processed (2.2% mapped)             [progress] 15M reads processed (2.2% mapped)             [progress] 16M reads processed (2.2% mapped)             [progress] 17M reads processed (2.2% mapped)             [progress] 18M reads processed (2.2% mapped)             [progress] 19M reads processed (2.2% mapped)             [progress] 20M reads processed (2.2% mapped)             [progress] 21M reads processed (2.2% mapped)             [progress] 22M reads processed (2.2% mapped)             [progress] 23M reads processed (2.2% mapped)             [progress] 24M reads processed (2.2% mapped)             [progress] 25M reads processed (2.2% mapped)             [progress] 26M reads processed (2.2% mapped)             [progress] 27M reads processed (2.2% mapped)             [progress] 28M reads processed (2.2% mapped)             [progress] 29M reads processed (2.2% mapped)             [progress] 30M reads processed (2.2% mapped)             [progress] 31M reads processed (2.2% mapped)             [progress] 32M reads processed (2.2% mapped)             [progress] 33M reads processed (2.2% mapped)             [progress] 34M reads processed (2.2% mapped)             [progress] 35M reads processed (2.2% mapped)             
+[quant] done 
+[quant] processed 35,926,516 reads, 779,399 reads pseudoaligned
+[quant] estimated average fragment length: 233.0
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 971 rounds
+[bstrp] number of EM bootstraps complete: 1[bstrp] number of EM bootstraps complete: 2[bstrp] number of EM bootstraps complete: 3[bstrp] number of EM bootstraps complete: 4
+
+
+real	6m32.967s
+user	25m23.469s
+sys	0m7.138s
+
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 227,665
+[index] number of k-mers: 139,900,295
+[index] number of D-list k-mers: 5,477,475
+[quant] running in paired-end mode
+[quant] will process pair 1: /Users/adrian/research/011.askja/data/clean_fastq/HRH88_CTRL2A/HRH88_CTRL2A_HRH88_CTRL2A_R1_clean.fastq.gz
+                             /Users/adrian/research/011.askja/data/clean_fastq/HRH88_CTRL2A/HRH88_CTRL2A_HRH88_CTRL2A_R2_clean.fastq.gz
+[quant] finding pseudoalignments for the reads ...
+[progress] 1M reads processed (2.1% mapped)             [progress] 2M reads processed (2.0% mapped)             [progress] 3M reads processed (2.0% mapped)             [progress] 4M reads processed (2.0% mapped)             [progress] 5M reads processed (2.0% mapped)             [progress] 6M reads processed (2.0% mapped)             [progress] 7M reads processed (2.0% mapped)             [progress] 8M reads processed (2.0% mapped)             [progress] 9M reads processed (2.0% mapped)             [progress] 10M reads processed (2.0% mapped)             [progress] 11M reads processed (2.0% mapped)             [progress] 12M reads processed (2.0% mapped)             [progress] 13M reads processed (2.0% mapped)             [progress] 14M reads processed (2.0% mapped)             [progress] 15M reads processed (2.0% mapped)             [progress] 16M reads processed (2.0% mapped)             [progress] 17M reads processed (2.0% mapped)             [progress] 18M reads processed (2.0% mapped)             [progress] 19M reads processed (2.0% mapped)             [progress] 20M reads processed (2.0% mapped)             [progress] 21M reads processed (2.0% mapped)             [progress] 22M reads processed (2.0% mapped)             [progress] 23M reads processed (2.0% mapped)             [progress] 24M reads processed (2.0% mapped)             [progress] 25M reads processed (2.0% mapped)             [progress] 26M reads processed (2.0% mapped)             [progress] 27M reads processed (2.0% mapped)             [progress] 28M reads processed (2.0% mapped)             [progress] 29M reads processed (2.0% mapped)             [progress] 30M reads processed (2.0% mapped)             [progress] 31M reads processed (2.0% mapped)             [progress] 32M reads processed (2.0% mapped)             [progress] 33M reads processed (2.0% mapped)             [progress] 34M reads processed (2.0% mapped)             [progress] 35M reads processed (2.0% mapped)             
+[quant] done 
+[quant] processed 35,823,789 reads, 721,652 reads pseudoaligned
+[quant] estimated average fragment length: 240.5
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 977 rounds
+[bstrp] number of EM bootstraps complete: 1[bstrp] number of EM bootstraps complete: 2[bstrp] number of EM bootstraps complete: 3[bstrp] number of EM bootstraps complete: 4
+
+
+real	6m29.928s
+user	25m18.613s
+sys	0m6.202s
+
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 227,665
+[index] number of k-mers: 139,900,295
+[index] number of D-list k-mers: 5,477,475
+[quant] running in paired-end mode
+[quant] will process pair 1: /Users/adrian/research/011.askja/data/clean_fastq/HRH88_CTRL3A/HRH88_CTRL3A_HRH88_CTRL3A_R1_clean.fastq.gz
+                             /Users/adrian/research/011.askja/data/clean_fastq/HRH88_CTRL3A/HRH88_CTRL3A_HRH88_CTRL3A_R2_clean.fastq.gz
+[quant] finding pseudoalignments for the reads ...
+[progress] 1M reads processed (2.2% mapped)             [progress] 2M reads processed (2.2% mapped)             [progress] 3M reads processed (2.2% mapped)             [progress] 4M reads processed (2.2% mapped)             [progress] 5M reads processed (2.2% mapped)             [progress] 6M reads processed (2.2% mapped)             [progress] 7M reads processed (2.2% mapped)             [progress] 8M reads processed (2.2% mapped)             [progress] 9M reads processed (2.2% mapped)             [progress] 10M reads processed (2.2% mapped)             [progress] 11M reads processed (2.2% mapped)             [progress] 12M reads processed (2.2% mapped)             [progress] 13M reads processed (2.2% mapped)             [progress] 14M reads processed (2.2% mapped)             [progress] 15M reads processed (2.2% mapped)             [progress] 16M reads processed (2.2% mapped)             [progress] 17M reads processed (2.2% mapped)             [progress] 18M reads processed (2.2% mapped)             [progress] 19M reads processed (2.2% mapped)             [progress] 20M reads processed (2.2% mapped)             [progress] 21M reads processed (2.2% mapped)             [progress] 22M reads processed (2.2% mapped)             [progress] 23M reads processed (2.2% mapped)             [progress] 24M reads processed (2.2% mapped)             [progress] 25M reads processed (2.2% mapped)             [progress] 26M reads processed (2.2% mapped)             [progress] 27M reads processed (2.2% mapped)             [progress] 28M reads processed (2.2% mapped)             [progress] 29M reads processed (2.2% mapped)             [progress] 30M reads processed (2.2% mapped)             [progress] 31M reads processed (2.2% mapped)             [progress] 32M reads processed (2.2% mapped)             [progress] 33M reads processed (2.2% mapped)             [progress] 34M reads processed (2.2% mapped)             [progress] 35M reads processed (2.2% mapped)             
+[quant] done 
+[quant] processed 35,811,064 reads, 776,045 reads pseudoaligned
+[quant] estimated average fragment length: 234.2
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 1,061 rounds
+[bstrp] number of EM bootstraps complete: 1[bstrp] number of EM bootstraps complete: 2[bstrp] number of EM bootstraps complete: 3[bstrp] number of EM bootstraps complete: 4
+
+
+real	6m34.200s
+user	25m33.030s
+sys	0m6.456s
+2024-10-03 13:33:46 	 recover labels...
+2024-10-03 13:33:46 	 ['HRH88_120DHA1A', 'HRH88_120DHA2A', 'HRH88_120DHA3A', 'HRH88_240DHA1A', 'HRH88_240DHA2A', 'HRH88_240DHA3A', 'HRH88_60DHA1A', 'HRH88_60DHA2A', 'HRH88_60DHA3A', 'HRH88_CTRL1A', 'HRH88_CTRL2A', 'HRH88_CTRL3A']
+2024-10-03 13:33:46 	 about to quantify HRH88_120DHA1A
+
+time kallisto quant -i /Users/adrian/software/kallisto/human_index_standard/index.idx -o /Users/adrian/scratch/kallisto/HRH88_120DHA1A -t 4 -b 4 --fr-stranded --verbose /Users/adrian/research/011.askja/data/clean_fastq/HRH88_120DHA1A/HRH88_120DHA1A_HRH88_120DHA1A_R1_clean.fastq.gz /Users/adrian/research/011.askja/data/clean_fastq/HRH88_120DHA1A/HRH88_120DHA1A_HRH88_120DHA1A_R2_clean.fastq.gz
+
+2024-10-03 13:38:29 	 about to quantify HRH88_120DHA2A
+
+time kallisto quant -i /Users/adrian/software/kallisto/human_index_standard/index.idx -o /Users/adrian/scratch/kallisto/HRH88_120DHA2A -t 4 -b 4 --fr-stranded --verbose /Users/adrian/research/011.askja/data/clean_fastq/HRH88_120DHA2A/HRH88_120DHA2A_HRH88_120DHA2A_R1_clean.fastq.gz /Users/adrian/research/011.askja/data/clean_fastq/HRH88_120DHA2A/HRH88_120DHA2A_HRH88_120DHA2A_R2_clean.fastq.gz
+
+2024-10-03 13:43:33 	 about to quantify HRH88_120DHA3A
+
+time kallisto quant -i /Users/adrian/software/kallisto/human_index_standard/index.idx -o /Users/adrian/scratch/kallisto/HRH88_120DHA3A -t 4 -b 4 --fr-stranded --verbose /Users/adrian/research/011.askja/data/clean_fastq/HRH88_120DHA3A/HRH88_120DHA3A_HRH88_120DHA3A_R1_clean.fastq.gz /Users/adrian/research/011.askja/data/clean_fastq/HRH88_120DHA3A/HRH88_120DHA3A_HRH88_120DHA3A_R2_clean.fastq.gz
+
+2024-10-03 13:48:54 	 about to quantify HRH88_240DHA1A
+
+time kallisto quant -i /Users/adrian/software/kallisto/human_index_standard/index.idx -o /Users/adrian/scratch/kallisto/HRH88_240DHA1A -t 4 -b 4 --fr-stranded --verbose /Users/adrian/research/011.askja/data/clean_fastq/HRH88_240DHA1A/HRH88_240DHA1A_HRH88_240DHA1A_R1_clean.fastq.gz /Users/adrian/research/011.askja/data/clean_fastq/HRH88_240DHA1A/HRH88_240DHA1A_HRH88_240DHA1A_R2_clean.fastq.gz
+
+2024-10-03 13:54:18 	 about to quantify HRH88_240DHA2A
+
+time kallisto quant -i /Users/adrian/software/kallisto/human_index_standard/index.idx -o /Users/adrian/scratch/kallisto/HRH88_240DHA2A -t 4 -b 4 --fr-stranded --verbose /Users/adrian/research/011.askja/data/clean_fastq/HRH88_240DHA2A/HRH88_240DHA2A_HRH88_240DHA2A_R1_clean.fastq.gz /Users/adrian/research/011.askja/data/clean_fastq/HRH88_240DHA2A/HRH88_240DHA2A_HRH88_240DHA2A_R2_clean.fastq.gz
+
+2024-10-03 13:59:54 	 about to quantify HRH88_240DHA3A
+
+time kallisto quant -i /Users/adrian/software/kallisto/human_index_standard/index.idx -o /Users/adrian/scratch/kallisto/HRH88_240DHA3A -t 4 -b 4 --fr-stranded --verbose /Users/adrian/research/011.askja/data/clean_fastq/HRH88_240DHA3A/HRH88_240DHA3A_HRH88_240DHA3A_R1_clean.fastq.gz /Users/adrian/research/011.askja/data/clean_fastq/HRH88_240DHA3A/HRH88_240DHA3A_HRH88_240DHA3A_R2_clean.fastq.gz
+
+2024-10-03 14:05:36 	 about to quantify HRH88_60DHA1A
+
+time kallisto quant -i /Users/adrian/software/kallisto/human_index_standard/index.idx -o /Users/adrian/scratch/kallisto/HRH88_60DHA1A -t 4 -b 4 --fr-stranded --verbose /Users/adrian/research/011.askja/data/clean_fastq/HRH88_60DHA1A/HRH88_60DHA1A_HRH88_60DHA1A_R1_clean.fastq.gz /Users/adrian/research/011.askja/data/clean_fastq/HRH88_60DHA1A/HRH88_60DHA1A_HRH88_60DHA1A_R2_clean.fastq.gz
+
+2024-10-03 14:11:53 	 about to quantify HRH88_60DHA2A
+
+time kallisto quant -i /Users/adrian/software/kallisto/human_index_standard/index.idx -o /Users/adrian/scratch/kallisto/HRH88_60DHA2A -t 4 -b 4 --fr-stranded --verbose /Users/adrian/research/011.askja/data/clean_fastq/HRH88_60DHA2A/HRH88_60DHA2A_HRH88_60DHA2A_R1_clean.fastq.gz /Users/adrian/research/011.askja/data/clean_fastq/HRH88_60DHA2A/HRH88_60DHA2A_HRH88_60DHA2A_R2_clean.fastq.gz
+
+2024-10-03 14:18:15 	 about to quantify HRH88_60DHA3A
+
+time kallisto quant -i /Users/adrian/software/kallisto/human_index_standard/index.idx -o /Users/adrian/scratch/kallisto/HRH88_60DHA3A -t 4 -b 4 --fr-stranded --verbose /Users/adrian/research/011.askja/data/clean_fastq/HRH88_60DHA3A/HRH88_60DHA3A_HRH88_60DHA3A_R1_clean.fastq.gz /Users/adrian/research/011.askja/data/clean_fastq/HRH88_60DHA3A/HRH88_60DHA3A_HRH88_60DHA3A_R2_clean.fastq.gz
+
+2024-10-03 14:24:24 	 about to quantify HRH88_CTRL1A
+
+time kallisto quant -i /Users/adrian/software/kallisto/human_index_standard/index.idx -o /Users/adrian/scratch/kallisto/HRH88_CTRL1A -t 4 -b 4 --fr-stranded --verbose /Users/adrian/research/011.askja/data/clean_fastq/HRH88_CTRL1A/HRH88_CTRL1A_HRH88_CTRL1A_R1_clean.fastq.gz /Users/adrian/research/011.askja/data/clean_fastq/HRH88_CTRL1A/HRH88_CTRL1A_HRH88_CTRL1A_R2_clean.fastq.gz
+
+2024-10-03 14:30:57 	 about to quantify HRH88_CTRL2A
+
+time kallisto quant -i /Users/adrian/software/kallisto/human_index_standard/index.idx -o /Users/adrian/scratch/kallisto/HRH88_CTRL2A -t 4 -b 4 --fr-stranded --verbose /Users/adrian/research/011.askja/data/clean_fastq/HRH88_CTRL2A/HRH88_CTRL2A_HRH88_CTRL2A_R1_clean.fastq.gz /Users/adrian/research/011.askja/data/clean_fastq/HRH88_CTRL2A/HRH88_CTRL2A_HRH88_CTRL2A_R2_clean.fastq.gz
+
+2024-10-03 14:37:27 	 about to quantify HRH88_CTRL3A
+
+time kallisto quant -i /Users/adrian/software/kallisto/human_index_standard/index.idx -o /Users/adrian/scratch/kallisto/HRH88_CTRL3A -t 4 -b 4 --fr-stranded --verbose /Users/adrian/research/011.askja/data/clean_fastq/HRH88_CTRL3A/HRH88_CTRL3A_HRH88_CTRL3A_R1_clean.fastq.gz /Users/adrian/research/011.askja/data/clean_fastq/HRH88_CTRL3A/HRH88_CTRL3A_HRH88_CTRL3A_R2_clean.fastq.gz
+

@@ -49,9 +49,9 @@ results_dir = '/Users/adrian/research/011.askja/results/kallisto/kallisto.{}/'.f
 transcriptome_index = '/Users/adrian/software/kallisto/dog_index_standard/index.idx'
 
 # version 5
-strand_flag = '--rf-stranded'    # processed 35,851,401 reads, 26,364,849 reads pseudoaligned
+strand_flag = '--rf-stranded'     # processed 35,851,401 reads, 26,364,849 reads pseudoaligned
 #strand_flag = '--fr-stranded'    # processed 35,851,401 reads, 908,871 reads pseudoaligned
-#strand_flag = ''                  # processed 35,851,401 reads, 26,759,566 reads pseudoaligned
+#strand_flag = ''                 # processed 35,851,401 reads, 26,759,566 reads pseudoaligned
 
 #
 # 1. recover labels

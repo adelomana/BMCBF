@@ -53,6 +53,12 @@ strand_flag = '--rf-stranded'    # processed 32,576,754 reads, 28,145,049 reads 
 #strand_flag = '--fr-stranded'   # processed 32,576,754 reads, 889,414 reads pseudoaligned
 #strand_flag = ''                # processed 32,576,754 reads, 28,666,500 reads pseudoaligned
 
+strand_flag = '--fr-stranded'
+results_dir = '/Users/adrian/scratch/kallisto/'
+boots = 4
+threads = 4
+
+
 #
 # 1. recover labels
 #
