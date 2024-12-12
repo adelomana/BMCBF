@@ -43,15 +43,15 @@ def printt(label):
 # 0. user defined variables
 #
 clean_fastq_dir = '/Users/adrian/research/016.saudarkrokur/data/clean_fastq/'
-boots = 8
-threads = 8
-results_dir = '/Users/adrian/research/016.saudarkrokur/results/kallisto/kallisto.{}/'.format(boots)
-transcriptome_index = '/Users/adrian/software/kallisto/dme/index.idx'
+boots = 100
+threads = 4
+results_dir = '/Users/adrian/research/016.saudarkrokur/results/kallisto/kallisto.dme_alo.{}/'.format(boots)
+transcriptome_index = '/Users/adrian/software/kallisto/dme_alo/index.idx'
 
 # version 5
-#strand_flag = '--rf-stranded'  # processed xx reads, xx reads pseudoaligned
-#strand_flag = '--fr-stranded'  # processed 20,560,080 reads, 9,077,908 reads pseudoaligned
-#strand_flag = ''                # processed 20,560,080 reads, 17,438,434 reads pseudoaligned
+#strand_flag = '--rf-stranded'  # processed 20,917,258 reads, 9,014,272 reads pseudoaligned
+#strand_flag = '--fr-stranded'  # processed 20,917,258 reads, 9,811,219 reads pseudoaligned
+strand_flag = ''                # processed 20,917,258 reads, 18,778,203 reads pseudoaligned
 
 #
 # 1. recover labels
