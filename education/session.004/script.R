@@ -177,4 +177,8 @@ ggplot() +
   geom_point(data=blacks, aes(plotting_x, plotting_y), color = "black", size=1, shape=19, alpha=0.2, stroke=0) +
   labs(x=expression('Expression [log'[2]~'FC]'), y=expression('Significance [log'[10]~'adjusted P]')) + 
   theme_linedraw() +
+  geom_segment(aes(x=-1, xend=-1, y=-log10(0.05), yend=20), linetype=2) +
+  geom_segment(aes(x=1, xend=1, y=-log10(0.05), yend=20), linetype=2) +
+  geom_segment(aes(x=-6, xend=-1, y=-log10(0.05), yend=-log10(0.05)), linetype=2) +
+  geom_segment(aes(x=1, xend=6, y=-log10(0.05), yend=-log10(0.05)), linetype=2) +
   xlim(-6.2, 6) 
