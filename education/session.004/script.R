@@ -8,7 +8,10 @@
 #   install.packages("BiocManager")
 # BiocManager::install()
 # 
+
+# setRepositories(ind=c(1:6))
 # BiocManager::install("biomaRt")
+
 # BiocManager::install("tximport")
 # BiocManager::install("DESeq2")
 # BiocManager::install('rhdf5')·
