@@ -4,19 +4,19 @@
 
 # use the following block of code if libraries are not installed in your computer
 
-# if (!require("BiocManager", quietly = TRUE))
-#   install.packages("BiocManager")
-# BiocManager::install()
-# 
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
 
-# setRepositories(ind=c(1:6))
-# BiocManager::install("biomaRt")
+setRepositories(ind=c(1:6))
+BiocManager::install("biomaRt")
 
-# BiocManager::install("tximport")
-# BiocManager::install("DESeq2")
-# BiocManager::install('rhdf5')·
-# BiocManager::install('this.path')
-# BiocManager::install('ramify')
+BiocManager::install("tximport")
+BiocManager::install("DESeq2")
+BiocManager::install('rhdf5')
+BiocManager::install('this.path')
+BiocManager::install('ramify')
+BiocManager::install('rhdf5')
+BiocManager::install('crayon')
 
 library(biomaRt)        # required to map transcripts to genes
 library(tximport)       # required to read input files
@@ -26,6 +26,7 @@ library(crayon)         # so the messages are blue
 library(this.path)      # necessary to locate where this file is
 library(ggplot2)        # useful for plotting
 library(ramify)         # necessary for the clip function
+library(rhdf5)          # necessary for reading the input files
 
 #
 # 0. user-defined variables
@@ -49,8 +50,7 @@ effect_size_threshold = log2(2) # arbitrary: we will discard DEGs that hold less
 # 
 # 1. get todays working data: kallisto output from two conditions
 #
-file_location = 'https://nextcloud-dev2.rhi.hi.is/index.php/s/CTgf5dqn8DD33Fk/download/kallisto_output.tgz'
-download.file(file_location, 'kallisto_output.tgz')
+system('wget https://nextcloud-dev2.rhi.hi.is/index.php/s/CTgf5dqn8DD33Fk/download/kallisto_output.tgz --no-check-certificate')
 untar('kallisto_output.tgz')
 
 list.files('kallisto_output')
