@@ -20,7 +20,6 @@
 library(biomaRt)        # required to map transcripts to genes
 library(tximport)       # required to read input files
 library(DESeq2)         # the library that will call DEGs
-library(BiocParallel)   # necessary for parallel processing
 library(crayon)         # so the messages are blue
 library(this.path)      # necessary to locate where this file is
 library(ggplot2)        # useful for plotting
@@ -35,10 +34,6 @@ library(rhdf5)          # necessary for reading the input files
 script_path = this.dir()
 script_path
 setwd(script_path) 
-
-# define multiple threads to speed up calculation
-registered() # use this for checking the number of threads, as bpnworkers
-register(MulticoreParam(6))
 
 kallisto_dir = "kallisto_output"
 results_dir = 'DEGs_DESeq2'
