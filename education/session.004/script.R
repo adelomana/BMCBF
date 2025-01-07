@@ -15,7 +15,6 @@ BiocManager::install("DESeq2")
 BiocManager::install('rhdf5')
 BiocManager::install('this.path')
 BiocManager::install('ramify')
-BiocManager::install('rhdf5')
 BiocManager::install('crayon')
 
 library(biomaRt)        # required to map transcripts to genes
@@ -39,13 +38,14 @@ setwd(script_path)
 
 # define multiple threads to speed up calculation
 registered() # use this for checking the number of threads, as bpnworkers
-register(MulticoreParam(8))
+register(MulticoreParam(6))
 
 kallisto_dir = "kallisto_output"
 results_dir = 'DEGs_DESeq2'
 
-threshold = 20 # arbitrary threshold: we will discard DEGs that hold less than 20 reads difference
 effect_size_threshold = log2(2) # arbitrary: we will discard DEGs that hold less than abs FC = 2
+count_threshold = 20 # arbitrary threshold: we will discard DEGs that hold less than 20 reads difference
+tpm_threshold = 1
 
 # 
 # 1. get todays working data: kallisto output from two conditions
@@ -109,7 +109,17 @@ cat(blue(paste('size before counts filtering:', dim(dds)[1], sep=' ')), fill=TRU
 a = counts(dds)[ , 1:3]
 b = counts(dds)[ , 4:6]
 c = rowMedians(a) - rowMedians(b)
-keep = abs(c) >= threshold
+keep = abs(c) >= count_threshold
+dds = dds[keep, ]
+cat(blue(paste('size after counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE)
+
+# keep features with at least a max median expression of 1 TPM
+cat(blue(paste('size before counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE)
+subset = txi$abundance[names(dds), ]
+a = rowMedians(subset[ , 1:3])
+b = rowMedians(subset[ , 4:6])
+c = pmax(a, b)
+keep = c >= tpm_threshold
 dds = dds[keep, ]
 cat(blue(paste('size after counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE)
 
