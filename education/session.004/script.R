@@ -4,18 +4,18 @@
 
 # use the following block of code if libraries are not installed in your computer
 
-if (!requireNamespace("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
-
-setRepositories(ind=c(1:6))
-BiocManager::install("biomaRt")
-
-BiocManager::install("tximport")
-BiocManager::install("DESeq2")
-BiocManager::install('rhdf5')
-BiocManager::install('this.path')
-BiocManager::install('ramify')
-BiocManager::install('crayon')
+# if (!requireNamespace("BiocManager", quietly = TRUE))
+#   install.packages("BiocManager")
+# 
+# setRepositories(ind=c(1:6))
+# BiocManager::install("biomaRt")
+# 
+# BiocManager::install("tximport")
+# BiocManager::install("DESeq2")
+# BiocManager::install('rhdf5')
+# BiocManager::install('this.path')
+# BiocManager::install('ramify')
+# BiocManager::install('crayon')
 
 library(biomaRt)        # required to map transcripts to genes
 library(tximport)       # required to read input files
@@ -104,7 +104,7 @@ txi = tximport(files, type="kallisto", tx2gene=t2g, ignoreTxVersion=TRUE)
 dds = DESeqDataSetFromTximport(txi, colData=metadata, design=~treatment) 
 dds$treatment = relevel(dds$treatment, ref="without")
 
-# keep features with at least 20 counts median difference
+# keep features with at least 20 counts median difference. 41,465 to 12,918 features
 cat(blue(paste('size before counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE)
 a = counts(dds)[ , 1:3]
 b = counts(dds)[ , 4:6]
@@ -113,7 +113,7 @@ keep = abs(c) >= count_threshold
 dds = dds[keep, ]
 cat(blue(paste('size after counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE)
 
-# keep features with at least a max median expression of 1 TPM
+# keep features with at least a max median expression of 1 TPM. 12,918 to 11,976 features
 cat(blue(paste('size before counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE)
 subset = txi$abundance[names(dds), ]
 a = rowMedians(subset[ , 1:3])
@@ -135,7 +135,7 @@ sorted_filtred_results = filtred_results[order(filtred_results[["padj"]]),]
 
 anti_results = res[which(res$padj > 0.05 | abs(res$log2FoldChange) < effect_size_threshold), ]
 
-cat(blue(paste('contrast IFN vs control:', dim(filtred_results)[1], sep=' ')), fill=TRUE)
+cat(blue(paste('contrast IFN vs control:', dim(filtred_results)[1], sep=' ')), fill=TRUE) # 585 without TPM filter. 427 with TPM filter
 
 # store results
 dir.create(results_dir)
