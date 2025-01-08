@@ -1,2 +1,2 @@
 # BMCBF
-this is a description
+BMC Bioinformatics Facility computational tools.
