@@ -1,2 +1,2 @@
 # BMCBF
-BMC Bioinformatics Facility computational tools.
+[BMC Bioinformatics Facility]([url](https://lifvisindi.hi.is/facilities/bioinformatics-facility)) computational tools.
