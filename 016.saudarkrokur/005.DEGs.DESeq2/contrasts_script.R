@@ -31,8 +31,12 @@ results_dir = '/Users/adrian/research/016.saudarkrokur/results/deseq2'
 #
 listEnsembl()
 listEnsembl(version=113)
-#ensembl = useEnsembl(biomart="ensembl", verbose=TRUE)
-ensembl = useEnsembl(biomart="ensembl", verbose=TRUE, mirror='asia')
+
+ensembl = useEnsembl(biomart="ensembl", verbose=TRUE)
+#ensembl = useEnsembl(biomart="ensembl", verbose=TRUE, mirror='www')
+#ensembl = useEnsembl(biomart="ensembl", verbose=TRUE, mirror='useast')
+#ensembl = useEnsembl(biomart="ensembl", verbose=TRUE, mirror='asia')
+
 head(listDatasets(ensembl)) # dmelanogaster_gene_ensembl
 mart = biomaRt::useMart(biomart="ENSEMBL_MART_ENSEMBL", 
                         dataset="dmelanogaster_gene_ensembl",
@@ -73,7 +77,7 @@ effect_size_threshold = log2(2)
 tpm_threshold = 2
 
 contrasts = list()
-contrasts[[1]] = c('wt', 'ko')
+contrasts[[1]] = c('ko', 'wt')
 contrasts[[2]] = c('h1M8', 'ko')
 contrasts[[3]] = c('h2F14', 'wt')
 contrasts[[4]] = c('h2M8', 'wt')
@@ -142,7 +146,7 @@ contrast_maker <- function(contrast){
   cat(blue(paste('contrast DEGs:', dim(filtred_results)[1], sep=' ')), fill=TRUE)
   
   # add annotation and expression values
-  subset = txi$abundance[names(dds), ]
+  subset = txi$abundance[rownames(sorted_filtred_results), ]
   if (dim(working_metadata)[1] == 6) {
     a = rowMedians(subset[ , 1:3])
     b = rowMedians(subset[ , 4:6])
@@ -152,11 +156,13 @@ contrast_maker <- function(contrast){
   } else {print('ERRRRRRROR')}
   sorted_filtred_results[paste('expression', contrast[1], sep='')] = a
   sorted_filtred_results[paste('expression', contrast[2], sep='')] = b
-  df_new = t2g[t2g$ensembl_gene_id %in% rownames(sorted_filtred_results), ]
-  sorted_filtred_results['description'] = df_new$description
-  sorted_filtred_results['external_gene_name'] = df_new$external_gene_name
-  sorted_filtred_results['gene_biotype'] = df_new$gene_biotype
-  sorted_filtred_results['entrezgene_id'] = df_new$entrezgene_id
+  tempo = t2g[t2g[ , 'ensembl_gene_id'] %in% rownames(sorted_filtred_results), ]
+  df_new = tempo[!duplicated(tempo$ensembl_gene_id), ]
+  no = match(rownames(sorted_filtred_results), df_new$ensembl_gene_id)
+  sorted_filtred_results['ensembl'] = df_new$ensembl_gene_id[no]
+  sorted_filtred_results['description'] = df_new$description[no]
+  sorted_filtred_results['gene_biotype'] = df_new$gene_biotype[no]
+  sorted_filtred_results['entrezgene_id'] = df_new$entrezgene_id[no]
   
   write.table(sorted_filtred_results, file=paste(results_dir, '/effect_', label, '.tsv', sep=''), quote=FALSE, sep='\t')
   write.table(anti_results, file=paste(results_dir, '/effect_', label, '.anti.tsv', sep=''), quote=FALSE, sep='\t')
@@ -190,10 +196,10 @@ contrast_maker <- function(contrast){
     xlim(-6.2, 6) +
     scale_color_viridis_c(option = "cividis") 
   ggsave(paste(label, '.png', sep=''))
-
+  
   message('...')
-}
-
+ }
+# 
 for (contrast in contrasts){
   contrast_maker(contrast)
-}
+  }

@@ -1,0 +1,578 @@
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/501-KO13_VHN-10/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_350_250.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/501-KO13_VHN-10/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_350_250.001.R2.fastq.gz /Volumes/sandbox/501-KO13_VHN-10/501-KO13_VHN-10_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_350_250.001.R1_clean.fastq.gz /Volumes/sandbox/501-KO13_VHN-10/501-KO13_VHN-10_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_350_250.001.R1_garbage.fastq.gz /Volumes/sandbox/501-KO13_VHN-10/501-KO13_VHN-10_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_350_250.001.R2_clean.fastq.gz /Volumes/sandbox/501-KO13_VHN-10/501-KO13_VHN-10_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_350_250.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	22m20.958s
+user	64m53.037s
+sys	0m44.993s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/501-KO13_VHN-2/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_381_281.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/501-KO13_VHN-2/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_381_281.001.R2.fastq.gz /Volumes/sandbox/501-KO13_VHN-2/501-KO13_VHN-2_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_381_281.001.R1_clean.fastq.gz /Volumes/sandbox/501-KO13_VHN-2/501-KO13_VHN-2_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_381_281.001.R1_garbage.fastq.gz /Volumes/sandbox/501-KO13_VHN-2/501-KO13_VHN-2_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_381_281.001.R2_clean.fastq.gz /Volumes/sandbox/501-KO13_VHN-2/501-KO13_VHN-2_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_381_281.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m1.610s
+user	0m5.641s
+sys	0m0.143s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/501-KO13_VHN-6/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_318_218.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/501-KO13_VHN-6/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_318_218.001.R2.fastq.gz /Volumes/sandbox/501-KO13_VHN-6/501-KO13_VHN-6_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_318_218.001.R1_clean.fastq.gz /Volumes/sandbox/501-KO13_VHN-6/501-KO13_VHN-6_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_318_218.001.R1_garbage.fastq.gz /Volumes/sandbox/501-KO13_VHN-6/501-KO13_VHN-6_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_318_218.001.R2_clean.fastq.gz /Volumes/sandbox/501-KO13_VHN-6/501-KO13_VHN-6_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_318_218.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.485s
+user	0m2.328s
+sys	0m0.087s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/C1-RD-16/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_325_225.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/C1-RD-16/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_325_225.001.R2.fastq.gz /Volumes/sandbox/C1-RD-16/C1-RD-16_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_325_225.001.R1_clean.fastq.gz /Volumes/sandbox/C1-RD-16/C1-RD-16_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_325_225.001.R1_garbage.fastq.gz /Volumes/sandbox/C1-RD-16/C1-RD-16_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_325_225.001.R2_clean.fastq.gz /Volumes/sandbox/C1-RD-16/C1-RD-16_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_325_225.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.067s
+user	0m0.047s
+sys	0m0.029s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/C1_RD-10/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_372_272.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/C1_RD-10/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_372_272.001.R2.fastq.gz /Volumes/sandbox/C1_RD-10/C1_RD-10_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_372_272.001.R1_clean.fastq.gz /Volumes/sandbox/C1_RD-10/C1_RD-10_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_372_272.001.R1_garbage.fastq.gz /Volumes/sandbox/C1_RD-10/C1_RD-10_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_372_272.001.R2_clean.fastq.gz /Volumes/sandbox/C1_RD-10/C1_RD-10_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_372_272.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.091s
+user	0m0.085s
+sys	0m0.030s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/C1_RD-4/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_324_224.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/C1_RD-4/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_324_224.001.R2.fastq.gz /Volumes/sandbox/C1_RD-4/C1_RD-4_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_324_224.001.R1_clean.fastq.gz /Volumes/sandbox/C1_RD-4/C1_RD-4_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_324_224.001.R1_garbage.fastq.gz /Volumes/sandbox/C1_RD-4/C1_RD-4_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_324_224.001.R2_clean.fastq.gz /Volumes/sandbox/C1_RD-4/C1_RD-4_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_324_224.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.084s
+user	0m0.050s
+sys	0m0.030s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/C3_RD-1/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_300_200.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/C3_RD-1/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_300_200.001.R2.fastq.gz /Volumes/sandbox/C3_RD-1/C3_RD-1_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_300_200.001.R1_clean.fastq.gz /Volumes/sandbox/C3_RD-1/C3_RD-1_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_300_200.001.R1_garbage.fastq.gz /Volumes/sandbox/C3_RD-1/C3_RD-1_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_300_200.001.R2_clean.fastq.gz /Volumes/sandbox/C3_RD-1/C3_RD-1_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_300_200.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.066s
+user	0m0.046s
+sys	0m0.029s
+['501-KO13_VHN-10', '501-KO13_VHN-2', '501-KO13_VHN-6', 'C1-RD-16', 'C1_RD-10', 'C1_RD-4', 'C3_RD-1', 'C3_RD-13', 'C3_RD-7', 'KO13_VHN-11', 'KO13_VHN-3', 'KO13_VHN-7', 'KO17_VHN-12', 'KO17_VHN-4', 'KO17_VHN-8', 'KO24_VHN-1', 'KO24_VHN-5', 'KO24_VHN-9', 'ev_01', 'ev_02', 'ev_03', 'ev_04', 'siCTRL_1', 'siCTRL_2', 'siCTRL_3', 'siMITF_1', 'siMITF_2', 'siMITF_3', 'x6_01', 'x6_02', 'x6_03', 'x6_04'] 32
+
+2025-01-19 23:56:48 	 working with sample 501-KO13_VHN-10
+2025-01-19 23:56:48 	 about to clean novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_350_250.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/501-KO13_VHN-10/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_350_250.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/501-KO13_VHN-10/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_350_250.001.R2.fastq.gz /Volumes/sandbox/501-KO13_VHN-10/501-KO13_VHN-10_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_350_250.001.R1_clean.fastq.gz /Volumes/sandbox/501-KO13_VHN-10/501-KO13_VHN-10_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_350_250.001.R1_garbage.fastq.gz /Volumes/sandbox/501-KO13_VHN-10/501-KO13_VHN-10_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_350_250.001.R2_clean.fastq.gz /Volumes/sandbox/501-KO13_VHN-10/501-KO13_VHN-10_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_350_250.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:09 	 working with sample 501-KO13_VHN-2
+2025-01-20 00:19:09 	 about to clean novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_381_281.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/501-KO13_VHN-2/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_381_281.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/501-KO13_VHN-2/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_381_281.001.R2.fastq.gz /Volumes/sandbox/501-KO13_VHN-2/501-KO13_VHN-2_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_381_281.001.R1_clean.fastq.gz /Volumes/sandbox/501-KO13_VHN-2/501-KO13_VHN-2_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_381_281.001.R1_garbage.fastq.gz /Volumes/sandbox/501-KO13_VHN-2/501-KO13_VHN-2_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_381_281.001.R2_clean.fastq.gz /Volumes/sandbox/501-KO13_VHN-2/501-KO13_VHN-2_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_381_281.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:10 	 working with sample 501-KO13_VHN-6
+2025-01-20 00:19:10 	 about to clean novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_318_218.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/501-KO13_VHN-6/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_318_218.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/501-KO13_VHN-6/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_318_218.001.R2.fastq.gz /Volumes/sandbox/501-KO13_VHN-6/501-KO13_VHN-6_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_318_218.001.R1_clean.fastq.gz /Volumes/sandbox/501-KO13_VHN-6/501-KO13_VHN-6_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_318_218.001.R1_garbage.fastq.gz /Volumes/sandbox/501-KO13_VHN-6/501-KO13_VHN-6_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_318_218.001.R2_clean.fastq.gz /Volumes/sandbox/501-KO13_VHN-6/501-KO13_VHN-6_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_318_218.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:11 	 working with sample C1-RD-16
+2025-01-20 00:19:11 	 about to clean novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_325_225.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/C1-RD-16/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_325_225.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/C1-RD-16/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_325_225.001.R2.fastq.gz /Volumes/sandbox/C1-RD-16/C1-RD-16_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_325_225.001.R1_clean.fastq.gz /Volumes/sandbox/C1-RD-16/C1-RD-16_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_325_225.001.R1_garbage.fastq.gz /Volumes/sandbox/C1-RD-16/C1-RD-16_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_325_225.001.R2_clean.fastq.gz /Volumes/sandbox/C1-RD-16/C1-RD-16_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_325_225.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:11 	 working with sample C1_RD-10
+2025-01-20 00:19:11 	 about to clean novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_372_272.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/C1_RD-10/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_372_272.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/C1_RD-10/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_372_272.001.R2.fastq.gz /Volumes/sandbox/C1_RD-10/C1_RD-10_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_372_272.001.R1_clean.fastq.gz /Volumes/sandbox/C1_RD-10/C1_RD-10_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_372_272.001.R1_garbage.fastq.gz /Volumes/sandbox/C1_RD-10/C1_RD-10_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_372_272.001.R2_clean.fastq.gz /Volumes/sandbox/C1_RD-10/C1_RD-10_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_372_272.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:11 	 working with sample C1_RD-4
+2025-01-20 00:19:11 	 about to clean novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_324_224.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/C1_RD-4/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_324_224.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/C1_RD-4/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_324_224.001.R2.fastq.gz /Volumes/sandbox/C1_RD-4/C1_RD-4_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_324_224.001.R1_clean.fastq.gz /Volumes/sandbox/C1_RD-4/C1_RD-4_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_324_224.001.R1_garbage.fastq.gz /Volumes/sandbox/C1_RD-4/C1_RD-4_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_324_224.001.R2_clean.fastq.gz /Volumes/sandbox/C1_RD-4/C1_RD-4_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_324_224.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:11 	 working with sample C3_RD-1
+2025-01-20 00:19:11 	 about to clean novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_300_200.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/C3_RD-1/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_300_200.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/C3_RD-1/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_300_200.001.R2.fastq.gz /Volumes/sandbox/C3_RD-1/C3_RD-1_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_300_200.001.R1_clean.fastq.gz /Volumes/sandbox/C3_RD-1/C3_RD-1_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_300_200.001.R1_garbage.fastq.gz /Volumes/sandbox/C3_RD-1/C3_RD-1_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_300_200.001.R2_clean.fastq.gz /Volumes/sandbox/C3_RD-1/C3_RD-1_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_300_200.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:11 	 working with sample C3_RD-13
+2025-01-20 00:19:11 	 about to clean novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_301_201.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/C3_RD-13/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_301_201.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/C3_RD-13/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_301_201.001.R2.fastq.gz /Volumes/sandbox/C3_RD-13/C3_RD-13_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_301_201.001.R1_clean.fastq.gz /Volumes/sandbox/C3_RD-13/C3_RD-13_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_301_201.001.R1_garbage.fastq.gz /Volumes/sandbox/C3_RD-13/C3_RD-13_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_301_201.001.R2_clean.fastq.gz /Volumes/sandbox/C3_RD-13/C3_RD-13_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_301_201.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/C3_RD-13/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_301_201.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/C3_RD-13/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_301_201.001.R2.fastq.gz /Volumes/sandbox/C3_RD-13/C3_RD-13_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_301_201.001.R1_clean.fastq.gz /Volumes/sandbox/C3_RD-13/C3_RD-13_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_301_201.001.R1_garbage.fastq.gz /Volumes/sandbox/C3_RD-13/C3_RD-13_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_301_201.001.R2_clean.fastq.gz /Volumes/sandbox/C3_RD-13/C3_RD-13_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_301_201.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.091s
+user	0m0.079s
+sys	0m0.030s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/C3_RD-7/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_348_248.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/C3_RD-7/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_348_248.001.R2.fastq.gz /Volumes/sandbox/C3_RD-7/C3_RD-7_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_348_248.001.R1_clean.fastq.gz /Volumes/sandbox/C3_RD-7/C3_RD-7_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_348_248.001.R1_garbage.fastq.gz /Volumes/sandbox/C3_RD-7/C3_RD-7_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_348_248.001.R2_clean.fastq.gz /Volumes/sandbox/C3_RD-7/C3_RD-7_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_348_248.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.081s
+user	0m0.046s
+sys	0m0.029s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/KO13_VHN-11/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_358_258.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/KO13_VHN-11/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_358_258.001.R2.fastq.gz /Volumes/sandbox/KO13_VHN-11/KO13_VHN-11_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_358_258.001.R1_clean.fastq.gz /Volumes/sandbox/KO13_VHN-11/KO13_VHN-11_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_358_258.001.R1_garbage.fastq.gz /Volumes/sandbox/KO13_VHN-11/KO13_VHN-11_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_358_258.001.R2_clean.fastq.gz /Volumes/sandbox/KO13_VHN-11/KO13_VHN-11_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_358_258.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.067s
+user	0m0.046s
+sys	0m0.028s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/KO13_VHN-3/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_389_289.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/KO13_VHN-3/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_389_289.001.R2.fastq.gz /Volumes/sandbox/KO13_VHN-3/KO13_VHN-3_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_389_289.001.R1_clean.fastq.gz /Volumes/sandbox/KO13_VHN-3/KO13_VHN-3_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_389_289.001.R1_garbage.fastq.gz /Volumes/sandbox/KO13_VHN-3/KO13_VHN-3_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_389_289.001.R2_clean.fastq.gz /Volumes/sandbox/KO13_VHN-3/KO13_VHN-3_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_389_289.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.091s
+user	0m0.080s
+sys	0m0.030s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/KO13_VHN-7/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_326_226.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/KO13_VHN-7/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_326_226.001.R2.fastq.gz /Volumes/sandbox/KO13_VHN-7/KO13_VHN-7_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_326_226.001.R1_clean.fastq.gz /Volumes/sandbox/KO13_VHN-7/KO13_VHN-7_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_326_226.001.R1_garbage.fastq.gz /Volumes/sandbox/KO13_VHN-7/KO13_VHN-7_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_326_226.001.R2_clean.fastq.gz /Volumes/sandbox/KO13_VHN-7/KO13_VHN-7_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_326_226.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.082s
+user	0m0.048s
+sys	0m0.029s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/KO17_VHN-12/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_366_266.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/KO17_VHN-12/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_366_266.001.R2.fastq.gz /Volumes/sandbox/KO17_VHN-12/KO17_VHN-12_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_366_266.001.R1_clean.fastq.gz /Volumes/sandbox/KO17_VHN-12/KO17_VHN-12_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_366_266.001.R1_garbage.fastq.gz /Volumes/sandbox/KO17_VHN-12/KO17_VHN-12_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_366_266.001.R2_clean.fastq.gz /Volumes/sandbox/KO17_VHN-12/KO17_VHN-12_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_366_266.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.068s
+user	0m0.047s
+sys	0m0.029s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/KO17_VHN-4/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_302_202.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/KO17_VHN-4/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_302_202.001.R2.fastq.gz /Volumes/sandbox/KO17_VHN-4/KO17_VHN-4_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_302_202.001.R1_clean.fastq.gz /Volumes/sandbox/KO17_VHN-4/KO17_VHN-4_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_302_202.001.R1_garbage.fastq.gz /Volumes/sandbox/KO17_VHN-4/KO17_VHN-4_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_302_202.001.R2_clean.fastq.gz /Volumes/sandbox/KO17_VHN-4/KO17_VHN-4_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_302_202.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.091s
+user	0m0.089s
+sys	0m0.031s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/KO17_VHN-8/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_334_234.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/KO17_VHN-8/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_334_234.001.R2.fastq.gz /Volumes/sandbox/KO17_VHN-8/KO17_VHN-8_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_334_234.001.R1_clean.fastq.gz /Volumes/sandbox/KO17_VHN-8/KO17_VHN-8_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_334_234.001.R1_garbage.fastq.gz /Volumes/sandbox/KO17_VHN-8/KO17_VHN-8_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_334_234.001.R2_clean.fastq.gz /Volumes/sandbox/KO17_VHN-8/KO17_VHN-8_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_334_234.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.067s
+user	0m0.046s
+sys	0m0.028s
+
+
+
+2025-01-20 00:19:11 	 working with sample C3_RD-7
+2025-01-20 00:19:11 	 about to clean novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_348_248.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/C3_RD-7/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_348_248.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/C3_RD-7/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_348_248.001.R2.fastq.gz /Volumes/sandbox/C3_RD-7/C3_RD-7_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_348_248.001.R1_clean.fastq.gz /Volumes/sandbox/C3_RD-7/C3_RD-7_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_348_248.001.R1_garbage.fastq.gz /Volumes/sandbox/C3_RD-7/C3_RD-7_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_348_248.001.R2_clean.fastq.gz /Volumes/sandbox/C3_RD-7/C3_RD-7_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_348_248.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:11 	 working with sample KO13_VHN-11
+2025-01-20 00:19:11 	 about to clean novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_358_258.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/KO13_VHN-11/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_358_258.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/KO13_VHN-11/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_358_258.001.R2.fastq.gz /Volumes/sandbox/KO13_VHN-11/KO13_VHN-11_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_358_258.001.R1_clean.fastq.gz /Volumes/sandbox/KO13_VHN-11/KO13_VHN-11_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_358_258.001.R1_garbage.fastq.gz /Volumes/sandbox/KO13_VHN-11/KO13_VHN-11_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_358_258.001.R2_clean.fastq.gz /Volumes/sandbox/KO13_VHN-11/KO13_VHN-11_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_358_258.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:12 	 working with sample KO13_VHN-3
+2025-01-20 00:19:12 	 about to clean novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_389_289.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/KO13_VHN-3/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_389_289.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/KO13_VHN-3/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_389_289.001.R2.fastq.gz /Volumes/sandbox/KO13_VHN-3/KO13_VHN-3_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_389_289.001.R1_clean.fastq.gz /Volumes/sandbox/KO13_VHN-3/KO13_VHN-3_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_389_289.001.R1_garbage.fastq.gz /Volumes/sandbox/KO13_VHN-3/KO13_VHN-3_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_389_289.001.R2_clean.fastq.gz /Volumes/sandbox/KO13_VHN-3/KO13_VHN-3_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_389_289.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:12 	 working with sample KO13_VHN-7
+2025-01-20 00:19:12 	 about to clean novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_326_226.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/KO13_VHN-7/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_326_226.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/KO13_VHN-7/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_326_226.001.R2.fastq.gz /Volumes/sandbox/KO13_VHN-7/KO13_VHN-7_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_326_226.001.R1_clean.fastq.gz /Volumes/sandbox/KO13_VHN-7/KO13_VHN-7_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_326_226.001.R1_garbage.fastq.gz /Volumes/sandbox/KO13_VHN-7/KO13_VHN-7_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_326_226.001.R2_clean.fastq.gz /Volumes/sandbox/KO13_VHN-7/KO13_VHN-7_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_326_226.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:12 	 working with sample KO17_VHN-12
+2025-01-20 00:19:12 	 about to clean novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_366_266.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/KO17_VHN-12/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_366_266.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/KO17_VHN-12/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_366_266.001.R2.fastq.gz /Volumes/sandbox/KO17_VHN-12/KO17_VHN-12_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_366_266.001.R1_clean.fastq.gz /Volumes/sandbox/KO17_VHN-12/KO17_VHN-12_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_366_266.001.R1_garbage.fastq.gz /Volumes/sandbox/KO17_VHN-12/KO17_VHN-12_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_366_266.001.R2_clean.fastq.gz /Volumes/sandbox/KO17_VHN-12/KO17_VHN-12_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_3_366_266.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:12 	 working with sample KO17_VHN-4
+2025-01-20 00:19:12 	 about to clean novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_302_202.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/KO17_VHN-4/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_302_202.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/KO17_VHN-4/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_302_202.001.R2.fastq.gz /Volumes/sandbox/KO17_VHN-4/KO17_VHN-4_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_302_202.001.R1_clean.fastq.gz /Volumes/sandbox/KO17_VHN-4/KO17_VHN-4_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_302_202.001.R1_garbage.fastq.gz /Volumes/sandbox/KO17_VHN-4/KO17_VHN-4_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_302_202.001.R2_clean.fastq.gz /Volumes/sandbox/KO17_VHN-4/KO17_VHN-4_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_302_202.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:12 	 working with sample KO17_VHN-8
+2025-01-20 00:19:12 	 about to clean novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_334_234.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/KO17_VHN-8/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_334_234.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/KO17_VHN-8/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_334_234.001.R2.fastq.gz /Volumes/sandbox/KO17_VHN-8/KO17_VHN-8_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_334_234.001.R1_clean.fastq.gz /Volumes/sandbox/KO17_VHN-8/KO17_VHN-8_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_334_234.001.R1_garbage.fastq.gz /Volumes/sandbox/KO17_VHN-8/KO17_VHN-8_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_334_234.001.R2_clean.fastq.gz /Volumes/sandbox/KO17_VHN-8/KO17_VHN-8_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_334_234.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:12 	 working with sample KO24_VHN-1
+2025-01-20 00:19:12 	 about to clean novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_373_273.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/KO24_VHN-1/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_373_273.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/KO24_VHN-1/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_373_273.001.R2.fastq.gz /Volumes/sandbox/KO24_VHN-1/KO24_VHN-1_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_373_273.001.R1_clean.fastq.gz /Volumes/sandbox/KO24_VHN-1/KO24_VHN-1_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_373_273.001.R1_garbage.fastq.gz /Volumes/sandbox/KO24_VHN-1/KO24_VHN-1_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_373_273.001.R2_clean.fastq.gz /Volumes/sandbox/KO24_VHN-1/KO24_VHN-1_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_373_273.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/KO24_VHN-1/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_373_273.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/KO24_VHN-1/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_373_273.001.R2.fastq.gz /Volumes/sandbox/KO24_VHN-1/KO24_VHN-1_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_373_273.001.R1_clean.fastq.gz /Volumes/sandbox/KO24_VHN-1/KO24_VHN-1_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_373_273.001.R1_garbage.fastq.gz /Volumes/sandbox/KO24_VHN-1/KO24_VHN-1_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_373_273.001.R2_clean.fastq.gz /Volumes/sandbox/KO24_VHN-1/KO24_VHN-1_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_4_373_273.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.095s
+user	0m0.111s
+sys	0m0.032s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/KO24_VHN-5/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_310_210.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/KO24_VHN-5/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_310_210.001.R2.fastq.gz /Volumes/sandbox/KO24_VHN-5/KO24_VHN-5_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_310_210.001.R1_clean.fastq.gz /Volumes/sandbox/KO24_VHN-5/KO24_VHN-5_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_310_210.001.R1_garbage.fastq.gz /Volumes/sandbox/KO24_VHN-5/KO24_VHN-5_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_310_210.001.R2_clean.fastq.gz /Volumes/sandbox/KO24_VHN-5/KO24_VHN-5_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_310_210.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.067s
+user	0m0.047s
+sys	0m0.029s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/KO24_VHN-9/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_342_242.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/KO24_VHN-9/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_342_242.001.R2.fastq.gz /Volumes/sandbox/KO24_VHN-9/KO24_VHN-9_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_342_242.001.R1_clean.fastq.gz /Volumes/sandbox/KO24_VHN-9/KO24_VHN-9_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_342_242.001.R1_garbage.fastq.gz /Volumes/sandbox/KO24_VHN-9/KO24_VHN-9_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_342_242.001.R2_clean.fastq.gz /Volumes/sandbox/KO24_VHN-9/KO24_VHN-9_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_342_242.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.093s
+user	0m0.098s
+sys	0m0.031s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/ev_01/EV-SKmel28-rep1-R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/ev_01/EV-SKmel28-rep1-R2.fastq.gz /Volumes/sandbox/ev_01/ev_01_EV-SKmel28-rep1-R1_clean.fastq.gz /Volumes/sandbox/ev_01/ev_01_EV-SKmel28-rep1-R1_garbage.fastq.gz /Volumes/sandbox/ev_01/ev_01_EV-SKmel28-rep1-R2_clean.fastq.gz /Volumes/sandbox/ev_01/ev_01_EV-SKmel28-rep1-R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m1.393s
+user	0m4.974s
+sys	0m0.143s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/ev_02/EV-SKmel28-rep2-R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/ev_02/EV-SKmel28-rep2-R2.fastq.gz /Volumes/sandbox/ev_02/ev_02_EV-SKmel28-rep2-R1_clean.fastq.gz /Volumes/sandbox/ev_02/ev_02_EV-SKmel28-rep2-R1_garbage.fastq.gz /Volumes/sandbox/ev_02/ev_02_EV-SKmel28-rep2-R2_clean.fastq.gz /Volumes/sandbox/ev_02/ev_02_EV-SKmel28-rep2-R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.488s
+user	0m2.315s
+sys	0m0.090s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/ev_03/EV-SKmel28-rep3-R1.fq.gz /Users/adrian/Nextcloud/door2necio5/019/ev_03/EV-SKmel28-rep3-R2.fq.gz /Volumes/sandbox/ev_03/ev_03_EV-SKmel28-rep3-R1_clean.fastq.gz /Volumes/sandbox/ev_03/ev_03_EV-SKmel28-rep3-R1_garbage.fastq.gz /Volumes/sandbox/ev_03/ev_03_EV-SKmel28-rep3-R2_clean.fastq.gz /Volumes/sandbox/ev_03/ev_03_EV-SKmel28-rep3-R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.067s
+user	0m0.047s
+sys	0m0.029s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/ev_04/EV-SKmel28-rep4-R1.fq.gz /Users/adrian/Nextcloud/door2necio5/019/ev_04/EV-SKmel28-rep4-R2.fq.gz /Volumes/sandbox/ev_04/ev_04_EV-SKmel28-rep4-R1_clean.fastq.gz /Volumes/sandbox/ev_04/ev_04_EV-SKmel28-rep4-R1_garbage.fastq.gz /Volumes/sandbox/ev_04/ev_04_EV-SKmel28-rep4-R2_clean.fastq.gz /Volumes/sandbox/ev_04/ev_04_EV-SKmel28-rep4-R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.091s
+user	0m0.086s
+sys	0m0.030s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/siCTRL_1/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_308_208.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/siCTRL_1/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_308_208.001.R2.fastq.gz /Volumes/sandbox/siCTRL_1/siCTRL_1_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_308_208.001.R1_clean.fastq.gz /Volumes/sandbox/siCTRL_1/siCTRL_1_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_308_208.001.R1_garbage.fastq.gz /Volumes/sandbox/siCTRL_1/siCTRL_1_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_308_208.001.R2_clean.fastq.gz /Volumes/sandbox/siCTRL_1/siCTRL_1_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_308_208.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.069s
+user	0m0.048s
+sys	0m0.028s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/siCTRL_2/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_348_248.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/siCTRL_2/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_348_248.001.R2.fastq.gz /Volumes/sandbox/siCTRL_2/siCTRL_2_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_348_248.001.R1_clean.fastq.gz /Volumes/sandbox/siCTRL_2/siCTRL_2_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_348_248.001.R1_garbage.fastq.gz /Volumes/sandbox/siCTRL_2/siCTRL_2_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_348_248.001.R2_clean.fastq.gz /Volumes/sandbox/siCTRL_2/siCTRL_2_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_348_248.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.093s
+user	0m0.093s
+sys	0m0.030s
+
+
+
+2025-01-20 00:19:12 	 working with sample KO24_VHN-5
+2025-01-20 00:19:12 	 about to clean novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_310_210.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/KO24_VHN-5/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_310_210.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/KO24_VHN-5/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_310_210.001.R2.fastq.gz /Volumes/sandbox/KO24_VHN-5/KO24_VHN-5_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_310_210.001.R1_clean.fastq.gz /Volumes/sandbox/KO24_VHN-5/KO24_VHN-5_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_310_210.001.R1_garbage.fastq.gz /Volumes/sandbox/KO24_VHN-5/KO24_VHN-5_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_310_210.001.R2_clean.fastq.gz /Volumes/sandbox/KO24_VHN-5/KO24_VHN-5_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_310_210.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:12 	 working with sample KO24_VHN-9
+2025-01-20 00:19:12 	 about to clean novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_342_242.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/KO24_VHN-9/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_342_242.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/KO24_VHN-9/novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_342_242.001.R2.fastq.gz /Volumes/sandbox/KO24_VHN-9/KO24_VHN-9_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_342_242.001.R1_clean.fastq.gz /Volumes/sandbox/KO24_VHN-9/KO24_VHN-9_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_342_242.001.R1_garbage.fastq.gz /Volumes/sandbox/KO24_VHN-9/KO24_VHN-9_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_342_242.001.R2_clean.fastq.gz /Volumes/sandbox/KO24_VHN-9/KO24_VHN-9_novaseq05_201016_A00394_0613_BHCN3LDSXY.s_2_342_242.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:12 	 working with sample ev_01
+2025-01-20 00:19:12 	 about to clean EV-SKmel28-rep1-
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/ev_01/EV-SKmel28-rep1-R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/ev_01/EV-SKmel28-rep1-R2.fastq.gz /Volumes/sandbox/ev_01/ev_01_EV-SKmel28-rep1-R1_clean.fastq.gz /Volumes/sandbox/ev_01/ev_01_EV-SKmel28-rep1-R1_garbage.fastq.gz /Volumes/sandbox/ev_01/ev_01_EV-SKmel28-rep1-R2_clean.fastq.gz /Volumes/sandbox/ev_01/ev_01_EV-SKmel28-rep1-R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:14 	 working with sample ev_02
+2025-01-20 00:19:14 	 about to clean EV-SKmel28-rep2-
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/ev_02/EV-SKmel28-rep2-R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/ev_02/EV-SKmel28-rep2-R2.fastq.gz /Volumes/sandbox/ev_02/ev_02_EV-SKmel28-rep2-R1_clean.fastq.gz /Volumes/sandbox/ev_02/ev_02_EV-SKmel28-rep2-R1_garbage.fastq.gz /Volumes/sandbox/ev_02/ev_02_EV-SKmel28-rep2-R2_clean.fastq.gz /Volumes/sandbox/ev_02/ev_02_EV-SKmel28-rep2-R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:14 	 working with sample ev_03
+2025-01-20 00:19:14 	 about to clean EV-SKmel28-rep3-
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/ev_03/EV-SKmel28-rep3-R1.fq.gz /Users/adrian/Nextcloud/door2necio5/019/ev_03/EV-SKmel28-rep3-R2.fq.gz /Volumes/sandbox/ev_03/ev_03_EV-SKmel28-rep3-R1_clean.fastq.gz /Volumes/sandbox/ev_03/ev_03_EV-SKmel28-rep3-R1_garbage.fastq.gz /Volumes/sandbox/ev_03/ev_03_EV-SKmel28-rep3-R2_clean.fastq.gz /Volumes/sandbox/ev_03/ev_03_EV-SKmel28-rep3-R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:14 	 working with sample ev_04
+2025-01-20 00:19:14 	 about to clean EV-SKmel28-rep4-
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/ev_04/EV-SKmel28-rep4-R1.fq.gz /Users/adrian/Nextcloud/door2necio5/019/ev_04/EV-SKmel28-rep4-R2.fq.gz /Volumes/sandbox/ev_04/ev_04_EV-SKmel28-rep4-R1_clean.fastq.gz /Volumes/sandbox/ev_04/ev_04_EV-SKmel28-rep4-R1_garbage.fastq.gz /Volumes/sandbox/ev_04/ev_04_EV-SKmel28-rep4-R2_clean.fastq.gz /Volumes/sandbox/ev_04/ev_04_EV-SKmel28-rep4-R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:14 	 working with sample siCTRL_1
+2025-01-20 00:19:14 	 about to clean novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_308_208.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/siCTRL_1/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_308_208.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/siCTRL_1/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_308_208.001.R2.fastq.gz /Volumes/sandbox/siCTRL_1/siCTRL_1_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_308_208.001.R1_clean.fastq.gz /Volumes/sandbox/siCTRL_1/siCTRL_1_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_308_208.001.R1_garbage.fastq.gz /Volumes/sandbox/siCTRL_1/siCTRL_1_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_308_208.001.R2_clean.fastq.gz /Volumes/sandbox/siCTRL_1/siCTRL_1_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_308_208.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:14 	 working with sample siCTRL_2
+2025-01-20 00:19:14 	 about to clean novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_348_248.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/siCTRL_2/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_348_248.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/siCTRL_2/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_348_248.001.R2.fastq.gz /Volumes/sandbox/siCTRL_2/siCTRL_2_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_348_248.001.R1_clean.fastq.gz /Volumes/sandbox/siCTRL_2/siCTRL_2_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_348_248.001.R1_garbage.fastq.gz /Volumes/sandbox/siCTRL_2/siCTRL_2_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_348_248.001.R2_clean.fastq.gz /Volumes/sandbox/siCTRL_2/siCTRL_2_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_348_248.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:14 	 working with sample siCTRL_3
+2025-01-20 00:19:14 	 about to clean novaseq09_191030_A00841_0045_AHTYHNDSXX.s_4_388_288.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/siCTRL_3/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_4_388_288.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/siCTRL_3/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_4_388_288.001.R2.fastq.gz /Volumes/sandbox/siCTRL_3/siCTRL_3_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_4_388_288.001.R1_clean.fastq.gz /Volumes/sandbox/siCTRL_3/siCTRL_3_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_4_388_288.001.R1_garbage.fastq.gz /Volumes/sandbox/siCTRL_3/siCTRL_3_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_4_388_288.001.R2_clean.fastq.gz /Volumes/sandbox/siCTRL_3/siCTRL_3_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_4_388_288.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/siCTRL_3/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_4_388_288.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/siCTRL_3/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_4_388_288.001.R2.fastq.gz /Volumes/sandbox/siCTRL_3/siCTRL_3_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_4_388_288.001.R1_clean.fastq.gz /Volumes/sandbox/siCTRL_3/siCTRL_3_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_4_388_288.001.R1_garbage.fastq.gz /Volumes/sandbox/siCTRL_3/siCTRL_3_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_4_388_288.001.R2_clean.fastq.gz /Volumes/sandbox/siCTRL_3/siCTRL_3_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_4_388_288.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.069s
+user	0m0.047s
+sys	0m0.029s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/siMITF_1/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_316_216.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/siMITF_1/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_316_216.001.R2.fastq.gz /Volumes/sandbox/siMITF_1/siMITF_1_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_316_216.001.R1_clean.fastq.gz /Volumes/sandbox/siMITF_1/siMITF_1_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_316_216.001.R1_garbage.fastq.gz /Volumes/sandbox/siMITF_1/siMITF_1_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_316_216.001.R2_clean.fastq.gz /Volumes/sandbox/siMITF_1/siMITF_1_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_316_216.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.092s
+user	0m0.088s
+sys	0m0.030s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/siMITF_2/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_356_256.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/siMITF_2/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_356_256.001.R2.fastq.gz /Volumes/sandbox/siMITF_2/siMITF_2_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_356_256.001.R1_clean.fastq.gz /Volumes/sandbox/siMITF_2/siMITF_2_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_356_256.001.R1_garbage.fastq.gz /Volumes/sandbox/siMITF_2/siMITF_2_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_356_256.001.R2_clean.fastq.gz /Volumes/sandbox/siMITF_2/siMITF_2_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_356_256.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.068s
+user	0m0.047s
+sys	0m0.029s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/siMITF_3/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_301_201.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/siMITF_3/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_301_201.001.R2.fastq.gz /Volumes/sandbox/siMITF_3/siMITF_3_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_301_201.001.R1_clean.fastq.gz /Volumes/sandbox/siMITF_3/siMITF_3_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_301_201.001.R1_garbage.fastq.gz /Volumes/sandbox/siMITF_3/siMITF_3_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_301_201.001.R2_clean.fastq.gz /Volumes/sandbox/siMITF_3/siMITF_3_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_301_201.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.092s
+user	0m0.087s
+sys	0m0.030s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/x6_01/MITF-X6-rep1-R1.fq.gz /Users/adrian/Nextcloud/door2necio5/019/x6_01/MITF-X6-rep1-R2.fq.gz /Volumes/sandbox/x6_01/x6_01_MITF-X6-rep1-R1_clean.fastq.gz /Volumes/sandbox/x6_01/x6_01_MITF-X6-rep1-R1_garbage.fastq.gz /Volumes/sandbox/x6_01/x6_01_MITF-X6-rep1-R2_clean.fastq.gz /Volumes/sandbox/x6_01/x6_01_MITF-X6-rep1-R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.082s
+user	0m0.050s
+sys	0m0.029s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/x6_02/MITF-X6-rep2-R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/x6_02/MITF-X6-rep2-R2.fastq.gz /Volumes/sandbox/x6_02/x6_02_MITF-X6-rep2-R1_clean.fastq.gz /Volumes/sandbox/x6_02/x6_02_MITF-X6-rep2-R1_garbage.fastq.gz /Volumes/sandbox/x6_02/x6_02_MITF-X6-rep2-R2_clean.fastq.gz /Volumes/sandbox/x6_02/x6_02_MITF-X6-rep2-R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Exception in thread "main" java.util.zip.ZipException: Not in GZIP format
+	at java.base/java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:199)
+	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:82)
+	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:114)
+	at org.usadellab.trimmomatic.util.ConcatGZIPInputStream$GZIPHelperInputStream.<init>(ConcatGZIPInputStream.java:100)
+	at org.usadellab.trimmomatic.util.ConcatGZIPInputStream$GZIPHelperInputStream.<init>(ConcatGZIPInputStream.java:96)
+	at org.usadellab.trimmomatic.util.ConcatGZIPInputStream.nextGzipInputStream(ConcatGZIPInputStream.java:38)
+	at org.usadellab.trimmomatic.util.ConcatGZIPInputStream.<init>(ConcatGZIPInputStream.java:16)
+	at org.usadellab.trimmomatic.fastq.FastqParser.parse(FastqParser.java:140)
+	at org.usadellab.trimmomatic.TrimmomaticPE.process(TrimmomaticPE.java:268)
+	at org.usadellab.trimmomatic.TrimmomaticPE.run(TrimmomaticPE.java:555)
+	at org.usadellab.trimmomatic.Trimmomatic.main(Trimmomatic.java:80)
+
+real	0m0.060s
+user	0m0.032s
+sys	0m0.026s
+TrimmomaticPE: Started with arguments:
+ -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/x6_04/MITF-X6-rep-4-R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/x6_04/MITF-X6-rep-4-R2.fastq.gz /Volumes/sandbox/x6_04/x6_04_MITF-X6-rep-4-R1_clean.fastq.gz /Volumes/sandbox/x6_04/x6_04_MITF-X6-rep-4-R1_garbage.fastq.gz /Volumes/sandbox/x6_04/x6_04_MITF-X6-rep-4-R2_clean.fastq.gz /Volumes/sandbox/x6_04/x6_04_MITF-X6-rep-4-R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+
+real	0m0.099s
+user	0m0.120s
+sys	0m0.032s
+
+
+
+2025-01-20 00:19:14 	 working with sample siMITF_1
+2025-01-20 00:19:14 	 about to clean novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_316_216.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/siMITF_1/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_316_216.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/siMITF_1/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_316_216.001.R2.fastq.gz /Volumes/sandbox/siMITF_1/siMITF_1_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_316_216.001.R1_clean.fastq.gz /Volumes/sandbox/siMITF_1/siMITF_1_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_316_216.001.R1_garbage.fastq.gz /Volumes/sandbox/siMITF_1/siMITF_1_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_316_216.001.R2_clean.fastq.gz /Volumes/sandbox/siMITF_1/siMITF_1_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_316_216.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:15 	 working with sample siMITF_2
+2025-01-20 00:19:15 	 about to clean novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_356_256.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/siMITF_2/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_356_256.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/siMITF_2/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_356_256.001.R2.fastq.gz /Volumes/sandbox/siMITF_2/siMITF_2_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_356_256.001.R1_clean.fastq.gz /Volumes/sandbox/siMITF_2/siMITF_2_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_356_256.001.R1_garbage.fastq.gz /Volumes/sandbox/siMITF_2/siMITF_2_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_356_256.001.R2_clean.fastq.gz /Volumes/sandbox/siMITF_2/siMITF_2_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_3_356_256.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:15 	 working with sample siMITF_3
+2025-01-20 00:19:15 	 about to clean novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_301_201.001.
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/siMITF_3/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_301_201.001.R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/siMITF_3/novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_301_201.001.R2.fastq.gz /Volumes/sandbox/siMITF_3/siMITF_3_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_301_201.001.R1_clean.fastq.gz /Volumes/sandbox/siMITF_3/siMITF_3_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_301_201.001.R1_garbage.fastq.gz /Volumes/sandbox/siMITF_3/siMITF_3_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_301_201.001.R2_clean.fastq.gz /Volumes/sandbox/siMITF_3/siMITF_3_novaseq09_191030_A00841_0045_AHTYHNDSXX.s_1_301_201.001.R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:15 	 working with sample x6_01
+2025-01-20 00:19:15 	 about to clean MITF-X6-rep1-
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/x6_01/MITF-X6-rep1-R1.fq.gz /Users/adrian/Nextcloud/door2necio5/019/x6_01/MITF-X6-rep1-R2.fq.gz /Volumes/sandbox/x6_01/x6_01_MITF-X6-rep1-R1_clean.fastq.gz /Volumes/sandbox/x6_01/x6_01_MITF-X6-rep1-R1_garbage.fastq.gz /Volumes/sandbox/x6_01/x6_01_MITF-X6-rep1-R2_clean.fastq.gz /Volumes/sandbox/x6_01/x6_01_MITF-X6-rep1-R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:15 	 working with sample x6_02
+2025-01-20 00:19:15 	 about to clean MITF-X6-rep2-
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/x6_02/MITF-X6-rep2-R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/x6_02/MITF-X6-rep2-R2.fastq.gz /Volumes/sandbox/x6_02/x6_02_MITF-X6-rep2-R1_clean.fastq.gz /Volumes/sandbox/x6_02/x6_02_MITF-X6-rep2-R1_garbage.fastq.gz /Volumes/sandbox/x6_02/x6_02_MITF-X6-rep2-R2_clean.fastq.gz /Volumes/sandbox/x6_02/x6_02_MITF-X6-rep2-R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:15 	 working with sample x6_03
+2025-01-20 00:19:15 	 about to clean MITF-X6-rep-3-
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/x6_03/MITF-X6-rep-3-R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/x6_03/MITF-X6-rep-3-R2.fastq.gz /Volumes/sandbox/x6_03/x6_03_MITF-X6-rep-3-R1_clean.fastq.gz /Volumes/sandbox/x6_03/x6_03_MITF-X6-rep-3-R1_garbage.fastq.gz /Volumes/sandbox/x6_03/x6_03_MITF-X6-rep-3-R2_clean.fastq.gz /Volumes/sandbox/x6_03/x6_03_MITF-X6-rep-3-R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2025-01-20 00:19:15 	 working with sample x6_04
+2025-01-20 00:19:15 	 about to clean MITF-X6-rep-4-
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 8 -phred33 /Users/adrian/Nextcloud/door2necio5/019/x6_04/MITF-X6-rep-4-R1.fastq.gz /Users/adrian/Nextcloud/door2necio5/019/x6_04/MITF-X6-rep-4-R2.fastq.gz /Volumes/sandbox/x6_04/x6_04_MITF-X6-rep-4-R1_clean.fastq.gz /Volumes/sandbox/x6_04/x6_04_MITF-X6-rep-4-R1_garbage.fastq.gz /Volumes/sandbox/x6_04/x6_04_MITF-X6-rep-4-R2_clean.fastq.gz /Volumes/sandbox/x6_04/x6_04_MITF-X6-rep-4-R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
