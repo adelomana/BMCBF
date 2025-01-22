@@ -91,5 +91,5 @@ print(p5)
 # arguably this plot communicates best data patterns, IMHO
 
 # importantly, store your fuctional enrichment in a form of table which will be a supplementary file of your paper
-storage_file = 'clusterProfiler_enrichments_RP.tsv'
+storage_file = 'clusterProfiler_enrichments.tsv'
 write.table(ck@compareClusterResult, storage_file, quote=FALSE, sep='\t')
