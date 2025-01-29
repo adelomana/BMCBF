@@ -138,7 +138,6 @@ date
 # 0. user-defined variables
 #
 raw_fastq_dir = '/hpcdata/Mimir/adrian/entrance2nextcloud/019/' #019
-clean_fastq_dir = '/hpcdata/Mimir/adrian/research/019/clean_fastq/'
 trimmomatic_path = '/users/home/adrian/software/Trimmomatic-0.39/'
 adapter_file = trimmomatic_path + 'adapters/TruSeq3-PE-2.fa'
 number_threads = 4
