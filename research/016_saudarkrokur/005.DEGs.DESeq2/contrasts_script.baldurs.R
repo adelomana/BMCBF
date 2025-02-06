@@ -6,7 +6,7 @@ rm(list = ls())
 # if (!require("BiocManager", quietly = TRUE))
 #   install.packages("BiocManager")
 # 
-# BiocManager::install("DESeq2")
+# BiocManager::install("tximport")
 
 #
 # 0. load libraries
@@ -32,8 +32,8 @@ results_dir = '/Users/adrian/research/016.saudarkrokur/results/deseq2'
 listEnsembl()
 listEnsembl(version=113)
 
-ensembl = useEnsembl(biomart="ensembl", verbose=TRUE)
-#ensembl = useEnsembl(biomart="ensembl", verbose=TRUE, mirror='www')
+#ensembl = useEnsembl(biomart="ensembl", verbose=TRUE)
+ensembl = useEnsembl(biomart="ensembl", verbose=TRUE, mirror='www')
 #ensembl = useEnsembl(biomart="ensembl", verbose=TRUE, mirror='useast')
 #ensembl = useEnsembl(biomart="ensembl", verbose=TRUE, mirror='asia')
 
@@ -81,6 +81,7 @@ contrasts[[1]] = c('ko', 'wt')
 contrasts[[2]] = c('h1M8', 'ko')
 contrasts[[3]] = c('h2F14', 'wt')
 contrasts[[4]] = c('h2M8', 'wt')
+contrasts[[5]] = c('h2M8', 'h2F14')
 
 contrast_maker <- function(contrast){
   
