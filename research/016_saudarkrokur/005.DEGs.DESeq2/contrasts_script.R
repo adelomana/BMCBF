@@ -81,7 +81,6 @@ contrasts[[1]] = c('ko', 'wt')
 contrasts[[2]] = c('h1M8', 'ko')
 contrasts[[3]] = c('h2F14', 'wt')
 contrasts[[4]] = c('h2M8', 'wt')
-contrasts[[5]] = c('h2M8', 'h2F14')
 
 contrast_maker <- function(contrast){
   
@@ -115,6 +114,9 @@ contrast_maker <- function(contrast){
   } else if (dim(working_metadata)[1] == 5) {
     a = counts(dds)[ , 1:2]
     b = counts(dds)[ , 3:5]
+  } else if (dim(working_metadata)[1] == 4) {
+    a = counts(dds)[ , 1:2]
+    b = counts(dds)[ , 3:4]
   } else {print('ERRRRRRROR')}
   c = rowMedians(a) - rowMedians(b)
   keep = abs(c) >= read_threshold
@@ -130,6 +132,9 @@ contrast_maker <- function(contrast){
   } else if (dim(working_metadata)[1] == 5) {
     a = rowMedians(subset[ , 1:2])
     b = rowMedians(subset[ , 3:5])
+  } else if (dim(working_metadata)[1] == 4) {
+    a = rowMedians(subset[ , 1:2])
+    b = rowMedians(subset[ , 3:4])
   } else {print('ERRRRRRROR')}
   c = pmax(a, b)
   keep = c >= tpm_threshold
@@ -154,6 +159,9 @@ contrast_maker <- function(contrast){
   } else if (dim(working_metadata)[1] == 5) {
     a = rowMedians(subset[ , 1:2])
     b = rowMedians(subset[ , 3:5])
+  } else if (dim(working_metadata)[1] == 4) {
+      a = rowMedians(subset[ , 1:2])
+      b = rowMedians(subset[ , 3:4])
   } else {print('ERRRRRRROR')}
   sorted_filtred_results[paste('expression', contrast[1], sep='')] = a
   sorted_filtred_results[paste('expression', contrast[2], sep='')] = b
