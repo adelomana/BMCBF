@@ -1,0 +1,318 @@
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_18_1/C_17_18_1_MKRN240009840-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_18_1/C_17_18_1_MKRN240009840-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_1/C_17_18_1_C_17_18_1_MKRN240009840-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_1/C_17_18_1_C_17_18_1_MKRN240009840-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_1/C_17_18_1_C_17_18_1_MKRN240009840-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_1/C_17_18_1_C_17_18_1_MKRN240009840-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 21707829 Both Surviving: 20560080 (94.71%) Forward Only Surviving: 1124347 (5.18%) Reverse Only Surviving: 17368 (0.08%) Dropped: 6034 (0.03%)
+TrimmomaticPE: Completed successfully
+
+real	10m47.522s
+user	29m21.455s
+sys	1m1.373s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_18_2/C_17_18_2_MKRN240009841-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_18_2/C_17_18_2_MKRN240009841-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_2/C_17_18_2_C_17_18_2_MKRN240009841-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_2/C_17_18_2_C_17_18_2_MKRN240009841-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_2/C_17_18_2_C_17_18_2_MKRN240009841-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_2/C_17_18_2_C_17_18_2_MKRN240009841-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 22537063 Both Surviving: 21283160 (94.44%) Forward Only Surviving: 1230831 (5.46%) Reverse Only Surviving: 17433 (0.08%) Dropped: 5639 (0.03%)
+TrimmomaticPE: Completed successfully
+
+real	11m51.341s
+user	32m8.697s
+sys	1m13.545s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_18_3/C_17_18_3_MKRN240009842-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_18_3/C_17_18_3_MKRN240009842-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_3/C_17_18_3_C_17_18_3_MKRN240009842-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_3/C_17_18_3_C_17_18_3_MKRN240009842-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_3/C_17_18_3_C_17_18_3_MKRN240009842-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_3/C_17_18_3_C_17_18_3_MKRN240009842-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 23596112 Both Surviving: 22556646 (95.59%) Forward Only Surviving: 1018404 (4.32%) Reverse Only Surviving: 16730 (0.07%) Dropped: 4332 (0.02%)
+TrimmomaticPE: Completed successfully
+
+real	14m4.739s
+user	37m51.087s
+sys	1m28.037s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_42_1/C_17_42_1_MKRN240009843-1A_227YCMLT4_L8_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_42_1/C_17_42_1_MKRN240009843-1A_227YCMLT4_L8_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_1/C_17_42_1_C_17_42_1_MKRN240009843-1A_227YCMLT4_L8_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_1/C_17_42_1_C_17_42_1_MKRN240009843-1A_227YCMLT4_L8_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_1/C_17_42_1_C_17_42_1_MKRN240009843-1A_227YCMLT4_L8_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_1/C_17_42_1_C_17_42_1_MKRN240009843-1A_227YCMLT4_L8_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 3845782 Both Surviving: 3747725 (97.45%) Forward Only Surviving: 94569 (2.46%) Reverse Only Surviving: 2935 (0.08%) Dropped: 553 (0.01%)
+TrimmomaticPE: Completed successfully
+
+real	2m19.895s
+user	6m22.012s
+sys	0m13.134s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_42_1/C_17_42_1_MKRN240009843-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_42_1/C_17_42_1_MKRN240009843-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_1/C_17_42_1_C_17_42_1_MKRN240009843-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_1/C_17_42_1_C_17_42_1_MKRN240009843-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_1/C_17_42_1_C_17_42_1_MKRN240009843-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_1/C_17_42_1_C_17_42_1_MKRN240009843-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 18142029 Both Surviving: 17674278 (97.42%) Forward Only Surviving: 450112 (2.48%) Reverse Only Surviving: 14402 (0.08%) Dropped: 3237 (0.02%)
+TrimmomaticPE: Completed successfully
+
+real	10m49.696s
+user	29m17.609s
+sys	0m58.830s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_42_2/C_17_42_2_MKRN240009844-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_42_2/C_17_42_2_MKRN240009844-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_2/C_17_42_2_C_17_42_2_MKRN240009844-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_2/C_17_42_2_C_17_42_2_MKRN240009844-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_2/C_17_42_2_C_17_42_2_MKRN240009844-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_2/C_17_42_2_C_17_42_2_MKRN240009844-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 24234208 Both Surviving: 23442639 (96.73%) Forward Only Surviving: 766773 (3.16%) Reverse Only Surviving: 19829 (0.08%) Dropped: 4967 (0.02%)
+TrimmomaticPE: Completed successfully
+
+real	14m16.913s
+user	39m3.310s
+sys	1m5.961s
+['C_17_18_1', 'C_17_18_2', 'C_17_18_3', 'C_17_42_1', 'C_17_42_2', 'C_17_42_3', 'C_KO1_63_1', 'C_KO1_63_2', 'C_KO1_63_3', 'C_WT_1', 'C_WT_2', 'C_WT_3']
+
+2024-08-07 13:18:34 	 working with sample C_17_18_1
+2024-08-07 13:18:34 	 about to clean C_17_18_1_MKRN240009840-1A_227NW7LT4_L7
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_18_1/C_17_18_1_MKRN240009840-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_18_1/C_17_18_1_MKRN240009840-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_1/C_17_18_1_C_17_18_1_MKRN240009840-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_1/C_17_18_1_C_17_18_1_MKRN240009840-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_1/C_17_18_1_C_17_18_1_MKRN240009840-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_1/C_17_18_1_C_17_18_1_MKRN240009840-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-08-07 13:29:21 	 working with sample C_17_18_2
+2024-08-07 13:29:21 	 about to clean C_17_18_2_MKRN240009841-1A_227NW7LT4_L7
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_18_2/C_17_18_2_MKRN240009841-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_18_2/C_17_18_2_MKRN240009841-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_2/C_17_18_2_C_17_18_2_MKRN240009841-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_2/C_17_18_2_C_17_18_2_MKRN240009841-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_2/C_17_18_2_C_17_18_2_MKRN240009841-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_2/C_17_18_2_C_17_18_2_MKRN240009841-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-08-07 13:41:13 	 working with sample C_17_18_3
+2024-08-07 13:41:13 	 about to clean C_17_18_3_MKRN240009842-1A_227NW7LT4_L7
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_18_3/C_17_18_3_MKRN240009842-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_18_3/C_17_18_3_MKRN240009842-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_3/C_17_18_3_C_17_18_3_MKRN240009842-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_3/C_17_18_3_C_17_18_3_MKRN240009842-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_3/C_17_18_3_C_17_18_3_MKRN240009842-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_18_3/C_17_18_3_C_17_18_3_MKRN240009842-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-08-07 13:55:17 	 working with sample C_17_42_1
+2024-08-07 13:55:17 	 about to clean C_17_42_1_MKRN240009843-1A_227YCMLT4_L8
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_42_1/C_17_42_1_MKRN240009843-1A_227YCMLT4_L8_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_42_1/C_17_42_1_MKRN240009843-1A_227YCMLT4_L8_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_1/C_17_42_1_C_17_42_1_MKRN240009843-1A_227YCMLT4_L8_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_1/C_17_42_1_C_17_42_1_MKRN240009843-1A_227YCMLT4_L8_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_1/C_17_42_1_C_17_42_1_MKRN240009843-1A_227YCMLT4_L8_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_1/C_17_42_1_C_17_42_1_MKRN240009843-1A_227YCMLT4_L8_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-08-07 13:57:37 	 about to clean C_17_42_1_MKRN240009843-1A_227NW7LT4_L7
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_42_1/C_17_42_1_MKRN240009843-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_42_1/C_17_42_1_MKRN240009843-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_1/C_17_42_1_C_17_42_1_MKRN240009843-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_1/C_17_42_1_C_17_42_1_MKRN240009843-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_1/C_17_42_1_C_17_42_1_MKRN240009843-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_1/C_17_42_1_C_17_42_1_MKRN240009843-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-08-07 14:08:27 	 working with sample C_17_42_2
+2024-08-07 14:08:27 	 about to clean C_17_42_2_MKRN240009844-1A_227NW7LT4_L7
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_42_2/C_17_42_2_MKRN240009844-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_42_2/C_17_42_2_MKRN240009844-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_2/C_17_42_2_C_17_42_2_MKRN240009844-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_2/C_17_42_2_C_17_42_2_MKRN240009844-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_2/C_17_42_2_C_17_42_2_MKRN240009844-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_2/C_17_42_2_C_17_42_2_MKRN240009844-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-08-07 14:22:44 	 working with sample C_17_42_3
+2024-08-07 14:22:44 	 about to clean C_17_42_3_MKRN240009845-1A_227NW7LT4_L7
+
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_42_3/C_17_42_3_MKRN240009845-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_42_3/C_17_42_3_MKRN240009845-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_3/C_17_42_3_C_17_42_3_MKRN240009845-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_3/C_17_42_3_C_17_42_3_MKRN240009845-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_3/C_17_42_3_C_17_42_3_MKRN240009845-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_3/C_17_42_3_C_17_42_3_MKRN240009845-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 20482739 Both Surviving: 19823950 (96.78%) Forward Only Surviving: 637344 (3.11%) Reverse Only Surviving: 17154 (0.08%) Dropped: 4291 (0.02%)
+TrimmomaticPE: Completed successfully
+
+real	11m58.376s
+user	32m58.053s
+sys	0m54.495s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_KO1_63_1/C_KO1_63_1_MKRN240009846-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_KO1_63_1/C_KO1_63_1_MKRN240009846-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_1/C_KO1_63_1_C_KO1_63_1_MKRN240009846-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_1/C_KO1_63_1_C_KO1_63_1_MKRN240009846-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_1/C_KO1_63_1_C_KO1_63_1_MKRN240009846-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_1/C_KO1_63_1_C_KO1_63_1_MKRN240009846-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 18753351 Both Surviving: 18187063 (96.98%) Forward Only Surviving: 550722 (2.94%) Reverse Only Surviving: 12521 (0.07%) Dropped: 3045 (0.02%)
+TrimmomaticPE: Completed successfully
+
+real	11m5.810s
+user	30m29.707s
+sys	0m50.905s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_KO1_63_1/C_KO1_63_1_MKRN240009846-1A_227YCMLT4_L8_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_KO1_63_1/C_KO1_63_1_MKRN240009846-1A_227YCMLT4_L8_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_1/C_KO1_63_1_C_KO1_63_1_MKRN240009846-1A_227YCMLT4_L8_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_1/C_KO1_63_1_C_KO1_63_1_MKRN240009846-1A_227YCMLT4_L8_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_1/C_KO1_63_1_C_KO1_63_1_MKRN240009846-1A_227YCMLT4_L8_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_1/C_KO1_63_1_C_KO1_63_1_MKRN240009846-1A_227YCMLT4_L8_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 3382129 Both Surviving: 3281769 (97.03%) Forward Only Surviving: 97733 (2.89%) Reverse Only Surviving: 2131 (0.06%) Dropped: 496 (0.01%)
+TrimmomaticPE: Completed successfully
+
+real	2m3.268s
+user	5m40.071s
+sys	0m8.992s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_KO1_63_2/C_KO1_63_2_MKRN240009847-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_KO1_63_2/C_KO1_63_2_MKRN240009847-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_2/C_KO1_63_2_C_KO1_63_2_MKRN240009847-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_2/C_KO1_63_2_C_KO1_63_2_MKRN240009847-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_2/C_KO1_63_2_C_KO1_63_2_MKRN240009847-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_2/C_KO1_63_2_C_KO1_63_2_MKRN240009847-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 22031070 Both Surviving: 21202916 (96.24%) Forward Only Surviving: 808419 (3.67%) Reverse Only Surviving: 15710 (0.07%) Dropped: 4025 (0.02%)
+TrimmomaticPE: Completed successfully
+
+real	12m29.168s
+user	34m42.991s
+sys	0m55.364s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_KO1_63_3/C_KO1_63_3_MKRN240009848-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_KO1_63_3/C_KO1_63_3_MKRN240009848-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_3/C_KO1_63_3_C_KO1_63_3_MKRN240009848-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_3/C_KO1_63_3_C_KO1_63_3_MKRN240009848-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_3/C_KO1_63_3_C_KO1_63_3_MKRN240009848-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_3/C_KO1_63_3_C_KO1_63_3_MKRN240009848-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 20996601 Both Surviving: 20431628 (97.31%) Forward Only Surviving: 545843 (2.60%) Reverse Only Surviving: 15548 (0.07%) Dropped: 3582 (0.02%)
+TrimmomaticPE: Completed successfully
+
+real	11m44.781s
+user	32m43.709s
+sys	0m52.315s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_1/C_WT_1_MKRN240009837-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_1/C_WT_1_MKRN240009837-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_1/C_WT_1_C_WT_1_MKRN240009837-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_1/C_WT_1_C_WT_1_MKRN240009837-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_1/C_WT_1_C_WT_1_MKRN240009837-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_1/C_WT_1_C_WT_1_MKRN240009837-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 18823991 Both Surviving: 17959881 (95.41%) Forward Only Surviving: 843427 (4.48%) Reverse Only Surviving: 16532 (0.09%) Dropped: 4151 (0.02%)
+TrimmomaticPE: Completed successfully
+
+real	10m52.478s
+user	30m17.470s
+sys	0m46.040s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_1/C_WT_1_MKRN240009837-1A_227YCMLT4_L6_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_1/C_WT_1_MKRN240009837-1A_227YCMLT4_L6_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_1/C_WT_1_C_WT_1_MKRN240009837-1A_227YCMLT4_L6_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_1/C_WT_1_C_WT_1_MKRN240009837-1A_227YCMLT4_L6_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_1/C_WT_1_C_WT_1_MKRN240009837-1A_227YCMLT4_L6_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_1/C_WT_1_C_WT_1_MKRN240009837-1A_227YCMLT4_L6_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 3738909 Both Surviving: 3578769 (95.72%) Forward Only Surviving: 156518 (4.19%) Reverse Only Surviving: 2935 (0.08%) Dropped: 687 (0.02%)
+TrimmomaticPE: Completed successfully
+
+real	2m7.681s
+user	5m59.198s
+sys	0m9.721s
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_42_3/C_17_42_3_MKRN240009845-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_17_42_3/C_17_42_3_MKRN240009845-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_3/C_17_42_3_C_17_42_3_MKRN240009845-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_3/C_17_42_3_C_17_42_3_MKRN240009845-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_3/C_17_42_3_C_17_42_3_MKRN240009845-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_17_42_3/C_17_42_3_C_17_42_3_MKRN240009845-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-08-07 14:34:42 	 working with sample C_KO1_63_1
+2024-08-07 14:34:42 	 about to clean C_KO1_63_1_MKRN240009846-1A_227NW7LT4_L7
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_KO1_63_1/C_KO1_63_1_MKRN240009846-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_KO1_63_1/C_KO1_63_1_MKRN240009846-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_1/C_KO1_63_1_C_KO1_63_1_MKRN240009846-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_1/C_KO1_63_1_C_KO1_63_1_MKRN240009846-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_1/C_KO1_63_1_C_KO1_63_1_MKRN240009846-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_1/C_KO1_63_1_C_KO1_63_1_MKRN240009846-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-08-07 14:45:48 	 about to clean C_KO1_63_1_MKRN240009846-1A_227YCMLT4_L8
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_KO1_63_1/C_KO1_63_1_MKRN240009846-1A_227YCMLT4_L8_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_KO1_63_1/C_KO1_63_1_MKRN240009846-1A_227YCMLT4_L8_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_1/C_KO1_63_1_C_KO1_63_1_MKRN240009846-1A_227YCMLT4_L8_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_1/C_KO1_63_1_C_KO1_63_1_MKRN240009846-1A_227YCMLT4_L8_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_1/C_KO1_63_1_C_KO1_63_1_MKRN240009846-1A_227YCMLT4_L8_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_1/C_KO1_63_1_C_KO1_63_1_MKRN240009846-1A_227YCMLT4_L8_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-08-07 14:47:51 	 working with sample C_KO1_63_2
+2024-08-07 14:47:51 	 about to clean C_KO1_63_2_MKRN240009847-1A_227NW7LT4_L7
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_KO1_63_2/C_KO1_63_2_MKRN240009847-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_KO1_63_2/C_KO1_63_2_MKRN240009847-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_2/C_KO1_63_2_C_KO1_63_2_MKRN240009847-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_2/C_KO1_63_2_C_KO1_63_2_MKRN240009847-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_2/C_KO1_63_2_C_KO1_63_2_MKRN240009847-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_2/C_KO1_63_2_C_KO1_63_2_MKRN240009847-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-08-07 15:00:21 	 working with sample C_KO1_63_3
+2024-08-07 15:00:21 	 about to clean C_KO1_63_3_MKRN240009848-1A_227NW7LT4_L7
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_KO1_63_3/C_KO1_63_3_MKRN240009848-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_KO1_63_3/C_KO1_63_3_MKRN240009848-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_3/C_KO1_63_3_C_KO1_63_3_MKRN240009848-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_3/C_KO1_63_3_C_KO1_63_3_MKRN240009848-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_3/C_KO1_63_3_C_KO1_63_3_MKRN240009848-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_KO1_63_3/C_KO1_63_3_C_KO1_63_3_MKRN240009848-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-08-07 15:12:05 	 working with sample C_WT_1
+2024-08-07 15:12:05 	 about to clean C_WT_1_MKRN240009837-1A_227NW7LT4_L7
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_1/C_WT_1_MKRN240009837-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_1/C_WT_1_MKRN240009837-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_1/C_WT_1_C_WT_1_MKRN240009837-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_1/C_WT_1_C_WT_1_MKRN240009837-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_1/C_WT_1_C_WT_1_MKRN240009837-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_1/C_WT_1_C_WT_1_MKRN240009837-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-08-07 15:22:58 	 about to clean C_WT_1_MKRN240009837-1A_227YCMLT4_L6
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_1/C_WT_1_MKRN240009837-1A_227YCMLT4_L6_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_1/C_WT_1_MKRN240009837-1A_227YCMLT4_L6_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_1/C_WT_1_C_WT_1_MKRN240009837-1A_227YCMLT4_L6_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_1/C_WT_1_C_WT_1_MKRN240009837-1A_227YCMLT4_L6_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_1/C_WT_1_C_WT_1_MKRN240009837-1A_227YCMLT4_L6_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_1/C_WT_1_C_WT_1_MKRN240009837-1A_227YCMLT4_L6_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-08-07 15:25:06 	 working with sample C_WT_2
+2024-08-07 15:25:06 	 about to clean C_WT_2_MKRN240009838-1A_227NW7LT4_L2
+
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_2/C_WT_2_MKRN240009838-1A_227NW7LT4_L2_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_2/C_WT_2_MKRN240009838-1A_227NW7LT4_L2_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_2/C_WT_2_C_WT_2_MKRN240009838-1A_227NW7LT4_L2_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_2/C_WT_2_C_WT_2_MKRN240009838-1A_227NW7LT4_L2_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_2/C_WT_2_C_WT_2_MKRN240009838-1A_227NW7LT4_L2_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_2/C_WT_2_C_WT_2_MKRN240009838-1A_227NW7LT4_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 25103852 Both Surviving: 24205453 (96.42%) Forward Only Surviving: 876278 (3.49%) Reverse Only Surviving: 17550 (0.07%) Dropped: 4571 (0.02%)
+TrimmomaticPE: Completed successfully
+
+real	15m23.961s
+user	42m38.268s
+sys	1m8.554s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_3/C_WT_3_MKRN240009839-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_3/C_WT_3_MKRN240009839-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_3/C_WT_3_C_WT_3_MKRN240009839-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_3/C_WT_3_C_WT_3_MKRN240009839-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_3/C_WT_3_C_WT_3_MKRN240009839-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_3/C_WT_3_C_WT_3_MKRN240009839-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 17507684 Both Surviving: 16768381 (95.78%) Forward Only Surviving: 723284 (4.13%) Reverse Only Surviving: 13008 (0.07%) Dropped: 3011 (0.02%)
+TrimmomaticPE: Completed successfully
+
+real	14m6.810s
+user	38m2.674s
+sys	0m54.272s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_3/C_WT_3_MKRN240009839-1A_227YCMLT4_L6_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_3/C_WT_3_MKRN240009839-1A_227YCMLT4_L6_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_3/C_WT_3_C_WT_3_MKRN240009839-1A_227YCMLT4_L6_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_3/C_WT_3_C_WT_3_MKRN240009839-1A_227YCMLT4_L6_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_3/C_WT_3_C_WT_3_MKRN240009839-1A_227YCMLT4_L6_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_3/C_WT_3_C_WT_3_MKRN240009839-1A_227YCMLT4_L6_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 3605827 Both Surviving: 3462786 (96.03%) Forward Only Surviving: 140257 (3.89%) Reverse Only Surviving: 2299 (0.06%) Dropped: 485 (0.01%)
+TrimmomaticPE: Completed successfully
+
+real	2m55.494s
+user	7m57.177s
+sys	0m11.420s
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_2/C_WT_2_MKRN240009838-1A_227NW7LT4_L2_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_2/C_WT_2_MKRN240009838-1A_227NW7LT4_L2_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_2/C_WT_2_C_WT_2_MKRN240009838-1A_227NW7LT4_L2_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_2/C_WT_2_C_WT_2_MKRN240009838-1A_227NW7LT4_L2_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_2/C_WT_2_C_WT_2_MKRN240009838-1A_227NW7LT4_L2_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_2/C_WT_2_C_WT_2_MKRN240009838-1A_227NW7LT4_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-08-07 15:40:30 	 working with sample C_WT_3
+2024-08-07 15:40:30 	 about to clean C_WT_3_MKRN240009839-1A_227NW7LT4_L7
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_3/C_WT_3_MKRN240009839-1A_227NW7LT4_L7_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_3/C_WT_3_MKRN240009839-1A_227NW7LT4_L7_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_3/C_WT_3_C_WT_3_MKRN240009839-1A_227NW7LT4_L7_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_3/C_WT_3_C_WT_3_MKRN240009839-1A_227NW7LT4_L7_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_3/C_WT_3_C_WT_3_MKRN240009839-1A_227NW7LT4_L7_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_3/C_WT_3_C_WT_3_MKRN240009839-1A_227NW7LT4_L7_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-08-07 15:54:36 	 about to clean C_WT_3_MKRN240009839-1A_227YCMLT4_L6
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_3/C_WT_3_MKRN240009839-1A_227YCMLT4_L6_1.fq.gz /Users/adrian/research/egilsstadir/data/X204SC24063187-Z01-F001/01.RawData/C_WT_3/C_WT_3_MKRN240009839-1A_227YCMLT4_L6_2.fq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_3/C_WT_3_C_WT_3_MKRN240009839-1A_227YCMLT4_L6_R1_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_3/C_WT_3_C_WT_3_MKRN240009839-1A_227YCMLT4_L6_R1_garbage.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_3/C_WT_3_C_WT_3_MKRN240009839-1A_227YCMLT4_L6_R2_clean.fastq.gz /Users/adrian/research/egilsstadir/data/clean_fastq/C_WT_3/C_WT_3_C_WT_3_MKRN240009839-1A_227YCMLT4_L6_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+

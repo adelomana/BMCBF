@@ -1,0 +1,25 @@
+sample ID	replicate	cell line	treatment
+M104_EV_1	A	M104	empty vector
+M104_EV_2	B	M104	empty vector
+M104_EV_3	C	M104	empty vector
+M104_SET_1	A	M104	setdb2 overexpression
+M104_SET_2	B	M104	setdb2 overexpression
+M104_SET_3	C	M104	setdb2 overexpression
+M501_miR1_1	A	M501	miRNA1
+M501_miR1_2	B	M501	miRNA1
+M501_miR1_3	C	M501	miRNA1
+M501_miR2_1	A	M501	miRNA2
+M501_miR2_2	B	M501	miRNA2
+M501_miR2_3	C	M501	miRNA2
+M501_miRN_1	A	M501	miRNA control
+M501_miRN_2	B	M501	miRNA control
+M501_miRN_3	C	M501	miRNA control
+Sk28_miR1_1	A	Sk28	miRNA1
+Sk28_miR1_2	B	Sk28	miRNA1
+Sk28_miR1_3	C	Sk28	miRNA1
+Sk28_miR2_1	A	Sk28	miRNA2
+Sk28_miR2_2	B	Sk28	miRNA2
+Sk28_miR2_3	C	Sk28	miRNA2
+Sk28_miRN_1	A	Sk28	miRNA control
+Sk28_miRN_2	B	Sk28	miRNA control
+Sk28_miRN_3	C	Sk28	miRNA control
