@@ -1,0 +1,16 @@
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - pip
+  - numpy <2
+  - python <3.10
+  - perl
+  - bedtools
+  - bowtie2
+  - samtools
+  - fastqc
+  - pip:
+      - deeptools
+      - cutadapt
