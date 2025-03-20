@@ -30,6 +30,11 @@ convertedIDs = bitr(ensemblIDs, fromType = 'ENSEMBL', toType = 'ENTREZID', OrgDb
 list_one_up = convertedIDs$ENTREZID
 length(list_one_up)
 
+ensemblIDs = row.names(df)
+convertedIDs = bitr(ensemblIDs, fromType = 'ENSEMBL', toType = 'ENTREZID', OrgDb='org.Dm.eg.db')
+list_one = convertedIDs$ENTREZID
+
+
 ensemblIDs = row.names(df_down)
 convertedIDs = bitr(ensemblIDs, fromType = 'ENSEMBL', toType = 'ENTREZID', OrgDb='org.Dm.eg.db')
 list_one_down = convertedIDs$ENTREZID
@@ -51,7 +56,7 @@ convertedIDs = bitr(ensemblIDs, fromType = 'ENSEMBL', toType = 'ENTREZID', OrgDb
 list_two_down = convertedIDs$ENTREZID
 length(list_two_down)
 
-filename = 'effect_h2F14_wt.for.tsv'
+filename = 'effect_h1M8_wt.for.tsv'
 df = read.csv(filename, sep='\t', header=TRUE)
 df_up = df[df$log2FoldChange > 0, ] 
 df_down = df[df$log2FoldChange < 0, ] 
@@ -67,30 +72,14 @@ convertedIDs = bitr(ensemblIDs, fromType = 'ENSEMBL', toType = 'ENTREZID', OrgDb
 list_three_down = convertedIDs$ENTREZID
 length(list_three_down)
 
-filename = 'effect_h2M8_wt.for.tsv'
-df = read.csv(filename, sep='\t', header=TRUE)
-df_up = df[df$log2FoldChange > 0, ] 
-df_down = df[df$log2FoldChange < 0, ] 
-print(dim(df))
 
-ensemblIDs = row.names(df_up)
-convertedIDs = bitr(ensemblIDs, fromType = 'ENSEMBL', toType = 'ENTREZID', OrgDb='org.Dm.eg.db')
-list_four_up = convertedIDs$ENTREZID
-length(list_four_up)
-
-ensemblIDs = row.names(df_down)
-convertedIDs = bitr(ensemblIDs, fromType = 'ENSEMBL', toType = 'ENTREZID', OrgDb='org.Dm.eg.db')
-list_four_down = convertedIDs$ENTREZID
-length(list_four_down)
 
 geneLists = list('KO vs WT up'=list_one_up, 
                 'KO vs WT down'=list_one_down,
                 'h1M8 vs KO up'=list_two_up, 
                 'h1M8 vs KO down'=list_two_down,
-                'h2F14 vs WT up'=list_three_up, 
-                'h2F14 vs WT down'=list_three_down,
-                'h2M8 vs WT up'=list_four_up, 
-                'h2M8 vs WT down'=list_four_down)
+                'h1M8 vs WT up'=list_three_up, 
+                'h1M8 vs WT down'=list_three_down)
 
 
 #
@@ -102,7 +91,7 @@ tic()
 ck = compareCluster(geneLists, fun="enrichPathway", pvalueCutoff=0.05, organism='fly')
 #toc()
 
-p1 = dotplot(ck, size='count', showCategory=5, font.size=8) 
+p1 = dotplot(ck, size='count', showCategory=15, font.size=4) 
 print(p1)
 
 # and I have a preference for cividis, but this is just personal preference
@@ -112,5 +101,5 @@ p5 = p1 +  scale_fill_viridis(direction=-1, trans="log", breaks=my_breaks, optio
 print(p5)
 
 # importantly, store your fuctional enrichment in a form of table which will be a supplementary file of your paper
-storage_file = 'clusterProfiler_enrichments.tsv'
+storage_file = 'clusterProfiler_enrichments.h1.tsv'
 write.table(ck@compareClusterResult, storage_file, quote=FALSE, sep='\t')

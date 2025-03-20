@@ -32,8 +32,8 @@ results_dir = '/Users/adrian/research/016.saudarkrokur/results/deseq2'
 listEnsembl()
 listEnsembl(version=113)
 
-#ensembl = useEnsembl(biomart="ensembl", verbose=TRUE)
-ensembl = useEnsembl(biomart="ensembl", verbose=TRUE, mirror='www')
+ensembl = useEnsembl(biomart="ensembl", verbose=TRUE)
+#ensembl = useEnsembl(biomart="ensembl", verbose=TRUE, mirror='www')
 #ensembl = useEnsembl(biomart="ensembl", verbose=TRUE, mirror='useast')
 #ensembl = useEnsembl(biomart="ensembl", verbose=TRUE, mirror='asia')
 
@@ -79,8 +79,9 @@ tpm_threshold = 2
 contrasts = list()
 contrasts[[1]] = c('ko', 'wt')
 contrasts[[2]] = c('h1M8', 'ko')
-contrasts[[3]] = c('h2F14', 'wt')
-contrasts[[4]] = c('h2M8', 'wt')
+contrasts[[3]] = c('h1M8', 'wt')
+contrasts[[4]] = c('h2F14', 'wt')
+contrasts[[5]] = c('h2M8', 'wt')
 
 contrast_maker <- function(contrast){
   
@@ -173,7 +174,7 @@ contrast_maker <- function(contrast){
   sorted_filtred_results['gene_biotype'] = df_new$gene_biotype[no]
   sorted_filtred_results['entrezgene_id'] = df_new$entrezgene_id[no]
   
-  write.table(sorted_filtred_results, file=paste(results_dir, '/effect_', label, '.tsv', sep=''), quote=FALSE, sep='\t')
+  write.table(sorted_filtred_results, file=paste(results_dir, '/effect_', label, '.for.tsv', sep=''), quote=FALSE, sep='\t')
   write.table(anti_results, file=paste(results_dir, '/effect_', label, '.anti.tsv', sep=''), quote=FALSE, sep='\t')
   
   #               
@@ -211,4 +212,4 @@ contrast_maker <- function(contrast){
 # 
 for (contrast in contrasts){
   contrast_maker(contrast)
-  }
+}
