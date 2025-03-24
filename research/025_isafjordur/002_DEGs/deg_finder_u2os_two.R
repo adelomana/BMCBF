@@ -30,19 +30,8 @@ results_dir = '/Users/adrian/research/bmcbf/025_isafjordur/results/002_DEGs'
 #
 # 1. generate gene to transcript mapping
 #
-mart = biomaRt::useMart(biomart="ENSEMBL_MART_ENSEMBL", 
-                        dataset="hsapiens_gene_ensembl",
-                        host = 'https://oct2022.archive.ensembl.org', # because of 108
-                        verbose = TRUE)
-# attributes = listAttributes(mart)
-working_attributes = c('ensembl_transcript_id', 
-                       'ensembl_gene_id', 
-                       'external_gene_name',
-                       'gene_biotype',
-                       'description')
-t2g = biomaRt::getBM(attributes=working_attributes, 
-                     mart=mart,
-                     verbose=TRUE)
+df = read.csv('/Users/adrian/software/kallisto/human_index_standard/annotation.tsv', sep='\t')
+t2g = df[, 2:3]
 dim(t2g)
 
 #
@@ -62,7 +51,7 @@ genotypes = rep(c('wt', 'ko'), 2)
 metadata = data.frame(labels)
 metadata$path = paths
 metadata$genotype = genotypes
-View(metadata)
+#View(metadata)
 
 #
 # 3. contrasts
@@ -76,7 +65,7 @@ tpm_threshold = 1
 #
 txi = tximport(metadata$path, type="kallisto", tx2gene=t2g, ignoreTxVersion=TRUE)
 dds = DESeqDataSetFromTximport(txi, colData=metadata, design=~genotype) 
-dds$time = relevel(dds$genotype, ref="wt")
+dds$genotype = relevel(dds$genotype, ref="wt")
 
 # keep features with at least 20 counts median difference
 cat(blue(paste('size before counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE)
@@ -138,4 +127,4 @@ ggplot() +
   xlim(-6, 6) +
   scale_color_viridis_c(option = "cividis") +
   theme(axis.text.x = element_text(size = 20), axis.text.y = element_text(size = 20), axis.title=element_text(size=24))
-#ggsave(paste(label, '.png', sep=''))
+ggsave(paste(label, '.png', sep=''))

@@ -31,19 +31,8 @@ a_cases = c('SkMel28-MITFKO_ev_skmel28_rep1', 'SkMel28-MITFKO_ev_skmel28_rep2', 
 #
 # 1. generate gene to transcript mapping
 #
-mart = biomaRt::useMart(biomart="ENSEMBL_MART_ENSEMBL", 
-                        dataset="hsapiens_gene_ensembl",
-                        host = 'https://oct2022.archive.ensembl.org', # because of 108
-                        verbose = TRUE)
-# attributes = listAttributes(mart)
-working_attributes = c('ensembl_transcript_id', 
-                       'ensembl_gene_id', 
-                       'external_gene_name',
-                       'gene_biotype',
-                       'description')
-t2g = biomaRt::getBM(attributes=working_attributes, 
-                     mart=mart,
-                     verbose=TRUE)
+df = read.csv('/Users/adrian/software/kallisto/human_index_standard/annotation.tsv', sep='\t')
+t2g = df[, 2:3]
 dim(t2g)
 
 #
@@ -74,7 +63,7 @@ metadata = data.frame(labels)
 metadata$path = paths
 metadata$replicate = replicates
 metadata$genotype = genotypes
-View(metadata)
+#View(metadata)
 
 #
 # 3. contrasts
@@ -88,7 +77,7 @@ tpm_threshold = 1
 #
 txi = tximport(metadata$path, type="kallisto", tx2gene=t2g, ignoreTxVersion=TRUE)
 dds = DESeqDataSetFromTximport(txi, colData=metadata, design=~genotype) 
-dds$time = relevel(dds$genotype, ref="wt")
+dds$genotype = relevel(dds$genotype, ref="wt")
 
 # keep features with at least 20 counts median difference
 cat(blue(paste('size before counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE)
@@ -149,4 +138,4 @@ ggplot() +
   geom_segment(aes(x=1, xend=6, y=-log10(0.05), yend=-log10(0.05)), linetype=2) +
   xlim(-6, 6) +
   scale_color_viridis_c(option = "cividis") 
-#ggsave(paste(label, '.png', sep=''))
+ggsave(paste(label, '.png', sep=''))

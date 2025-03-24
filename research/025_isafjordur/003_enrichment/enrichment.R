@@ -1,4 +1,4 @@
-
+rm(list = ls())
 #
 # 0. load libraries
 #
@@ -75,6 +75,19 @@ print(p5)
 
 # importantly, store your fuctional enrichment in a form of table which will be a supplementary file of your paper
 storage_file = 'clusterProfiler_enrichments.tsv'
+
+all_names = c()
+for (index in 1:dim(ck@compareClusterResult)[1]) {
+  v = strsplit(ck@compareClusterResult[index, 12], '/')[[1]]
+  results = bitr(v, fromType = 'ENTREZID', toType = 'SYMBOL', OrgDb='org.Hs.eg.db')
+  names = results$SYMBOL
+  sorted_names = sort(names)
+  joined_names = paste(sorted_names, collapse=', ')
+  print(joined_names)
+  all_names = c(all_names, joined_names)
+}
+
+ck@compareClusterResult$transformed_ids = all_names
 write.table(ck@compareClusterResult, storage_file, quote=FALSE, sep='\t')
 
 #ggsave('/Users/adrian/scratch/h1.enrichment.svg')
