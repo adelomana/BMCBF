@@ -25,8 +25,8 @@ library(ramify)
 # 0. user-defined variables
 #
 setwd("~/scratch/")
-kallisto_dir = "/Users/adrian/research/016.saudarkrokur/results/kallisto/kallisto.dme.100"
-results_dir = '/Users/adrian/research/016.saudarkrokur/results/deseq2'
+kallisto_dir = "/Users/adrian/research/bmcbf/016.saudarkrokur/results/kallisto/kallisto.dme.100"
+results_dir = '/Users/adrian/research/bmcbf/016.saudarkrokur/results/deseq2'
 
 #
 # 1. generate gene to transcript mapping
@@ -102,7 +102,7 @@ keep = abs(c) >= read_threshold
 dds = dds[keep, ]
 cat(blue(paste('size after counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE)
 
-# keep features with at least a max median expression of 1 TPM.
+# keep features with at least a max median expression of 2 TPM.
 cat(blue(paste('size before counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE)
 subset = txi$abundance[names(dds), ]
 a = rowMedians(subset[ , 1:3])

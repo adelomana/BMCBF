@@ -127,4 +127,5 @@ ggplot() +
   xlim(-6, 6) +
   scale_color_viridis_c(option = "cividis") +
   theme(axis.text.x = element_text(size = 20), axis.text.y = element_text(size = 20), axis.title=element_text(size=24))
-ggsave(paste(label, '.png', sep=''))
+ggsave('u2os.png')
+dev.off()

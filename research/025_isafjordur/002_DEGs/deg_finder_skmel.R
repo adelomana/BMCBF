@@ -137,5 +137,7 @@ ggplot() +
   geom_segment(aes(x=-6, xend=-1, y=-log10(0.05), yend=-log10(0.05)), linetype=2) +
   geom_segment(aes(x=1, xend=6, y=-log10(0.05), yend=-log10(0.05)), linetype=2) +
   xlim(-6, 6) +
-  scale_color_viridis_c(option = "cividis") 
-ggsave(paste(label, '.png', sep=''))
+  scale_color_viridis_c(option = "cividis") + 
+  theme(axis.text.x = element_text(size = 20), axis.text.y = element_text(size = 20), axis.title=element_text(size=24))
+ggsave('skmel.png')
+dev.off()

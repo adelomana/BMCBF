@@ -69,6 +69,8 @@ geneLists = list('skmel up'=list_one_up,
 #
 # this step takes surprisingly long time
 ck = compareCluster(geneLists, fun="enrichPathway", pvalueCutoff=0.05)
+#ck = compareCluster(geneLists, fun="enrichGO", pvalueCutoff=0.05, OrgDb='org.Hs.eg.db')
+#ck = compareCluster(geneLists, fun="enrichKEGG", pvalueCutoff=0.05)
 
 p1 = dotplot(ck, size='count', showCategory=10, font.size=8) + scale_size_area(max_size=9)
 print(p1)
@@ -78,7 +80,7 @@ p5 = p1 +  scale_fill_viridis(direction=-1, trans="log", breaks=my_breaks, optio
 print(p5)
 
 # importantly, store your fuctional enrichment in a form of table which will be a supplementary file of your paper
-storage_file = 'clusterProfiler_enrichments_sets.tsv'
+storage_file = 'clusterProfiler_enrichments_setsKEGG.tsv'
 
 all_names = c()
 for (index in 1:dim(ck@compareClusterResult)[1]) {
@@ -94,5 +96,5 @@ for (index in 1:dim(ck@compareClusterResult)[1]) {
 ck@compareClusterResult$transformed_ids = all_names
 write.table(ck@compareClusterResult, storage_file, quote=FALSE, sep='\t')
 
-#ggsave('/Users/adrian/scratch/h1.enrichment.svg')
-#dev.off()
+ggsave('/Users/adrian/scratch/enrichment.svg')
+dev.off()

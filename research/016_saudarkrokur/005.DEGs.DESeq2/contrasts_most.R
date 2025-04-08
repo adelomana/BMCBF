@@ -23,8 +23,8 @@ library(ramify)
 # 0. user-defined variables
 #
 setwd("~/scratch/")
-kallisto_dir = "/Users/adrian/research/016.saudarkrokur/results/kallisto/kallisto.dme.100"
-results_dir = '/Users/adrian/research/016.saudarkrokur/results/deseq2'
+kallisto_dir = "/Users/adrian/research/bmcbf/016.saudarkrokur/results/kallisto/kallisto.dme.100"
+results_dir = '/Users/adrian/research/bmcbf/016.saudarkrokur/results/deseq2'
 
 #
 # 1. generate gene to transcript mapping
@@ -82,6 +82,8 @@ contrasts[[2]] = c('h1M8', 'ko')
 contrasts[[3]] = c('h1M8', 'wt')
 contrasts[[4]] = c('h2F14', 'wt')
 contrasts[[5]] = c('h2M8', 'wt')
+contrasts[[6]] = c('h2F14', 'ko')
+contrasts[[7]] = c('h2M8', 'ko')
 
 contrast_maker <- function(contrast){
   
@@ -124,7 +126,7 @@ contrast_maker <- function(contrast){
   dds = dds[keep, ]
   cat(blue(paste('size after counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE)
   
-  # keep features with at least a max median expression of 1 TPM.
+  # keep features with at least a max median expression of 2 TPM.
   cat(blue(paste('size before counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE)
   subset = txi$abundance[names(dds), ]
   if (dim(working_metadata)[1] == 6) {
