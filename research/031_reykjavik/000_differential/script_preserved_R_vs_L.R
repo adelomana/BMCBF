@@ -49,7 +49,7 @@ View(metadata)
 levels(metadata$axis)
 levels(metadata$health)
 
-metadata = metadata[metadata$Characteristics.disease. == 'healthy', ]
+metadata = metadata[metadata$Characteristics.disease. == 'heart failure with preserved ejection fraction', ]
 dim(metadata)
 
 #
@@ -114,5 +114,5 @@ sorted_filtred_results$gene_name = subu[rownames(sorted_filtred_results), 'exter
 sorted_filtred_results$biotype = subu[rownames(sorted_filtred_results), 'gene_biotype']
 sorted_filtred_results$description = subu[rownames(sorted_filtred_results), 'description']
 
-write.table(sorted_filtred_results, file=paste(results_dir, '/effect_right_vs_left_healthy.for.tsv', sep=''), quote=FALSE, sep='\t')
-write.table(anti_results, file=paste(results_dir, '/effect_right_vs_left_healthy.anti.tsv', sep=''), quote=FALSE, sep='\t')
+write.table(sorted_filtred_results, file=paste(results_dir, '/effect_right_vs_left_preserved.for.tsv', sep=''), quote=FALSE, sep='\t')
+write.table(anti_results, file=paste(results_dir, '/effect_right_vs_left_preserved.anti.tsv', sep=''), quote=FALSE, sep='\t')
