@@ -1,0 +1,20 @@
+Fri Apr 25 15:35:33 GMT 2025
+/users/home/adrian/research/029_orsay
+the scratch dir is:
+/scratch/users/adrian/1340469-i4fl
+
+about to copy files into scratch
+Fri Apr 25 15:35:33 GMT 2025
+Fri Apr 25 15:37:17 GMT 2025
+
+about to call trimmomatic
+Fri Apr 25 15:37:17 GMT 2025
+Fri Apr 25 15:59:41 GMT 2025
+
+about to copy results out of scratch to my dirs
+Fri Apr 25 18:03:24 GMT 2025
+Fri Apr 25 18:03:24 GMT 2025
+
+about to remove scratch dir
+all done.
+Fri Apr 25 18:03:25 GMT 2025
