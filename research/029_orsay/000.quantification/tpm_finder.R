@@ -28,8 +28,9 @@ results_dir = kallisto_dir
 #
 # 1. generate gene to transcript mapping
 #
-df = read.csv('/Users/adrian/software/kallisto/human_index_standard/annotation.tsv', sep='\t')
-t2g = df[, 2:3]
+df = read.csv('/Users/adrian/software/kallisto/mouse_index_standard/t2g.txt', sep='\t', header=FALSE)
+t2g = df
+View(t2g)
 dim(t2g)
 
 #
@@ -48,7 +49,7 @@ View(metadata)
 #
 # 3. read files
 #
-txi = tximport(metadata$path, type="kallisto", tx2gene=t2g, ignoreTxVersion=TRUE)
+txi = tximport(metadata$path, type="kallisto", tx2gene=t2g)
 
 #
 # 4. find abundance

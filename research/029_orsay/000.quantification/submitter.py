@@ -139,8 +139,8 @@ date
 raw_fastq_dir = '/hpcdata/Mimir/adrian/research/029_orsay/data/orsay/' 
 trimmomatic_path = '/users/home/adrian/software/Trimmomatic-0.39/'
 adapter_file = trimmomatic_path + 'adapters/TruSeq3-PE-2.fa'
-number_threads = 4
-transcriptome_index = '/users/home/adrian/software/kallisto/108/index.idx'
+number_threads = 16
+transcriptome_index = '/users/home/adrian/software/kallisto/mouse/index.idx'
 kallisto_executable = '/users/home/adrian/software/kallisto/kallisto'
 output_dir = '/hpcdata/Mimir/adrian/research/029_orsay/results/'
 
