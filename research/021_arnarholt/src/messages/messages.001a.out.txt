@@ -1,0 +1,20 @@
+Sun May  4 23:13:00 GMT 2025
+/users/home/adrian/research/021_arnarholt/src
+the scratch dir is:
+/scratch/users/adrian/1349148-pEf2
+
+about to copy files into scratch
+Sun May  4 23:13:00 GMT 2025
+Mon May  5 00:00:31 GMT 2025
+
+about to basecall sup
+Mon May  5 00:00:31 GMT 2025
+Mon May  5 15:48:29 GMT 2025
+
+about to copy results out of scratch to my dirs
+Mon May  5 15:48:29 GMT 2025
+Mon May  5 15:49:58 GMT 2025
+
+about to remove scratch dir
+all done.
+Mon May  5 15:50:13 GMT 2025

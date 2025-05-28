@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#SBATCH --job-name=021.001
+#SBATCH --job-name=001b
 #SBATCH --partition=gpu-1xA100
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=32      
 #SBATCH --hint=multithread        
-#SBATCH --output=messages/messages.001.out.txt   
-#SBATCH --error=messages/messages.001.err.txt 
+#SBATCH --output=messages/messages.001b.out.txt   
+#SBATCH --error=messages/messages.001b.err.txt 
 
 date
 pwd
@@ -28,7 +28,7 @@ echo $tdir
 echo ""
 echo "about to copy files into scratch"
 date
-cp -rf /hpcdata/Mimir/adrian/research/021_arnarholt/data/nanopore/Sheepseq_sample2/no_sample/20240808_1504_1D_PAS69274_99e60aae/pod5_pass $tdir/.
+cp -rf /hpcdata/Mimir/adrian/research/021_arnarholt/data/nanopore/Sheepseq_sample2/no_sample/20240808_1504_1D_PAS69274_99e60aae/pod5_pass $tdir/pod5_pass02
 date
 
 cd $tdir
@@ -39,7 +39,7 @@ cd $tdir
 echo ""
 echo "about to basecall sup"
 date
-/users/home/adrian/software/dorado/dorado-0.9.1-linux-x64/bin/dorado basecaller sup --kit-name EXP-PBC001 pod5_pass --recursive -v --device cuda:all > sample02.bam
+time /users/home/adrian/software/dorado/dorado-0.9.1-linux-x64/bin/dorado basecaller sup pod5_pass02 --recursive -v --device cuda:all > sample02.bam
 date
 
 #
@@ -48,7 +48,7 @@ date
 echo ""
 echo "about to copy results out of scratch to my dirs"
 date
-cp -rf sample02.bam /hpcdata/Mimir/adrian/research/021_arnarholt/results/.
+cp -rf sample02.bam /hpcdata/Mimir/adrian/research/021_arnarholt/results/bam/.
 date
 
 #
