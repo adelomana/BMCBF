@@ -22,7 +22,7 @@ library(ramify) # this is for clip, for the volcano
 # 0. user-defined variables
 #
 setwd("~/scratch/")
-kallisto_dir = "//Users/adrian/research/bmcbf/029_orsay/results/000.quantification/results"
+kallisto_dir = "/Users/adrian/research/bmcbf/029_orsay/results/000.quantification/results/DESeq2_TPM_values.tsv"
 results_dir = '/Users/adrian/research/bmcbf/029_orsay/results/001.degs'
 
 #
