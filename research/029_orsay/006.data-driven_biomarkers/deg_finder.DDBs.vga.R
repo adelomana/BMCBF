@@ -27,10 +27,8 @@ results_dir = '/Users/adrian/research/bmcbf/029_orsay/results/006.DDBs'
 #
 # 1. generate gene to transcript mapping
 #
-df = read.csv('/Users/adrian/software/kallisto/mouse_index_standard/t2g.txt', sep='\t', header=FALSE)
-t2g = df
+t2g = read.csv('/Users/adrian/software/kallisto/mouse_index_standard/t2g.txt', sep='\t', header=FALSE)
 dim(t2g)
-
 annotation = read.csv('/Users/adrian/software/kallisto/mouse_index_standard/annotation.tsv', sep='\t')
 
 #
@@ -45,7 +43,7 @@ labels = str_remove(labels, '_processed')
 metadata = data.frame(labels)
 metadata$path = paths
 
-genotypes = c(rep('WT', 9), rep('other', 9), rep('other', 12), rep('other', 4))
+genotypes = c(rep('other', 9), rep('other', 9), rep('other', 12), rep('VGA', 4))
 metadata = data.frame(labels)
 metadata$path = paths
 metadata$genotype = genotypes
@@ -54,8 +52,11 @@ metadata = metadata[!(metadata$labels %in% c("P9T001","P9T004", "P9T009")),]
 dim(metadata)
 View(metadata)
 
-seta_indexes = 1:6
-setb_indexes = 7:31
+seta_indexes = 28:31
+setb_indexes = c(1:27)
+
+seta_indexes
+setb_indexes
 
 #
 # 3. contrasts
@@ -69,7 +70,7 @@ tpm_threshold = 2
 #
 txi = tximport(metadata$path, type="kallisto", tx2gene=t2g)
 dds = DESeqDataSetFromTximport(txi, colData=metadata, design=~genotype) 
-dds$genotype = relevel(dds$genotype, ref="WT")
+dds$genotype = relevel(dds$genotype, ref="VGA")
 
 # keep features with at least 20 counts median difference
 cat(blue(paste('size before counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE)
@@ -96,7 +97,7 @@ res = results(dds, parallel=TRUE, alpha=0.05) # it does not seem to affect  http
 filtred_results = res[which(res$padj < 0.05 & abs(res$log2FoldChange) > effect_size_threshold), ]
 sorted_filtred_results = filtred_results[order(filtred_results[["padj"]]),]
 anti_results = res[which(res$padj > 0.05 | abs(res$log2FoldChange) < effect_size_threshold), ]
-cat(blue(paste('others vs WT:', dim(filtred_results)[1], sep=' ')), fill=TRUE)
+cat(blue(paste('all vs VGA:', dim(filtred_results)[1], sep=' ')), fill=TRUE)
 
 ensembl_results_wo = sapply(strsplit(rownames(sorted_filtred_results), split='.',fixed=TRUE), function(x) (x[1]))
 rownames(sorted_filtred_results) = ensembl_results_wo
@@ -115,12 +116,12 @@ sorted_filtred_results$description2 = sub[rownames(sorted_filtred_results), 'des
 # this is very dangerous, but lets go
 wo = sapply(strsplit(rownames(subset), split='.',fixed=TRUE), function(x) (x[1]))
 rownames(subset) = wo
-sorted_filtred_results$medianTPM_WT = rowMedians(subset[rownames(sorted_filtred_results), seta_indexes]) # WT
+sorted_filtred_results$medianTPM_VGA = rowMedians(subset[rownames(sorted_filtred_results), seta_indexes]) # VGA
 sorted_filtred_results$medianTPM_all = rowMedians(subset[rownames(sorted_filtred_results), setb_indexes]) # others
 
-write.table(sorted_filtred_results, file=paste(results_dir, '/DDBs_WT.for.tsv', sep=''), quote=FALSE, sep='\t')
+write.table(sorted_filtred_results, file=paste(results_dir, '/DDBs_VGA.for.tsv', sep=''), quote=FALSE, sep='\t')
 
-plotPCA(rlog(dds), intgroup=c('genotype')) + ggtitle('effect others vs WT')
+plotPCA(rlog(dds), intgroup=c('genotype')) + ggtitle('effect all vs VGA')
 
 #               
 # volcano
