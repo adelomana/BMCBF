@@ -1,0 +1,93 @@
+(base) necio5 2025-06-29 13:43:36 ~/research/bmcbf/044_blaskogar/pair : cat mapper.sh 
+time /Users/adrian/software/kallisto_old/kallisto/kallisto quant -i /Users/adrian/software/kallisto_old/homo_sapiens/transcriptome.idx -o r1 --single -l 180 -s 20 --verbose --pseudobam -t 8 PE-041_Pre_551_S44_L003_R1_001.fastq.gz
+time /Users/adrian/software/kallisto_old/kallisto/kallisto quant -i /Users/adrian/software/kallisto_old/homo_sapiens/transcriptome.idx -o r2 --single -l 180 -s 20 --verbose --pseudobam -t 8 PE-041_Pre_551_S44_L003_R2_001.fastq.gz
+
+cd r1
+time samtools view -h pseudoalignments.bam > output1.sam
+cd ..
+
+cd r2
+time samtools view -h pseudoalignments.bam > output2.sam
+cd ..%                                                                                                                                      (base) necio5 2025-06-29 13:43:48 ~/research/bmcbf/044_blaskogar/pair : open final_check_strandness.sh 
+(base) necio5 2025-06-29 13:43:54 ~/research/bmcbf/044_blaskogar/pair : ls
+PE-041_Pre_551_S44_L003_R1_001.fastq.gz mapper.sh                               r2
+PE-041_Pre_551_S44_L003_R2_001.fastq.gz pairornotpair.ipynb
+final_check_strandness.sh               r1
+(base) necio5 2025-06-29 13:44:33 ~/research/bmcbf/044_blaskogar/pair : bash final_check_strandness.sh 
+
+[quant] fragment length distribution is truncated gaussian with mean = 180, sd = 20
+[index] k-mer length: 31
+[index] number of targets: 227,665
+[index] number of k-mers: 139,900,295
+[index] number of D-list k-mers: 5,477,475
+[quant] running in single-end mode
+[quant] will process file 1: PE-041_Pre_551_S44_L003_R1_001.fastq.gz
+[quant] finding pseudoalignments for the reads ...
+[progress] 36M reads processed (2.4% mapped)             
+[quant] done 
+[quant] processed 36,638,362 reads, 887,334 reads pseudoaligned
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 953 rounds
+
+
+real	2m32.421s
+user	15m35.928s
+sys	0m7.662s
+
+[quant] fragment length distribution is truncated gaussian with mean = 180, sd = 20
+[index] k-mer length: 31
+[index] number of targets: 227,665
+[index] number of k-mers: 139,900,295
+[index] number of D-list k-mers: 5,477,475
+[quant] running in single-end mode
+[quant] will process file 1: PE-041_Pre_551_S44_L003_R1_001.fastq.gz
+[quant] finding pseudoalignments for the reads ...
+[progress] 36M reads processed (47.0% mapped)             
+[quant] done 
+[quant] processed 36,638,362 reads, 17,221,658 reads pseudoaligned
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 1,277 rounds
+
+
+real	2m58.395s
+user	16m51.330s
+sys	0m7.435s
+
+[quant] fragment length distribution is truncated gaussian with mean = 180, sd = 20
+[index] k-mer length: 31
+[index] number of targets: 227,665
+[index] number of k-mers: 139,900,295
+[index] number of D-list k-mers: 5,477,475
+[quant] running in single-end mode
+[quant] will process file 1: PE-041_Pre_551_S44_L003_R2_001.fastq.gz
+[quant] finding pseudoalignments for the reads ...
+[progress] 36M reads processed (45.1% mapped)             
+[quant] done 
+[quant] processed 36,638,362 reads, 16,508,791 reads pseudoaligned
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 1,151 rounds
+
+
+real	3m21.284s
+user	18m38.085s
+sys	0m8.226s
+
+[quant] fragment length distribution is truncated gaussian with mean = 180, sd = 20
+[index] k-mer length: 31
+[index] number of targets: 227,665
+[index] number of k-mers: 139,900,295
+[index] number of D-list k-mers: 5,477,475
+[quant] running in single-end mode
+[quant] will process file 1: PE-041_Pre_551_S44_L003_R2_001.fastq.gz
+[quant] finding pseudoalignments for the reads ...
+[progress] 36M reads processed (2.4% mapped)             
+[quant] done 
+[quant] processed 36,638,362 reads, 873,445 reads pseudoaligned
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 986 rounds
+
+
+real	2m54.821s
+user	18m13.948s
+sys	0m7.137s
+(base) necio5 2025-06-29 13:56:26 ~/research/bmcbf/044_blaskogar/pair : 
