@@ -1,0 +1,20 @@
+Thu Jun 26 23:14:11 GMT 2025
+/hpcdata/Mimir/adrian/research/044_vala_GSE/src/002.quantification
+the scratch dir is:
+/scratch/users/adrian/1384446-1F0f
+
+about to copy files into scratch
+Thu Jun 26 23:14:11 GMT 2025
+Thu Jun 26 23:14:52 GMT 2025
+
+about to call trimmomatic
+Thu Jun 26 23:14:52 GMT 2025
+Thu Jun 26 23:25:38 GMT 2025
+
+about to copy results out of scratch to my dirs
+Fri Jun 27 00:09:30 GMT 2025
+Fri Jun 27 00:09:31 GMT 2025
+
+about to remove scratch dir
+all done.
+Fri Jun 27 00:09:31 GMT 2025
