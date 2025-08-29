@@ -1,0 +1,20 @@
+Mon Aug 25 14:49:38 GMT 2025
+/hpcdata/Mimir/adrian/research/051/src
+the scratch dir is:
+/scratch/users/adrian/1450565-Ocoo
+
+about to copy files into scratch
+Mon Aug 25 14:49:38 GMT 2025
+Mon Aug 25 14:49:42 GMT 2025
+
+about to call trimmomatic
+Mon Aug 25 14:49:42 GMT 2025
+Mon Aug 25 14:53:44 GMT 2025
+
+about to copy results out of scratch to my dirs
+Mon Aug 25 15:37:14 GMT 2025
+Mon Aug 25 15:37:14 GMT 2025
+
+about to remove scratch dir
+all done.
+Mon Aug 25 15:37:15 GMT 2025
