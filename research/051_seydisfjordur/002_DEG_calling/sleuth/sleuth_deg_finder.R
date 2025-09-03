@@ -14,8 +14,7 @@ library(sleuth)
 library(ggplot2)
 library(dplyr)
 library(stringr)
-
-
+library(data.table)
 
 #
 # 0. user-defined variables
@@ -57,180 +56,49 @@ metadata$genotype = genotypes
 dim(metadata)
 View(metadata)
 
-seta_indexes = 1:3
-setb_indexes = 4:6
+# make sure to relevel for the appropriate reference
 
 #
 # 3. contrasts
 #
 
-# old, need to check
-# using LRT instead of Wald because Wald gives three times more and authors mentioned that it gives lots of false positives
-# Using pval_aggregate = TRUE bc otherwise no DEGs. Get FC from est counts file
-
+# using LRT instead of Wald because authors mentioned that it gives lots of false positives
 
 # prepare contrast
 so = sleuth_prep(metadata,
                  target_mapping = t2g,
                  aggregation_column = 'ens_gene',
+                 #transform_fun_counts = function(x) (log2(x+0.5)),
                  read_bootstrap_tpm = TRUE)
+
 # contrast 
 so = sleuth_fit(so, ~genotype, 'full')
 so = sleuth_fit(so, ~1, 'reduced')
 so = sleuth_lrt(so, 'reduced', 'full')
-sleuth_table = sleuth_results(so, 
-                              'reduced:full', 
-                              'lrt',
-                              show_all = FALSE,
-                              pval_aggregate = TRUE)
+# do not use gene mode in prep, use Lancaster aggregation method for transcripts into genes. 
+# see https://pachterlab.github.io/sleuth/docs/sleuth_results.html
+sleuth_table = sleuth_results(so, 'reduced:full', 'lrt', show_all = FALSE, pval_aggregate = TRUE) 
+
+# filter table as expected, see https://pachterlab.github.io/sleuth/docs/sleuth_results.html
+# get log2fc from the wald test
+# add annotation, save final table
+# check the relevel
+# implement filters on ammount, etc
+
+# filter
 sleuth_significant = dplyr::filter(sleuth_table, qval < 0.05)
 anti = dplyr::filter(sleuth_table, qval > 0.05)
 dim(sleuth_significant)
-plot_pca(so, color_by = 'time') + ggtitle('effect time for 2D')
-ggsave(file.path(results_dir, 'effect_time_2D.png'))
+
+plot_pca(so, color_by = 'genotype') 
+
 write.table(sleuth_significant, 
-            file = paste(results_dir, '/effect_time_2D.tsv', sep=''), 
+            file = paste(results_dir, '/effect_genotype.tsv', sep=''), 
             sep = '\t',
             quote = FALSE)
 write.table(anti, 
-            file = paste(results_dir, '/effect_time_2D.anti.tsv', sep=''), 
+            file = paste(results_dir, '/effect_genotype.anti.tsv', sep=''), 
             sep = '\t',
             quote = FALSE)
-
-#
-# 3.2. contrast effect of time for 3D
-#
-rule = metadata$culture == '3D'
-s2c = metadata[rule, ]
-dim(s2c)
-View(s2c)
-# prepare contrast
-so = sleuth_prep(s2c,
-                 target_mapping = t2g,
-                 aggregation_column = 'ens_gene',
-                 read_bootstrap_tpm = TRUE)
-# contrast 
-so = sleuth_fit(so, ~time, 'full')
-so = sleuth_fit(so, ~1, 'reduced')
-so = sleuth_lrt(so, 'reduced', 'full')
-sleuth_table = sleuth_results(so, 
-                              'reduced:full', 
-                              'lrt',
-                              show_all = FALSE,
-                              pval_aggregate = TRUE)
-sleuth_significant = dplyr::filter(sleuth_table, qval < 0.05)
-anti = dplyr::filter(sleuth_table, qval > 0.05)
-dim(sleuth_significant)
-plot_pca(so, color_by = 'time') + ggtitle('effect time for 3D')
-ggsave(file.path(results_dir, 'effect_time_3D.png'))
-write.table(sleuth_significant, 
-            file = paste(results_dir, '/effect_time_3D.tsv', sep=''), 
-            sep = '\t',
-            quote = FALSE)
-write.table(anti, 
-            file = paste(results_dir, '/effect_time_3D.anti.tsv', sep=''), 
-            sep = '\t',
-            quote = FALSE)
-
-#
-# 3.3. contrast effect of culture at 2 days
-#
-rule = metadata$time == 'two'
-s2c = metadata[rule, ]
-dim(s2c)
-View(s2c)
-# prepare contrast
-so = sleuth_prep(s2c,
-                 target_mapping = t2g,
-                 aggregation_column = 'ens_gene',
-                 read_bootstrap_tpm = TRUE)
-# contrast 
-so = sleuth_fit(so, ~culture, 'full')
-so = sleuth_fit(so, ~1, 'reduced')
-so = sleuth_lrt(so, 'reduced', 'full')
-sleuth_table = sleuth_results(so, 
-                              'reduced:full', 
-                              'lrt',
-                              show_all = FALSE,
-                              pval_aggregate = TRUE)
-sleuth_significant = dplyr::filter(sleuth_table, qval < 0.05)
-anti = dplyr::filter(sleuth_table, qval > 0.05)
-dim(sleuth_significant)
-plot_pca(so, color_by = 'culture') + ggtitle('effect culture at 2 days')
-ggsave(file.path(results_dir, 'effect_culture_2days.png'))
-write.table(sleuth_significant, 
-            file = paste(results_dir, '/effect_culture_day2.tsv', sep=''), 
-            sep = '\t',
-            quote = FALSE)
-write.table(anti, 
-            file = paste(results_dir, '/effect_culture_day2.anti.tsv', sep=''), 
-            sep = '\t',
-            quote = FALSE)
-
-#
-# 3.4. contrast effect of culture at 14 days
-#
-rule = metadata$time == 'fourteen'
-s2c = metadata[rule, ]
-dim(s2c)
-View(s2c)
-# prepare contrast
-so = sleuth_prep(s2c,
-                 target_mapping = t2g,
-                 aggregation_column = 'ens_gene',
-                 read_bootstrap_tpm = TRUE)
-# contrast 
-so = sleuth_fit(so, ~culture, 'full')
-so = sleuth_fit(so, ~1, 'reduced')
-so = sleuth_lrt(so, 'reduced', 'full')
-sleuth_table = sleuth_results(so, 
-                              'reduced:full', 
-                              'lrt',
-                              show_all = FALSE,
-                              pval_aggregate = TRUE)
-sleuth_significant = dplyr::filter(sleuth_table, qval < 0.05)
-anti = dplyr::filter(sleuth_table, qval > 0.05)
-dim(sleuth_significant)
-plot_pca(so, color_by = 'culture') + ggtitle('effect culture at 14 days')
-ggsave(file.path(results_dir, 'effect_culture_day14.png'))
-write.table(sleuth_significant, 
-            file = paste(results_dir, '/effect_culture_day14.tsv', sep=''), 
-            sep = '\t',
-            quote = FALSE)
-write.table(anti, 
-            file = paste(results_dir, '/effect_culture_day14.anti.tsv', sep=''), 
-            sep = '\t',
-            quote = FALSE)
-
-#
-# 3.5 interaction
-#
-s2c = metadata
-dim(s2c)
-View(s2c)
-# prepare contrast
-so = sleuth_prep(s2c,
-                 target_mapping = t2g,
-                 aggregation_column = 'ens_gene',
-                 read_bootstrap_tpm = TRUE)
-# contrast 
-so = sleuth_fit(so, ~time+culture+time:culture, 'full')
-so = sleuth_fit(so, ~time+culture, 'reduced')
-so = sleuth_lrt(so, 'reduced', 'full')
-sleuth_table = sleuth_results(so, 
-                              'reduced:full', 
-                              'lrt',
-                              show_all = FALSE,
-                              pval_aggregate = TRUE)
-sleuth_significant = dplyr::filter(sleuth_table, qval <= 0.05)
-dim(sleuth_significant)
-plot_pca(so, color_by = 'culture') + ggtitle('interaction')
-ggsave(file.path(results_dir, 'interaction.png'))
-write.table(sleuth_significant, 
-            file = paste(results_dir, '/interaction.tsv', sep=''), 
-            sep = '\t',
-            quote = FALSE)
-
-
 
 
