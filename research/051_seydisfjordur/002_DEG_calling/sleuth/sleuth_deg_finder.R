@@ -19,7 +19,7 @@ library(data.table)
 #
 # 0. user-defined variables
 #
-setwd("~/scratch/")
+setwd("/Users/adrian/scratch/")
 kallisto_dir = "/Users/adrian/research/bmcbf/051_seydisfjordur/results/profiles"
 results_dir = '/Users/adrian/research/bmcbf/051_seydisfjordur/results/degs_sleuth'
 
@@ -68,31 +68,50 @@ View(metadata)
 so = sleuth_prep(metadata,
                  target_mapping = t2g,
                  aggregation_column = 'ens_gene',
-                 #transform_fun_counts = function(x) (log2(x+0.5)),
+                 transform_fun_counts = function(x) (log2(x+0.5)),
                  read_bootstrap_tpm = TRUE)
+
+
+#############\\
+#filter_low_expression <- function(row) {
+#  mean(row > 5) >= 0.5  # expressed (>5 estimated counts) in at least 50% of samples
+#}
+
+#so <- sleuth_prep(s2c, ~condition, target_mapping = t2g, aggregation_column = "gene", 
+#                  extra_bootstrap_summary = TRUE,
+#                  filter_fun = filter_low_expression)
+###########
 
 # contrast 
 so = sleuth_fit(so, ~genotype, 'full')
 so = sleuth_fit(so, ~1, 'reduced')
 so = sleuth_lrt(so, 'reduced', 'full')
+
 # do not use gene mode in prep, use Lancaster aggregation method for transcripts into genes. 
 # see https://pachterlab.github.io/sleuth/docs/sleuth_results.html
 sleuth_table = sleuth_results(so, 'reduced:full', 'lrt', show_all = FALSE, pval_aggregate = TRUE) 
 
-# filter table as expected, see https://pachterlab.github.io/sleuth/docs/sleuth_results.html
-# get log2fc from the wald test
-# add annotation, save final table
-# check the relevel
-# implement filters on ammount, etc
+
+#! implement filters on ammount, etc
+#! get log2fc from the wald test
+#! add annotation, save final table
+#! check the relevel
+
 
 # filter
 sleuth_significant = dplyr::filter(sleuth_table, qval < 0.05)
-anti = dplyr::filter(sleuth_table, qval > 0.05)
 dim(sleuth_significant)
+anti = dplyr::filter(sleuth_table, qval > 0.05)
+
+
+
+# filter table as expected, see https://pachterlab.github.io/sleuth/docs/sleuth_results.html
+filtered_df <- sleuth_significant[!duplicated(sleuth_significant$target_id), ] # filtering repetitives
+dim(filtered_df)
 
 plot_pca(so, color_by = 'genotype') 
 
-write.table(sleuth_significant, 
+write.table(filtered_df, 
             file = paste(results_dir, '/effect_genotype.tsv', sep=''), 
             sep = '\t',
             quote = FALSE)

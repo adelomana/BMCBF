@@ -1,0 +1,736 @@
+(base) s8-mc07 2025-09-08 16:17:00 ~/hub/bmcbf/research/004_keilir/aug25 : python 000.trimmer.py
+['MITF_M_Untreated_FLAG_1', 'MITF_A_Untreated_FLAG_3', 'MITF_M_Untreated_IgG_3', 'MITF_A_Untreated_FLAG_2', 'MITF_M_Untreated_IgG_2', 'MITF_A_Untreated_IgG_1', 'MITF_M_Untreated_FLAG_2', 'MITF_M_Untreated_FLAG_3', 'MITF_A_Untreated_FLAG_1', 'MITF_M_Untreated_IgG_1', 'MITF_A_Untreated_IgG_2', 'MITF_A_Untreated_IgG_3']
+
+about to run MITF_M_Untreated_FLAG_1
+time fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_FLAG_1/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1706_1506.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_FLAG_1/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1706_1506.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_1/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_1/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe  --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_1/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_1/report.json
+
+Detecting adapter sequence for read1...
+>Nextera_LMP_Read1_External_Adapter | >Illumina Multiplexing Index Sequencing Primer
+GATCGGAAGAGCACACGTCTGAACTCCAGTCAC
+
+Detecting adapter sequence for read2...
+>Nextera_LMP_Read2_External_Adapter
+GATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+
+Read1 before filtering:
+total reads: 173103739
+total bases: 26138664589
+Q20 bases: 23330729316(89.2575%)
+Q30 bases: 19899013786(76.1287%)
+Q40 bases: 19899013786(76.1287%)
+
+Read2 before filtering:
+total reads: 173103739
+total bases: 26138664589
+Q20 bases: 23076780694(88.286%)
+Q30 bases: 19399984544(74.2195%)
+Q40 bases: 19399984544(74.2195%)
+
+Read1 after filtering:
+total reads: 162483186
+total bases: 11792522163
+Q20 bases: 11460876239(97.1877%)
+Q30 bases: 10696239906(90.7036%)
+Q40 bases: 10696239906(90.7036%)
+
+Read2 after filtering:
+total reads: 162483186
+total bases: 11812355408
+Q20 bases: 11411257168(96.6044%)
+Q30 bases: 10580819282(89.5742%)
+Q40 bases: 10580819282(89.5742%)
+
+Filtering result:
+reads passed filter: 324966372
+reads failed due to low quality: 7892532
+reads failed due to too many N: 7378
+reads failed due to too short: 13341196
+reads with adapter trimmed: 303336125
+bases trimmed due to adapters: 19298336506
+
+Duplication rate: 7.00999%
+
+Insert size peak (evaluated by paired-end reads): 0
+
+JSON report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_1/report.json
+HTML report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_1/report.html
+
+fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_FLAG_1/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1706_1506.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_FLAG_1/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1706_1506.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_1/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_1/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_1/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_1/report.json 
+fastp v1.0.1, time used: 670 seconds
+
+real	11m9.338s
+user	79m42.794s
+sys	0m54.240s
+
+about to run MITF_A_Untreated_FLAG_3
+time fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_FLAG_3/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_7_1712_1504.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_FLAG_3/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_7_1712_1504.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_3/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_3/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe  --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_3/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_3/report.json
+
+Detecting adapter sequence for read1...
+>Nextera_LMP_Read1_External_Adapter | >Illumina Multiplexing Index Sequencing Primer
+GATCGGAAGAGCACACGTCTGAACTCCAGTCAC
+
+Detecting adapter sequence for read2...
+>Nextera_LMP_Read2_External_Adapter
+GATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+
+Read1 before filtering:
+total reads: 217763262
+total bases: 32882252562
+Q20 bases: 29135195265(88.6046%)
+Q30 bases: 24824325047(75.4946%)
+Q40 bases: 24824325047(75.4946%)
+
+Read2 before filtering:
+total reads: 217763262
+total bases: 32882252562
+Q20 bases: 28182029595(85.7059%)
+Q30 bases: 22996994761(69.9374%)
+Q40 bases: 22996994761(69.9374%)
+
+Read1 after filtering:
+total reads: 212089992
+total bases: 13624305587
+Q20 bases: 13271832353(97.4129%)
+Q30 bases: 12488092759(91.6604%)
+Q40 bases: 12488092759(91.6604%)
+
+Read2 after filtering:
+total reads: 212089992
+total bases: 13661475078
+Q20 bases: 13270420822(97.1375%)
+Q30 bases: 12470961068(91.2856%)
+Q40 bases: 12470961068(91.2856%)
+
+Filtering result:
+reads passed filter: 424179984
+reads failed due to low quality: 10104098
+reads failed due to too many N: 35392
+reads failed due to too short: 1207050
+reads with adapter trimmed: 406684882
+bases trimmed due to adapters: 26553199608
+
+Duplication rate: 5.46719%
+
+Insert size peak (evaluated by paired-end reads): 39
+
+JSON report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_3/report.json
+HTML report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_3/report.html
+
+fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_FLAG_3/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_7_1712_1504.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_FLAG_3/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_7_1712_1504.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_3/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_3/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_3/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_3/report.json 
+fastp v1.0.1, time used: 3492 seconds
+
+real	58m12.208s
+user	98m47.320s
+sys	1m5.903s
+
+about to run MITF_M_Untreated_IgG_3
+time fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_IgG_3/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_7_1705_1505.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_IgG_3/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_7_1705_1505.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_3/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_3/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe  --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_3/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_3/report.json
+
+Detecting adapter sequence for read1...
+>Nextera_LMP_Read1_External_Adapter | >Illumina Multiplexing Index Sequencing Primer
+GATCGGAAGAGCACACGTCTGAACTCCAGTCAC
+
+Detecting adapter sequence for read2...
+>Illumina TruSeq Adapter Read 2
+AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+
+Read1 before filtering:
+total reads: 107408513
+total bases: 16218685463
+Q20 bases: 14844333973(91.5261%)
+Q30 bases: 13046035394(80.4383%)
+Q40 bases: 13046035394(80.4383%)
+
+Read2 before filtering:
+total reads: 107408513
+total bases: 16218685463
+Q20 bases: 14594699310(89.9869%)
+Q30 bases: 12521706200(77.2054%)
+Q40 bases: 12521706200(77.2054%)
+
+Read1 after filtering:
+total reads: 103029205
+total bases: 8484499225
+Q20 bases: 8274486807(97.5248%)
+Q30 bases: 7783310202(91.7356%)
+Q40 bases: 7783310202(91.7356%)
+
+Read2 after filtering:
+total reads: 103029205
+total bases: 8490546001
+Q20 bases: 8227125895(96.8975%)
+Q30 bases: 7644723356(90.0381%)
+Q40 bases: 7644723356(90.0381%)
+
+Filtering result:
+reads passed filter: 206058410
+reads failed due to low quality: 4373874
+reads failed due to too many N: 7508
+reads failed due to too short: 4377234
+reads with adapter trimmed: 189546421
+bases trimmed due to adapters: 11147406605
+
+Duplication rate: 3.16213%
+
+Insert size peak (evaluated by paired-end reads): 0
+
+JSON report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_3/report.json
+HTML report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_3/report.html
+
+fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_IgG_3/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_7_1705_1505.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_IgG_3/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_7_1705_1505.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_3/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_3/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_3/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_3/report.json 
+fastp v1.0.1, time used: 401 seconds
+
+real	6m40.861s
+user	48m54.696s
+sys	0m29.978s
+
+about to run MITF_A_Untreated_FLAG_2
+time fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_FLAG_2/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_3_1712_1504.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_FLAG_2/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_3_1712_1504.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_2/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_2/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe  --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_2/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_2/report.json
+
+Detecting adapter sequence for read1...
+>Nextera_LMP_Read1_External_Adapter | >Illumina Multiplexing Index Sequencing Primer
+GATCGGAAGAGCACACGTCTGAACTCCAGTCAC
+
+Detecting adapter sequence for read2...
+>Illumina TruSeq Adapter Read 2
+AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+
+Read1 before filtering:
+total reads: 281330012
+total bases: 42480831812
+Q20 bases: 38574709009(90.805%)
+Q30 bases: 34213749851(80.5393%)
+Q40 bases: 34213749851(80.5393%)
+
+Read2 before filtering:
+total reads: 281330012
+total bases: 42480831812
+Q20 bases: 38614132507(90.8978%)
+Q30 bases: 33806338775(79.5802%)
+Q40 bases: 33806338775(79.5802%)
+
+Read1 after filtering:
+total reads: 276329525
+total bases: 19579037276
+Q20 bases: 19303503101(98.5927%)
+Q30 bases: 18644895273(95.2289%)
+Q40 bases: 18644895273(95.2289%)
+
+Read2 after filtering:
+total reads: 276329525
+total bases: 19578211476
+Q20 bases: 19245252573(98.2993%)
+Q30 bases: 18498471676(94.485%)
+Q40 bases: 18498471676(94.485%)
+
+Filtering result:
+reads passed filter: 552659050
+reads failed due to low quality: 8741792
+reads failed due to too many N: 2688
+reads failed due to too short: 1256494
+reads with adapter trimmed: 523448625
+bases trimmed due to adapters: 33303086482
+
+Duplication rate: 16.9242%
+
+Insert size peak (evaluated by paired-end reads): 41
+
+JSON report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_2/report.json
+HTML report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_2/report.html
+
+fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_FLAG_2/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_3_1712_1504.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_FLAG_2/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_3_1712_1504.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_2/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_2/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_2/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_2/report.json 
+fastp v1.0.1, time used: 4211 seconds
+
+real	70m10.653s
+user	115m16.661s
+sys	1m8.200s
+
+about to run MITF_M_Untreated_IgG_2
+time fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_IgG_2/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_3_1705_1505.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_IgG_2/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_3_1705_1505.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_2/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_2/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe  --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_2/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_2/report.json
+
+Detecting adapter sequence for read1...
+>Nextera_LMP_Read1_External_Adapter | >Illumina Multiplexing Index Sequencing Primer
+GATCGGAAGAGCACACGTCTGAACTCCAGTCAC
+
+Detecting adapter sequence for read2...
+>Illumina TruSeq Adapter Read 2
+AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+
+Read1 before filtering:
+total reads: 127781827
+total bases: 19295055877
+Q20 bases: 18093759951(93.7741%)
+Q30 bases: 16556214170(85.8055%)
+Q40 bases: 16556214170(85.8055%)
+
+Read2 before filtering:
+total reads: 127781827
+total bases: 19295055877
+Q20 bases: 18051101999(93.553%)
+Q30 bases: 16281482092(84.3816%)
+Q40 bases: 16281482092(84.3816%)
+
+Read1 after filtering:
+total reads: 125427817
+total bases: 10998878804
+Q20 bases: 10840665434(98.5616%)
+Q30 bases: 10426805688(94.7988%)
+Q40 bases: 10426805688(94.7988%)
+
+Read2 after filtering:
+total reads: 125427817
+total bases: 10999474349
+Q20 bases: 10768259572(97.8979%)
+Q30 bases: 10216031487(92.8775%)
+Q40 bases: 10216031487(92.8775%)
+
+Filtering result:
+reads passed filter: 250855634
+reads failed due to low quality: 3433268
+reads failed due to too many N: 2402
+reads failed due to too short: 1272350
+reads with adapter trimmed: 216782453
+bases trimmed due to adapters: 12628430053
+
+Duplication rate: 8.29136%
+
+Insert size peak (evaluated by paired-end reads): 60
+
+JSON report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_2/report.json
+HTML report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_2/report.html
+
+fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_IgG_2/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_3_1705_1505.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_IgG_2/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_3_1705_1505.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_2/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_2/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_2/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_2/report.json 
+fastp v1.0.1, time used: 477 seconds
+
+real	7m57.304s
+user	58m36.022s
+sys	0m34.956s
+
+about to run MITF_A_Untreated_IgG_1
+time fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_IgG_1/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1711_1503.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_IgG_1/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1711_1503.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_1/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_1/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe  --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_1/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_1/report.json
+
+Detecting adapter sequence for read1...
+>Nextera_LMP_Read1_External_Adapter | >Illumina Multiplexing Index Sequencing Primer
+GATCGGAAGAGCACACGTCTGAACTCCAGTCAC
+
+Detecting adapter sequence for read2...
+>Illumina TruSeq Adapter Read 2
+AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+
+Read1 before filtering:
+total reads: 115557583
+total bases: 17449195033
+Q20 bases: 15628579885(89.5662%)
+Q30 bases: 13344678018(76.4773%)
+Q40 bases: 13344678018(76.4773%)
+
+Read2 before filtering:
+total reads: 115557583
+total bases: 17449195033
+Q20 bases: 15032447559(86.1498%)
+Q30 bases: 12290286435(70.4347%)
+Q40 bases: 12290286435(70.4347%)
+
+Read1 after filtering:
+total reads: 109067762
+total bases: 8404880170
+Q20 bases: 8173171325(97.2432%)
+Q30 bases: 7639134803(90.8893%)
+Q40 bases: 7639134803(90.8893%)
+
+Read2 after filtering:
+total reads: 109067762
+total bases: 8407433640
+Q20 bases: 8117859302(96.5557%)
+Q30 bases: 7511559783(89.3443%)
+Q40 bases: 7511559783(89.3443%)
+
+Filtering result:
+reads passed filter: 218135524
+reads failed due to low quality: 4963894
+reads failed due to too many N: 5320
+reads failed due to too short: 8010428
+reads with adapter trimmed: 203131262
+bases trimmed due to adapters: 12635523763
+
+Duplication rate: 5.03933%
+
+Insert size peak (evaluated by paired-end reads): 0
+
+JSON report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_1/report.json
+HTML report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_1/report.html
+
+fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_IgG_1/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1711_1503.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_IgG_1/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1711_1503.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_1/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_1/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_1/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_1/report.json 
+fastp v1.0.1, time used: 447 seconds
+
+real	7m26.677s
+user	55m8.285s
+sys	0m30.943s
+
+about to run MITF_M_Untreated_FLAG_2
+time fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_FLAG_2/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_3_1706_1506.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_FLAG_2/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_3_1706_1506.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_2/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_2/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe  --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_2/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_2/report.json
+
+Detecting adapter sequence for read1...
+>Nextera_LMP_Read1_External_Adapter | >Illumina Multiplexing Index Sequencing Primer
+GATCGGAAGAGCACACGTCTGAACTCCAGTCAC
+
+Detecting adapter sequence for read2...
+>Illumina TruSeq Adapter Read 2
+AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+
+Read1 before filtering:
+total reads: 173997011
+total bases: 26273548661
+Q20 bases: 24018300692(91.4163%)
+Q30 bases: 21562529404(82.0693%)
+Q40 bases: 21562529404(82.0693%)
+
+Read2 before filtering:
+total reads: 173997011
+total bases: 26273548661
+Q20 bases: 24068385384(91.6069%)
+Q30 bases: 21280676993(80.9966%)
+Q40 bases: 21280676993(80.9966%)
+
+Read1 after filtering:
+total reads: 171177748
+total bases: 12465541189
+Q20 bases: 12286300242(98.5621%)
+Q30 bases: 11851903639(95.0773%)
+Q40 bases: 11851903639(95.0773%)
+
+Read2 after filtering:
+total reads: 171177748
+total bases: 12467676936
+Q20 bases: 12242654356(98.1952%)
+Q30 bases: 11740664074(94.1688%)
+Q40 bases: 11740664074(94.1688%)
+
+Filtering result:
+reads passed filter: 342355496
+reads failed due to low quality: 4598956
+reads failed due to too many N: 2026
+reads failed due to too short: 1037544
+reads with adapter trimmed: 320514074
+bases trimmed due to adapters: 20151380821
+
+Duplication rate: 7.38893%
+
+Insert size peak (evaluated by paired-end reads): 57
+
+JSON report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_2/report.json
+HTML report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_2/report.html
+
+fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_FLAG_2/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_3_1706_1506.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_FLAG_2/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_3_1706_1506.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_2/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_2/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_2/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_2/report.json 
+fastp v1.0.1, time used: 4085 seconds
+
+real	68m5.464s
+user	71m37.190s
+sys	0m41.429s
+
+about to run MITF_M_Untreated_FLAG_3
+time fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_FLAG_3/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_7_1706_1506.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_FLAG_3/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_7_1706_1506.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_3/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_3/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe  --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_3/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_3/report.json
+
+Detecting adapter sequence for read1...
+>Nextera_LMP_Read1_External_Adapter | >Illumina Multiplexing Index Sequencing Primer
+GATCGGAAGAGCACACGTCTGAACTCCAGTCAC
+
+Detecting adapter sequence for read2...
+>Illumina TruSeq Adapter Read 2
+AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+
+Read1 before filtering:
+total reads: 157283042
+total bases: 23749739342
+Q20 bases: 21438946250(90.2702%)
+Q30 bases: 18611013457(78.363%)
+Q40 bases: 18611013457(78.363%)
+
+Read2 before filtering:
+total reads: 157283042
+total bases: 23749739342
+Q20 bases: 20921021537(88.0895%)
+Q30 bases: 17510729352(73.7302%)
+Q40 bases: 17510729352(73.7302%)
+
+Read1 after filtering:
+total reads: 152103996
+total bases: 12122735991
+Q20 bases: 11783325300(97.2002%)
+Q30 bases: 11004190144(90.7732%)
+Q40 bases: 11004190144(90.7732%)
+
+Read2 after filtering:
+total reads: 152103996
+total bases: 12140670073
+Q20 bases: 11721987492(96.5514%)
+Q30 bases: 10828420202(89.1913%)
+Q40 bases: 10828420202(89.1913%)
+
+Filtering result:
+reads passed filter: 304207992
+reads failed due to low quality: 7131308
+reads failed due to too many N: 23772
+reads failed due to too short: 3203012
+reads with adapter trimmed: 273685513
+bases trimmed due to adapters: 16354615178
+
+Duplication rate: 3.01399%
+
+Insert size peak (evaluated by paired-end reads): 39
+
+JSON report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_3/report.json
+HTML report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_3/report.html
+
+fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_FLAG_3/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_7_1706_1506.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_FLAG_3/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_7_1706_1506.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_3/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_3/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_3/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_FLAG_3/report.json 
+fastp v1.0.1, time used: 606 seconds
+
+real	10m6.173s
+user	74m8.728s
+sys	0m44.643s
+
+about to run MITF_A_Untreated_FLAG_1
+time fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_FLAG_1/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1712_1504.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_FLAG_1/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1712_1504.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_1/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_1/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe  --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_1/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_1/report.json
+
+Detecting adapter sequence for read1...
+>Nextera_LMP_Read1_External_Adapter | >Illumina Multiplexing Index Sequencing Primer
+GATCGGAAGAGCACACGTCTGAACTCCAGTCAC
+
+Detecting adapter sequence for read2...
+>Nextera_LMP_Read2_External_Adapter
+GATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+
+Read1 before filtering:
+total reads: 245923192
+total bases: 37134401992
+Q20 bases: 33057749054(89.0219%)
+Q30 bases: 28171293962(75.8631%)
+Q40 bases: 28171293962(75.8631%)
+
+Read2 before filtering:
+total reads: 245923192
+total bases: 37134401992
+Q20 bases: 32542065259(87.6332%)
+Q30 bases: 27147925007(73.1072%)
+Q40 bases: 27147925007(73.1072%)
+
+Read1 after filtering:
+total reads: 236588148
+total bases: 16581460449
+Q20 bases: 16132381730(97.2917%)
+Q30 bases: 15121404401(91.1946%)
+Q40 bases: 15121404401(91.1946%)
+
+Read2 after filtering:
+total reads: 236588148
+total bases: 16601152527
+Q20 bases: 16082360291(96.875%)
+Q30 bases: 15008066543(90.4038%)
+Q40 bases: 15008066543(90.4038%)
+
+Filtering result:
+reads passed filter: 473176296
+reads failed due to low quality: 11941398
+reads failed due to too many N: 8862
+reads failed due to too short: 6719828
+reads with adapter trimmed: 451344474
+bases trimmed due to adapters: 29048138359
+
+Duplication rate: 8.35054%
+
+Insert size peak (evaluated by paired-end reads): 39
+
+JSON report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_1/report.json
+HTML report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_1/report.html
+
+fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_FLAG_1/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1712_1504.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_FLAG_1/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1712_1504.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_1/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_1/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_1/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_FLAG_1/report.json 
+fastp v1.0.1, time used: 2394 seconds
+
+real	39m53.586s
+user	110m39.406s
+sys	1m2.494s
+
+about to run MITF_M_Untreated_IgG_1
+time fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_IgG_1/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1705_1505.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_IgG_1/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1705_1505.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_1/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_1/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe  --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_1/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_1/report.json
+
+Detecting adapter sequence for read1...
+>Nextera_LMP_Read1_External_Adapter | >Illumina Multiplexing Index Sequencing Primer
+GATCGGAAGAGCACACGTCTGAACTCCAGTCAC
+
+Detecting adapter sequence for read2...
+>Illumina TruSeq Adapter Read 2
+AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+
+Read1 before filtering:
+total reads: 128364536
+total bases: 19383044936
+Q20 bases: 17680225130(91.2149%)
+Q30 bases: 15404329553(79.4732%)
+Q40 bases: 15404329553(79.4732%)
+
+Read2 before filtering:
+total reads: 128364536
+total bases: 19383044936
+Q20 bases: 17529170481(90.4356%)
+Q30 bases: 15069645898(77.7465%)
+Q40 bases: 15069645898(77.7465%)
+
+Read1 after filtering:
+total reads: 122457843
+total bases: 10187886884
+Q20 bases: 9909247811(97.265%)
+Q30 bases: 9248675510(90.7811%)
+Q40 bases: 9248675510(90.7811%)
+
+Read2 after filtering:
+total reads: 122457843
+total bases: 10189899799
+Q20 bases: 9827268283(96.4413%)
+Q30 bases: 9052600115(88.839%)
+Q40 bases: 9052600115(88.839%)
+
+Filtering result:
+reads passed filter: 244915686
+reads failed due to low quality: 5647242
+reads failed due to too many N: 6966
+reads failed due to too short: 6159178
+reads with adapter trimmed: 218882975
+bases trimmed due to adapters: 13382799755
+
+Duplication rate: 7.06938%
+
+Insert size peak (evaluated by paired-end reads): 0
+
+JSON report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_1/report.json
+HTML report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_1/report.html
+
+fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_IgG_1/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1705_1505.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_M_Untreated_IgG_1/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1705_1505.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_1/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_1/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_1/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_M_Untreated_IgG_1/report.json 
+fastp v1.0.1, time used: 494 seconds
+
+real	8m14.335s
+user	59m9.910s
+sys	0m38.583s
+
+about to run MITF_A_Untreated_IgG_2
+time fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_IgG_2/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_3_1711_1503.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_IgG_2/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_3_1711_1503.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_2/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_2/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe  --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_2/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_2/report.json
+
+Detecting adapter sequence for read1...
+>Nextera_LMP_Read1_External_Adapter | >Illumina Multiplexing Index Sequencing Primer
+GATCGGAAGAGCACACGTCTGAACTCCAGTCAC
+
+Detecting adapter sequence for read2...
+>Illumina TruSeq Adapter Read 2
+AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+
+Read1 before filtering:
+total reads: 183619435
+total bases: 27726534685
+Q20 bases: 25743585707(92.8482%)
+Q30 bases: 23259572366(83.8892%)
+Q40 bases: 23259572366(83.8892%)
+
+Read2 before filtering:
+total reads: 183619435
+total bases: 27726534685
+Q20 bases: 25133961847(90.6495%)
+Q30 bases: 21841124858(78.7734%)
+Q40 bases: 21841124858(78.7734%)
+
+Read1 after filtering:
+total reads: 177013637
+total bases: 16342647901
+Q20 bases: 16085543694(98.4268%)
+Q30 bases: 15403712884(94.2547%)
+Q40 bases: 15403712884(94.2547%)
+
+Read2 after filtering:
+total reads: 177013637
+total bases: 16346930936
+Q20 bases: 15936992159(97.4923%)
+Q30 bases: 14997994047(91.7481%)
+Q40 bases: 14997994047(91.7481%)
+
+Filtering result:
+reads passed filter: 354027274
+reads failed due to low quality: 6544650
+reads failed due to too many N: 4338
+reads failed due to too short: 6662608
+reads with adapter trimmed: 295156139
+bases trimmed due to adapters: 17009617891
+
+Duplication rate: 7.65147%
+
+Insert size peak (evaluated by paired-end reads): 0
+
+JSON report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_2/report.json
+HTML report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_2/report.html
+
+fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_IgG_2/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_3_1711_1503.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_IgG_2/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_3_1711_1503.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_2/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_2/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_2/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_2/report.json 
+fastp v1.0.1, time used: 756 seconds
+
+real	12m35.952s
+user	92m42.928s
+sys	0m51.824s
+
+about to run MITF_A_Untreated_IgG_3
+time fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_IgG_3/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_7_1711_1503.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_IgG_3/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_7_1711_1503.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_3/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_3/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe  --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_3/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_3/report.json
+
+Detecting adapter sequence for read1...
+>Nextera_LMP_Read1_External_Adapter | >Illumina Multiplexing Index Sequencing Primer
+GATCGGAAGAGCACACGTCTGAACTCCAGTCAC
+
+Detecting adapter sequence for read2...
+>Nextera_LMP_Read2_External_Adapter
+GATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+
+Read1 before filtering:
+total reads: 207925517
+total bases: 31396753067
+Q20 bases: 28334931085(90.248%)
+Q30 bases: 24481184958(77.9736%)
+Q40 bases: 24481184958(77.9736%)
+
+Read2 before filtering:
+total reads: 207925517
+total bases: 31396753067
+Q20 bases: 26992026271(85.9708%)
+Q30 bases: 22042470504(70.2062%)
+Q40 bases: 22042470504(70.2062%)
+
+Read1 after filtering:
+total reads: 197963409
+total bases: 16791661406
+Q20 bases: 16316788781(97.172%)
+Q30 bases: 15221474087(90.649%)
+Q40 bases: 15221474087(90.649%)
+
+Read2 after filtering:
+total reads: 197963409
+total bases: 16821162198
+Q20 bases: 16201617536(96.3169%)
+Q30 bases: 14882802889(88.4767%)
+Q40 bases: 14882802889(88.4767%)
+
+Filtering result:
+reads passed filter: 395926818
+reads failed due to low quality: 11244168
+reads failed due to too many N: 24998
+reads failed due to too short: 8655050
+reads with adapter trimmed: 347884118
+bases trimmed due to adapters: 20742120456
+
+Duplication rate: 4.82075%
+
+Insert size peak (evaluated by paired-end reads): 0
+
+JSON report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_3/report.json
+HTML report: /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_3/report.html
+
+fastp -i /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_IgG_3/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_7_1711_1503.001.R1.fastq.gz -I /Users/adrian/research/bmcbf/004_keilir/data/MITF_A_Untreated_IgG_3/novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_7_1711_1503.001.R2.fastq.gz -o /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_3/clean.R1.fq.gz -O /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_3/clean.R2.fq.gz --thread 8 --trim_poly_g --detect_adapter_for_pe --allow_gap_overlap_trimming -h /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_3/report.html -j /Users/adrian/research/bmcbf/004_keilir/results/000_trimmed/MITF_A_Untreated_IgG_3/report.json 
+fastp v1.0.1, time used: 831 seconds
+
+real	13m51.017s
+user	102m2.125s
+sys	0m56.926s
+
+(base) s8-mc07 2025-09-08 21:31:35 ~/hub/bmcbf/research/004_keilir/aug25 : 
