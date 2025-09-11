@@ -126,11 +126,6 @@ so = sleuth_lrt(so, 'reduced', 'full')
 # see https://pachterlab.github.io/sleuth/docs/sleuth_results.html
 sleuth_table = sleuth_results(so, 'reduced:full', 'lrt', show_all = FALSE, pval_aggregate = TRUE) 
 
-#! implement filters on ammount, etc
-#! get log2fc from the kallisto stimated counts
-#! add annotation, save final table
-#! check the relevel
-
 # filter simple duplicates
 sleuth_significant = dplyr::filter(sleuth_table, qval < 0.05)
 dim(sleuth_significant)
@@ -145,29 +140,55 @@ dim(filtered_df)
 # with filter of counts and TPMs: 2,018 DEGs
 
 #
-# final filter on log2FC. It is more appropriate to do it after than before testing
-#
-length(filtered_df$target_id)
-
-############# get TPMs and log2FC from deseq2
-
-
-# add relevant information like log2FC and expression in one vs the other case. how do i get a gene level expression matrix? probably you need a wald on log2 x plus 05 reading again. and then the expression values from the DESEq2 quantification
-
+# 5. get TPMs and log2FC from DESeq2. Oh, well.
 # from sleuth_to_matrix: Note this currently does not support returning raw values for gene-level counts or TPMs.
-# Moving to DESeq2
-# get log2FC from tests and TPMs from previous table then store results.
+#
+#if (!require("BiocManager", quietly = TRUE))
+#  install.packages("BiocManager")
+#BiocManager::install("DESeq2")
+#BiocManager::install("tximport")
+library(DESeq2)
+library(tximport)
 
+txi = tximport(metadata$path, type="kallisto", tx2gene=t2g)
+dds = DESeqDataSetFromTximport(txi, colData=metadata, design=~genotype) 
+dds$genotype = relevel(dds$genotype, ref="SEN")
+dds = DESeq(dds, test="LRT", reduced=~1)
+res = results(dds, parallel=TRUE)
+
+filtered_df$log2FC = res[filtered_df$target_id, "log2FoldChange"]
+dim(filtered_df)
+final = filtered_df[abs(filtered_df$log2FC) >= 1, ]
+dim(final)
+
+subset = txi$abundance[final$target_id, ]
+a = rowMedians(subset[ , seta_indexes])
+b = rowMedians(subset[ , setb_indexes])
+final$TPMa = a
+final$TPMb = b
+
+#
+# 6. add annotation
+#
+ensembl_results_wo = sapply(strsplit(final$target_id, split='.',fixed=TRUE), function(x) (x[1]))
+length(ensembl_results_wo)
+sub = annotation[annotation$ensembl_gene_id %in% ensembl_results_wo, ]
+dim(sub)
+sub = sub[, c(3, 4, 5, 6)]
+sub$description2 = sapply(strsplit(sub$description, split='[Source',fixed=TRUE), function(x) (x[1]))
+rownames(sub) <- sub$ensembl_gene_id
+
+final$ensembl_id = sub[ensembl_results_wo, 'ensembl_gene_id']
+final$gene_name = sub[ensembl_results_wo, 'external_gene_name']
+final$biotype = sub[ensembl_results_wo, 'gene_biotype']
+final$description2 = sub[ensembl_results_wo, 'description2']
 
 plot_pca(so, color_by = 'genotype') 
 
-write.table(filtered_df, 
+write.table(final, 
             file = paste(results_dir, '/effect_genotype.tsv', sep=''), 
             sep = '\t',
             quote = FALSE)
-write.table(anti, 
-            file = paste(results_dir, '/effect_genotype.anti.tsv', sep=''), 
-            sep = '\t',
-            quote = FALSE)
+
 
 
