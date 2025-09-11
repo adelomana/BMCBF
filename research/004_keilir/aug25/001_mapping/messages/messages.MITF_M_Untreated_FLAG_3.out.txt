@@ -1,0 +1,26 @@
+Wed Sep 10 14:40:59 GMT 2025
+/users/home/adrian/research/keilir/src/aug25
+the scratch dir is:
+/scratch/users/adrian/1463520-elgP
+
+about to copy files into scratch
+Wed Sep 10 14:40:59 GMT 2025
+Wed Sep 10 14:41:21 GMT 2025
+
+about to call bowtie2
+Wed Sep 10 14:41:21 GMT 2025
+Wed Sep 10 16:40:41 GMT 2025
+
+about to copy results out of scratch to my dirs
+clean.R1.fq.gz
+clean.R2.fq.gz
+ecoli.bam
+human.bam
+report.html
+report.json
+Wed Sep 10 16:40:41 GMT 2025
+Wed Sep 10 16:41:27 GMT 2025
+
+about to remove scratch dir
+all done.
+Wed Sep 10 16:41:29 GMT 2025

@@ -1,0 +1,23 @@
+152103996 reads; of these:
+  152103996 (100.00%) were paired; of these:
+    22722148 (14.94%) aligned concordantly 0 times
+    99142043 (65.18%) aligned concordantly exactly 1 time
+    30239805 (19.88%) aligned concordantly >1 times
+85.06% overall alignment rate
+[bam_sort_core] merging from 3 files and 32 in-memory blocks...
+
+real	98m42.246s
+user	3074m37.505s
+sys	50m2.077s
+152103996 reads; of these:
+  152103996 (100.00%) were paired; of these:
+    152102367 (100.00%) aligned concordantly 0 times
+    1430 (0.00%) aligned concordantly exactly 1 time
+    199 (0.00%) aligned concordantly >1 times
+0.00% overall alignment rate
+[bam_sort_core] merging from 2 files and 32 in-memory blocks...
+
+real	20m36.902s
+user	630m1.889s
+sys	21m40.412s
+mkdir: cannot create directory ‘/hpcdata/Mimir/adrian/research/keilir/results/MITF_M_Untreated_FLAG_3’: File exists
