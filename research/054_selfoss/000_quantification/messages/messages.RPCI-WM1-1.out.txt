@@ -1,0 +1,33 @@
+Fri Sep 12 16:13:52 GMT 2025
+/users/home/adrian/research/julia
+the scratch dir is:
+/scratch/users/adrian/1469099-h68p
+
+about to copy files into scratch
+Fri Sep 12 16:13:52 GMT 2025
+Fri Sep 12 16:14:26 GMT 2025
+
+about to call fastp
+RPCI-WM1-1_1.fq.gz
+RPCI-WM1-1_2.fq.gz
+RPCI-WM1-1.png
+Fri Sep 12 16:14:26 GMT 2025
+Fri Sep 12 16:17:16 GMT 2025
+
+about to copy results out of scratch to my dirs
+clean.R1.fq.gz
+clean.R2.fq.gz
+kallisto_output_a
+kallisto_output_b
+kallisto_output_c
+report.html
+report.json
+RPCI-WM1-1_1.fq.gz
+RPCI-WM1-1_2.fq.gz
+RPCI-WM1-1.png
+Fri Sep 12 16:53:29 GMT 2025
+Fri Sep 12 16:53:30 GMT 2025
+
+about to remove scratch dir
+all done.
+Fri Sep 12 16:53:30 GMT 2025
