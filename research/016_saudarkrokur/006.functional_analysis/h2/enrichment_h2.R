@@ -1,7 +1,7 @@
 #if (!require("BiocManager", quietly = TRUE))
-#  install.packages("BiocManager")
-
+# install.packages("BiocManager")
 #BiocManager::install("org.Dm.eg.db")
+#BiocManager::install("clusterProfiler")
 
 #
 # 0. load libraries
