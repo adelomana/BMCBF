@@ -1,0 +1,68 @@
+Detecting adapter sequence for read1...
+>Nextera_LMP_Read1_External_Adapter | >Illumina Multiplexing Index Sequencing Primer
+GATCGGAAGAGCACACGTCTGAACTCCAGTCAC
+
+Detecting adapter sequence for read2...
+>Illumina TruSeq Adapter Read 2
+AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+
+Read1 before filtering:
+total reads: 128364536
+total bases: 19383044936
+Q20 bases: 17680225130(91.2149%)
+Q30 bases: 15404329553(79.4732%)
+Q40 bases: 15404329553(79.4732%)
+
+Read2 before filtering:
+total reads: 128364536
+total bases: 19383044936
+Q20 bases: 17529170481(90.4356%)
+Q30 bases: 15069645898(77.7465%)
+Q40 bases: 15069645898(77.7465%)
+
+Read1 after filtering:
+total reads: 120579152
+total bases: 10144307171
+Q20 bases: 9866575725(97.2622%)
+Q30 bases: 9208270232(90.7728%)
+Q40 bases: 9208270232(90.7728%)
+
+Read2 after filtering:
+total reads: 120579152
+total bases: 10147874518
+Q20 bases: 9786138142(96.4353%)
+Q30 bases: 9013022533(88.8169%)
+Q40 bases: 9013022533(88.8169%)
+
+Filtering result:
+reads passed filter: 241158304
+reads failed due to low quality: 5647242
+reads failed due to too many N: 6966
+reads failed due to too short: 9916560
+reads with adapter trimmed: 218882975
+bases trimmed due to adapters: 13382799755
+
+Duplication rate: 7.06938%
+
+Insert size peak (evaluated by paired-end reads): 0
+
+JSON report: report.json
+HTML report: report.html
+
+fastp -i novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1705_1505.001.R1.fastq.gz -I novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1705_1505.001.R2.fastq.gz -o clean.R1.fq.gz -O clean.R2.fq.gz --thread 32 --trim_poly_g --detect_adapter_for_pe --allow_gap_overlap_trimming --length_required 25 -h report.html -j report.json 
+fastp v1.0.1, time used: 247 seconds
+
+real	4m7.355s
+user	63m43.420s
+sys	0m33.834s
+120579152 reads; of these:
+  120579152 (100.00%) were paired; of these:
+    44964793 (37.29%) aligned concordantly 0 times
+    57868961 (47.99%) aligned concordantly exactly 1 time
+    17745398 (14.72%) aligned concordantly >1 times
+62.71% overall alignment rate
+[bam_sort_core] merging from 2 files and 32 in-memory blocks...
+
+real	75m41.894s
+user	2359m25.301s
+sys	28m56.864s

@@ -1,0 +1,39 @@
+Fri Sep 19 11:40:09 GMT 2025
+/users/home/adrian/research/004_keilir/src/sep25
+# conda environments:
+#
+base                     /hpcapps/lib-edda/easybuild/software/Anaconda3/2023.09-0
+arnarholt                /users/home/adrian/.conda/envs/arnarholt
+aug25                 *  /users/home/adrian/.conda/envs/aug25
+keilir019                /users/home/adrian/.conda/envs/keilir019
+moa                      /users/home/adrian/.conda/envs/moa
+
+the scratch dir is:
+/scratch/users/adrian/1479787-tgZI
+
+about to copy files into scratch
+Fri Sep 19 11:40:13 GMT 2025
+Fri Sep 19 11:43:21 GMT 2025
+
+about to call fastp
+Fri Sep 19 11:43:21 GMT 2025
+Fri Sep 19 11:50:54 GMT 2025
+
+about to call bowtie2
+Fri Sep 19 11:50:54 GMT 2025
+Fri Sep 19 13:18:19 GMT 2025
+
+about to copy results out of scratch to my dirs
+clean.R1.fq.gz
+clean.R2.fq.gz
+human.bam
+novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_3_1712_1504.001.R1.fastq.gz
+novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_3_1712_1504.001.R2.fastq.gz
+report.html
+report.json
+Fri Sep 19 13:18:19 GMT 2025
+Fri Sep 19 13:19:07 GMT 2025
+
+about to remove scratch dir
+all done.
+Fri Sep 19 13:19:09 GMT 2025

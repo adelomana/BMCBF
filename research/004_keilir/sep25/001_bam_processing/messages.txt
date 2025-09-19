@@ -1,0 +1,2 @@
+=== Working with MITF_A_Untreated_FLAG_1 ===
+time java -jar /Users/adrian/software/picard/picard.jar AddOrReplaceReadGroups I=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_1/human.bam O=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_1/MITF_A_Untreated_FLAG_1.RG.bam RGID=MITF_A_Untreated_FLAG_1 RGLB=lib_MITF_A_Untreated_FLAG_1 RGPL=ILLUMINA RGPU=unit1 RGSM=MITF_A_Untreated_FLAG_1 VERBOSITY=WARNING
