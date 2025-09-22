@@ -1,0 +1,1143 @@
+(base) s8-mc07 2025-09-20 09:02:50 ~/hub/bmcbf/research/004_keilir/sep25/001_bam_processing : bash sender2.sh > messages.txt
+INFO	2025-09-20 09:04:08	AddOrReplaceReadGroups	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    AddOrReplaceReadGroups -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_1/human.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_1/MITF_A_Untreated_FLAG_1.RG.bam -RGID MITF_A_Untreated_FLAG_1 -RGLB lib_MITF_A_Untreated_FLAG_1 -RGPL ILLUMINA -RGPU unit1 -RGSM MITF_A_Untreated_FLAG_1 -VERBOSITY WARNING
+**********
+
+
+09:04:08.423 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+09:04:08.449 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression5767867942112263432.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression5767867942112263432.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression5767867942112263432.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression5767867942112263432.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression5767867942112263432.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+09:04:08.449 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+09:04:08.451 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression4868109806051294847.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression4868109806051294847.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression4868109806051294847.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression4868109806051294847.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression4868109806051294847.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sat Sep 20 09:04:08 GMT 2025] AddOrReplaceReadGroups INPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_1/human.bam OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_1/MITF_A_Untreated_FLAG_1.RG.bam RGID=MITF_A_Untreated_FLAG_1 RGLB=lib_MITF_A_Untreated_FLAG_1 RGPL=ILLUMINA RGPU=unit1 RGSM=MITF_A_Untreated_FLAG_1 VERBOSITY=WARNING    QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sat Sep 20 09:04:08 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+09:04:08.543 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+09:04:08.544 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+09:04:08.555 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sat Sep 20 09:38:56 GMT 2025] picard.sam.AddOrReplaceReadGroups done. Elapsed time: 34.80 minutes.
+Runtime.totalMemory()=270532608
+
+real	34m48.616s
+user	34m37.924s
+sys	0m13.276s
+INFO	2025-09-20 09:38:56	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_1/MITF_A_Untreated_FLAG_1.RG.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_1/MITF_A_Untreated_FLAG_1.marked_dup.bam -REMOVE_DUPLICATES false -M /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_1/MITF_A_Untreated_FLAG_1.marked_dup.info.txt -VERBOSITY WARNING
+**********
+
+
+09:38:56.940 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+09:38:56.967 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7616687308557215025.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7616687308557215025.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7616687308557215025.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7616687308557215025.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7616687308557215025.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+09:38:56.968 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+09:38:56.970 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1274772997984485543.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1274772997984485543.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1274772997984485543.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1274772997984485543.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1274772997984485543.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sat Sep 20 09:38:56 GMT 2025] MarkDuplicates INPUT=[/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_1/MITF_A_Untreated_FLAG_1.RG.bam] OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_1/MITF_A_Untreated_FLAG_1.marked_dup.bam METRICS_FILE=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_1/MITF_A_Untreated_FLAG_1.marked_dup.info.txt REMOVE_DUPLICATES=false VERBOSITY=WARNING    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true DUPLEX_UMI=false FLOW_MODE=false FLOW_DUP_STRATEGY=FLOW_QUALITY_SUM_STRATEGY FLOW_USE_END_IN_UNPAIRED_READS=false FLOW_USE_UNPAIRED_CLIPPED_END=false FLOW_UNPAIRED_END_UNCERTAINTY=0 FLOW_UNPAIRED_START_UNCERTAINTY=0 FLOW_SKIP_FIRST_N_FLOWS=0 FLOW_Q_IS_KNOWN_END=false FLOW_EFFECTIVE_QUALITY_THRESHOLD=15 ADD_PG_TAG_TO_READS=true ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sat Sep 20 09:38:57 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+09:38:57.079 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+09:38:57.080 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+09:48:26.246 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+09:48:26.246 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+09:48:26.256 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sat Sep 20 10:25:34 GMT 2025] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 46.63 minutes.
+Runtime.totalMemory()=41943040
+
+real	46m38.410s
+user	50m32.840s
+sys	0m29.105s
+
+real	36m42.671s
+user	38m57.042s
+sys	0m39.961s
+
+real	29m21.902s
+user	31m10.655s
+sys	0m29.882s
+[bam_sort_core] merging from 12 files and 8 in-memory blocks...
+
+real	5m38.217s
+user	34m9.309s
+sys	1m3.700s
+
+real	4m38.861s
+user	4m26.846s
+sys	0m11.175s
+
+real	4m49.691s
+user	4m38.207s
+sys	0m10.920s
+
+real	27m34.231s
+user	12m50.411s
+sys	12m17.686s
+INFO	2025-09-20 12:16:36	AddOrReplaceReadGroups	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    AddOrReplaceReadGroups -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_2/human.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_2/MITF_A_Untreated_FLAG_2.RG.bam -RGID MITF_A_Untreated_FLAG_2 -RGLB lib_MITF_A_Untreated_FLAG_2 -RGPL ILLUMINA -RGPU unit2 -RGSM MITF_A_Untreated_FLAG_2 -VERBOSITY WARNING
+**********
+
+
+12:16:36.858 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+12:16:36.885 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression11012506726037985577.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression11012506726037985577.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression11012506726037985577.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression11012506726037985577.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression11012506726037985577.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+12:16:36.885 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+12:16:36.887 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1752342083809124851.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1752342083809124851.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1752342083809124851.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1752342083809124851.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1752342083809124851.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sat Sep 20 12:16:36 GMT 2025] AddOrReplaceReadGroups INPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_2/human.bam OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_2/MITF_A_Untreated_FLAG_2.RG.bam RGID=MITF_A_Untreated_FLAG_2 RGLB=lib_MITF_A_Untreated_FLAG_2 RGPL=ILLUMINA RGPU=unit2 RGSM=MITF_A_Untreated_FLAG_2 VERBOSITY=WARNING    QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sat Sep 20 12:16:37 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+12:16:37.041 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+12:16:37.042 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+12:16:37.054 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sat Sep 20 12:53:04 GMT 2025] picard.sam.AddOrReplaceReadGroups done. Elapsed time: 36.47 minutes.
+Runtime.totalMemory()=270532608
+
+real	36m28.711s
+user	36m16.925s
+sys	0m15.143s
+INFO	2025-09-20 12:53:05	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_2/MITF_A_Untreated_FLAG_2.RG.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_2/MITF_A_Untreated_FLAG_2.marked_dup.bam -REMOVE_DUPLICATES false -M /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_2/MITF_A_Untreated_FLAG_2.marked_dup.info.txt -VERBOSITY WARNING
+**********
+
+
+12:53:05.445 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+12:53:05.472 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1588672046694258216.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1588672046694258216.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1588672046694258216.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1588672046694258216.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1588672046694258216.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+12:53:05.473 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+12:53:05.476 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression16278392635107783163.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression16278392635107783163.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression16278392635107783163.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression16278392635107783163.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression16278392635107783163.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sat Sep 20 12:53:05 GMT 2025] MarkDuplicates INPUT=[/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_2/MITF_A_Untreated_FLAG_2.RG.bam] OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_2/MITF_A_Untreated_FLAG_2.marked_dup.bam METRICS_FILE=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_2/MITF_A_Untreated_FLAG_2.marked_dup.info.txt REMOVE_DUPLICATES=false VERBOSITY=WARNING    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true DUPLEX_UMI=false FLOW_MODE=false FLOW_DUP_STRATEGY=FLOW_QUALITY_SUM_STRATEGY FLOW_USE_END_IN_UNPAIRED_READS=false FLOW_USE_UNPAIRED_CLIPPED_END=false FLOW_UNPAIRED_END_UNCERTAINTY=0 FLOW_UNPAIRED_START_UNCERTAINTY=0 FLOW_SKIP_FIRST_N_FLOWS=0 FLOW_Q_IS_KNOWN_END=false FLOW_EFFECTIVE_QUALITY_THRESHOLD=15 ADD_PG_TAG_TO_READS=true ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sat Sep 20 12:53:05 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+12:53:05.584 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+12:53:05.585 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+13:10:01.500 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+13:10:01.501 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+13:10:01.513 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sat Sep 20 13:48:52 GMT 2025] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 55.79 minutes.
+Runtime.totalMemory()=41943040
+
+real	55m48.002s
+user	60m5.198s
+sys	0m30.267s
+
+real	37m16.639s
+user	39m25.980s
+sys	0m40.956s
+
+real	31m24.082s
+user	33m15.932s
+sys	0m33.529s
+[bam_sort_core] merging from 13 files and 8 in-memory blocks...
+
+real	5m37.972s
+user	33m34.256s
+sys	1m3.128s
+
+real	4m50.743s
+user	4m38.994s
+sys	0m11.211s
+
+real	5m7.771s
+user	4m55.451s
+sys	0m11.792s
+
+real	28m16.477s
+user	13m35.993s
+sys	12m1.402s
+INFO	2025-09-20 15:43:36	AddOrReplaceReadGroups	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    AddOrReplaceReadGroups -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_3/human.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_3/MITF_A_Untreated_FLAG_3.RG.bam -RGID MITF_A_Untreated_FLAG_3 -RGLB lib_MITF_A_Untreated_FLAG_3 -RGPL ILLUMINA -RGPU unit3 -RGSM MITF_A_Untreated_FLAG_3 -VERBOSITY WARNING
+**********
+
+
+15:43:36.147 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+15:43:36.173 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression12327317870514175165.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression12327317870514175165.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression12327317870514175165.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression12327317870514175165.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression12327317870514175165.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+15:43:36.174 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+15:43:36.176 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression16618859624077514263.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression16618859624077514263.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression16618859624077514263.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression16618859624077514263.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression16618859624077514263.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sat Sep 20 15:43:36 GMT 2025] AddOrReplaceReadGroups INPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_3/human.bam OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_3/MITF_A_Untreated_FLAG_3.RG.bam RGID=MITF_A_Untreated_FLAG_3 RGLB=lib_MITF_A_Untreated_FLAG_3 RGPL=ILLUMINA RGPU=unit3 RGSM=MITF_A_Untreated_FLAG_3 VERBOSITY=WARNING    QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sat Sep 20 15:43:36 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+15:43:36.267 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+15:43:36.268 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+15:43:36.279 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sat Sep 20 16:13:05 GMT 2025] picard.sam.AddOrReplaceReadGroups done. Elapsed time: 29.50 minutes.
+Runtime.totalMemory()=270532608
+
+real	29m30.453s
+user	29m21.435s
+sys	0m12.206s
+INFO	2025-09-20 16:13:06	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_3/MITF_A_Untreated_FLAG_3.RG.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_3/MITF_A_Untreated_FLAG_3.marked_dup.bam -REMOVE_DUPLICATES false -M /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_3/MITF_A_Untreated_FLAG_3.marked_dup.info.txt -VERBOSITY WARNING
+**********
+
+
+16:13:06.485 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+16:13:06.511 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7428389682432873013.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7428389682432873013.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7428389682432873013.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7428389682432873013.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7428389682432873013.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+16:13:06.512 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+16:13:06.514 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression15158754393652740363.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression15158754393652740363.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression15158754393652740363.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression15158754393652740363.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression15158754393652740363.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sat Sep 20 16:13:06 GMT 2025] MarkDuplicates INPUT=[/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_3/MITF_A_Untreated_FLAG_3.RG.bam] OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_3/MITF_A_Untreated_FLAG_3.marked_dup.bam METRICS_FILE=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_FLAG_3/MITF_A_Untreated_FLAG_3.marked_dup.info.txt REMOVE_DUPLICATES=false VERBOSITY=WARNING    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true DUPLEX_UMI=false FLOW_MODE=false FLOW_DUP_STRATEGY=FLOW_QUALITY_SUM_STRATEGY FLOW_USE_END_IN_UNPAIRED_READS=false FLOW_USE_UNPAIRED_CLIPPED_END=false FLOW_UNPAIRED_END_UNCERTAINTY=0 FLOW_UNPAIRED_START_UNCERTAINTY=0 FLOW_SKIP_FIRST_N_FLOWS=0 FLOW_Q_IS_KNOWN_END=false FLOW_EFFECTIVE_QUALITY_THRESHOLD=15 ADD_PG_TAG_TO_READS=true ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sat Sep 20 16:13:06 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+16:13:06.617 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+16:13:06.618 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+16:22:30.519 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+16:22:30.519 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+16:22:30.529 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sat Sep 20 16:54:07 GMT 2025] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 41.02 minutes.
+Runtime.totalMemory()=50331648
+
+real	41m1.870s
+user	44m56.916s
+sys	0m25.962s
+
+real	35m0.546s
+user	37m11.989s
+sys	0m38.094s
+
+real	28m56.226s
+user	30m44.266s
+sys	0m31.080s
+[bam_sort_core] merging from 12 files and 8 in-memory blocks...
+
+real	5m34.275s
+user	33m57.003s
+sys	1m0.475s
+
+real	4m32.267s
+user	4m21.435s
+sys	0m10.324s
+
+real	4m51.244s
+user	4m39.583s
+sys	0m10.946s
+
+real	27m49.559s
+user	12m47.777s
+sys	12m27.202s
+INFO	2025-09-20 18:43:05	AddOrReplaceReadGroups	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    AddOrReplaceReadGroups -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_1/human.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_1/MITF_A_Untreated_IgG_1.RG.bam -RGID MITF_A_Untreated_IgG_1 -RGLB lib_MITF_A_Untreated_IgG_1 -RGPL ILLUMINA -RGPU unit1 -RGSM MITF_A_Untreated_IgG_1 -VERBOSITY WARNING
+**********
+
+
+18:43:05.900 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+18:43:05.927 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression8828147932860899397.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression8828147932860899397.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression8828147932860899397.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression8828147932860899397.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression8828147932860899397.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+18:43:05.928 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+18:43:05.930 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression3396776513231982611.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression3396776513231982611.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression3396776513231982611.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression3396776513231982611.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression3396776513231982611.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sat Sep 20 18:43:05 GMT 2025] AddOrReplaceReadGroups INPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_1/human.bam OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_1/MITF_A_Untreated_IgG_1.RG.bam RGID=MITF_A_Untreated_IgG_1 RGLB=lib_MITF_A_Untreated_IgG_1 RGPL=ILLUMINA RGPU=unit1 RGSM=MITF_A_Untreated_IgG_1 VERBOSITY=WARNING    QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sat Sep 20 18:43:06 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+18:43:06.021 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+18:43:06.022 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+18:43:06.034 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sat Sep 20 19:00:51 GMT 2025] picard.sam.AddOrReplaceReadGroups done. Elapsed time: 17.77 minutes.
+Runtime.totalMemory()=270532608
+
+real	17m46.625s
+user	17m41.602s
+sys	0m7.286s
+INFO	2025-09-20 19:00:52	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_1/MITF_A_Untreated_IgG_1.RG.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_1/MITF_A_Untreated_IgG_1.removed_dup.bam -REMOVE_DUPLICATES true -M /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_1/MITF_A_Untreated_IgG_1.removed_dup.info.txt -VERBOSITY WARNING
+**********
+
+
+19:00:52.391 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+19:00:52.414 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression4984857098171859288.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression4984857098171859288.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression4984857098171859288.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression4984857098171859288.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression4984857098171859288.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+19:00:52.415 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+19:00:52.417 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression514179616630318541.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression514179616630318541.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression514179616630318541.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression514179616630318541.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression514179616630318541.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sat Sep 20 19:00:52 GMT 2025] MarkDuplicates INPUT=[/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_1/MITF_A_Untreated_IgG_1.RG.bam] OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_1/MITF_A_Untreated_IgG_1.removed_dup.bam METRICS_FILE=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_1/MITF_A_Untreated_IgG_1.removed_dup.info.txt REMOVE_DUPLICATES=true VERBOSITY=WARNING    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true DUPLEX_UMI=false FLOW_MODE=false FLOW_DUP_STRATEGY=FLOW_QUALITY_SUM_STRATEGY FLOW_USE_END_IN_UNPAIRED_READS=false FLOW_USE_UNPAIRED_CLIPPED_END=false FLOW_UNPAIRED_END_UNCERTAINTY=0 FLOW_UNPAIRED_START_UNCERTAINTY=0 FLOW_SKIP_FIRST_N_FLOWS=0 FLOW_Q_IS_KNOWN_END=false FLOW_EFFECTIVE_QUALITY_THRESHOLD=15 ADD_PG_TAG_TO_READS=true ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sat Sep 20 19:00:52 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+19:00:52.518 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+19:00:52.520 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+19:05:08.528 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+19:05:08.529 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+19:05:08.535 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sat Sep 20 19:22:07 GMT 2025] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 21.26 minutes.
+Runtime.totalMemory()=41943040
+
+real	21m15.958s
+user	23m8.301s
+sys	0m13.666s
+
+real	14m13.965s
+user	15m6.176s
+sys	0m15.712s
+
+real	11m16.253s
+user	11m58.376s
+sys	0m12.271s
+[bam_sort_core] merging from 4 files and 8 in-memory blocks...
+
+real	1m59.111s
+user	12m25.570s
+sys	0m23.433s
+
+real	1m49.378s
+user	1m45.334s
+sys	0m3.869s
+
+real	1m45.452s
+user	1m41.359s
+sys	0m3.894s
+
+real	4m48.105s
+user	3m54.950s
+sys	1m5.083s
+INFO	2025-09-20 19:58:56	AddOrReplaceReadGroups	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    AddOrReplaceReadGroups -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_2/human.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_2/MITF_A_Untreated_IgG_2.RG.bam -RGID MITF_A_Untreated_IgG_2 -RGLB lib_MITF_A_Untreated_IgG_2 -RGPL ILLUMINA -RGPU unit2 -RGSM MITF_A_Untreated_IgG_2 -VERBOSITY WARNING
+**********
+
+
+19:58:56.057 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+19:58:56.084 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression14737943553258040104.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression14737943553258040104.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression14737943553258040104.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression14737943553258040104.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression14737943553258040104.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+19:58:56.085 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+19:58:56.088 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6453084034900054784.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6453084034900054784.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6453084034900054784.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6453084034900054784.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6453084034900054784.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sat Sep 20 19:58:56 GMT 2025] AddOrReplaceReadGroups INPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_2/human.bam OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_2/MITF_A_Untreated_IgG_2.RG.bam RGID=MITF_A_Untreated_IgG_2 RGLB=lib_MITF_A_Untreated_IgG_2 RGPL=ILLUMINA RGPU=unit2 RGSM=MITF_A_Untreated_IgG_2 VERBOSITY=WARNING    QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sat Sep 20 19:58:56 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+19:58:56.177 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+19:58:56.178 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+19:58:56.189 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sat Sep 20 20:27:36 GMT 2025] picard.sam.AddOrReplaceReadGroups done. Elapsed time: 28.68 minutes.
+Runtime.totalMemory()=270532608
+
+real	28m41.419s
+user	28m32.877s
+sys	0m11.799s
+INFO	2025-09-20 20:27:37	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_2/MITF_A_Untreated_IgG_2.RG.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_2/MITF_A_Untreated_IgG_2.removed_dup.bam -REMOVE_DUPLICATES true -M /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_2/MITF_A_Untreated_IgG_2.removed_dup.info.txt -VERBOSITY WARNING
+**********
+
+
+20:27:37.355 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+20:27:37.380 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7048197514990050822.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7048197514990050822.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7048197514990050822.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7048197514990050822.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7048197514990050822.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+20:27:37.381 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+20:27:37.384 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression2897250559785982116.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression2897250559785982116.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression2897250559785982116.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression2897250559785982116.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression2897250559785982116.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sat Sep 20 20:27:37 GMT 2025] MarkDuplicates INPUT=[/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_2/MITF_A_Untreated_IgG_2.RG.bam] OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_2/MITF_A_Untreated_IgG_2.removed_dup.bam METRICS_FILE=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_2/MITF_A_Untreated_IgG_2.removed_dup.info.txt REMOVE_DUPLICATES=true VERBOSITY=WARNING    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true DUPLEX_UMI=false FLOW_MODE=false FLOW_DUP_STRATEGY=FLOW_QUALITY_SUM_STRATEGY FLOW_USE_END_IN_UNPAIRED_READS=false FLOW_USE_UNPAIRED_CLIPPED_END=false FLOW_UNPAIRED_END_UNCERTAINTY=0 FLOW_UNPAIRED_START_UNCERTAINTY=0 FLOW_SKIP_FIRST_N_FLOWS=0 FLOW_Q_IS_KNOWN_END=false FLOW_EFFECTIVE_QUALITY_THRESHOLD=15 ADD_PG_TAG_TO_READS=true ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sat Sep 20 20:27:37 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+20:27:37.488 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+20:27:37.489 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+20:35:22.014 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+20:35:22.014 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+20:35:22.022 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sat Sep 20 21:00:41 GMT 2025] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 33.07 minutes.
+Runtime.totalMemory()=41943040
+
+real	33m4.601s
+user	36m23.344s
+sys	0m22.983s
+
+real	25m11.049s
+user	26m37.485s
+sys	0m27.883s
+
+real	20m39.341s
+user	21m50.602s
+sys	0m22.515s
+[bam_sort_core] merging from 8 files and 8 in-memory blocks...
+
+real	3m32.805s
+user	22m22.093s
+sys	0m41.995s
+
+real	3m27.545s
+user	3m18.074s
+sys	0m8.753s
+
+real	2m57.340s
+user	2m49.543s
+sys	0m7.470s
+
+real	12m52.887s
+user	7m11.067s
+sys	5m6.790s
+INFO	2025-09-20 22:10:53	AddOrReplaceReadGroups	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    AddOrReplaceReadGroups -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_3/human.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_3/MITF_A_Untreated_IgG_3.RG.bam -RGID MITF_A_Untreated_IgG_3 -RGLB lib_MITF_A_Untreated_IgG_3 -RGPL ILLUMINA -RGPU unit3 -RGSM MITF_A_Untreated_IgG_3 -VERBOSITY WARNING
+**********
+
+
+22:10:53.681 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+22:10:53.707 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1303028202377473074.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1303028202377473074.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1303028202377473074.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1303028202377473074.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1303028202377473074.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+22:10:53.708 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+22:10:53.711 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression5181172192268703612.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression5181172192268703612.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression5181172192268703612.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression5181172192268703612.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression5181172192268703612.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sat Sep 20 22:10:53 GMT 2025] AddOrReplaceReadGroups INPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_3/human.bam OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_3/MITF_A_Untreated_IgG_3.RG.bam RGID=MITF_A_Untreated_IgG_3 RGLB=lib_MITF_A_Untreated_IgG_3 RGPL=ILLUMINA RGPU=unit3 RGSM=MITF_A_Untreated_IgG_3 VERBOSITY=WARNING    QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sat Sep 20 22:10:53 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+22:10:53.800 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+22:10:53.801 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+22:10:53.812 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sat Sep 20 22:43:52 GMT 2025] picard.sam.AddOrReplaceReadGroups done. Elapsed time: 32.98 minutes.
+Runtime.totalMemory()=270532608
+
+real	32m59.402s
+user	32m49.449s
+sys	0m13.154s
+INFO	2025-09-20 22:43:52	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_3/MITF_A_Untreated_IgG_3.RG.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_3/MITF_A_Untreated_IgG_3.removed_dup.bam -REMOVE_DUPLICATES true -M /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_3/MITF_A_Untreated_IgG_3.removed_dup.info.txt -VERBOSITY WARNING
+**********
+
+
+22:43:52.907 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+22:43:52.933 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1495363704678269802.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1495363704678269802.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1495363704678269802.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1495363704678269802.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1495363704678269802.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+22:43:52.933 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+22:43:52.936 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6414217040991167649.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6414217040991167649.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6414217040991167649.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6414217040991167649.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6414217040991167649.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sat Sep 20 22:43:52 GMT 2025] MarkDuplicates INPUT=[/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_3/MITF_A_Untreated_IgG_3.RG.bam] OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_3/MITF_A_Untreated_IgG_3.removed_dup.bam METRICS_FILE=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_A_Untreated_IgG_3/MITF_A_Untreated_IgG_3.removed_dup.info.txt REMOVE_DUPLICATES=true VERBOSITY=WARNING    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true DUPLEX_UMI=false FLOW_MODE=false FLOW_DUP_STRATEGY=FLOW_QUALITY_SUM_STRATEGY FLOW_USE_END_IN_UNPAIRED_READS=false FLOW_USE_UNPAIRED_CLIPPED_END=false FLOW_UNPAIRED_END_UNCERTAINTY=0 FLOW_UNPAIRED_START_UNCERTAINTY=0 FLOW_SKIP_FIRST_N_FLOWS=0 FLOW_Q_IS_KNOWN_END=false FLOW_EFFECTIVE_QUALITY_THRESHOLD=15 ADD_PG_TAG_TO_READS=true ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sat Sep 20 22:43:53 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+22:43:53.039 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+22:43:53.041 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+22:52:18.568 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+22:52:18.569 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+22:52:18.575 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sat Sep 20 23:22:16 GMT 2025] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 38.39 minutes.
+Runtime.totalMemory()=50331648
+
+real	38m24.097s
+user	41m58.836s
+sys	0m25.753s
+
+real	28m10.137s
+user	29m49.659s
+sys	0m31.078s
+
+real	22m45.661s
+user	24m6.330s
+sys	0m24.513s
+[bam_sort_core] merging from 9 files and 8 in-memory blocks...
+
+real	4m11.446s
+user	26m34.901s
+sys	0m48.685s
+
+real	3m49.491s
+user	3m41.463s
+sys	0m7.626s
+
+real	3m17.128s
+user	3m9.291s
+sys	0m7.483s
+
+real	12m53.535s
+user	7m51.447s
+sys	4m42.896s
+INFO	2025-09-21 00:39:17	AddOrReplaceReadGroups	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    AddOrReplaceReadGroups -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_1/human.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_1/MITF_M_Untreated_FLAG_1.RG.bam -RGID MITF_M_Untreated_FLAG_1 -RGLB lib_MITF_M_Untreated_FLAG_1 -RGPL ILLUMINA -RGPU unit1 -RGSM MITF_M_Untreated_FLAG_1 -VERBOSITY WARNING
+**********
+
+
+00:39:17.762 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+00:39:17.789 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression14642311567562970700.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression14642311567562970700.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression14642311567562970700.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression14642311567562970700.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression14642311567562970700.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+00:39:17.790 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+00:39:17.792 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression3132240622473576426.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression3132240622473576426.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression3132240622473576426.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression3132240622473576426.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression3132240622473576426.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sun Sep 21 00:39:17 GMT 2025] AddOrReplaceReadGroups INPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_1/human.bam OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_1/MITF_M_Untreated_FLAG_1.RG.bam RGID=MITF_M_Untreated_FLAG_1 RGLB=lib_MITF_M_Untreated_FLAG_1 RGPL=ILLUMINA RGPU=unit1 RGSM=MITF_M_Untreated_FLAG_1 VERBOSITY=WARNING    QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sun Sep 21 00:39:17 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+00:39:17.882 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+00:39:17.883 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+00:39:17.893 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sun Sep 21 01:04:28 GMT 2025] picard.sam.AddOrReplaceReadGroups done. Elapsed time: 25.17 minutes.
+Runtime.totalMemory()=270532608
+
+real	25m11.107s
+user	25m3.910s
+sys	0m9.983s
+INFO	2025-09-21 01:04:28	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_1/MITF_M_Untreated_FLAG_1.RG.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_1/MITF_M_Untreated_FLAG_1.marked_dup.bam -REMOVE_DUPLICATES false -M /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_1/MITF_M_Untreated_FLAG_1.marked_dup.info.txt -VERBOSITY WARNING
+**********
+
+
+01:04:28.719 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+01:04:28.745 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6996353429957557411.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6996353429957557411.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6996353429957557411.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6996353429957557411.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6996353429957557411.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+01:04:28.746 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+01:04:28.748 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression11037624825488751888.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression11037624825488751888.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression11037624825488751888.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression11037624825488751888.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression11037624825488751888.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sun Sep 21 01:04:28 GMT 2025] MarkDuplicates INPUT=[/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_1/MITF_M_Untreated_FLAG_1.RG.bam] OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_1/MITF_M_Untreated_FLAG_1.marked_dup.bam METRICS_FILE=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_1/MITF_M_Untreated_FLAG_1.marked_dup.info.txt REMOVE_DUPLICATES=false VERBOSITY=WARNING    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true DUPLEX_UMI=false FLOW_MODE=false FLOW_DUP_STRATEGY=FLOW_QUALITY_SUM_STRATEGY FLOW_USE_END_IN_UNPAIRED_READS=false FLOW_USE_UNPAIRED_CLIPPED_END=false FLOW_UNPAIRED_END_UNCERTAINTY=0 FLOW_UNPAIRED_START_UNCERTAINTY=0 FLOW_SKIP_FIRST_N_FLOWS=0 FLOW_Q_IS_KNOWN_END=false FLOW_EFFECTIVE_QUALITY_THRESHOLD=15 ADD_PG_TAG_TO_READS=true ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sun Sep 21 01:04:28 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+01:04:28.854 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+01:04:28.856 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+01:11:12.080 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+01:11:12.080 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+01:11:12.087 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sun Sep 21 01:37:38 GMT 2025] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 33.16 minutes.
+Runtime.totalMemory()=41943040
+
+real	33m9.995s
+user	36m7.483s
+sys	0m20.943s
+
+real	27m50.434s
+user	29m33.921s
+sys	0m30.255s
+
+real	23m6.796s
+user	24m32.677s
+sys	0m24.807s
+[bam_sort_core] merging from 9 files and 8 in-memory blocks...
+
+real	4m25.643s
+user	27m26.506s
+sys	0m49.539s
+
+real	3m42.958s
+user	3m34.209s
+sys	0m8.300s
+
+real	3m44.006s
+user	3m35.150s
+sys	0m8.485s
+
+real	18m2.007s
+user	9m19.246s
+sys	7m27.641s
+INFO	2025-09-21 03:00:19	AddOrReplaceReadGroups	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    AddOrReplaceReadGroups -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_2/human.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_2/MITF_M_Untreated_FLAG_2.RG.bam -RGID MITF_M_Untreated_FLAG_2 -RGLB lib_MITF_M_Untreated_FLAG_2 -RGPL ILLUMINA -RGPU unit2 -RGSM MITF_M_Untreated_FLAG_2 -VERBOSITY WARNING
+**********
+
+
+03:00:19.386 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+03:00:19.412 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17967369592005810080.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17967369592005810080.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17967369592005810080.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17967369592005810080.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17967369592005810080.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+03:00:19.412 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+03:00:19.415 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression10866911327594070027.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression10866911327594070027.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression10866911327594070027.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression10866911327594070027.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression10866911327594070027.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sun Sep 21 03:00:19 GMT 2025] AddOrReplaceReadGroups INPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_2/human.bam OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_2/MITF_M_Untreated_FLAG_2.RG.bam RGID=MITF_M_Untreated_FLAG_2 RGLB=lib_MITF_M_Untreated_FLAG_2 RGPL=ILLUMINA RGPU=unit2 RGSM=MITF_M_Untreated_FLAG_2 VERBOSITY=WARNING    QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sun Sep 21 03:00:19 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+03:00:19.501 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+03:00:19.502 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+03:00:19.514 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sun Sep 21 03:23:42 GMT 2025] picard.sam.AddOrReplaceReadGroups done. Elapsed time: 23.39 minutes.
+Runtime.totalMemory()=270532608
+
+real	23m23.712s
+user	23m16.808s
+sys	0m9.866s
+INFO	2025-09-21 03:23:42	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_2/MITF_M_Untreated_FLAG_2.RG.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_2/MITF_M_Untreated_FLAG_2.marked_dup.bam -REMOVE_DUPLICATES false -M /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_2/MITF_M_Untreated_FLAG_2.marked_dup.info.txt -VERBOSITY WARNING
+**********
+
+
+03:23:43.025 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+03:23:43.051 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression18337309906574117073.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression18337309906574117073.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression18337309906574117073.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression18337309906574117073.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression18337309906574117073.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+03:23:43.052 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+03:23:43.055 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7772892110299827490.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7772892110299827490.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7772892110299827490.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7772892110299827490.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7772892110299827490.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sun Sep 21 03:23:43 GMT 2025] MarkDuplicates INPUT=[/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_2/MITF_M_Untreated_FLAG_2.RG.bam] OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_2/MITF_M_Untreated_FLAG_2.marked_dup.bam METRICS_FILE=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_2/MITF_M_Untreated_FLAG_2.marked_dup.info.txt REMOVE_DUPLICATES=false VERBOSITY=WARNING    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true DUPLEX_UMI=false FLOW_MODE=false FLOW_DUP_STRATEGY=FLOW_QUALITY_SUM_STRATEGY FLOW_USE_END_IN_UNPAIRED_READS=false FLOW_USE_UNPAIRED_CLIPPED_END=false FLOW_UNPAIRED_END_UNCERTAINTY=0 FLOW_UNPAIRED_START_UNCERTAINTY=0 FLOW_SKIP_FIRST_N_FLOWS=0 FLOW_Q_IS_KNOWN_END=false FLOW_EFFECTIVE_QUALITY_THRESHOLD=15 ADD_PG_TAG_TO_READS=true ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sun Sep 21 03:23:43 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+03:23:43.159 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+03:23:43.160 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+03:30:43.284 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+03:30:43.284 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+03:30:43.290 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sun Sep 21 03:55:25 GMT 2025] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 31.71 minutes.
+Runtime.totalMemory()=41943040
+
+real	31m43.110s
+user	34m51.707s
+sys	0m20.965s
+
+real	30m5.195s
+user	31m52.102s
+sys	0m32.707s
+
+real	25m35.517s
+user	27m6.872s
+sys	0m27.477s
+[bam_sort_core] merging from 10 files and 8 in-memory blocks...
+
+real	4m37.266s
+user	28m7.756s
+sys	0m51.254s
+
+real	3m59.123s
+user	3m49.709s
+sys	0m9.021s
+
+real	4m9.155s
+user	3m58.014s
+sys	0m10.578s
+
+real	23m9.319s
+user	10m40.628s
+sys	10m32.086s
+INFO	2025-09-21 05:28:43	AddOrReplaceReadGroups	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    AddOrReplaceReadGroups -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_3/human.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_3/MITF_M_Untreated_FLAG_3.RG.bam -RGID MITF_M_Untreated_FLAG_3 -RGLB lib_MITF_M_Untreated_FLAG_3 -RGPL ILLUMINA -RGPU unit3 -RGSM MITF_M_Untreated_FLAG_3 -VERBOSITY WARNING
+**********
+
+
+05:28:43.801 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+05:28:43.826 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7608948005459615985.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7608948005459615985.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7608948005459615985.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7608948005459615985.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7608948005459615985.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+05:28:43.827 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+05:28:43.829 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression10926108313440473150.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression10926108313440473150.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression10926108313440473150.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression10926108313440473150.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression10926108313440473150.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sun Sep 21 05:28:43 GMT 2025] AddOrReplaceReadGroups INPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_3/human.bam OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_3/MITF_M_Untreated_FLAG_3.RG.bam RGID=MITF_M_Untreated_FLAG_3 RGLB=lib_MITF_M_Untreated_FLAG_3 RGPL=ILLUMINA RGPU=unit3 RGSM=MITF_M_Untreated_FLAG_3 VERBOSITY=WARNING    QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sun Sep 21 05:28:43 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+05:28:43.919 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+05:28:43.920 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+05:28:43.932 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sun Sep 21 05:53:42 GMT 2025] picard.sam.AddOrReplaceReadGroups done. Elapsed time: 24.98 minutes.
+Runtime.totalMemory()=270532608
+
+real	24m59.346s
+user	24m52.048s
+sys	0m10.107s
+INFO	2025-09-21 05:53:43	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_3/MITF_M_Untreated_FLAG_3.RG.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_3/MITF_M_Untreated_FLAG_3.marked_dup.bam -REMOVE_DUPLICATES false -M /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_3/MITF_M_Untreated_FLAG_3.marked_dup.info.txt -VERBOSITY WARNING
+**********
+
+
+05:53:43.050 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+05:53:43.075 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17411845428658038457.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17411845428658038457.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17411845428658038457.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17411845428658038457.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17411845428658038457.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+05:53:43.076 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+05:53:43.079 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1388784189398809731.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1388784189398809731.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1388784189398809731.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1388784189398809731.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression1388784189398809731.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sun Sep 21 05:53:43 GMT 2025] MarkDuplicates INPUT=[/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_3/MITF_M_Untreated_FLAG_3.RG.bam] OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_3/MITF_M_Untreated_FLAG_3.marked_dup.bam METRICS_FILE=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_FLAG_3/MITF_M_Untreated_FLAG_3.marked_dup.info.txt REMOVE_DUPLICATES=false VERBOSITY=WARNING    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true DUPLEX_UMI=false FLOW_MODE=false FLOW_DUP_STRATEGY=FLOW_QUALITY_SUM_STRATEGY FLOW_USE_END_IN_UNPAIRED_READS=false FLOW_USE_UNPAIRED_CLIPPED_END=false FLOW_UNPAIRED_END_UNCERTAINTY=0 FLOW_UNPAIRED_START_UNCERTAINTY=0 FLOW_SKIP_FIRST_N_FLOWS=0 FLOW_Q_IS_KNOWN_END=false FLOW_EFFECTIVE_QUALITY_THRESHOLD=15 ADD_PG_TAG_TO_READS=true ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sun Sep 21 05:53:43 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+05:53:43.183 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+05:53:43.185 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+06:00:59.096 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+06:00:59.097 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+06:00:59.109 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sun Sep 21 06:27:14 GMT 2025] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 33.53 minutes.
+Runtime.totalMemory()=41943040
+
+real	33m32.330s
+user	36m38.683s
+sys	0m21.918s
+
+real	31m38.901s
+user	33m35.456s
+sys	0m34.274s
+
+real	26m21.039s
+user	27m57.142s
+sys	0m28.550s
+[bam_sort_core] merging from 11 files and 8 in-memory blocks...
+
+real	5m4.920s
+user	31m45.631s
+sys	0m56.701s
+
+real	4m18.373s
+user	4m8.458s
+sys	0m9.454s
+
+real	4m3.332s
+user	3m53.591s
+sys	0m9.266s
+
+real	20m56.023s
+user	10m13.782s
+sys	9m3.014s
+INFO	2025-09-21 08:01:44	AddOrReplaceReadGroups	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    AddOrReplaceReadGroups -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_1/human.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_1/MITF_M_Untreated_IgG_1.RG.bam -RGID MITF_M_Untreated_IgG_1 -RGLB lib_MITF_M_Untreated_IgG_1 -RGPL ILLUMINA -RGPU unit1 -RGSM MITF_M_Untreated_IgG_1 -VERBOSITY WARNING
+**********
+
+
+08:01:44.098 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+08:01:44.127 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6385389698116951434.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6385389698116951434.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6385389698116951434.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6385389698116951434.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression6385389698116951434.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+08:01:44.128 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+08:01:44.130 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17609113350727949289.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17609113350727949289.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17609113350727949289.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17609113350727949289.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17609113350727949289.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sun Sep 21 08:01:44 GMT 2025] AddOrReplaceReadGroups INPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_1/human.bam OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_1/MITF_M_Untreated_IgG_1.RG.bam RGID=MITF_M_Untreated_IgG_1 RGLB=lib_MITF_M_Untreated_IgG_1 RGPL=ILLUMINA RGPU=unit1 RGSM=MITF_M_Untreated_IgG_1 VERBOSITY=WARNING    QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sun Sep 21 08:01:44 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+08:01:44.219 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+08:01:44.220 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+08:01:44.231 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sun Sep 21 08:22:41 GMT 2025] picard.sam.AddOrReplaceReadGroups done. Elapsed time: 20.96 minutes.
+Runtime.totalMemory()=270532608
+
+real	20m57.917s
+user	20m52.256s
+sys	0m8.149s
+INFO	2025-09-21 08:22:41	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_1/MITF_M_Untreated_IgG_1.RG.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_1/MITF_M_Untreated_IgG_1.removed_dup.bam -REMOVE_DUPLICATES true -M /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_1/MITF_M_Untreated_IgG_1.removed_dup.info.txt -VERBOSITY WARNING
+**********
+
+
+08:22:41.857 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+08:22:41.879 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression2627866948019343170.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression2627866948019343170.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression2627866948019343170.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression2627866948019343170.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression2627866948019343170.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+08:22:41.883 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+08:22:41.885 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression9305564869086790325.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression9305564869086790325.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression9305564869086790325.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression9305564869086790325.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression9305564869086790325.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sun Sep 21 08:22:41 GMT 2025] MarkDuplicates INPUT=[/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_1/MITF_M_Untreated_IgG_1.RG.bam] OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_1/MITF_M_Untreated_IgG_1.removed_dup.bam METRICS_FILE=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_1/MITF_M_Untreated_IgG_1.removed_dup.info.txt REMOVE_DUPLICATES=true VERBOSITY=WARNING    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true DUPLEX_UMI=false FLOW_MODE=false FLOW_DUP_STRATEGY=FLOW_QUALITY_SUM_STRATEGY FLOW_USE_END_IN_UNPAIRED_READS=false FLOW_USE_UNPAIRED_CLIPPED_END=false FLOW_UNPAIRED_END_UNCERTAINTY=0 FLOW_UNPAIRED_START_UNCERTAINTY=0 FLOW_SKIP_FIRST_N_FLOWS=0 FLOW_Q_IS_KNOWN_END=false FLOW_EFFECTIVE_QUALITY_THRESHOLD=15 ADD_PG_TAG_TO_READS=true ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sun Sep 21 08:22:41 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+08:22:41.984 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+08:22:41.985 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+08:27:07.690 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+08:27:07.690 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+08:27:07.696 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sun Sep 21 08:46:51 GMT 2025] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 24.16 minutes.
+Runtime.totalMemory()=41943040
+
+real	24m10.048s
+user	26m7.264s
+sys	0m13.843s
+
+real	15m13.279s
+user	16m8.185s
+sys	0m16.557s
+
+real	12m9.783s
+user	12m54.147s
+sys	0m13.081s
+[bam_sort_core] merging from 5 files and 8 in-memory blocks...
+
+real	2m15.291s
+user	14m6.501s
+sys	0m26.767s
+
+real	2m1.087s
+user	1m56.721s
+sys	0m4.174s
+
+real	1m47.602s
+user	1m43.250s
+sys	0m4.049s
+
+real	4m53.680s
+user	3m58.864s
+sys	1m6.929s
+INFO	2025-09-21 09:26:15	AddOrReplaceReadGroups	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    AddOrReplaceReadGroups -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_2/human.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_2/MITF_M_Untreated_IgG_2.RG.bam -RGID MITF_M_Untreated_IgG_2 -RGLB lib_MITF_M_Untreated_IgG_2 -RGPL ILLUMINA -RGPU unit2 -RGSM MITF_M_Untreated_IgG_2 -VERBOSITY WARNING
+**********
+
+
+09:26:15.283 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+09:26:15.309 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression11748021398913083777.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression11748021398913083777.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression11748021398913083777.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression11748021398913083777.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression11748021398913083777.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+09:26:15.310 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+09:26:15.312 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression13432622542562847340.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression13432622542562847340.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression13432622542562847340.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression13432622542562847340.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression13432622542562847340.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sun Sep 21 09:26:15 GMT 2025] AddOrReplaceReadGroups INPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_2/human.bam OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_2/MITF_M_Untreated_IgG_2.RG.bam RGID=MITF_M_Untreated_IgG_2 RGLB=lib_MITF_M_Untreated_IgG_2 RGPL=ILLUMINA RGPU=unit2 RGSM=MITF_M_Untreated_IgG_2 VERBOSITY=WARNING    QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sun Sep 21 09:26:15 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+09:26:15.402 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+09:26:15.403 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+09:26:15.414 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sun Sep 21 09:46:06 GMT 2025] picard.sam.AddOrReplaceReadGroups done. Elapsed time: 19.85 minutes.
+Runtime.totalMemory()=270532608
+
+real	19m51.567s
+user	19m45.702s
+sys	0m8.238s
+INFO	2025-09-21 09:46:06	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_2/MITF_M_Untreated_IgG_2.RG.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_2/MITF_M_Untreated_IgG_2.removed_dup.bam -REMOVE_DUPLICATES true -M /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_2/MITF_M_Untreated_IgG_2.removed_dup.info.txt -VERBOSITY WARNING
+**********
+
+
+09:46:06.655 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+09:46:06.677 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression8045713078102762679.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression8045713078102762679.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression8045713078102762679.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression8045713078102762679.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression8045713078102762679.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+09:46:06.677 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+09:46:06.679 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7381342796319482629.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7381342796319482629.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7381342796319482629.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7381342796319482629.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression7381342796319482629.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sun Sep 21 09:46:06 GMT 2025] MarkDuplicates INPUT=[/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_2/MITF_M_Untreated_IgG_2.RG.bam] OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_2/MITF_M_Untreated_IgG_2.removed_dup.bam METRICS_FILE=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_2/MITF_M_Untreated_IgG_2.removed_dup.info.txt REMOVE_DUPLICATES=true VERBOSITY=WARNING    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true DUPLEX_UMI=false FLOW_MODE=false FLOW_DUP_STRATEGY=FLOW_QUALITY_SUM_STRATEGY FLOW_USE_END_IN_UNPAIRED_READS=false FLOW_USE_UNPAIRED_CLIPPED_END=false FLOW_UNPAIRED_END_UNCERTAINTY=0 FLOW_UNPAIRED_START_UNCERTAINTY=0 FLOW_SKIP_FIRST_N_FLOWS=0 FLOW_Q_IS_KNOWN_END=false FLOW_EFFECTIVE_QUALITY_THRESHOLD=15 ADD_PG_TAG_TO_READS=true ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sun Sep 21 09:46:06 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+09:46:06.776 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+09:46:06.777 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+09:51:15.724 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+09:51:15.724 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+09:51:15.730 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sun Sep 21 10:10:23 GMT 2025] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 24.29 minutes.
+Runtime.totalMemory()=50331648
+
+real	24m17.646s
+user	26m28.417s
+sys	0m15.854s
+
+real	18m17.915s
+user	19m21.633s
+sys	0m20.157s
+
+real	14m58.997s
+user	15m51.637s
+sys	0m16.096s
+[bam_sort_core] merging from 6 files and 8 in-memory blocks...
+
+real	2m36.306s
+user	16m11.914s
+sys	0m32.731s
+
+real	2m27.307s
+user	2m21.899s
+sys	0m5.147s
+
+real	2m10.686s
+user	2m5.210s
+sys	0m5.020s
+
+real	8m16.718s
+user	5m9.119s
+sys	2m57.602s
+INFO	2025-09-21 11:00:19	AddOrReplaceReadGroups	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    AddOrReplaceReadGroups -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_3/human.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_3/MITF_M_Untreated_IgG_3.RG.bam -RGID MITF_M_Untreated_IgG_3 -RGLB lib_MITF_M_Untreated_IgG_3 -RGPL ILLUMINA -RGPU unit3 -RGSM MITF_M_Untreated_IgG_3 -VERBOSITY WARNING
+**********
+
+
+11:00:19.493 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+11:00:19.519 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression14431513489734507830.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression14431513489734507830.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression14431513489734507830.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression14431513489734507830.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression14431513489734507830.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+11:00:19.538 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+11:00:19.541 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression3847284031263341898.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression3847284031263341898.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression3847284031263341898.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression3847284031263341898.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression3847284031263341898.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sun Sep 21 11:00:19 GMT 2025] AddOrReplaceReadGroups INPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_3/human.bam OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_3/MITF_M_Untreated_IgG_3.RG.bam RGID=MITF_M_Untreated_IgG_3 RGLB=lib_MITF_M_Untreated_IgG_3 RGPL=ILLUMINA RGPU=unit3 RGSM=MITF_M_Untreated_IgG_3 VERBOSITY=WARNING    QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sun Sep 21 11:00:19 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+11:00:19.635 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+11:00:19.636 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+11:00:19.648 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sun Sep 21 11:17:37 GMT 2025] picard.sam.AddOrReplaceReadGroups done. Elapsed time: 17.30 minutes.
+Runtime.totalMemory()=270532608
+
+real	17m18.413s
+user	17m13.608s
+sys	0m7.050s
+INFO	2025-09-21 11:17:37	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -I /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_3/MITF_M_Untreated_IgG_3.RG.bam -O /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_3/MITF_M_Untreated_IgG_3.removed_dup.bam -REMOVE_DUPLICATES true -M /Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_3/MITF_M_Untreated_IgG_3.removed_dup.info.txt -VERBOSITY WARNING
+**********
+
+
+11:17:37.764 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.intel.gkl.NativeLibraryLoader in an unnamed module (file:/Users/adrian/software/picard/picard.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+11:17:37.786 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression15533611164817296103.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression15533611164817296103.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression15533611164817296103.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression15533611164817296103.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression15533611164817296103.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+11:17:37.787 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+11:17:37.789 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17900010909394791181.dylib: dlopen(/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17900010909394791181.dylib, 0x0001): tried: '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17900010909394791181.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17900010909394791181.dylib' (no such file), '/private/var/folders/j2/645ctp717nv8rwbn2dsccyxh0000gn/T/libgkl_compression17900010909394791181.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64e.v1' or 'arm64' or 'arm64')))
+[Sun Sep 21 11:17:37 GMT 2025] MarkDuplicates INPUT=[/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_3/MITF_M_Untreated_IgG_3.RG.bam] OUTPUT=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_3/MITF_M_Untreated_IgG_3.removed_dup.bam METRICS_FILE=/Users/adrian/research/bmcbf/004_keilir/results/001_bam/MITF_M_Untreated_IgG_3/MITF_M_Untreated_IgG_3.removed_dup.info.txt REMOVE_DUPLICATES=true VERBOSITY=WARNING    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true DUPLEX_UMI=false FLOW_MODE=false FLOW_DUP_STRATEGY=FLOW_QUALITY_SUM_STRATEGY FLOW_USE_END_IN_UNPAIRED_READS=false FLOW_USE_UNPAIRED_CLIPPED_END=false FLOW_UNPAIRED_END_UNCERTAINTY=0 FLOW_UNPAIRED_START_UNCERTAINTY=0 FLOW_SKIP_FIRST_N_FLOWS=0 FLOW_Q_IS_KNOWN_END=false FLOW_EFFECTIVE_QUALITY_THRESHOLD=15 ADD_PG_TAG_TO_READS=true ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sun Sep 21 11:17:37 GMT 2025] Executing as adrian@necio5.local on Mac OS X 26.0 aarch64; Java HotSpot(TM) 64-Bit Server VM 24.0.2+12-54; Deflater: Jdk; Inflater: Jdk; Provider GCS is available; Picard version: 3.4.0
+11:17:37.885 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+11:17:37.886 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+11:22:10.151 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+11:22:10.151 WARN  IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+11:22:10.157 WARN  IntelDeflaterFactory - Intel Deflater not supported, using Java.util.zip.Deflater
+[Sun Sep 21 11:39:16 GMT 2025] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 21.65 minutes.
+Runtime.totalMemory()=50331648
+
+real	21m39.709s
+user	23m39.884s
+sys	0m14.667s
+
+real	18m14.670s
+user	19m20.803s
+sys	0m19.548s
+
+real	14m52.767s
+user	15m47.015s
+sys	0m15.301s
+[bam_sort_core] merging from 6 files and 8 in-memory blocks...
+
+real	2m42.021s
+user	17m1.795s
+sys	0m31.429s
+
+real	2m26.723s
+user	2m21.457s
+sys	0m4.992s
+
+real	2m12.163s
+user	2m6.818s
+sys	0m4.954s
+
+real	8m31.296s
+user	5m11.753s
+sys	3m7.899s
+sender2.sh: line 75: syntax error near unexpected token `done'
+(base) s8-mc07 2025-09-21 12:29:28 ~/hub/bmcbf/research/004_keilir/sep25/001_bam_processing : 
