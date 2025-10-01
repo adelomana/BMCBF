@@ -1,0 +1,149 @@
+Detecting adapter sequence for read1...
+>Nextera_LMP_Read1_External_Adapter | >Illumina Multiplexing Index Sequencing Primer
+GATCGGAAGAGCACACGTCTGAACTCCAGTCAC
+
+Detecting adapter sequence for read2...
+>Nextera_LMP_Read2_External_Adapter
+GATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+
+Read1 before filtering:
+total reads: 245923192
+total bases: 37134401992
+Q20 bases: 33057749054(89.0219%)
+Q30 bases: 28171293962(75.8631%)
+Q40 bases: 28171293962(75.8631%)
+
+Read2 before filtering:
+total reads: 245923192
+total bases: 37134401992
+Q20 bases: 32542065259(87.6332%)
+Q30 bases: 27147925007(73.1072%)
+Q40 bases: 27147925007(73.1072%)
+
+Read1 after filtering:
+total reads: 232524369
+total bases: 16488722398
+Q20 bases: 16041760399(97.2893%)
+Q30 bases: 15035628604(91.1873%)
+Q40 bases: 15035628604(91.1873%)
+
+Read2 after filtering:
+total reads: 232524369
+total bases: 16506779973
+Q20 bases: 15990566414(96.8727%)
+Q30 bases: 14920015983(90.3872%)
+Q40 bases: 14920015983(90.3872%)
+
+Filtering result:
+reads passed filter: 465048738
+reads failed due to low quality: 11941398
+reads failed due to too many N: 8846
+reads failed due to too short: 14847402
+reads with adapter trimmed: 451344474
+bases trimmed due to adapters: 29048138359
+
+Duplication rate: 8.35054%
+
+Insert size peak (evaluated by paired-end reads): 43
+
+JSON report: report.json
+HTML report: report.html
+
+fastp -i novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1712_1504.001.R1.fastq.gz -I novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_1_1712_1504.001.R2.fastq.gz -o clean.R1.fq.gz -O clean.R2.fq.gz --thread 32 --trim_poly_g --detect_adapter_for_pe --allow_gap_overlap_trimming --length_required 25 -h report.html -j report.json 
+fastp v1.0.1, time used: 436 seconds
+
+real	7m16.353s
+user	121m26.390s
+sys	1m14.691s
+232524369 reads; of these:
+  232524369 (100.00%) were paired; of these:
+    85677086 (36.85%) aligned concordantly 0 times
+    110641176 (47.58%) aligned concordantly exactly 1 time
+    36206107 (15.57%) aligned concordantly >1 times
+63.15% overall alignment rate
+[bam_sort_core] merging from 4 files and 32 in-memory blocks...
+
+real	107m56.396s
+user	3355m51.469s
+sys	56m32.146s
+INFO	2025-09-25 18:29:38	AddOrReplaceReadGroups	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    AddOrReplaceReadGroups -I human.bam -O human.RG.bam -RGID MITF_A_Untreated_FLAG_1 -RGLB lib_MITF_A_Untreated_FLAG_1 -RGPL ILLUMINA -RGPU unit1 -RGSM MITF_A_Untreated_FLAG_1 -VERBOSITY WARNING
+**********
+
+
+18:29:39.020 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/users/home/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.so
+[Thu Sep 25 18:29:39 GMT 2025] AddOrReplaceReadGroups INPUT=human.bam OUTPUT=human.RG.bam RGID=MITF_A_Untreated_FLAG_1 RGLB=lib_MITF_A_Untreated_FLAG_1 RGPL=ILLUMINA RGPU=unit1 RGSM=MITF_A_Untreated_FLAG_1 VERBOSITY=WARNING    QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Thu Sep 25 18:29:39 GMT 2025] Executing as adrian@compute-64 on Linux 4.18.0-553.72.1.el8_10.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 21.0.8+12-LTS-250; Deflater: Intel; Inflater: Intel; Provider GCS is available; Picard version: 3.4.0
+[Thu Sep 25 19:15:32 GMT 2025] picard.sam.AddOrReplaceReadGroups done. Elapsed time: 45.90 minutes.
+Runtime.totalMemory()=2164260864
+
+real	45m54.443s
+user	45m44.289s
+sys	0m10.522s
+INFO	2025-09-25 19:15:33	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** 
+https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -I human.RG.bam -O human.RG.marked_dup.bam -REMOVE_DUPLICATES false -M MITF_A_Untreated_FLAG_1.marked_dup.info.txt -VERBOSITY WARNING
+**********
+
+
+19:15:33.575 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/users/home/adrian/software/picard/picard.jar!/com/intel/gkl/native/libgkl_compression.so
+[Thu Sep 25 19:15:33 GMT 2025] MarkDuplicates INPUT=[human.RG.bam] OUTPUT=human.RG.marked_dup.bam METRICS_FILE=MITF_A_Untreated_FLAG_1.marked_dup.info.txt REMOVE_DUPLICATES=false VERBOSITY=WARNING    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true DUPLEX_UMI=false FLOW_MODE=false FLOW_DUP_STRATEGY=FLOW_QUALITY_SUM_STRATEGY FLOW_USE_END_IN_UNPAIRED_READS=false FLOW_USE_UNPAIRED_CLIPPED_END=false FLOW_UNPAIRED_END_UNCERTAINTY=0 FLOW_UNPAIRED_START_UNCERTAINTY=0 FLOW_SKIP_FIRST_N_FLOWS=0 FLOW_Q_IS_KNOWN_END=false FLOW_EFFECTIVE_QUALITY_THRESHOLD=15 ADD_PG_TAG_TO_READS=true ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Thu Sep 25 19:15:33 GMT 2025] Executing as adrian@compute-64 on Linux 4.18.0-553.72.1.el8_10.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 21.0.8+12-LTS-250; Deflater: Intel; Inflater: Intel; Provider GCS is available; Picard version: 3.4.0
+WARNING	2025-09-25 19:26:24	SortingCollection	There is not enough memory per file for buffering. Reading will be unbuffered.
+WARNING	2025-09-25 19:28:05	SortingCollection	There is not enough memory per file for buffering. Reading will be unbuffered.
+[Thu Sep 25 20:18:02 GMT 2025] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 62.48 minutes.
+Runtime.totalMemory()=67108864
+
+real	62m29.972s
+user	69m1.784s
+sys	2m1.483s
+
+real	0m47.618s
+user	17m53.870s
+sys	0m21.357s
+
+real	3m43.719s
+user	4m43.982s
+sys	0m28.564s
+[bam_sort_core] merging from 12 files and 8 in-memory blocks...
+
+real	5m4.083s
+user	31m14.257s
+sys	0m34.457s
+
+real	5m23.368s
+user	5m16.356s
+sys	0m6.373s
+
+real	1m6.824s
+user	1m0.749s
+sys	0m5.903s
+
+real	59m0.623s
+user	59m2.581s
+sys	0m9.881s
+
+real	25m18.920s
+user	26m13.297s
+sys	0m5.667s
+
+real	3m17.812s
+user	2m15.489s
+sys	1m2.068s

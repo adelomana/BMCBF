@@ -1,0 +1,134 @@
+#
+# 1. installation
+#
+#install.packages("devtools")
+#library(devtools)
+#devtools::install_github("cit-bioinfo/mMCP-counter")
+
+#
+# 2. load
+#
+library("mMCPcounter")
+library(pheatmap)
+
+
+#
+# 3. read data
+#
+expressionDataFile = '/Users/adrian/research/bmcbf/029_orsay/results/000.quantification/results/DESeq2_TPM_values.tsv'
+expressionData = read.table(expressionDataFile, header = TRUE, sep = "\t", row.names = 1)
+rownames(expressionData) <- sub("\\..*", "", rownames(expressionData))
+
+# Remove specific samples by name, the first three outliers
+expressionData <- expressionData[, !colnames(expressionData) %in% c("P9T001", "P9T004", "P9T009")]
+
+# exclude further more bc they are sparse in the previous analysis
+sparse = c("P9T011", "P9T015", "P9T033", "P9T013", "P9T014")
+expressionData <- expressionData[, !colnames(expressionData) %in% sparse]
+
+expressionData <- as.matrix(expressionData)
+View(expressionData)
+
+annot <- read.table(text="
+label   genotype
+P9T001  WT
+P9T002  WT
+P9T003  WT
+P9T004  WT
+P9T005  WT
+P9T006  WT
+P9T007  WT
+P9T008  WT
+P9T009  WT
+P9T010  HET
+P9T011  HET
+P9T012  HET
+P9T013  HET
+P9T014  HET
+P9T015  HET
+P9T016  HET
+P9T017  HET
+P9T018  HET
+P9T019  HOM
+P9T020  HOM
+P9T021  HOM
+P9T022  HOM
+P9T023  HOM
+P9T024  HOM
+P9T025  HOM
+P9T026  HOM
+P9T027  HOM
+P9T028  HOM
+P9T029  HOM
+P9T030  HOM
+P9T031  VGA
+P9T032  VGA
+P9T033  VGA
+P9T034  VGA
+", header=TRUE, stringsAsFactors=FALSE)
+
+# rownames must match column names in your expression matrix
+rownames(annot) <- annot$label
+annot$label <- NULL   # keep only 'genotype' as column annotation
+
+# --- 2. Define colors for each genotype ---
+ann_colors <- list(
+  genotype = c(
+    WT  = "grey70",
+    HET = "gold",
+    HOM = "red",
+    VGA = "skyblue"
+  )
+)
+
+# 4. estimate
+# index in kallisto indexes github is 108 which is GRCm39. Seems that the flag name has a typo. gCr? It should be Genome Reference Consortium
+immunoProfiles = mMCPcounter.estimate(expressionData, features = "ENSEMBL.ID", genomeVersion = "GCRm39")
+View(immunoProfiles)
+
+# 5. visualize
+pheatmap(
+  immunoProfiles,
+  clustering_distance_rows = "euclidean",
+  clustering_distance_cols = "euclidean",
+  clustering_method = "complete",
+  show_rownames = TRUE,
+  show_colnames = TRUE,
+  fontsize_row = 9,
+  fontsize_col = 9,
+  main = "mMCP-counter (row Z-scores)"
+)
+
+
+mat_z <- t(scale(t(immunoProfiles), center = TRUE, scale = TRUE))
+
+
+limit <- 4
+breaks <- seq(-limit, limit, length.out = 100)
+cols <- colorRampPalette(c("blue", "white", "red"))(length(breaks)-1)
+
+
+# Define distance measures and clustering methods
+#distances <- c("euclidean", "maximum", "manhattan", "canberra", "minkowski",
+#               "correlation", "binary")
+#methods   <- c("single", "complete", "average", "mcquitty",
+#               "median", "centroid", "ward.D", "ward.D2")
+
+
+# Loop through all combinations
+pheatmap(
+  mat_z,
+  color = cols,
+  breaks = breaks,
+  clustering_distance_rows = "euclidean",
+  clustering_distance_cols = "euclidean",
+  clustering_method = "ward.D2",
+  annotation_col = annot,
+  annotation_colors = ann_colors,
+  angle_col = 90,
+  show_rownames = TRUE,
+  show_colnames = TRUE,
+  fontsize_row = 18,
+  fontsize_col = 18,
+  main = paste("mMCP-counter z-scores [corr. ward.D2]")
+)

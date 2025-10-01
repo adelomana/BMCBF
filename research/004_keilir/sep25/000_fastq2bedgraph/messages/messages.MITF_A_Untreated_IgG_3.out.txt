@@ -1,0 +1,77 @@
+Thu Sep 25 16:25:04 GMT 2025
+/users/home/adrian/research/004_keilir/src/henikoff/001_elja
+# conda environments:
+#
+base                     /hpcapps/lib-edda/easybuild/software/Anaconda3/2023.09-0
+arnarholt                /users/home/adrian/.conda/envs/arnarholt
+aug25                 *  /users/home/adrian/.conda/envs/aug25
+keilir019                /users/home/adrian/.conda/envs/keilir019
+moa                      /users/home/adrian/.conda/envs/moa
+
+the scratch dir is:
+/scratch/users/adrian/1490337-k2d0
+
+about to copy files into scratch
+Thu Sep 25 16:25:09 GMT 2025
+Thu Sep 25 16:32:50 GMT 2025
+
+about to call fastp
+Thu Sep 25 16:32:50 GMT 2025
+Thu Sep 25 16:39:46 GMT 2025
+
+about to call bowtie2
+Thu Sep 25 16:39:46 GMT 2025
+Thu Sep 25 18:59:03 GMT 2025
+
+about to add read groups
+Thu Sep 25 18:59:03 GMT 2025
+Thu Sep 25 19:42:24 GMT 2025
+
+about to mark or remove duplicates
+Thu Sep 25 19:42:24 GMT 2025
+Thu Sep 25 20:34:45 GMT 2025
+
+about to run MAPQ filtering
+Thu Sep 25 20:34:45 GMT 2025
+Thu Sep 25 20:35:24 GMT 2025
+
+about to compute fragment length
+Thu Sep 25 20:35:24 GMT 2025
+Thu Sep 25 20:38:14 GMT 2025
+
+about to convert to BEDPE fragments
+Thu Sep 25 20:38:14 GMT 2025
+Thu Sep 25 21:44:50 GMT 2025
+
+about to convert to bedGraph
+Thu Sep 25 21:44:50 GMT 2025
+Thu Sep 25 21:48:12 GMT 2025
+
+about to copy results out of scratch to my dirs
+total 127G
+   0 drwx------ 3 adrian adrian   44 Sep 25 16:25 ..
+ 14G -rw-r--r-- 1 adrian adrian  14G Sep 25 16:29 novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_7_1711_1503.001.R1.fastq.gz
+ 15G -rw-r--r-- 1 adrian adrian  15G Sep 25 16:32 novaseqxplus4_20240513_LH00203_0044_A22F577LT3.s_7_1711_1503.001.R2.fastq.gz
+140K -rw-rw-r-- 1 adrian adrian 139K Sep 25 16:39 report.json
+484K -rw-rw-r-- 1 adrian adrian 484K Sep 25 16:39 report.html
+8.2G -rw-rw-r-- 1 adrian adrian 8.2G Sep 25 16:39 clean.R1.fq.gz
+8.4G -rw-rw-r-- 1 adrian adrian 8.4G Sep 25 16:39 clean.R2.fq.gz
+ 15G -rw-rw-r-- 1 adrian adrian  15G Sep 25 18:59 human.bam
+ 16G -rw-rw-r-- 1 adrian adrian  16G Sep 25 19:42 human.RG.bam
+ 14G -rw-rw-r-- 1 adrian adrian  14G Sep 25 20:34 human.RG.marked_dup.bam
+ 24K -rw-rw-r-- 1 adrian adrian  23K Sep 25 20:34 MITF_A_Untreated_IgG_3.marked_dup.info.txt
+7.7G -rw-rw-r-- 1 adrian adrian 7.7G Sep 25 20:35 human.RG.marked_dup.q30.bam
+8.0K -rw-rw-r-- 1 adrian adrian 6.0K Sep 25 20:38 fragment_length_info.txt
+9.4G -rw-rw-r-- 1 adrian adrian 9.4G Sep 25 20:41 human.sorted.bam
+7.6G -rw-rw-r-- 1 adrian adrian 7.6G Sep 25 20:46 human.bedpe
+7.6G -rw-rw-r-- 1 adrian adrian 7.6G Sep 25 20:47 human.clean.bed
+2.0G -rw-rw-r-- 1 adrian adrian 2.0G Sep 25 21:26 human.fragments.bed
+ 93M -rw-rw-r-- 1 adrian adrian  93M Sep 25 21:44 human.fragments.500.bed
+4.0K drwxr-xr-x 2 adrian adrian 4.0K Sep 25 21:44 .
+3.8G -rw-rw-r-- 1 adrian adrian 3.8G Sep 25 21:48 human.bedgraph
+Thu Sep 25 21:48:12 GMT 2025
+Thu Sep 25 21:48:20 GMT 2025
+
+about to remove scratch dir
+all done.
+Thu Sep 25 21:48:25 GMT 2025
