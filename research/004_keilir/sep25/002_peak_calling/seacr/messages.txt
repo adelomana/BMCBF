@@ -1,0 +1,308 @@
+(base) s8-mc07 2025-10-01 11:25:24 ~/hub/bmcbf/research/004_keilir/sep25/002_peak_calling : bash sender.sh
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_A_Untreated_FLAG_1/human.bedgraph /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_A_Untreated_IgG_1/human.bedgraph norm stringent /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_A_Untreated_FLAG_1_vs_MITF_A_Untreated_IgG_1
+Calling enriched regions with control file
+Normalizing control to experimental bedgraph
+Using stringent threshold
+Creating experimental AUC file: Wed Oct  1 11:25:56 GMT 2025
+Creating control AUC file: Wed Oct  1 11:28:26 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 11:30:11 GMT 2025
+Calculating threshold using normalized control: Wed Oct  1 11:30:11 GMT 2025
+Creating thresholded feature file: Wed Oct  1 11:31:22 GMT 2025
+Empirical false discovery rate = 0.0886075949367089
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 11:32:05 GMT 2025
+Removing temporary files: Wed Oct  1 11:32:05 GMT 2025
+Done: Wed Oct  1 11:32:05 GMT 2025
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_A_Untreated_FLAG_1/human.bedgraph 0.01 norm stringent /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_A_Untreated_FLAG_1_vs_MITF_A_Untreated_IgG_1_auc
+Calling enriched regions without control file
+Normalizing control to experimental bedgraph
+Using stringent threshold
+Creating experimental AUC file: Wed Oct  1 11:32:05 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 11:34:37 GMT 2025
+Using user-provided threshold: Wed Oct  1 11:34:37 GMT 2025
+Creating thresholded feature file: Wed Oct  1 11:34:42 GMT 2025
+Empirical false discovery rate = 0.01
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 11:34:55 GMT 2025
+Removing temporary files: Wed Oct  1 11:34:55 GMT 2025
+Done: Wed Oct  1 11:34:55 GMT 2025
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_A_Untreated_FLAG_1/human.bedgraph /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_A_Untreated_IgG_1/human.bedgraph norm relaxed /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_A_Untreated_FLAG_1_vs_MITF_A_Untreated_IgG_1
+Calling enriched regions with control file
+Normalizing control to experimental bedgraph
+Using relaxed threshold
+Creating experimental AUC file: Wed Oct  1 11:34:55 GMT 2025
+Creating control AUC file: Wed Oct  1 11:37:26 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 11:39:09 GMT 2025
+Calculating threshold using normalized control: Wed Oct  1 11:39:09 GMT 2025
+Creating thresholded feature file: Wed Oct  1 11:40:18 GMT 2025
+Empirical false discovery rate = 0.109039548022599
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 11:41:00 GMT 2025
+Removing temporary files: Wed Oct  1 11:41:00 GMT 2025
+Done: Wed Oct  1 11:41:00 GMT 2025
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_A_Untreated_FLAG_1/human.bedgraph 0.01 norm relaxed /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_A_Untreated_FLAG_1_vs_MITF_A_Untreated_IgG_1_auc
+Calling enriched regions without control file
+Normalizing control to experimental bedgraph
+Using relaxed threshold
+Creating experimental AUC file: Wed Oct  1 11:41:00 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 11:43:31 GMT 2025
+Using user-provided threshold: Wed Oct  1 11:43:31 GMT 2025
+Creating thresholded feature file: Wed Oct  1 11:43:35 GMT 2025
+Empirical false discovery rate = 
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 11:43:49 GMT 2025
+Removing temporary files: Wed Oct  1 11:44:10 GMT 2025
+Done: Wed Oct  1 11:44:10 GMT 2025
+
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_A_Untreated_FLAG_2/human.bedgraph /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_A_Untreated_IgG_2/human.bedgraph norm stringent /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_A_Untreated_FLAG_2_vs_MITF_A_Untreated_IgG_2
+Calling enriched regions with control file
+Normalizing control to experimental bedgraph
+Using stringent threshold
+Creating experimental AUC file: Wed Oct  1 11:44:10 GMT 2025
+Creating control AUC file: Wed Oct  1 11:46:24 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 11:48:58 GMT 2025
+Calculating threshold using normalized control: Wed Oct  1 11:48:58 GMT 2025
+Creating thresholded feature file: Wed Oct  1 11:49:49 GMT 2025
+Empirical false discovery rate = 4.17950995246219e-05
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 11:50:14 GMT 2025
+Removing temporary files: Wed Oct  1 11:50:14 GMT 2025
+Done: Wed Oct  1 11:50:14 GMT 2025
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_A_Untreated_FLAG_2/human.bedgraph 0.01 norm stringent /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_A_Untreated_FLAG_2_vs_MITF_A_Untreated_IgG_2_auc
+Calling enriched regions without control file
+Normalizing control to experimental bedgraph
+Using stringent threshold
+Creating experimental AUC file: Wed Oct  1 11:50:14 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 11:52:32 GMT 2025
+Using user-provided threshold: Wed Oct  1 11:52:32 GMT 2025
+Creating thresholded feature file: Wed Oct  1 11:52:36 GMT 2025
+Empirical false discovery rate = 0.01
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 11:52:48 GMT 2025
+Removing temporary files: Wed Oct  1 11:52:48 GMT 2025
+Done: Wed Oct  1 11:52:48 GMT 2025
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_A_Untreated_FLAG_2/human.bedgraph /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_A_Untreated_IgG_2/human.bedgraph norm relaxed /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_A_Untreated_FLAG_2_vs_MITF_A_Untreated_IgG_2
+Calling enriched regions with control file
+Normalizing control to experimental bedgraph
+Using relaxed threshold
+Creating experimental AUC file: Wed Oct  1 11:52:48 GMT 2025
+Creating control AUC file: Wed Oct  1 11:55:02 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 11:57:33 GMT 2025
+Calculating threshold using normalized control: Wed Oct  1 11:57:33 GMT 2025
+Creating thresholded feature file: Wed Oct  1 11:58:19 GMT 2025
+Empirical false discovery rate = 0.000216910837920747
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 11:58:44 GMT 2025
+Removing temporary files: Wed Oct  1 11:58:44 GMT 2025
+Done: Wed Oct  1 11:58:44 GMT 2025
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_A_Untreated_FLAG_2/human.bedgraph 0.01 norm relaxed /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_A_Untreated_FLAG_2_vs_MITF_A_Untreated_IgG_2_auc
+Calling enriched regions without control file
+Normalizing control to experimental bedgraph
+Using relaxed threshold
+Creating experimental AUC file: Wed Oct  1 11:58:44 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 12:00:57 GMT 2025
+Using user-provided threshold: Wed Oct  1 12:00:57 GMT 2025
+Creating thresholded feature file: Wed Oct  1 12:01:01 GMT 2025
+Empirical false discovery rate = 
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 12:01:13 GMT 2025
+Removing temporary files: Wed Oct  1 12:01:26 GMT 2025
+Done: Wed Oct  1 12:01:26 GMT 2025
+
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_A_Untreated_FLAG_3/human.bedgraph /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_A_Untreated_IgG_3/human.bedgraph norm stringent /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_A_Untreated_FLAG_3_vs_MITF_A_Untreated_IgG_3
+Calling enriched regions with control file
+Normalizing control to experimental bedgraph
+Using stringent threshold
+Creating experimental AUC file: Wed Oct  1 12:01:26 GMT 2025
+Creating control AUC file: Wed Oct  1 12:03:56 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 12:06:46 GMT 2025
+Calculating threshold using normalized control: Wed Oct  1 12:06:46 GMT 2025
+Creating thresholded feature file: Wed Oct  1 12:07:39 GMT 2025
+Empirical false discovery rate = 0.111111111111111
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 12:08:07 GMT 2025
+Removing temporary files: Wed Oct  1 12:08:07 GMT 2025
+Done: Wed Oct  1 12:08:07 GMT 2025
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_A_Untreated_FLAG_3/human.bedgraph 0.01 norm stringent /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_A_Untreated_FLAG_3_vs_MITF_A_Untreated_IgG_3_auc
+Calling enriched regions without control file
+Normalizing control to experimental bedgraph
+Using stringent threshold
+Creating experimental AUC file: Wed Oct  1 12:08:07 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 12:10:37 GMT 2025
+Using user-provided threshold: Wed Oct  1 12:10:37 GMT 2025
+Creating thresholded feature file: Wed Oct  1 12:10:41 GMT 2025
+Empirical false discovery rate = 0.01
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 12:10:53 GMT 2025
+Removing temporary files: Wed Oct  1 12:10:54 GMT 2025
+Done: Wed Oct  1 12:10:54 GMT 2025
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_A_Untreated_FLAG_3/human.bedgraph /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_A_Untreated_IgG_3/human.bedgraph norm relaxed /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_A_Untreated_FLAG_3_vs_MITF_A_Untreated_IgG_3
+Calling enriched regions with control file
+Normalizing control to experimental bedgraph
+Using relaxed threshold
+Creating experimental AUC file: Wed Oct  1 12:10:54 GMT 2025
+Creating control AUC file: Wed Oct  1 12:13:23 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 12:16:13 GMT 2025
+Calculating threshold using normalized control: Wed Oct  1 12:16:13 GMT 2025
+Creating thresholded feature file: Wed Oct  1 12:17:05 GMT 2025
+Empirical false discovery rate = 0.181818181818182
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 12:17:34 GMT 2025
+Removing temporary files: Wed Oct  1 12:17:34 GMT 2025
+Done: Wed Oct  1 12:17:34 GMT 2025
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_A_Untreated_FLAG_3/human.bedgraph 0.01 norm relaxed /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_A_Untreated_FLAG_3_vs_MITF_A_Untreated_IgG_3_auc
+Calling enriched regions without control file
+Normalizing control to experimental bedgraph
+Using relaxed threshold
+Creating experimental AUC file: Wed Oct  1 12:17:34 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 12:20:05 GMT 2025
+Using user-provided threshold: Wed Oct  1 12:20:05 GMT 2025
+Creating thresholded feature file: Wed Oct  1 12:20:09 GMT 2025
+Empirical false discovery rate = 
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 12:20:22 GMT 2025
+Removing temporary files: Wed Oct  1 12:20:35 GMT 2025
+Done: Wed Oct  1 12:20:35 GMT 2025
+
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_M_Untreated_FLAG_1/human.bedgraph /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_M_Untreated_IgG_1/human.bedgraph norm stringent /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_M_Untreated_FLAG_1_vs_MITF_M_Untreated_IgG_1
+Calling enriched regions with control file
+Normalizing control to experimental bedgraph
+Using stringent threshold
+Creating experimental AUC file: Wed Oct  1 12:20:35 GMT 2025
+Creating control AUC file: Wed Oct  1 12:22:42 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 12:24:27 GMT 2025
+Calculating threshold using normalized control: Wed Oct  1 12:24:27 GMT 2025
+Creating thresholded feature file: Wed Oct  1 12:25:22 GMT 2025
+Empirical false discovery rate = 0.101604278074866
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 12:25:57 GMT 2025
+Removing temporary files: Wed Oct  1 12:25:57 GMT 2025
+Done: Wed Oct  1 12:25:57 GMT 2025
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_M_Untreated_FLAG_1/human.bedgraph 0.01 norm stringent /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_M_Untreated_FLAG_1_vs_MITF_M_Untreated_IgG_1_auc
+Calling enriched regions without control file
+Normalizing control to experimental bedgraph
+Using stringent threshold
+Creating experimental AUC file: Wed Oct  1 12:25:57 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 12:28:04 GMT 2025
+Using user-provided threshold: Wed Oct  1 12:28:04 GMT 2025
+Creating thresholded feature file: Wed Oct  1 12:28:08 GMT 2025
+Empirical false discovery rate = 0.01
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 12:28:18 GMT 2025
+Removing temporary files: Wed Oct  1 12:28:19 GMT 2025
+Done: Wed Oct  1 12:28:19 GMT 2025
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_M_Untreated_FLAG_1/human.bedgraph /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_M_Untreated_IgG_1/human.bedgraph norm relaxed /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_M_Untreated_FLAG_1_vs_MITF_M_Untreated_IgG_1
+Calling enriched regions with control file
+Normalizing control to experimental bedgraph
+Using relaxed threshold
+Creating experimental AUC file: Wed Oct  1 12:28:19 GMT 2025
+Creating control AUC file: Wed Oct  1 12:30:29 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 12:32:14 GMT 2025
+Calculating threshold using normalized control: Wed Oct  1 12:32:14 GMT 2025
+Creating thresholded feature file: Wed Oct  1 12:33:13 GMT 2025
+Empirical false discovery rate = 0.137273593898951
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 12:33:49 GMT 2025
+Removing temporary files: Wed Oct  1 12:33:49 GMT 2025
+Done: Wed Oct  1 12:33:49 GMT 2025
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_M_Untreated_FLAG_1/human.bedgraph 0.01 norm relaxed /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_M_Untreated_FLAG_1_vs_MITF_M_Untreated_IgG_1_auc
+Calling enriched regions without control file
+Normalizing control to experimental bedgraph
+Using relaxed threshold
+Creating experimental AUC file: Wed Oct  1 12:33:49 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 12:36:00 GMT 2025
+Using user-provided threshold: Wed Oct  1 12:36:00 GMT 2025
+Creating thresholded feature file: Wed Oct  1 12:36:03 GMT 2025
+Empirical false discovery rate = 
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 12:36:15 GMT 2025
+Removing temporary files: Wed Oct  1 12:36:29 GMT 2025
+Done: Wed Oct  1 12:36:29 GMT 2025
+
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_M_Untreated_FLAG_2/human.bedgraph /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_M_Untreated_IgG_2/human.bedgraph norm stringent /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_M_Untreated_FLAG_2_vs_MITF_M_Untreated_IgG_2
+Calling enriched regions with control file
+Normalizing control to experimental bedgraph
+Using stringent threshold
+Creating experimental AUC file: Wed Oct  1 12:36:29 GMT 2025
+Creating control AUC file: Wed Oct  1 12:38:40 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 12:40:41 GMT 2025
+Calculating threshold using normalized control: Wed Oct  1 12:40:41 GMT 2025
+Creating thresholded feature file: Wed Oct  1 12:41:34 GMT 2025
+Empirical false discovery rate = 0.222222222222222
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 12:42:08 GMT 2025
+Removing temporary files: Wed Oct  1 12:42:08 GMT 2025
+Done: Wed Oct  1 12:42:08 GMT 2025
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_M_Untreated_FLAG_2/human.bedgraph 0.01 norm stringent /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_M_Untreated_FLAG_2_vs_MITF_M_Untreated_IgG_2_auc
+Calling enriched regions without control file
+Normalizing control to experimental bedgraph
+Using stringent threshold
+Creating experimental AUC file: Wed Oct  1 12:42:08 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 12:44:23 GMT 2025
+Using user-provided threshold: Wed Oct  1 12:44:23 GMT 2025
+Creating thresholded feature file: Wed Oct  1 12:44:27 GMT 2025
+Empirical false discovery rate = 0.01
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 12:44:39 GMT 2025
+Removing temporary files: Wed Oct  1 12:44:39 GMT 2025
+Done: Wed Oct  1 12:44:39 GMT 2025
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_M_Untreated_FLAG_2/human.bedgraph /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_M_Untreated_IgG_2/human.bedgraph norm relaxed /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_M_Untreated_FLAG_2_vs_MITF_M_Untreated_IgG_2
+Calling enriched regions with control file
+Normalizing control to experimental bedgraph
+Using relaxed threshold
+Creating experimental AUC file: Wed Oct  1 12:44:39 GMT 2025
+Creating control AUC file: Wed Oct  1 12:46:54 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 12:48:58 GMT 2025
+Calculating threshold using normalized control: Wed Oct  1 12:48:58 GMT 2025
+Creating thresholded feature file: Wed Oct  1 12:49:52 GMT 2025
+Empirical false discovery rate = 0.3
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 12:50:25 GMT 2025
+Removing temporary files: Wed Oct  1 12:50:25 GMT 2025
+Done: Wed Oct  1 12:50:25 GMT 2025
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_M_Untreated_FLAG_2/human.bedgraph 0.01 norm relaxed /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_M_Untreated_FLAG_2_vs_MITF_M_Untreated_IgG_2_auc
+Calling enriched regions without control file
+Normalizing control to experimental bedgraph
+Using relaxed threshold
+Creating experimental AUC file: Wed Oct  1 12:50:25 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 12:52:38 GMT 2025
+Using user-provided threshold: Wed Oct  1 12:52:38 GMT 2025
+Creating thresholded feature file: Wed Oct  1 12:52:42 GMT 2025
+Empirical false discovery rate = 
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 12:52:54 GMT 2025
+Removing temporary files: Wed Oct  1 12:53:11 GMT 2025
+Done: Wed Oct  1 12:53:12 GMT 2025
+
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_M_Untreated_FLAG_3/human.bedgraph /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_M_Untreated_IgG_3/human.bedgraph norm stringent /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_M_Untreated_FLAG_3_vs_MITF_M_Untreated_IgG_3
+Calling enriched regions with control file
+Normalizing control to experimental bedgraph
+Using stringent threshold
+Creating experimental AUC file: Wed Oct  1 12:53:12 GMT 2025
+Creating control AUC file: Wed Oct  1 12:55:58 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 12:58:01 GMT 2025
+Calculating threshold using normalized control: Wed Oct  1 12:58:01 GMT 2025
+Creating thresholded feature file: Wed Oct  1 12:58:51 GMT 2025
+Empirical false discovery rate = 0.233062330623306
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 12:59:26 GMT 2025
+Removing temporary files: Wed Oct  1 12:59:26 GMT 2025
+Done: Wed Oct  1 12:59:26 GMT 2025
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_M_Untreated_FLAG_3/human.bedgraph 0.01 norm stringent /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_M_Untreated_FLAG_3_vs_MITF_M_Untreated_IgG_3_auc
+Calling enriched regions without control file
+Normalizing control to experimental bedgraph
+Using stringent threshold
+Creating experimental AUC file: Wed Oct  1 12:59:26 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 13:02:12 GMT 2025
+Using user-provided threshold: Wed Oct  1 13:02:12 GMT 2025
+Creating thresholded feature file: Wed Oct  1 13:02:15 GMT 2025
+Empirical false discovery rate = 0.01
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 13:02:24 GMT 2025
+Removing temporary files: Wed Oct  1 13:02:24 GMT 2025
+Done: Wed Oct  1 13:02:24 GMT 2025
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_M_Untreated_FLAG_3/human.bedgraph /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_M_Untreated_IgG_3/human.bedgraph norm relaxed /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_M_Untreated_FLAG_3_vs_MITF_M_Untreated_IgG_3
+Calling enriched regions with control file
+Normalizing control to experimental bedgraph
+Using relaxed threshold
+Creating experimental AUC file: Wed Oct  1 13:02:24 GMT 2025
+Creating control AUC file: Wed Oct  1 13:06:05 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 13:08:13 GMT 2025
+Calculating threshold using normalized control: Wed Oct  1 13:08:13 GMT 2025
+Creating thresholded feature file: Wed Oct  1 13:09:03 GMT 2025
+Empirical false discovery rate = 0.303337306317044
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 13:09:37 GMT 2025
+Removing temporary files: Wed Oct  1 13:09:37 GMT 2025
+Done: Wed Oct  1 13:09:37 GMT 2025
+bash /Users/adrian/software/SEACR/SEACR_1.3.sh /Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph/MITF_M_Untreated_FLAG_3/human.bedgraph 0.01 norm relaxed /Users/adrian/research/bmcbf/004_keilir/results/002_seacr/MITF_M_Untreated_FLAG_3_vs_MITF_M_Untreated_IgG_3_auc
+Calling enriched regions without control file
+Normalizing control to experimental bedgraph
+Using relaxed threshold
+Creating experimental AUC file: Wed Oct  1 13:09:37 GMT 2025
+Calculating optimal AUC threshold: Wed Oct  1 13:12:24 GMT 2025
+Using user-provided threshold: Wed Oct  1 13:12:24 GMT 2025
+Creating thresholded feature file: Wed Oct  1 13:12:27 GMT 2025
+Empirical false discovery rate = 
+Merging nearby features and eliminating control-enriched features: Wed Oct  1 13:12:36 GMT 2025
+Removing temporary files: Wed Oct  1 13:12:49 GMT 2025
+Done: Wed Oct  1 13:12:49 GMT 2025
+
+

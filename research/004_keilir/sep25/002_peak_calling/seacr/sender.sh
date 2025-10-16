@@ -2,8 +2,8 @@
 set -euo pipefail
 
 # Paths
-BEDDIR="/Users/adrian/research/bmcbf/004_keilir/results/000_bedgraph"
-OUTDIR="/Users/adrian/research/bmcbf/004_keilir/results/002_seacr"
+BEDDIR="/Users/adrian/research/bmcbf/004_keilir/results/results001"
+OUTDIR="/Users/adrian/research/bmcbf/004_keilir/results/results001_seacr"
 SEACR="/Users/adrian/software/SEACR/SEACR_1.3.sh"
 mkdir -p "$OUTDIR"
 
