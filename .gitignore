@@ -14,4 +14,24 @@ education/session.004/.Rhistory
 research/020_vik/in_house_functional/.ipynb_checkpoints/analysis-checkpoint.ipynb
 research/020_vik/in_house_functional/.ipynb_checkpoints/analysis-checkpoint.ipynb
 /research/020_vik/in_house_functional/.ipynb_checkpoints
-*.tsv
+research/020_vik/in_house_functional/effect_WT_vs_MUTANT_annotated_update.tsv
+research/020_vik/in_house_functional/effect_WT_vs_MUTANT_annotated_update_nocounts.tsv
+research/024_oslo/2025.05.28/my_dataframe.tsv
+research/029_orsay/004.tf_enrichment/029 orsay Table DEGs - both HOM & VGA.tsv
+research/029_orsay/004.tf_enrichment/029 orsay Table DEGs - HOM.tsv
+research/029_orsay/004.tf_enrichment/029 orsay Table DEGs - particular to HOM.tsv
+research/029_orsay/004.tf_enrichment/029 orsay Table DEGs - particular to VGA.tsv
+research/029_orsay/004.tf_enrichment/029 orsay Table DEGs - VGA.tsv
+research/029_orsay/004.tf_enrichment/tf_enricher.ARCHS4_TFs_Coexp029 orsay Table DEGs - both HOM & VGA.tsv.tsv
+research/029_orsay/004.tf_enrichment/tf_enricher.ARCHS4_TFs_Coexp029 orsay Table DEGs - HOM.tsv.tsv
+research/029_orsay/004.tf_enrichment/tf_enricher.ARCHS4_TFs_Coexp029 orsay Table DEGs - particular to HOM.tsv.tsv
+research/029_orsay/004.tf_enrichment/tf_enricher.ARCHS4_TFs_Coexp029 orsay Table DEGs - particular to VGA.tsv.tsv
+research/029_orsay/004.tf_enrichment/tf_enricher.ARCHS4_TFs_Coexp029 orsay Table DEGs - VGA.tsv.tsv
+research/029_orsay/004.tf_enrichment/tf_enricher.chea.hom.tsv
+research/029_orsay/004.tf_enrichment/tf_enricher.ChEA_2022029 orsay Table DEGs - both HOM & VGA.tsv.tsv
+research/029_orsay/004.tf_enrichment/tf_enricher.ChEA_2022029 orsay Table DEGs - HOM.tsv.tsv
+research/029_orsay/004.tf_enrichment/tf_enricher.ChEA_2022029 orsay Table DEGs - particular to VGA.tsv.tsv
+research/029_orsay/004.tf_enrichment/tf_enricher.ChEA_2022029 orsay Table DEGs - VGA.tsv.tsv
+research/044_blaskogar/PRJNA641129/000_retrieve/info.tsv
+research/054_selfoss/002_DEG_calling/intersect/deseq2.tsv
+research/054_selfoss/002_DEG_calling/intersect/sleuth.tsv
