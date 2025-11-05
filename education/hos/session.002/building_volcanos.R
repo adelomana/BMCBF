@@ -1,6 +1,15 @@
 # Load library
 library(ggplot2)
 
+# get the data
+url <- "https://raw.githubusercontent.com/adelomana/BMCBF/refs/heads/main/education/hos/session.002/effect_RES_vs_SEN.raw.tsv"
+destfile <- basename(url)
+download.file(url, destfile, method = "wget")
+
+url <- "https://raw.githubusercontent.com/adelomana/BMCBF/refs/heads/main/education/hos/session.002/effect_RES_vs_SEN.anti.tsv"
+destfile <- basename(url)
+download.file(url, destfile, method = "wget")
+
 # Read data
 # getwd() and setwd() are good functions to locate the path to the data in your computer
 response_df <- read.table("effect_RES_vs_SEN.raw.tsv", header = TRUE, sep = "\t")
@@ -13,6 +22,8 @@ ggplot(response_df, aes(x = log2FoldChange, y = -log10(padj))) +
   labs(x = "log2(Fold Change)", y = "-log10(p-value)")
 
 # think. How would you improve this visualization to convey a clear scientific message?
+
+### WARNING: ADVANCED CODE BELOW
 
 # this is a deeper modification approach to represent the same effect
 library(ramify) # this is for clip, for the volcano
