@@ -1,0 +1,31 @@
+Wed Nov 12 14:59:11 GMT 2025
+/hpcdata/Mimir/adrian/research/055_bruara/src
+the scratch dir is:
+/scratch/users/adrian/1532980-jh5T
+
+about to copy files into scratch
+Wed Nov 12 14:59:11 GMT 2025
+Wed Nov 12 14:59:19 GMT 2025
+
+about to call fastp
+R_AM_Trans_2_1.fq.gz
+R_AM_Trans_2_2.fq.gz
+Wed Nov 12 14:59:19 GMT 2025
+Wed Nov 12 15:01:55 GMT 2025
+
+about to copy results out of scratch to my dirs
+R_AM_Trans_2_1.fq.gz
+R_AM_Trans_2_2.fq.gz
+clean.R1.fq.gz
+clean.R2.fq.gz
+kallisto_output_a
+kallisto_output_b
+kallisto_output_c
+report.html
+report.json
+Wed Nov 12 15:14:59 GMT 2025
+Wed Nov 12 15:14:59 GMT 2025
+
+about to remove scratch dir
+all done.
+Wed Nov 12 15:15:00 GMT 2025
