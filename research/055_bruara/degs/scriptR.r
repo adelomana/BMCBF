@@ -72,7 +72,7 @@ setb_indexes = 4:6
 #
 # 3.1. contrast R vs DMSO
 #
-working_metadata = metadata[c(1:3, 7:9), ]
+working_metadata = metadata[c(1:3, 4:6), ]
 View(working_metadata)
 txi = tximport(working_metadata$path, type="kallisto", tx2gene=t2g)
 dds = DESeqDataSetFromTximport(txi, colData=working_metadata, design=~genotype) 
@@ -103,7 +103,7 @@ res = results(dds, parallel=TRUE, alpha=0.05) # it does not seem to affect  http
 filtred_results = res[which(res$padj < 0.05 & abs(res$log2FoldChange) > effect_size_threshold), ]
 sorted_filtred_results = filtred_results[order(filtred_results[["padj"]]),]
 anti_results = res[which(res$padj > 0.05 | abs(res$log2FoldChange) < effect_size_threshold), ]
-cat(blue(paste('S vs DMSO:', dim(filtred_results)[1], sep=' ')), fill=TRUE)
+cat(blue(paste('R vs DMSO:', dim(filtred_results)[1], sep=' ')), fill=TRUE)
 write.table(sorted_filtred_results, file=paste(results_dir, '/effect_S_vs_DMSO.raw.tsv', sep=''), quote=FALSE, sep='\t')
 
 ensembl_results_wo = sapply(strsplit(rownames(sorted_filtred_results), split='.',fixed=TRUE), function(x) (x[1]))
@@ -126,10 +126,10 @@ rownames(subset) = wo
 sorted_filtred_results$medianTPM_WT = rowMedians(subset[rownames(sorted_filtred_results), seta_indexes]) # SEN
 sorted_filtred_results$medianTPM_HET = rowMedians(subset[rownames(sorted_filtred_results), setb_indexes]) # RES
 
-write.table(sorted_filtred_results, file=paste(results_dir, '/effect_S_vs_DMSO.for.tsv', sep=''), quote=FALSE, sep='\t')
-write.table(anti_results, file=paste(results_dir, '/effect_S_vs_DMSO.anti.tsv', sep=''), quote=FALSE, sep='\t')
+write.table(sorted_filtred_results, file=paste(results_dir, '/effect_R_vs_DMSO.for.tsv', sep=''), quote=FALSE, sep='\t')
+write.table(anti_results, file=paste(results_dir, '/effect_R_vs_DMSO.anti.tsv', sep=''), quote=FALSE, sep='\t')
 
-plotPCA(rlog(dds), intgroup=c('genotype')) + ggtitle('effect S vs DMSO')
+plotPCA(rlog(dds), intgroup=c('genotype')) + ggtitle('effect R vs DMSO')
 
 #               
 # volcano
@@ -161,7 +161,4 @@ ggplot() +
   geom_segment(aes(x=1, xend=3, y=-log10(0.05), yend=-log10(0.05)), linetype=2) +
   xlim(-3, 3) +
   scale_color_viridis_c(option = "viridis", limits = c(0, 2)) 
-#ggsave(paste('effect_S_DMSO', '.svg', sep=''), device = svglite::svglite)
-
-grDevices::svg("effect_S_DMSO_base.svg", width = 6, height = 4)
-grDevices::dev.off()
+ggsave(paste('effect_R_DMSO', '.svg', sep=''))
