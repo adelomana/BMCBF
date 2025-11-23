@@ -62,9 +62,11 @@ View(metadata)
 #
 # 3. contrasts
 #
-count_threshold = 20
+count_threshold = 10
 effect_size_threshold = log2(2)
 tpm_threshold = 2
+
+# 10 counts and 1 TPM goes from 8 DEGs to 9 DEGs, but the ninth is dcdc2b
 
 seta_indexes = 1:3
 setb_indexes = 4:6

@@ -62,7 +62,7 @@ View(metadata)
 #
 # 3. contrasts
 #
-count_threshold = 20
+count_threshold = 10
 effect_size_threshold = log2(2)
 tpm_threshold = 2
 
