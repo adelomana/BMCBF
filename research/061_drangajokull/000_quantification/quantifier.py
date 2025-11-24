@@ -58,15 +58,15 @@ def launcher(sample):
         fastq_files.append(r1)
         fastq_files.append(r2)
 
-    fastq_files_string = " ".join(fastq_files)
+    fastq_files_string = " ".join(fastq_files) 
 
-    kallisto_options = f"-i {transcriptome_index} -o kallisto_output_{sample} -t {number_threads} -b 100 --rf-stranded --verbose"
+    kallisto_options = f"-i {transcriptome_index} -o kallisto_output_{sample}_reverse -t {number_threads} -b 100 --rf-stranded --verbose"
     kallisto_cmd_a = f"{kallisto_executable} {kallisto_options} {fastq_files_string}"
 
-    kallisto_options = f"-i {transcriptome_index} -o kallisto_output_{sample} -t {number_threads} -b 100 --fr-stranded --verbose"
+    kallisto_options = f"-i {transcriptome_index} -o kallisto_output_{sample}_forward -t {number_threads} -b 100 --fr-stranded --verbose"
     kallisto_cmd_b = f"{kallisto_executable} {kallisto_options} {fastq_files_string}"
 
-    kallisto_options = f"-i {transcriptome_index} -o kallisto_output_{sample} -t {number_threads} -b 100 --verbose"
+    kallisto_options = f"-i {transcriptome_index} -o kallisto_output_{sample}_unstranded -t {number_threads} -b 100 --verbose"
     kallisto_cmd_c = f"{kallisto_executable} {kallisto_options} {fastq_files_string}"
     
     #

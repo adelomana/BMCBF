@@ -1,11 +1,11 @@
-Sun Nov 23 20:30:53 GMT 2025
+Mon Nov 24 10:05:28 GMT 2025
 /hpcdata/Mimir/adrian/research/061_drangajokull/src
 the scratch dir is:
-/scratch/users/adrian/1545076-8wjH
+/scratch/users/adrian/1545138-TyDz
 
 about to copy files into scratch
-Sun Nov 23 20:30:53 GMT 2025
-Sun Nov 23 20:31:37 GMT 2025
+Mon Nov 24 10:05:28 GMT 2025
+Mon Nov 24 10:05:29 GMT 2025
 
 about to call fastp
 C_4_2_siC2_MKRN250061799-1A_233KYFLT4_L6_1.fq.gz
@@ -13,8 +13,8 @@ C_4_2_siC2_MKRN250061799-1A_233KYFLT4_L6_2.fq.gz
 C_4_2_siC2_MKRN250061799-1A_235LJ2LT4_L8_1.fq.gz
 C_4_2_siC2_MKRN250061799-1A_235LJ2LT4_L8_2.fq.gz
 MD5.txt
-Sun Nov 23 20:31:37 GMT 2025
-Sun Nov 23 20:33:48 GMT 2025
+Mon Nov 24 10:05:29 GMT 2025
+Mon Nov 24 10:07:40 GMT 2025
 
 about to copy results out of scratch to my dirs
 C_4_2_siC2_MKRN250061799-1A_233KYFLT4_L6_1.fq.gz
@@ -30,10 +30,12 @@ C_4_2_siC2_part2.clean.R2.fq.gz
 C_4_2_siC2_part2.fastp.html
 C_4_2_siC2_part2.fastp.json
 MD5.txt
-kallisto_output_C_4_2_siC2
-Sun Nov 23 21:11:40 GMT 2025
-Sun Nov 23 21:11:40 GMT 2025
+kallisto_output_C_4_2_siC2_forward
+kallisto_output_C_4_2_siC2_reverse
+kallisto_output_C_4_2_siC2_unstranded
+Mon Nov 24 10:45:34 GMT 2025
+Mon Nov 24 10:45:35 GMT 2025
 
 about to remove scratch dir
 all done.
-Sun Nov 23 21:11:40 GMT 2025
+Mon Nov 24 10:45:35 GMT 2025

@@ -44,9 +44,9 @@ time /users/home/adrian/software/fastp/fastp -i /hpcdata/Mimir/adrian/research/0
 date
 
 # call kallisto
-time /users/home/adrian/software/kallisto/kallisto quant -i /users/home/adrian/software/kallisto/108/index.idx -o kallisto_output_C_4_2_siC2 -t 16 -b 100 --rf-stranded --verbose C_4_2_siC2_part1.clean.R1.fq.gz C_4_2_siC2_part1.clean.R2.fq.gz C_4_2_siC2_part2.clean.R1.fq.gz C_4_2_siC2_part2.clean.R2.fq.gz
-time /users/home/adrian/software/kallisto/kallisto quant -i /users/home/adrian/software/kallisto/108/index.idx -o kallisto_output_C_4_2_siC2 -t 16 -b 100 --fr-stranded --verbose C_4_2_siC2_part1.clean.R1.fq.gz C_4_2_siC2_part1.clean.R2.fq.gz C_4_2_siC2_part2.clean.R1.fq.gz C_4_2_siC2_part2.clean.R2.fq.gz
-time /users/home/adrian/software/kallisto/kallisto quant -i /users/home/adrian/software/kallisto/108/index.idx -o kallisto_output_C_4_2_siC2 -t 16 -b 100 --verbose C_4_2_siC2_part1.clean.R1.fq.gz C_4_2_siC2_part1.clean.R2.fq.gz C_4_2_siC2_part2.clean.R1.fq.gz C_4_2_siC2_part2.clean.R2.fq.gz
+time /users/home/adrian/software/kallisto/kallisto quant -i /users/home/adrian/software/kallisto/108/index.idx -o kallisto_output_C_4_2_siC2_reverse -t 16 -b 100 --rf-stranded --verbose C_4_2_siC2_part1.clean.R1.fq.gz C_4_2_siC2_part1.clean.R2.fq.gz C_4_2_siC2_part2.clean.R1.fq.gz C_4_2_siC2_part2.clean.R2.fq.gz
+time /users/home/adrian/software/kallisto/kallisto quant -i /users/home/adrian/software/kallisto/108/index.idx -o kallisto_output_C_4_2_siC2_forward -t 16 -b 100 --fr-stranded --verbose C_4_2_siC2_part1.clean.R1.fq.gz C_4_2_siC2_part1.clean.R2.fq.gz C_4_2_siC2_part2.clean.R1.fq.gz C_4_2_siC2_part2.clean.R2.fq.gz
+time /users/home/adrian/software/kallisto/kallisto quant -i /users/home/adrian/software/kallisto/108/index.idx -o kallisto_output_C_4_2_siC2_unstranded -t 16 -b 100 --verbose C_4_2_siC2_part1.clean.R1.fq.gz C_4_2_siC2_part1.clean.R2.fq.gz C_4_2_siC2_part2.clean.R1.fq.gz C_4_2_siC2_part2.clean.R2.fq.gz
 
 #
 # 4. copy results back to my folders

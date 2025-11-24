@@ -43,9 +43,9 @@ time /users/home/adrian/software/fastp/fastp -i /hpcdata/Mimir/adrian/research/0
 date
 
 # call kallisto
-time /users/home/adrian/software/kallisto/kallisto quant -i /users/home/adrian/software/kallisto/108/index.idx -o kallisto_output_P_siA1 -t 16 -b 100 --rf-stranded --verbose P_siA1_part1.clean.R1.fq.gz P_siA1_part1.clean.R2.fq.gz
-time /users/home/adrian/software/kallisto/kallisto quant -i /users/home/adrian/software/kallisto/108/index.idx -o kallisto_output_P_siA1 -t 16 -b 100 --fr-stranded --verbose P_siA1_part1.clean.R1.fq.gz P_siA1_part1.clean.R2.fq.gz
-time /users/home/adrian/software/kallisto/kallisto quant -i /users/home/adrian/software/kallisto/108/index.idx -o kallisto_output_P_siA1 -t 16 -b 100 --verbose P_siA1_part1.clean.R1.fq.gz P_siA1_part1.clean.R2.fq.gz
+time /users/home/adrian/software/kallisto/kallisto quant -i /users/home/adrian/software/kallisto/108/index.idx -o kallisto_output_P_siA1_reverse -t 16 -b 100 --rf-stranded --verbose P_siA1_part1.clean.R1.fq.gz P_siA1_part1.clean.R2.fq.gz
+time /users/home/adrian/software/kallisto/kallisto quant -i /users/home/adrian/software/kallisto/108/index.idx -o kallisto_output_P_siA1_forward -t 16 -b 100 --fr-stranded --verbose P_siA1_part1.clean.R1.fq.gz P_siA1_part1.clean.R2.fq.gz
+time /users/home/adrian/software/kallisto/kallisto quant -i /users/home/adrian/software/kallisto/108/index.idx -o kallisto_output_P_siA1_unstranded -t 16 -b 100 --verbose P_siA1_part1.clean.R1.fq.gz P_siA1_part1.clean.R2.fq.gz
 
 #
 # 4. copy results back to my folders

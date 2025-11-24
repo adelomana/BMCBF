@@ -1,18 +1,18 @@
-Sun Nov 23 20:30:55 GMT 2025
+Mon Nov 24 10:05:28 GMT 2025
 /hpcdata/Mimir/adrian/research/061_drangajokull/src
 the scratch dir is:
-/scratch/users/adrian/1545085-lgVF
+/scratch/users/adrian/1545147-92O3
 
 about to copy files into scratch
-Sun Nov 23 20:30:55 GMT 2025
-Sun Nov 23 20:31:37 GMT 2025
+Mon Nov 24 10:05:28 GMT 2025
+Mon Nov 24 10:05:29 GMT 2025
 
 about to call fastp
 MD5.txt
 P_siA2_MKRN250061808-1A_233KYFLT4_L6_1.fq.gz
 P_siA2_MKRN250061808-1A_233KYFLT4_L6_2.fq.gz
-Sun Nov 23 20:31:37 GMT 2025
-Sun Nov 23 20:33:26 GMT 2025
+Mon Nov 24 10:05:29 GMT 2025
+Mon Nov 24 10:07:18 GMT 2025
 
 about to copy results out of scratch to my dirs
 MD5.txt
@@ -22,10 +22,12 @@ P_siA2_part1.clean.R1.fq.gz
 P_siA2_part1.clean.R2.fq.gz
 P_siA2_part1.fastp.html
 P_siA2_part1.fastp.json
-kallisto_output_P_siA2
-Sun Nov 23 21:11:21 GMT 2025
-Sun Nov 23 21:11:21 GMT 2025
+kallisto_output_P_siA2_forward
+kallisto_output_P_siA2_reverse
+kallisto_output_P_siA2_unstranded
+Mon Nov 24 10:45:28 GMT 2025
+Mon Nov 24 10:45:28 GMT 2025
 
 about to remove scratch dir
 all done.
-Sun Nov 23 21:11:22 GMT 2025
+Mon Nov 24 10:45:29 GMT 2025
