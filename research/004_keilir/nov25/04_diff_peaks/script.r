@@ -1,0 +1,205 @@
+## Differentially bound peaks (DBPs) with DESeq2
+## Input: featureCounts output: counts_featureCounts.txt
+## Peaks: purple.AM.union.saf / purple.AM.union.bed
+
+library(DESeq2)
+library(ggplot2)
+library(crayon) 
+library(ramify) # this is for clip, for the volcano
+
+
+count_threshold = 20
+seta_indexes = 1:3
+setb_indexes = 4:6
+
+## 1. Read featureCounts table
+fc_file <- "counts_featureCounts.purple.txt"
+
+fc <- read.table(
+  fc_file,
+  header       = TRUE,
+  sep          = "\t",
+  comment.char = "#",
+  stringsAsFactors = FALSE,
+  check.names  = FALSE  # keep full paths as column names initially
+)
+
+cat("Columns in raw featureCounts table:\n")
+print(colnames(fc))
+
+## 2. Clean sample names: keep the directory name just before the BAM filename
+## Example:
+## /hpcdata/.../MITF_A_Untreated_FLAG_1/human.30_120.bam
+## becomes: MITF_A_Untreated_FLAG_1
+
+count_col_idx <- 7:ncol(fc)
+raw_sample_cols <- colnames(fc)[count_col_idx]
+
+extract_sample_name <- function(path) {
+  parts <- strsplit(path, "/", fixed = TRUE)[[1]]
+  if (length(parts) >= 2) {
+    return(parts[length(parts) - 1])  # directory just before BAM file
+  } else {
+    return(path)
+  }
+}
+
+sample_names <- vapply(raw_sample_cols, extract_sample_name, character(1))
+
+cat("\nRenaming count columns to:\n")
+print(sample_names)
+
+colnames(fc)[count_col_idx] <- sample_names
+
+## 3. Separate annotation and count matrix
+peak_annot <- fc[, c("Geneid","Chr","Start","End","Strand")]
+
+count_mat <- as.matrix(fc[, count_col_idx])
+storage.mode(count_mat) <- "integer"
+rownames(count_mat) <- fc$Geneid
+
+cat("\nDimension of count matrix:\n")
+print(dim(count_mat))
+View(count_mat)
+
+## 4. Build sample metadata (A vs M)
+## Here: MITF_A_Untreated_FLAG_* = condition A
+##       MITF_M_Untreated_FLAG_* = condition M
+
+conditions <- ifelse(grepl("MITF_A", sample_names), "A", "M")
+
+## Make M the reference level
+condition_factor <- factor(conditions, levels = c("M","A"))
+
+coldata <- data.frame(
+  row.names = sample_names,
+  condition = condition_factor
+)
+
+cat("\nSample metadata:\n")
+print(coldata)
+View(coldata)
+
+## 5. Construct DESeqDataSet
+dds <- DESeqDataSetFromMatrix(
+  countData = count_mat,
+  colData   = coldata,
+  design    = ~ condition
+)
+
+
+# filter peaks that do not differ in at least 20 counts
+# keep features with at least 20 counts median difference
+cat(blue(paste('size before counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE)
+a = counts(dds)[ , seta_indexes]
+b = counts(dds)[ , setb_indexes]
+c = rowMedians(a) - rowMedians(b)
+keep = abs(c) >= count_threshold
+dds = dds[keep, ]
+cat(blue(paste('size after counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE)
+
+## 7. Run DESeq2
+dds <- DESeq(dds)
+
+## 8. Extract results: condition A vs M (M is reference)
+res <- results(dds, contrast = c("condition","A","M"))
+
+# manipulate results for later
+dim(res_df)
+length(rowMedians(counts(dds)[ , 1:3]))
+
+res_df <- as.data.frame(res)
+res_df$Geneid = rownames(res_df)
+res_df$countsa = rowMedians(counts(dds)[ , 1:3])
+res_df$countsb = rowMedians(counts(dds)[ , 4:6])
+
+## 9. Attach genomic coordinates
+res_annot <- merge(
+  res_df,
+  peak_annot,
+  by = "Geneid",
+  sort = FALSE
+)
+
+## Reorder columns for readability and sort on adj P
+res_annot <- res_annot[, c(
+  "Geneid","Chr","Start","End","Strand","log2FoldChange","padj", 'countsa', 'countsb'
+)]
+
+res_annot <- res_annot[order(res_annot$padj), ]
+
+
+cat("\nSummary of DESeq2 results:\n")
+print(summary(res))
+
+## 10. Define strict DBPs
+## Here: padj < 0.01 and |log2FC| > 1
+dbp_strict <- subset(
+  res_annot,
+  !is.na(padj) &
+    padj < 0.01 &
+    abs(log2FoldChange) > 1
+)
+
+cat("\nNumber of strict DBPs (padj < 0.01 & |log2FC| > 1):\n")
+print(nrow(dbp_strict))
+
+## Split by direction
+dbp_A_up <- subset(dbp_strict, log2FoldChange > 0)  # gained in A
+dbp_M_up <- subset(dbp_strict, log2FoldChange < 0)  # gained in M
+
+cat("\nGained in A (log2FC > 0):\n")
+print(nrow(dbp_A_up))
+
+cat("Gained in M (log2FC < 0):\n")
+print(nrow(dbp_M_up))
+
+## 11. Write outputs
+
+## Full annotated table
+write.table(
+  res_annot,
+  file      = "DESeq2_results_all_peaks.tsv",
+  sep       = "\t",
+  quote     = FALSE,
+  row.names = FALSE
+)
+
+## Strict DBPs (all)
+write.table(
+  dbp_strict[, c("Chr","Start","End","Geneid","log2FoldChange","padj", 'countsa', 'countsb')],
+  file      = "DBPs_strict_A_vs_M.bed",
+  sep       = "\t",
+  quote     = FALSE,
+  row.names = FALSE,
+  col.names = FALSE
+)
+
+##
+## Volcano plot (A vs M, M reference)
+##
+plotting_x = res_annot$log2FoldChange
+y = res_annot$padj
+plotting_y = -log10(y) 
+z <- log10(rowMedians(as.matrix(res_annot[, c("countsa", "countsb")])) + 1)
+print(c(min(z), max(z)))
+
+df = data.frame(plotting_x=clip(plotting_x, .min=-2.5, .max=2.5), plotting_y=clip(plotting_y, .min=0, .max=60), plotting_z=clip(z, .min=0, .max=4.5))
+reds = df[(df$plotting_x > 1) & (df$plotting_y > -log10(0.01)), ]
+blues = df[(df$plotting_x < -1) & (df$plotting_y > -log10(0.01)), ]
+blacks <- df[((df$plotting_x > -1) & (df$plotting_x < 1)) | (df$plotting_y < -log10(0.01)), ]
+
+print(c(dim(reds)[1], dim(blues)[1], dim(dbp_strict)[1]))
+
+ggplot() + 
+  geom_point(data=reds, aes(x=plotting_x, y=plotting_y, color=plotting_z), size=3, shape=19, alpha=1/3, stroke=0) + 
+  geom_point(data=blues, aes(plotting_x, plotting_y, color=plotting_z), size=3, shape=19, alpha=1/3, stroke=0) +
+  geom_point(data=blacks, aes(plotting_x, plotting_y), size=1, shape=19, alpha=1/6, stroke=0, color='black') + 
+  labs(x=expression('Peak difference [log'[2]~'FC]'), y=expression('Significance [log'[10]~'adjusted P]')) + 
+  theme_linedraw() +
+  geom_segment(aes(x=-1, xend=-1, y=-log10(0.01), yend=60), linetype=2) +
+  geom_segment(aes(x=1, xend=1, y=-log10(0.01), yend=60), linetype=2) +
+  geom_segment(aes(x=-2.5, xend=-1, y=-log10(0.01), yend=-log10(0.01)), linetype=2) +
+  geom_segment(aes(x=1, xend=2.5, y=-log10(0.01), yend=-log10(0.01)), linetype=2) +
+  scale_x_continuous(breaks = c(-2, -1, 0, 1, 2), limits = c(-2.5, 2.5)) +
+  scale_color_viridis_c(option = "viridis", name = "Counts") 
