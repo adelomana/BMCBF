@@ -1,0 +1,6 @@
+Term	Priority	Adjusted P	Odds ratio	N overlap	Overlap genes
+Formation of the Cornified Envelope	1.6630168369562588	8.635771944729188e-08	12.843575418994412	13	Krt5, Pkp3, Pkp1, Krt6A, Sprr1A, Krt14, Krt19, Krt17, Krt16, Krt15, Dsp, Krt79, Krt80
+Keratinization	1.2497969028164315	2.8895878765956123e-06	7.943820224719102	14	Krt5, Sprr1A, Krtap8-1, Krt14, Krt19, Krt17, Krt16, Krt15, Pkp3, Pkp1, Krt6A, Dsp, Krt79, Krt80
+Epigenetic Regulation of Adipogenesis Genes by MLL3 and MLL4 Complexes	0.0	0.0315993782209868	6.816984858459512	6	Cidec, Pdk4, Adipoq, Dgat2, Plin1, Plin4
+Epigenetic Regulation of Gene Expression by MLL3 and MLL4 Complexes	0.0	0.0315993782209868	6.816984858459512	6	Cidec, Pdk4, Adipoq, Dgat2, Plin1, Plin4
+MLL4 and MLL3 Complexes Regulate Expression of PPARG Targets in Adipogenesis and Hepatic Steatosis	0.0	0.0315993782209868	6.816984858459512	6	Cidec, Pdk4, Adipoq, Dgat2, Plin1, Plin4

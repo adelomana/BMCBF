@@ -13,8 +13,8 @@ seta_indexes = 1:3
 setb_indexes = 4:6
 
 ## 1. Read featureCounts table
+setwd('/Users/adrian/hub/bmcbf/research/004_keilir/nov25/04_diff_peaks')
 fc_file <- "counts_featureCounts.purple.txt"
-
 fc <- read.table(
   fc_file,
   header       = TRUE,
@@ -60,7 +60,7 @@ rownames(count_mat) <- fc$Geneid
 
 cat("\nDimension of count matrix:\n")
 print(dim(count_mat))
-View(count_mat)
+#View(count_mat)
 
 ## 4. Build sample metadata (A vs M)
 ## Here: MITF_A_Untreated_FLAG_* = condition A
@@ -78,7 +78,7 @@ coldata <- data.frame(
 
 cat("\nSample metadata:\n")
 print(coldata)
-View(coldata)
+#View(coldata)
 
 ## 5. Construct DESeqDataSet
 dds <- DESeqDataSetFromMatrix(
@@ -105,7 +105,6 @@ dds <- DESeq(dds)
 res <- results(dds, contrast = c("condition","A","M"))
 
 # manipulate results for later
-dim(res_df)
 length(rowMedians(counts(dds)[ , 1:3]))
 
 res_df <- as.data.frame(res)
@@ -159,7 +158,7 @@ print(nrow(dbp_M_up))
 ## Full annotated table
 write.table(
   res_annot,
-  file      = "DESeq2_results_all_peaks.tsv",
+  file      = "DESeq2_results_all_peaks.purple.tsv",
   sep       = "\t",
   quote     = FALSE,
   row.names = FALSE
@@ -168,12 +167,33 @@ write.table(
 ## Strict DBPs (all)
 write.table(
   dbp_strict[, c("Chr","Start","End","Geneid","log2FoldChange","padj", 'countsa', 'countsb')],
-  file      = "DBPs_strict_A_vs_M.bed",
+  file      = "DBPs_strict_A_vs_M.purple.bed",
   sep       = "\t",
   quote     = FALSE,
   row.names = FALSE,
   col.names = FALSE
 )
+
+## Strict DBPs: gained in A (log2FC > 0)
+write.table(
+  dbp_A_up[, c("Chr","Start","End","Geneid","log2FoldChange","padj")],
+  file      = "DBPs_strict_A_gained.bed",
+  sep       = "\t",
+  quote     = FALSE,
+  row.names = FALSE,
+  col.names = FALSE
+)
+
+## Strict DBPs: gained in M (log2FC < 0)
+write.table(
+  dbp_M_up[, c("Chr","Start","End","Geneid","log2FoldChange","padj")],
+  file      = "DBPs_strict_M_gained.bed",
+  sep       = "\t",
+  quote     = FALSE,
+  row.names = FALSE,
+  col.names = FALSE
+)
+
 
 ##
 ## Volcano plot (A vs M, M reference)
@@ -202,4 +222,4 @@ ggplot() +
   geom_segment(aes(x=-2.5, xend=-1, y=-log10(0.01), yend=-log10(0.01)), linetype=2) +
   geom_segment(aes(x=1, xend=2.5, y=-log10(0.01), yend=-log10(0.01)), linetype=2) +
   scale_x_continuous(breaks = c(-2, -1, 0, 1, 2), limits = c(-2.5, 2.5)) +
-  scale_color_viridis_c(option = "viridis", name = "Counts") 
+  scale_color_viridis_c(option = "viridis", name = "Counts", limits = c(1.8, 4.1)) 

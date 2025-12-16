@@ -1,0 +1,13 @@
+Term	Priority	Adjusted P	Odds ratio	N overlap	Overlap genes
+Immune System	1.3387458923894688	1.4227003867108186e-07	2.858274002865361	56	C3Ar1, Rnf213, Siglec1, Pkp1, Cd274, Col17A1, Trim29, Itgax, Rnf144B, Lgals3, Bst2, Plac8, Ifih1, Ppl, Ifit1, Ifit3, Oas2, Oas3, Ltb, Clec12A, Gbp6, Trbc1, Gbp3, Gbp5, C3, Klrk1, Rnase6, Lag3, Cxcl10, Hp, Glipr1, Dsp, Dhx58, Ccl5, Rsad2, Mapk13, Ccr2, Ptprc, Ctss, Clec7A, Ccr5, Zbp1, Cd74, Cybb, Isg15, Irf7, Mx1, Mx2, Tuba8, Cdh1, Xaf1, Ptpn22, Klc3, B2M, Klrd1, Usp18
+Interferon Alpha Beta Signaling	1.1408937587054286	2.9321289273919273e-08	17.009174311926607	12	Mx1, Mx2, Rsad2, Bst2, Oas2, Oas3, Irf7, Isg15, Xaf1, Usp18, Ifit1, Ifit3
+Apoptotic Cleavage of Cell Adhesion Proteins	1.0040951064231143	0.013478873663384584	30.48604992657856	3	Dsp, Cdh1, Pkp1
+Interferon Signaling	0.8629297513535092	5.047759656804112e-07	6.4708213509153385	18	Gbp6, Mx1, Mx2, Rsad2, B2M, Gbp3, Gbp5, Ifit1, Ifit3, Bst2, Tuba8, Isg15, Xaf1, Oas2, Oas3, Irf7, Usp18, Trim29
+Formation of the Cornified Envelope	0.5977610218399346	2.426403881827143e-05	8.716511262039063	11	Pkp3, Pkp1, Krt6A, Perp, St14, Sprr1A, Ppl, Krt14, Krt16, Dsp, Krt80
+Cytokine Signaling in Immune System	0.50402404879327	0.0005780452498518177	3.0674501788451716	24	Gbp6, Gbp3, Gbp5, Cxcl10, Trim29, Ccl5, Itgax, Rsad2, Ccr2, Bst2, Ccr5, Isg15, Irf7, Mx1, Mx2, Tuba8, Xaf1, B2M, Ifit1, Ifit3, Oas2, Oas3, Ltb, Usp18
+Innate Immune System	0.4668222260914067	0.009716549510146342	2.3269348025389416	27	C3Ar1, C3, Klrk1, Rnase6, Pkp1, Hp, Glipr1, Dsp, Dhx58, Itgax, Mapk13, Lgals3, Ccr2, Bst2, Ptprc, Ctss, Clec7A, Zbp1, Cybb, Isg15, Irf7, Plac8, Ifih1, B2M, Klrd1, Clec12A, Usp18
+Interferon Gamma Signaling	0.3459808847118104	0.001169808951021725	8.09949079514297	8	Gbp6, B2M, Gbp3, Gbp5, Oas2, Oas3, Irf7, Trim29
+Adaptive Immune System	0.32075471698113206	0.04940052551753633	2.2737382378100945	20	Trbc1, C3, Rnf213, Klrk1, Siglec1, Lag3, Cd274, Col17A1, Rnf144B, Ptprc, Ctss, Cd74, Cybb, Tuba8, Cdh1, Ptpn22, Klc3, B2M, Ppl, Klrd1
+Keratinization	0.2836563843180919	0.002107401999507913	4.989588158736461	11	St14, Sprr1A, Ppl, Krt14, Krt16, Pkp3, Pkp1, Krt6A, Perp, Dsp, Krt80
+Neutrophil Degranulation	0.24542648990996024	0.013478873663384584	3.0532277465918205	15	C3Ar1, C3, Plac8, Pkp1, Hp, Glipr1, Dsp, Itgax, B2M, Lgals3, Bst2, Ptprc, Ctss, Cybb, Clec12A
+Antiviral Mechanism by IFN-stimulated Genes	0.14100072436170724	0.0214300240697576	4.731279049750388	8	Mx1, Mx2, Tuba8, Isg15, Ifit1, Oas2, Oas3, Usp18

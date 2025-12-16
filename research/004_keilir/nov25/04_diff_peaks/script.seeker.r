@@ -1,0 +1,308 @@
+#!/usr/bin/env Rscript
+
+rm(list = ls())
+
+## Peak-to-gene annotation for MITF CUT&RUN using ChIPseeker
+## - Annotate union peaks
+## - Annotate differentially bound peaks (DBPs)
+## - Extract genes with DBPs (overall, promoter, A-gained, M-gained)
+
+###
+### installing library and its dependencies
+###
+#BiocManager::install("ChIPseeker")
+#BiocManager::install("TxDb.Hsapiens.UCSC.hg38.knownGene")
+#BiocManager::install("org.Hs.eg.db")
+
+suppressPackageStartupMessages({
+  library(ChIPseeker)
+  library(TxDb.Hsapiens.UCSC.hg38.knownGene)
+  library(org.Hs.eg.db)
+  library(dplyr)
+})
+
+## ------------------------------------------------------------------
+## 1. Configuration: choose peak set and directories
+## ------------------------------------------------------------------
+
+## Set this to "purple" or "orange"
+peak_label <- "purple"
+
+## Base directory consistent with the first DESeq2 script
+base_dir <- "/Users/adrian/hub/bmcbf/research/004_keilir/nov25/04_diff_peaks"
+
+## Results directory for this peak set (already created by DESeq2 script)
+RESULTS_DIR <- file.path(base_dir, paste0("results_", peak_label))
+
+if (!dir.exists(RESULTS_DIR)) {
+  dir.create(RESULTS_DIR, recursive = TRUE)
+}
+
+cat("Running ChIPseeker annotation for label:", peak_label, "\n")
+cat("Base directory:", base_dir, "\n")
+cat("Results directory:", RESULTS_DIR, "\n")
+
+## Directory where the union peak BEDs live
+union_dir <- "/Users/adrian/research/bmcbf/004_keilir/results/peaks_251211"
+
+## Union peaks (IDR + filters), e.g. purple.AM.union.bed or orange.AM.union.bed
+UNION_BED <- file.path(union_dir, paste0(peak_label, ".AM.union.bed"))
+
+## Differential peaks (from DESeq2 BEDs, produced by first script)
+## Files are inside results_<label> and labeled with <peak_label>
+DBP_ALL_BED  <- file.path(RESULTS_DIR, paste0("DBPs_strict_A_vs_M.", peak_label, ".bed"))
+DBP_A_GAINED <- file.path(RESULTS_DIR, paste0("DBPs_strict_A_gained.", peak_label, ".bed"))
+DBP_M_GAINED <- file.path(RESULTS_DIR, paste0("DBPs_strict_M_gained.", peak_label, ".bed"))
+
+cat("UNION_BED:", UNION_BED, "exists?", file.exists(UNION_BED), "\n")
+cat("DBP_ALL_BED:", DBP_ALL_BED, "exists?", file.exists(DBP_ALL_BED), "\n")
+cat("DBP_A_GAINED:", DBP_A_GAINED, "exists?", file.exists(DBP_A_GAINED), "\n")
+cat("DBP_M_GAINED:", DBP_M_GAINED, "exists?", file.exists(DBP_M_GAINED), "\n")
+
+## TxDb for hg38
+txdb <- TxDb.Hsapiens.UCSC.hg38.knownGene
+
+## TSS window for "promoter"
+tss_window <- c(-2000, 2000)   # +/- 2 kb, standard for TFs
+
+## ------------------------------------------------------------------
+## 2. Annotate ALL union peaks
+## ------------------------------------------------------------------
+
+cat("Annotating union peaks from:", UNION_BED, "\n")
+
+peakAnno_all <- annotatePeak(
+  UNION_BED,
+  TxDb      = txdb,
+  tssRegion = tss_window,
+  annoDb    = "org.Hs.eg.db"
+)
+
+all_peaks_annot <- as.data.frame(peakAnno_all)
+
+## Save full annotation
+union_outfile <- file.path(RESULTS_DIR, paste0(peak_label, ".AM.union.annotated.tsv"))
+write.table(
+  all_peaks_annot,
+  file      = union_outfile,
+  sep       = "\t",
+  quote     = FALSE,
+  row.names = FALSE
+)
+
+cat("Union peaks annotated and written to", union_outfile, "\n")
+
+## ------------------------------------------------------------------
+## 3. Annotate ALL DBPs (A vs M) and merge with log2FC / padj
+## ------------------------------------------------------------------
+
+cat("Annotating DBPs (A vs M) from:", DBP_ALL_BED, "\n")
+
+## DBPs_strict_A_vs_M.<peak_label>.bed was written without header:
+## Chr  Start  End  Geneid  log2FC  padj  countsa  countsb  (8 columns)
+dbp_stats_all <- read.table(
+  DBP_ALL_BED,
+  header           = FALSE,
+  sep              = "\t",
+  stringsAsFactors = FALSE,
+  col.names        = c("Chr","Start","End","PeakID","log2FoldChange","padj","countsa","countsb")
+)
+
+## Annotate peaks with ChIPseeker
+peakAnno_DBPs <- annotatePeak(
+  DBP_ALL_BED,
+  TxDb      = txdb,
+  tssRegion = tss_window,
+  annoDb    = "org.Hs.eg.db"
+)
+
+DBPannot_all <- as.data.frame(peakAnno_DBPs)
+
+## Merge annotation with log2FC and padj by genomic coordinates
+DBPannot_all <- DBPannot_all %>%
+  dplyr::left_join(
+    dbp_stats_all,
+    by = c("seqnames" = "Chr",
+           "start"    = "Start",
+           "end"      = "End")
+  )
+
+## Save annotated DBPs
+dbp_all_outfile <- file.path(RESULTS_DIR, paste0("DBPs_strict_A_vs_M.annotated.", peak_label, ".tsv"))
+write.table(
+  DBPannot_all,
+  file      = dbp_all_outfile,
+  sep       = "\t",
+  quote     = FALSE,
+  row.names = FALSE
+)
+
+cat("DBPs annotated and written to", dbp_all_outfile, "\n")
+
+## ------------------------------------------------------------------
+## 4. Gene-level summaries for all DBPs
+## ------------------------------------------------------------------
+
+## Helper: promoter flag (ChIPseeker uses strings like "Promoter (<=1kb)")
+is_promoter <- grepl("Promoter", DBPannot_all$annotation)
+
+## Genes with ANY DBP (any genomic annotation)
+genes_any_DBP <- unique(DBPannot_all$SYMBOL[!is.na(DBPannot_all$SYMBOL)])
+
+## Genes with promoter DBPs
+genes_promoter_DBP <- unique(DBPannot_all$SYMBOL[is_promoter & !is.na(DBPannot_all$SYMBOL)])
+
+## Save gene lists (labeled and in RESULTS_DIR)
+genes_any_outfile <- file.path(RESULTS_DIR, paste0("genes_with_any_DBP.", peak_label, ".txt"))
+write.table(
+  data.frame(Gene = genes_any_DBP),
+  file      = genes_any_outfile,
+  sep       = "\t",
+  quote     = FALSE,
+  row.names = FALSE,
+  col.names = TRUE
+)
+
+genes_promoter_outfile <- file.path(RESULTS_DIR, paste0("genes_with_promoter_DBP.", peak_label, ".txt"))
+write.table(
+  data.frame(Gene = genes_promoter_DBP),
+  file      = genes_promoter_outfile,
+  sep       = "\t",
+  quote     = FALSE,
+  row.names = FALSE,
+  col.names = TRUE
+)
+
+cat("Gene lists written:\n  ",
+    genes_any_outfile, "\n  ",
+    genes_promoter_outfile, "\n")
+
+## ------------------------------------------------------------------
+## 5. Annotate direction-specific DBPs: A-gained and M-gained
+## ------------------------------------------------------------------
+
+cat("Annotating DBPs gained in A from:", DBP_A_GAINED, "\n")
+
+## A-gained DBPs (6 columns)
+## Chr  Start  End  Geneid  log2FC  padj
+dbp_A_stats <- read.table(
+  DBP_A_GAINED,
+  header           = FALSE,
+  sep              = "\t",
+  stringsAsFactors = FALSE,
+  col.names        = c("Chr","Start","End","PeakID","log2FoldChange","padj")
+)
+
+peakAnno_DBPs_A <- annotatePeak(
+  DBP_A_GAINED,
+  TxDb      = txdb,
+  tssRegion = tss_window,
+  annoDb    = "org.Hs.eg.db"
+)
+
+DBPannot_A <- as.data.frame(peakAnno_DBPs_A) %>%
+  dplyr::left_join(
+    dbp_A_stats,
+    by = c("seqnames" = "Chr",
+           "start"    = "Start",
+           "end"      = "End")
+  )
+
+dbp_A_outfile <- file.path(RESULTS_DIR, paste0("DBPs_strict_A_gained.annotated.", peak_label, ".tsv"))
+write.table(
+  DBPannot_A,
+  file      = dbp_A_outfile,
+  sep       = "\t",
+  quote     = FALSE,
+  row.names = FALSE
+)
+
+## Genes with DBPs gained in A
+genes_any_DBP_A <- unique(DBPannot_A$SYMBOL[!is.na(DBPannot_A$SYMBOL)])
+genes_promoter_DBP_A <- unique(DBPannot_A$SYMBOL[
+  grepl("Promoter", DBPannot_A$annotation) & !is.na(DBPannot_A$SYMBOL)
+])
+
+genes_any_A_outfile <- file.path(RESULTS_DIR, paste0("genes_with_any_DBP_A_gained.", peak_label, ".txt"))
+write.table(
+  data.frame(Gene = genes_any_DBP_A),
+  file      = genes_any_A_outfile,
+  sep       = "\t",
+  quote     = FALSE,
+  row.names = FALSE,
+  col.names = TRUE
+)
+
+genes_promoter_A_outfile <- file.path(RESULTS_DIR, paste0("genes_with_promoter_DBP_A_gained.", peak_label, ".txt"))
+write.table(
+  data.frame(Gene = genes_promoter_DBP_A),
+  file      = genes_promoter_A_outfile,
+  sep       = "\t",
+  quote     = FALSE,
+  row.names = FALSE,
+  col.names = TRUE
+)
+
+cat("Annotating DBPs gained in M from:", DBP_M_GAINED, "\n")
+
+## M-gained DBPs (6 columns)
+## Chr  Start  End  Geneid  log2FC  padj
+dbp_M_stats <- read.table(
+  DBP_M_GAINED,
+  header           = FALSE,
+  sep              = "\t",
+  stringsAsFactors = FALSE,
+  col.names        = c("Chr","Start","End","PeakID","log2FoldChange","padj")
+)
+
+peakAnno_DBPs_M <- annotatePeak(
+  DBP_M_GAINED,
+  TxDb      = txdb,
+  tssRegion = tss_window,
+  annoDb    = "org.Hs.eg.db"
+)
+
+DBPannot_M <- as.data.frame(peakAnno_DBPs_M) %>%
+  dplyr::left_join(
+    dbp_M_stats,
+    by = c("seqnames" = "Chr",
+           "start"    = "Start",
+           "end"      = "End")
+  )
+
+dbp_M_outfile <- file.path(RESULTS_DIR, paste0("DBPs_strict_M_gained.annotated.", peak_label, ".tsv"))
+write.table(
+  DBPannot_M,
+  file      = dbp_M_outfile,
+  sep       = "\t",
+  quote     = FALSE,
+  row.names = FALSE
+)
+
+## Genes with DBPs gained in M
+genes_any_DBP_M <- unique(DBPannot_M$SYMBOL[!is.na(DBPannot_M$SYMBOL)])
+genes_promoter_DBP_M <- unique(DBPannot_M$SYMBOL[
+  grepl("Promoter", DBPannot_M$annotation) & !is.na(DBPannot_M$SYMBOL)
+])
+
+genes_any_M_outfile <- file.path(RESULTS_DIR, paste0("genes_with_any_DBP_M_gained.", peak_label, ".txt"))
+write.table(
+  data.frame(Gene = genes_any_DBP_M),
+  file      = genes_any_M_outfile,
+  sep       = "\t",
+  quote     = FALSE,
+  row.names = FALSE,
+  col.names = TRUE
+)
+
+genes_promoter_M_outfile <- file.path(RESULTS_DIR, paste0("genes_with_promoter_DBP_M_gained.", peak_label, ".txt"))
+write.table(
+  data.frame(Gene = genes_promoter_DBP_M),
+  file      = genes_promoter_M_outfile,
+  sep       = "\t",
+  quote     = FALSE,
+  row.names = FALSE,
+  col.names = TRUE
+)
+
+cat("Done. Annotated peak and gene-level files written under:\n  ", RESULTS_DIR, "\n")

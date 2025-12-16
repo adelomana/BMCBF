@@ -6,11 +6,11 @@
 #devtools::install_github("cit-bioinfo/mMCP-counter")
 
 #
-# 2. load
+# 2. load libraries
 #
 library("mMCPcounter")
 library(pheatmap)
-
+library(readxl)
 
 #
 # 3. read data
@@ -18,70 +18,55 @@ library(pheatmap)
 expressionDataFile = '/Users/adrian/research/bmcbf/029_orsay/results/000.quantification/results/DESeq2_TPM_values.tsv'
 expressionData = read.table(expressionDataFile, header = TRUE, sep = "\t", row.names = 1)
 rownames(expressionData) <- sub("\\..*", "", rownames(expressionData))
-
-# Remove specific samples by name, the first three outliers
-expressionData <- expressionData[, !colnames(expressionData) %in% c("P9T001", "P9T004", "P9T009")]
-
-# exclude further more bc they are sparse in the previous analysis
-sparse = c("P9T011", "P9T015", "P9T033", "P9T013", "P9T014")
-expressionData <- expressionData[, !colnames(expressionData) %in% sparse]
-
 expressionData <- as.matrix(expressionData)
 View(expressionData)
 
-annot <- read.table(text="
-label   genotype
-P9T001  WT
-P9T002  WT
-P9T003  WT
-P9T004  WT
-P9T005  WT
-P9T006  WT
-P9T007  WT
-P9T008  WT
-P9T009  WT
-P9T010  HET
-P9T011  HET
-P9T012  HET
-P9T013  HET
-P9T014  HET
-P9T015  HET
-P9T016  HET
-P9T017  HET
-P9T018  HET
-P9T019  HOM
-P9T020  HOM
-P9T021  HOM
-P9T022  HOM
-P9T023  HOM
-P9T024  HOM
-P9T025  HOM
-P9T026  HOM
-P9T027  HOM
-P9T028  HOM
-P9T029  HOM
-P9T030  HOM
-P9T031  VGA
-P9T032  VGA
-P9T033  VGA
-P9T034  VGA
-", header=TRUE, stringsAsFactors=FALSE)
+# 
+# 4. read metadata
+#
+filename = '/Users/adrian/research/bmcbf/029_orsay/metadata/SampleDescription-annotated.xlsx'
+metadata <- read_excel(filename)
+View(metadata)
 
-# rownames must match column names in your expression matrix
-rownames(annot) <- annot$label
-annot$label <- NULL   # keep only 'genotype' as column annotation
+# 5. change column names
+name_map <- setNames(as.character(metadata$"mouse Nb"), as.character(metadata$"NAME"))
+colnames(expressionData) <- name_map[colnames(expressionData)]
+View(expressionData)
+dim(expressionData)
 
-# --- 2. Define colors for each genotype ---
-ann_colors <- list(
-  genotype = c(
-    WT  = "grey70",
-    HET = "gold",
-    HOM = "red",
-    VGA = "skyblue"
-  )
-)
+#
+# 6. remove samples as they are outliers or second extractions
+#
 
-# 4. estimate
+# remove blue bc it looks away in TILs
+dim(expressionData)
+drop_these <- c("390B")
+expressionData <- expressionData[, !(colnames(expressionData) %in% drop_these)]
+dim(expressionData)
+
+# remove two reds, 2105B looks very weird in TILs, 2239 was already flagged
+dim(expressionData)
+drop_these <- c("2239", '2105B')
+expressionData <- expressionData[, !(colnames(expressionData) %in% drop_these)]
+dim(expressionData)
+
+# remove three yellows, 2409 seems close to red. Also 2657B without clear reasons
+dim(expressionData)
+drop_these <- c("2409", '2728', '2657B')
+expressionData <- expressionData[, !(colnames(expressionData) %in% drop_these)]
+dim(expressionData)
+
+# remove five blacks. 376, 376B and 2727 are simply far way in PCA
+# 2773B is close to red, as 2423
+dim(expressionData)
+drop_these <- c("376", '376B', '2727', '2773B', '2423')
+expressionData <- expressionData[, !(colnames(expressionData) %in% drop_these)]
+dim(expressionData)
+
+
+#
+# 6. estimate
+#
 # index in kallisto indexes github is 108 which is GRCm39. Seems that the flag name has a typo. gCr? It should be Genome Reference Consortium
 immunoProfiles = mMCPcounter.estimate(expressionData, features = "ENSEMBL.ID", genomeVersion = "GCRm39")
 View(immunoProfiles)
@@ -99,25 +84,101 @@ pheatmap(
   main = "mMCP-counter (row Z-scores)"
 )
 
+# lets drop some non immune cells to avoid clustering biases
+drop_rows <- c("Vessels", "Endothelial cells", "Fibroblasts", 'Lymphatics')
+immunoProfiles <- immunoProfiles[!(rownames(immunoProfiles) %in% drop_rows), ]
 
+# create z score
 mat_z <- t(scale(t(immunoProfiles), center = TRUE, scale = TRUE))
 
-
+# define the colorbar
 limit <- 4
 breaks <- seq(-limit, limit, length.out = 100)
 cols <- colorRampPalette(c("blue", "white", "red"))(length(breaks)-1)
 
-
 # Define distance measures and clustering methods
-#distances <- c("euclidean", "maximum", "manhattan", "canberra", "minkowski",
-#               "correlation", "binary")
-#methods   <- c("single", "complete", "average", "mcquitty",
-#               "median", "centroid", "ward.D", "ward.D2")
 
+
+# define group colors
+metadata$"mouse Nb" <- as.character(metadata$"mouse Nb")
+colnames(mat_z) <- as.character(colnames(mat_z))
+idx <- match(colnames(mat_z), metadata$"mouse Nb")
+annot <- data.frame(
+  genotype = metadata$genotype[idx],
+  row.names = colnames(mat_z)
+)
+ann_colors <- list(
+  genotype = c(
+    wt  = "grey70",
+    hom = "red",
+    het = "gold",     # if you have these
+    "Vga/F" = "skyblue"   # if you have these
+  )
+)
 
 # Loop through all combinations
+
+distances <- c("euclidean", "maximum", "manhattan", "canberra", "minkowski",
+               "correlation", "binary")
+methods   <- c("single", "complete", "average", "mcquitty",
+               "median", "centroid", "ward.D", "ward.D2")
+
+
+
+d = 'euclidean'
+m = 'ward.D2'
 pheatmap(
   mat_z,
+  color = cols,
+  breaks = breaks,
+  clustering_distance_rows = d,
+  clustering_distance_cols = d,
+  clustering_method = m,
+  annotation_col = annot,
+  annotation_colors = ann_colors,
+  angle_col = 90,
+  show_rownames = TRUE,
+  show_colnames = TRUE,
+  fontsize_row = 12,
+  fontsize_col = 12,
+  main = paste("mMCP-counter z-scores [", d, " + ", m, "]")
+)
+
+#################### LOW GRANULAROTU
+
+## 1. Define your groups of cell types (by row name in mat_z)
+groups <- list(
+  T_lineage = c("T cells", "CD8 T cells"),
+  B_lineage = c("B derived", "Memory B cells"),
+  NK        = c("NK cells"),
+  Myeloid_Gran = c(
+    "Monocytes / macrophages",
+    "Monocytes",
+    "Granulocytes",
+    "Mast cells",
+    "Eosinophils",
+    "Neutrophils",
+    "Basophils"
+  )
+)
+
+## 2. For each group, compute the median across rows for each column
+group_medians <- lapply(groups, function(rows) {
+  # be robust in case some rows were dropped earlier
+  keep_rows <- intersect(rows, rownames(mat_z))
+  # if only one row, apply() still works
+  apply(mat_z[keep_rows, , drop = FALSE], 2, mean, na.rm = TRUE)
+})
+
+## 3. Bind into a new matrix with 4 rows
+mat_z_grouped <- do.call(rbind, group_medians)
+
+## 4. Check result
+View(mat_z_grouped)
+
+
+pheatmap(
+  mat_z_grouped,
   color = cols,
   breaks = breaks,
   clustering_distance_rows = "euclidean",
@@ -128,7 +189,14 @@ pheatmap(
   angle_col = 90,
   show_rownames = TRUE,
   show_colnames = TRUE,
-  fontsize_row = 18,
-  fontsize_col = 18,
-  main = paste("mMCP-counter z-scores [corr. ward.D2]")
+  fontsize_row = 12,
+  fontsize_col = 12,
+  main = "Grouped mMCP-counter z-scores (median per lineage)"
 )
+
+
+
+
+
+
+
