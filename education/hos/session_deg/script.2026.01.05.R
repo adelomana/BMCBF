@@ -94,8 +94,9 @@ cat(blue(paste('size after counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE
 # 6. Statistical test
 #
 
-# Fit model (Wald test by default)
-dds <- DESeq(dds, test = "LRT", reduced = ~ 1)
+# Fit model, either Wald or LRT test
+#dds <- DESeq(dds, test = "LRT", reduced = ~ 1)
+dds <- DESeq(dds, test = "Wald")
 
 # 6.1.get p-values / padj for H0: log2FC = 0
 resultsNames(dds)
