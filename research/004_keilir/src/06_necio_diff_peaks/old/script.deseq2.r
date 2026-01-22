@@ -1,6 +1,6 @@
 ## Differentially bound peaks (DBPs) with DESeq2
-## Input: featureCounts output: counts_featureCounts.<peak_label>.txt
-## Peaks: <peak_label>.AM.union.saf / <peak_label>.AM.union.bed
+## Input: featureCounts output: counts_featureCounts.black.txt
+## Peaks: black.AM.union.saf / <peak_label>.AM.union.bed
 
 library(DESeq2)
 library(ggplot2)
@@ -11,9 +11,9 @@ library(ramify) # this is for clip, for the volcano
 ## CONFIGURATION: change only here for purple / orange and directories
 ## ------------------------------------------------------------------
 
-peak_label <- "purple"   # set to "purple" or "orange"
+peak_label <- "black" 
 
-base_dir   <- "/Users/adrian/hub/bmcbf/research/004_keilir/nov25/04_diff_peaks"
+base_dir   <- "/Users/adrian/research/bmcbf/004_keilir/results/06_necio_diff_peaks"
 setwd(base_dir)
 
 ## all outputs will go here, e.g. results_purple, results_orange
@@ -31,7 +31,7 @@ seta_indexes    = 1:3
 setb_indexes    = 4:6
 
 ## 1. Read featureCounts table
-fc_file <- paste0("counts_featureCounts.", peak_label, ".txt")
+fc_file <- "/Users/adrian/research/bmcbf/004_keilir/results/05_elja_count_retriever/counts_featureCounts.txt"
 cat(blue(paste0("Reading featureCounts file: ", fc_file)), fill = TRUE)
 
 fc <- read.table(
@@ -181,15 +181,6 @@ write.table(
   row.names = FALSE
 )
 
-## Strict DBPs (all)
-write.table(
-  dbp_strict[, c("Chr","Start","End","Geneid","log2FoldChange","padj", 'countsa', 'countsb')],
-  file      = file.path(output_dir, paste0("DBPs_strict_A_vs_M.", peak_label, ".bed")),
-  sep       = "\t",
-  quote     = FALSE,
-  row.names = FALSE,
-  col.names = FALSE
-)
 
 ## Strict DBPs: gained in A (log2FC > 0)
 write.table(
