@@ -51,7 +51,7 @@ genotypes = rep(c('wt', 'ko'), 2)
 metadata = data.frame(labels)
 metadata$path = paths
 metadata$genotype = genotypes
-#View(metadata)
+View(metadata)
 
 #
 # 3. contrasts

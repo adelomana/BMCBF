@@ -5,7 +5,6 @@
 #BiocManager::install("org.Hs.eg.db")
 #BiocManager::install("ReactomePA")
 #BiocManager::install("tictoc")
-#BiocManager::install("wesanderson")
 
 #
 # 0. load libraries
@@ -16,7 +15,7 @@ library(enrichplot)
 library(tictoc)
 library(viridis)
 library(ggplot2)
-library(wesanderson)
+library(wesanderson) # install.packages("wesanderson")
 
 #
 # 2. read files and generate lists of genes
