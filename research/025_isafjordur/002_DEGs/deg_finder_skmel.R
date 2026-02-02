@@ -107,6 +107,7 @@ anti_results = res[which(res$padj > 0.05 | abs(res$log2FoldChange) < effect_size
 cat(blue(paste('contrast wt vs control:', dim(filtred_results)[1], sep=' ')), fill=TRUE)
 write.table(sorted_filtred_results, file=paste(results_dir, '/effect_ko_vs_wt.skmel.for.tsv', sep=''), quote=FALSE, sep='\t')
 write.table(anti_results, file=paste(results_dir, '/effect_ko_vs_wt.skmel.anti.tsv', sep=''), quote=FALSE, sep='\t')
+write.table(res, file=paste(results_dir, '/effect_ko_vs_wt.skmel.full.tsv', sep=''), quote=FALSE, sep='\t')
 
 plotPCA(rlog(dds), intgroup=c('genotype')) + ggtitle('effect ko vs wt')
 
