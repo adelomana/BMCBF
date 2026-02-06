@@ -6,7 +6,8 @@ set -euo pipefail # a command to fail if any step in a pipe fails
 #
 
 # install kallisto
-cd software
+cd ..
+mkdir software
 
 wget https://github.com/pachterlab/kallisto/releases/download/v0.51.1/kallisto_linux-v0.51.1.tar.gz
 tar xvf kallisto_linux-v0.51.1.tar.gz
