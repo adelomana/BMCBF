@@ -22,7 +22,14 @@ tar xvf zebrafish_index_standard.tar.xz
 #
 # 1. quantify a transcriptome using only one core.
 #
+your code
 
 #
 # 2. quantify a transcriptome using two threads
 #
+your code
+
+#
+# 3. capture messages into a log file
+#
+your code
