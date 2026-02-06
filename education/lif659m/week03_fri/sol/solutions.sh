@@ -31,3 +31,8 @@ time software/kallisto/kallisto quant -i software/index.idx -o output data/sampl
 # 2. quantify a transcriptome using two threads
 #
 time software/kallisto/kallisto quant -i software/index.idx -o output data/sample_1_pair_1.fq data/sample_1_pair_2.fq -t 2 -b 100
+
+#
+# 3. captures messages into a log file
+#
+time software/kallisto/kallisto quant -i software/index.idx -o output data/sample_1_pair_1.fq data/sample_1_pair_2.fq -t 2 -b 100 > logfile.txt
