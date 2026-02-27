@@ -1,0 +1,126 @@
+Detecting adapter sequence for read1...
+>Illumina TruSeq Adapter Read 1
+AGATCGGAAGAGCACACGTCTGAACTCCAGTCA
+
+Detecting adapter sequence for read2...
+>Illumina TruSeq Adapter Read 2
+AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+
+Read1 before filtering:
+total reads: 43793512
+total bases: 6569026800
+Q20 bases: 6485272646(98.725%)
+Q30 bases: 6227710696(94.8042%)
+Q40 bases: 6227710696(94.8042%)
+
+Read2 before filtering:
+total reads: 43793512
+total bases: 6569026800
+Q20 bases: 6469355610(98.4827%)
+Q30 bases: 6208492510(94.5116%)
+Q40 bases: 6208492510(94.5116%)
+
+Read1 after filtering:
+total reads: 42747171
+total bases: 6326133902
+Q20 bases: 6268451572(99.0882%)
+Q30 bases: 6038827436(95.4584%)
+Q40 bases: 6038827436(95.4584%)
+
+Read2 after filtering:
+total reads: 42747171
+total bases: 6325105402
+Q20 bases: 6263918388(99.0326%)
+Q30 bases: 6043053676(95.5408%)
+Q40 bases: 6043053676(95.5408%)
+
+Filtering result:
+reads passed filter: 85494342
+reads failed due to low quality: 740112
+reads failed due to too many N: 8728
+reads failed due to too short: 1343842
+reads with adapter trimmed: 5504608
+bases trimmed due to adapters: 153466788
+reads with polyX in 3' end: 1670138
+bases trimmed in polyX tail: 183305149
+
+Duplication rate: 25.3704%
+
+Insert size peak (evaluated by paired-end reads): 150
+
+JSON report: PT502_part1.fastp.json
+HTML report: PT502_part1.fastp.html
+
+/users/home/adrian/software/fastp/fastp -i /hpcdata/Mimir/adrian/research/067_urmia/data/PT502/PT502_1.fq.gz -I /hpcdata/Mimir/adrian/research/067_urmia/data/PT502/PT502_2.fq.gz -o PT502_part1.clean.R1.fq.gz -O PT502_part1.clean.R2.fq.gz --thread 16 --detect_adapter_for_pe --trim_poly_g --trim_poly_x --cut_tail --cut_window_size 4 --cut_mean_quality 20 --length_required 36 -h PT502_part1.fastp.html -j PT502_part1.fastp.json 
+fastp v1.0.1, time used: 175 seconds
+
+real	2m54.161s
+user	38m31.831s
+sys	0m7.978s
+
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 227,665
+[index] number of k-mers: 139,900,295
+[index] number of D-list k-mers: 5,477,475
+[quant] running in paired-end mode
+[quant] will process pair 1: PT502_part1.clean.R1.fq.gz
+                             PT502_part1.clean.R2.fq.gz
+[quant] finding pseudoalignments for the reads ...
+[progress] 1M reads processed (38.5% mapped)             [progress] 2M reads processed (38.4% mapped)             [progress] 3M reads processed (38.4% mapped)             [progress] 4M reads processed (38.4% mapped)             [progress] 5M reads processed (38.3% mapped)             [progress] 6M reads processed (38.4% mapped)             [progress] 7M reads processed (38.4% mapped)             [progress] 8M reads processed (38.4% mapped)             [progress] 9M reads processed (38.4% mapped)             [progress] 10M reads processed (38.4% mapped)             [progress] 11M reads processed (38.4% mapped)             [progress] 12M reads processed (38.4% mapped)             [progress] 13M reads processed (38.4% mapped)             [progress] 14M reads processed (38.4% mapped)             [progress] 15M reads processed (38.4% mapped)             [progress] 16M reads processed (38.4% mapped)             [progress] 17M reads processed (38.4% mapped)             [progress] 18M reads processed (38.4% mapped)             [progress] 19M reads processed (38.4% mapped)             [progress] 20M reads processed (38.4% mapped)             [progress] 21M reads processed (38.4% mapped)             [progress] 22M reads processed (38.4% mapped)             [progress] 23M reads processed (38.4% mapped)             [progress] 24M reads processed (38.4% mapped)             [progress] 25M reads processed (38.4% mapped)             [progress] 26M reads processed (38.3% mapped)             [progress] 27M reads processed (38.3% mapped)             [progress] 28M reads processed (38.3% mapped)             [progress] 29M reads processed (38.3% mapped)             [progress] 30M reads processed (38.3% mapped)             [progress] 31M reads processed (38.3% mapped)             [progress] 32M reads processed (38.3% mapped)             [progress] 33M reads processed (38.3% mapped)             [progress] 34M reads processed (38.3% mapped)             [progress] 35M reads processed (38.3% mapped)             [progress] 36M reads processed (38.3% mapped)             [progress] 37M reads processed (38.3% mapped)             [progress] 38M reads processed (38.3% mapped)             [progress] 39M reads processed (38.3% mapped)             [progress] 40M reads processed (38.3% mapped)             [progress] 41M reads processed (38.3% mapped)             [progress] 42M reads processed (38.3% mapped)             
+[quant] done 
+[quant] processed 42,747,171 reads, 16,368,949 reads pseudoaligned
+[quant] estimated average fragment length: 234.7
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 1,314 rounds
+[bstrp] number of EM bootstraps complete: 1[bstrp] number of EM bootstraps complete: 2[bstrp] number of EM bootstraps complete: 3[bstrp] number of EM bootstraps complete: 4[bstrp] number of EM bootstraps complete: 5[bstrp] number of EM bootstraps complete: 6[bstrp] number of EM bootstraps complete: 7[bstrp] number of EM bootstraps complete: 8[bstrp] number of EM bootstraps complete: 9[bstrp] number of EM bootstraps complete: 10[bstrp] number of EM bootstraps complete: 11[bstrp] number of EM bootstraps complete: 12[bstrp] number of EM bootstraps complete: 13[bstrp] number of EM bootstraps complete: 14[bstrp] number of EM bootstraps complete: 15[bstrp] number of EM bootstraps complete: 16[bstrp] number of EM bootstraps complete: 17[bstrp] number of EM bootstraps complete: 18[bstrp] number of EM bootstraps complete: 19[bstrp] number of EM bootstraps complete: 20[bstrp] number of EM bootstraps complete: 21[bstrp] number of EM bootstraps complete: 22[bstrp] number of EM bootstraps complete: 23[bstrp] number of EM bootstraps complete: 24[bstrp] number of EM bootstraps complete: 25[bstrp] number of EM bootstraps complete: 26[bstrp] number of EM bootstraps complete: 27[bstrp] number of EM bootstraps complete: 28[bstrp] number of EM bootstraps complete: 29[bstrp] number of EM bootstraps complete: 30[bstrp] number of EM bootstraps complete: 31[bstrp] number of EM bootstraps complete: 32[bstrp] number of EM bootstraps complete: 33[bstrp] number of EM bootstraps complete: 34[bstrp] number of EM bootstraps complete: 35[bstrp] number of EM bootstraps complete: 36[bstrp] number of EM bootstraps complete: 37[bstrp] number of EM bootstraps complete: 38[bstrp] number of EM bootstraps complete: 39[bstrp] number of EM bootstraps complete: 40[bstrp] number of EM bootstraps complete: 41[bstrp] number of EM bootstraps complete: 42[bstrp] number of EM bootstraps complete: 43[bstrp] number of EM bootstraps complete: 44[bstrp] number of EM bootstraps complete: 45[bstrp] number of EM bootstraps complete: 46[bstrp] number of EM bootstraps complete: 47[bstrp] number of EM bootstraps complete: 48[bstrp] number of EM bootstraps complete: 49[bstrp] number of EM bootstraps complete: 50[bstrp] number of EM bootstraps complete: 51[bstrp] number of EM bootstraps complete: 52[bstrp] number of EM bootstraps complete: 53[bstrp] number of EM bootstraps complete: 54[bstrp] number of EM bootstraps complete: 55[bstrp] number of EM bootstraps complete: 56[bstrp] number of EM bootstraps complete: 57[bstrp] number of EM bootstraps complete: 58[bstrp] number of EM bootstraps complete: 59[bstrp] number of EM bootstraps complete: 60[bstrp] number of EM bootstraps complete: 61[bstrp] number of EM bootstraps complete: 62[bstrp] number of EM bootstraps complete: 63[bstrp] number of EM bootstraps complete: 64[bstrp] number of EM bootstraps complete: 65[bstrp] number of EM bootstraps complete: 66[bstrp] number of EM bootstraps complete: 67[bstrp] number of EM bootstraps complete: 68[bstrp] number of EM bootstraps complete: 69[bstrp] number of EM bootstraps complete: 70[bstrp] number of EM bootstraps complete: 71[bstrp] number of EM bootstraps complete: 72[bstrp] number of EM bootstraps complete: 73[bstrp] number of EM bootstraps complete: 74[bstrp] number of EM bootstraps complete: 75[bstrp] number of EM bootstraps complete: 76[bstrp] number of EM bootstraps complete: 77[bstrp] number of EM bootstraps complete: 78[bstrp] number of EM bootstraps complete: 79[bstrp] number of EM bootstraps complete: 80[bstrp] number of EM bootstraps complete: 81[bstrp] number of EM bootstraps complete: 82[bstrp] number of EM bootstraps complete: 83[bstrp] number of EM bootstraps complete: 84[bstrp] number of EM bootstraps complete: 85[bstrp] number of EM bootstraps complete: 86[bstrp] number of EM bootstraps complete: 87[bstrp] number of EM bootstraps complete: 88[bstrp] number of EM bootstraps complete: 89[bstrp] number of EM bootstraps complete: 90[bstrp] number of EM bootstraps complete: 91[bstrp] number of EM bootstraps complete: 92[bstrp] number of EM bootstraps complete: 93[bstrp] number of EM bootstraps complete: 94[bstrp] number of EM bootstraps complete: 95[bstrp] number of EM bootstraps complete: 96[bstrp] number of EM bootstraps complete: 97[bstrp] number of EM bootstraps complete: 98[bstrp] number of EM bootstraps complete: 99[bstrp] number of EM bootstraps complete: 100
+
+
+real	11m19.461s
+user	156m58.140s
+sys	0m6.049s
+
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 227,665
+[index] number of k-mers: 139,900,295
+[index] number of D-list k-mers: 5,477,475
+[quant] running in paired-end mode
+[quant] will process pair 1: PT502_part1.clean.R1.fq.gz
+                             PT502_part1.clean.R2.fq.gz
+[quant] finding pseudoalignments for the reads ...
+[progress] 1M reads processed (37.7% mapped)             [progress] 2M reads processed (37.7% mapped)             [progress] 3M reads processed (37.6% mapped)             [progress] 4M reads processed (37.5% mapped)             [progress] 5M reads processed (37.5% mapped)             [progress] 6M reads processed (37.5% mapped)             [progress] 7M reads processed (37.5% mapped)             [progress] 8M reads processed (37.5% mapped)             [progress] 9M reads processed (37.5% mapped)             [progress] 10M reads processed (37.5% mapped)             [progress] 11M reads processed (37.6% mapped)             [progress] 12M reads processed (37.6% mapped)             [progress] 13M reads processed (37.6% mapped)             [progress] 14M reads processed (37.6% mapped)             [progress] 15M reads processed (37.6% mapped)             [progress] 16M reads processed (37.6% mapped)             [progress] 17M reads processed (37.6% mapped)             [progress] 18M reads processed (37.6% mapped)             [progress] 19M reads processed (37.6% mapped)             [progress] 20M reads processed (37.6% mapped)             [progress] 21M reads processed (37.6% mapped)             [progress] 22M reads processed (37.6% mapped)             [progress] 23M reads processed (37.5% mapped)             [progress] 24M reads processed (37.5% mapped)             [progress] 25M reads processed (37.5% mapped)             [progress] 26M reads processed (37.5% mapped)             [progress] 27M reads processed (37.5% mapped)             [progress] 28M reads processed (37.5% mapped)             [progress] 29M reads processed (37.5% mapped)             [progress] 30M reads processed (37.5% mapped)             [progress] 31M reads processed (37.5% mapped)             [progress] 32M reads processed (37.5% mapped)             [progress] 33M reads processed (37.5% mapped)             [progress] 34M reads processed (37.5% mapped)             [progress] 35M reads processed (37.5% mapped)             [progress] 36M reads processed (37.5% mapped)             [progress] 37M reads processed (37.5% mapped)             [progress] 38M reads processed (37.5% mapped)             [progress] 39M reads processed (37.5% mapped)             [progress] 40M reads processed (37.4% mapped)             [progress] 41M reads processed (37.4% mapped)             [progress] 42M reads processed (37.4% mapped)             
+[quant] done 
+[quant] processed 42,747,171 reads, 16,004,079 reads pseudoaligned
+[quant] estimated average fragment length: 233.6
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 1,223 rounds
+[bstrp] number of EM bootstraps complete: 1[bstrp] number of EM bootstraps complete: 2[bstrp] number of EM bootstraps complete: 3[bstrp] number of EM bootstraps complete: 4[bstrp] number of EM bootstraps complete: 5[bstrp] number of EM bootstraps complete: 6[bstrp] number of EM bootstraps complete: 7[bstrp] number of EM bootstraps complete: 8[bstrp] number of EM bootstraps complete: 9[bstrp] number of EM bootstraps complete: 10[bstrp] number of EM bootstraps complete: 11[bstrp] number of EM bootstraps complete: 12[bstrp] number of EM bootstraps complete: 13[bstrp] number of EM bootstraps complete: 14[bstrp] number of EM bootstraps complete: 15[bstrp] number of EM bootstraps complete: 16[bstrp] number of EM bootstraps complete: 17[bstrp] number of EM bootstraps complete: 18[bstrp] number of EM bootstraps complete: 19[bstrp] number of EM bootstraps complete: 20[bstrp] number of EM bootstraps complete: 21[bstrp] number of EM bootstraps complete: 22[bstrp] number of EM bootstraps complete: 23[bstrp] number of EM bootstraps complete: 24[bstrp] number of EM bootstraps complete: 25[bstrp] number of EM bootstraps complete: 26[bstrp] number of EM bootstraps complete: 27[bstrp] number of EM bootstraps complete: 28[bstrp] number of EM bootstraps complete: 29[bstrp] number of EM bootstraps complete: 30[bstrp] number of EM bootstraps complete: 31[bstrp] number of EM bootstraps complete: 32[bstrp] number of EM bootstraps complete: 33[bstrp] number of EM bootstraps complete: 34[bstrp] number of EM bootstraps complete: 35[bstrp] number of EM bootstraps complete: 36[bstrp] number of EM bootstraps complete: 37[bstrp] number of EM bootstraps complete: 38[bstrp] number of EM bootstraps complete: 39[bstrp] number of EM bootstraps complete: 40[bstrp] number of EM bootstraps complete: 41[bstrp] number of EM bootstraps complete: 42[bstrp] number of EM bootstraps complete: 43[bstrp] number of EM bootstraps complete: 44[bstrp] number of EM bootstraps complete: 45[bstrp] number of EM bootstraps complete: 46[bstrp] number of EM bootstraps complete: 47[bstrp] number of EM bootstraps complete: 48[bstrp] number of EM bootstraps complete: 49[bstrp] number of EM bootstraps complete: 50[bstrp] number of EM bootstraps complete: 51[bstrp] number of EM bootstraps complete: 52[bstrp] number of EM bootstraps complete: 53[bstrp] number of EM bootstraps complete: 54[bstrp] number of EM bootstraps complete: 55[bstrp] number of EM bootstraps complete: 56[bstrp] number of EM bootstraps complete: 57[bstrp] number of EM bootstraps complete: 58[bstrp] number of EM bootstraps complete: 59[bstrp] number of EM bootstraps complete: 60[bstrp] number of EM bootstraps complete: 61[bstrp] number of EM bootstraps complete: 62[bstrp] number of EM bootstraps complete: 63[bstrp] number of EM bootstraps complete: 64[bstrp] number of EM bootstraps complete: 65[bstrp] number of EM bootstraps complete: 66[bstrp] number of EM bootstraps complete: 67[bstrp] number of EM bootstraps complete: 68[bstrp] number of EM bootstraps complete: 69[bstrp] number of EM bootstraps complete: 70[bstrp] number of EM bootstraps complete: 71[bstrp] number of EM bootstraps complete: 72[bstrp] number of EM bootstraps complete: 73[bstrp] number of EM bootstraps complete: 74[bstrp] number of EM bootstraps complete: 75[bstrp] number of EM bootstraps complete: 76[bstrp] number of EM bootstraps complete: 77[bstrp] number of EM bootstraps complete: 78[bstrp] number of EM bootstraps complete: 79[bstrp] number of EM bootstraps complete: 80[bstrp] number of EM bootstraps complete: 81[bstrp] number of EM bootstraps complete: 82[bstrp] number of EM bootstraps complete: 83[bstrp] number of EM bootstraps complete: 84[bstrp] number of EM bootstraps complete: 85[bstrp] number of EM bootstraps complete: 86[bstrp] number of EM bootstraps complete: 87[bstrp] number of EM bootstraps complete: 88[bstrp] number of EM bootstraps complete: 89[bstrp] number of EM bootstraps complete: 90[bstrp] number of EM bootstraps complete: 91[bstrp] number of EM bootstraps complete: 92[bstrp] number of EM bootstraps complete: 93[bstrp] number of EM bootstraps complete: 94[bstrp] number of EM bootstraps complete: 95[bstrp] number of EM bootstraps complete: 96[bstrp] number of EM bootstraps complete: 97[bstrp] number of EM bootstraps complete: 98[bstrp] number of EM bootstraps complete: 99[bstrp] number of EM bootstraps complete: 100
+
+
+real	11m24.075s
+user	158m59.500s
+sys	0m6.745s
+
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 227,665
+[index] number of k-mers: 139,900,295
+[index] number of D-list k-mers: 5,477,475
+[quant] running in paired-end mode
+[quant] will process pair 1: PT502_part1.clean.R1.fq.gz
+                             PT502_part1.clean.R2.fq.gz
+[quant] finding pseudoalignments for the reads ...
+[progress] 1M reads processed (75.6% mapped)             [progress] 2M reads processed (75.6% mapped)             [progress] 3M reads processed (75.5% mapped)             [progress] 4M reads processed (75.5% mapped)             [progress] 5M reads processed (75.4% mapped)             [progress] 6M reads processed (75.4% mapped)             [progress] 7M reads processed (75.4% mapped)             [progress] 8M reads processed (75.4% mapped)             [progress] 9M reads processed (75.4% mapped)             [progress] 10M reads processed (75.5% mapped)             [progress] 11M reads processed (75.5% mapped)             [progress] 12M reads processed (75.5% mapped)             [progress] 13M reads processed (75.5% mapped)             [progress] 14M reads processed (75.5% mapped)             [progress] 15M reads processed (75.5% mapped)             [progress] 16M reads processed (75.5% mapped)             [progress] 17M reads processed (75.5% mapped)             [progress] 18M reads processed (75.5% mapped)             [progress] 19M reads processed (75.5% mapped)             [progress] 20M reads processed (75.5% mapped)             [progress] 21M reads processed (75.5% mapped)             [progress] 22M reads processed (75.5% mapped)             [progress] 23M reads processed (75.5% mapped)             [progress] 24M reads processed (75.4% mapped)             [progress] 25M reads processed (75.4% mapped)             [progress] 26M reads processed (75.4% mapped)             [progress] 27M reads processed (75.4% mapped)             [progress] 28M reads processed (75.4% mapped)             [progress] 29M reads processed (75.4% mapped)             [progress] 30M reads processed (75.4% mapped)             [progress] 31M reads processed (75.4% mapped)             [progress] 32M reads processed (75.4% mapped)             [progress] 33M reads processed (75.3% mapped)             [progress] 34M reads processed (75.3% mapped)             [progress] 35M reads processed (75.3% mapped)             [progress] 36M reads processed (75.3% mapped)             [progress] 37M reads processed (75.3% mapped)             [progress] 38M reads processed (75.3% mapped)             [progress] 39M reads processed (75.3% mapped)             [progress] 40M reads processed (75.3% mapped)             [progress] 41M reads processed (75.3% mapped)             [progress] 42M reads processed (75.3% mapped)             
+[quant] done 
+[quant] processed 42,747,171 reads, 32,184,016 reads pseudoaligned
+[quant] estimated average fragment length: 234.7
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 1,284 rounds
+[bstrp] number of EM bootstraps complete: 1[bstrp] number of EM bootstraps complete: 2[bstrp] number of EM bootstraps complete: 3[bstrp] number of EM bootstraps complete: 4[bstrp] number of EM bootstraps complete: 5[bstrp] number of EM bootstraps complete: 6[bstrp] number of EM bootstraps complete: 7[bstrp] number of EM bootstraps complete: 8[bstrp] number of EM bootstraps complete: 9[bstrp] number of EM bootstraps complete: 10[bstrp] number of EM bootstraps complete: 11[bstrp] number of EM bootstraps complete: 12[bstrp] number of EM bootstraps complete: 13[bstrp] number of EM bootstraps complete: 14[bstrp] number of EM bootstraps complete: 15[bstrp] number of EM bootstraps complete: 16[bstrp] number of EM bootstraps complete: 17[bstrp] number of EM bootstraps complete: 18[bstrp] number of EM bootstraps complete: 19[bstrp] number of EM bootstraps complete: 20[bstrp] number of EM bootstraps complete: 21[bstrp] number of EM bootstraps complete: 22[bstrp] number of EM bootstraps complete: 23[bstrp] number of EM bootstraps complete: 24[bstrp] number of EM bootstraps complete: 25[bstrp] number of EM bootstraps complete: 26[bstrp] number of EM bootstraps complete: 27[bstrp] number of EM bootstraps complete: 28[bstrp] number of EM bootstraps complete: 29[bstrp] number of EM bootstraps complete: 30[bstrp] number of EM bootstraps complete: 31[bstrp] number of EM bootstraps complete: 32[bstrp] number of EM bootstraps complete: 33[bstrp] number of EM bootstraps complete: 34[bstrp] number of EM bootstraps complete: 35[bstrp] number of EM bootstraps complete: 36[bstrp] number of EM bootstraps complete: 37[bstrp] number of EM bootstraps complete: 38[bstrp] number of EM bootstraps complete: 39[bstrp] number of EM bootstraps complete: 40[bstrp] number of EM bootstraps complete: 41[bstrp] number of EM bootstraps complete: 42[bstrp] number of EM bootstraps complete: 43[bstrp] number of EM bootstraps complete: 44[bstrp] number of EM bootstraps complete: 45[bstrp] number of EM bootstraps complete: 46[bstrp] number of EM bootstraps complete: 47[bstrp] number of EM bootstraps complete: 48[bstrp] number of EM bootstraps complete: 49[bstrp] number of EM bootstraps complete: 50[bstrp] number of EM bootstraps complete: 51[bstrp] number of EM bootstraps complete: 52[bstrp] number of EM bootstraps complete: 53[bstrp] number of EM bootstraps complete: 54[bstrp] number of EM bootstraps complete: 55[bstrp] number of EM bootstraps complete: 56[bstrp] number of EM bootstraps complete: 57[bstrp] number of EM bootstraps complete: 58[bstrp] number of EM bootstraps complete: 59[bstrp] number of EM bootstraps complete: 60[bstrp] number of EM bootstraps complete: 61[bstrp] number of EM bootstraps complete: 62[bstrp] number of EM bootstraps complete: 63[bstrp] number of EM bootstraps complete: 64[bstrp] number of EM bootstraps complete: 65[bstrp] number of EM bootstraps complete: 66[bstrp] number of EM bootstraps complete: 67[bstrp] number of EM bootstraps complete: 68[bstrp] number of EM bootstraps complete: 69[bstrp] number of EM bootstraps complete: 70[bstrp] number of EM bootstraps complete: 71[bstrp] number of EM bootstraps complete: 72[bstrp] number of EM bootstraps complete: 73[bstrp] number of EM bootstraps complete: 74[bstrp] number of EM bootstraps complete: 75[bstrp] number of EM bootstraps complete: 76[bstrp] number of EM bootstraps complete: 77[bstrp] number of EM bootstraps complete: 78[bstrp] number of EM bootstraps complete: 79[bstrp] number of EM bootstraps complete: 80[bstrp] number of EM bootstraps complete: 81[bstrp] number of EM bootstraps complete: 82[bstrp] number of EM bootstraps complete: 83[bstrp] number of EM bootstraps complete: 84[bstrp] number of EM bootstraps complete: 85[bstrp] number of EM bootstraps complete: 86[bstrp] number of EM bootstraps complete: 87[bstrp] number of EM bootstraps complete: 88[bstrp] number of EM bootstraps complete: 89[bstrp] number of EM bootstraps complete: 90[bstrp] number of EM bootstraps complete: 91[bstrp] number of EM bootstraps complete: 92[bstrp] number of EM bootstraps complete: 93[bstrp] number of EM bootstraps complete: 94[bstrp] number of EM bootstraps complete: 95[bstrp] number of EM bootstraps complete: 96[bstrp] number of EM bootstraps complete: 97[bstrp] number of EM bootstraps complete: 98[bstrp] number of EM bootstraps complete: 99[bstrp] number of EM bootstraps complete: 100
+
+
+real	13m24.414s
+user	186m55.880s
+sys	0m6.541s
+cp: cannot stat 'report*': No such file or directory

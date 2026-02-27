@@ -1,0 +1,31 @@
+Thu Feb  5 14:58:19 GMT 2026
+/hpcdata/Mimir/adrian/research/067_urmia/src
+the scratch dir is:
+/scratch/users/adrian/1583942-LwU7
+
+about to copy files into scratch
+Thu Feb  5 14:58:19 GMT 2026
+Thu Feb  5 14:58:35 GMT 2026
+
+about to call fastp
+PT502_1.fq.gz
+PT502_2.fq.gz
+Thu Feb  5 14:58:35 GMT 2026
+Thu Feb  5 15:01:30 GMT 2026
+
+about to copy results out of scratch to my dirs
+PT502_1.fq.gz
+PT502_2.fq.gz
+PT502_part1.clean.R1.fq.gz
+PT502_part1.clean.R2.fq.gz
+PT502_part1.fastp.html
+PT502_part1.fastp.json
+kallisto_output_PT502_forward
+kallisto_output_PT502_reverse
+kallisto_output_PT502_unstranded
+Thu Feb  5 15:37:38 GMT 2026
+Thu Feb  5 15:37:38 GMT 2026
+
+about to remove scratch dir
+all done.
+Thu Feb  5 15:37:39 GMT 2026
