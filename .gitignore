@@ -35,3 +35,4 @@ research/029_orsay/004.tf_enrichment/tf_enricher.ChEA_2022029 orsay Table DEGs -
 research/044_blaskogar/PRJNA641129/000_retrieve/info.tsv
 research/054_selfoss/002_DEG_calling/intersect/deseq2.tsv
 research/054_selfoss/002_DEG_calling/intersect/sleuth.tsv
+education/lif659m/week_04/kallisto_output.tgz
