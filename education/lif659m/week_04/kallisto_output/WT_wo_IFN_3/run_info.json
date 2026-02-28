@@ -1,0 +1,13 @@
+{
+	"n_targets": 188753,
+	"n_bootstraps": 100,
+	"n_processed": 130831913,
+	"n_pseudoaligned": 114737313,
+	"n_unique": 30202771,
+	"p_pseudoaligned": 87.7,
+	"p_unique": 23.1,
+	"kallisto_version": "0.46.0",
+	"index_version": 10,
+	"start_time": "Tue Jun 21 12:43:01 2022",
+	"call": "kallisto quant -i /home/adrian/software/kallisto/ensembl_v96/hsa/transcriptome.idx -o /home/adrian/projects/nautholsvik/results/kallisto/kallisto.100/WT_wo_IFN_3 --bias -t 20 -b 100 /home/adrian/projects/nautholsvik/data/clean_fastq/WT_wo_IFN_3/WT_wo_IFN_3_R1_clean.fastq.gz /home/adrian/projects/nautholsvik/data/clean_fastq/WT_wo_IFN_3/WT_wo_IFN_3_R2_clean.fastq.gz"
+}
