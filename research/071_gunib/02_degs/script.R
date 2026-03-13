@@ -23,8 +23,8 @@ library(dplyr)
 # 0. user-defined variables
 #
 setwd("~/scratch/")
-kallisto_dir = "/Users/adrian/research/bmcbf/067_urmia/results/profiles"
-results_dir = '/Users/adrian/research/bmcbf/067_urmia/results/degs'
+kallisto_dir = "/Users/adrian/research/bmcbf/072_gunib/results/profiles"
+results_dir = '/Users/adrian/research/bmcbf/072_gunib/results/degs'
 
 #
 # 1. generate gene to transcript mapping
@@ -49,26 +49,32 @@ metadata = data.frame(labels)
 paths = file.path(dirnames, paste0("kallisto_output_", labels, "_unstranded"), 'abundance.h5')
 metadata$path = paths
 
-metadata$treatment = c(rep('disease', 3), rep('low', 3), rep('high', 3))
+metadata$cell_line = c(rep('624mel', 3), rep('skmel', 9), rep('624mel', 6))
+
+metadata$treatment = c(rep('wt', 6), rep('ko2', 3), rep('ko4', 3), rep('ko102', 3), rep('ko104', 3))
 View(metadata)
 
 #
 # 3. iterate contrasts
 #
 contrasts = list(
-  c('low', 'disease', 'treatment'),
-  c('high', 'disease', 'treatment')
+  c('skmel', 'ko2', 'wt'),
+  c('skmel', 'ko4', 'wt'),
+  c('624mel', '102', 'wt'),
+  c('624mel', '104', 'wt')
 )
 
 for (contrast in contrasts) {
-  sample_flag = contrast[1]
-  control_flag = contrast[2]
-  design_name    <- contrast[3] 
-  print(c('working with', sample_flag, control_flag, design_name))
+  cell_flag = contrast[1]
+  sample_flag = contrast[2]
+  control_flag = contrast[3]
+  design_name    <- 'treatment' 
+  print(c('working with', sample_flag, control_flag, cell_flag))
   
   # 3.1. define working metadata
-  rules = grepl(sample_flag, metadata$treatment) | grepl(control_flag, metadata$treatment)
+  rules = grepl(sample_flag, metadata[[design_name]]) | grepl(control_flag, metadata[[design_name]])
   working_metadata <- metadata[rules, ]
+  working_metadata = working_metadata[working_metadata$cell_line == cell_flag, ]
   print('working metadata')
   print(working_metadata)
   
@@ -118,12 +124,20 @@ for (contrast in contrasts) {
   )
   
   # add counts differences 
+  design_name = 'treatment'
   level_A <- unique(working_metadata[design_name])[[1]][1]   # typically sample         
   level_B <- unique(working_metadata[design_name])[[1]][2]   # typically control
+  print('levels')
+  print(level_A)
+  print(level_B)
   
   norm_counts <- counts(dds, normalized = TRUE)
   idx_A <- which(colData(dds)[[design_name]] == level_A)
   idx_B <- which(colData(dds)[[design_name]] == level_B)
+  print('indexes')
+  print(idx_A)
+  print(idx_B)
+  
   median_A <- rowMedians(norm_counts[, idx_A, drop = FALSE])
   median_B <- rowMedians(norm_counts[, idx_B, drop = FALSE])
   delta_counts <- median_B - median_A
