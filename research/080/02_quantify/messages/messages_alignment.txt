@@ -1,0 +1,27 @@
+messages.EV-SKmel28-rep1.err.txt:[quant] processed 52,044,927 reads, 44,765,893 reads pseudoaligned
+messages.EV-SKmel28-rep1.err.txt:[quant] processed 52,044,927 reads, 1,331,116 reads pseudoaligned
+messages.EV-SKmel28-rep1.err.txt:[quant] processed 52,044,927 reads, 45,274,715 reads pseudoaligned
+
+messages.EV-SKmel28-rep2.err.txt:[quant] processed 67,967,469 reads, 58,232,536 reads pseudoaligned
+messages.EV-SKmel28-rep2.err.txt:[quant] processed 67,967,469 reads, 1,654,118 reads pseudoaligned
+messages.EV-SKmel28-rep2.err.txt:[quant] processed 67,967,469 reads, 58,854,894 reads pseudoaligned
+
+messages.EV-SKmel28-rep3.err.txt:[quant] processed 7,419,363 reads, 6,427,865 reads pseudoaligned
+messages.EV-SKmel28-rep3.err.txt:[quant] processed 7,419,363 reads, 147,876 reads pseudoaligned
+messages.EV-SKmel28-rep3.err.txt:[quant] processed 7,419,363 reads, 6,469,693 reads pseudoaligned
+
+messages.EV-SKmel28-rep4.err.txt:[quant] processed 11,141,554 reads, 9,623,546 reads pseudoaligned
+messages.EV-SKmel28-rep4.err.txt:[quant] processed 11,141,554 reads, 279,972 reads pseudoaligned
+messages.EV-SKmel28-rep4.err.txt:[quant] processed 11,141,554 reads, 9,720,942 reads pseudoaligned
+
+messages.MITF-X6-rep1.err.txt:[quant] processed 4,523,460 reads, 3,880,345 reads pseudoaligned
+messages.MITF-X6-rep1.err.txt:[quant] processed 4,523,460 reads, 97,720 reads pseudoaligned
+messages.MITF-X6-rep1.err.txt:[quant] processed 4,523,460 reads, 3,911,594 reads pseudoaligned
+
+messages.MITF-X6-rep3.err.txt:[quant] processed 53,801,641 reads, 45,984,265 reads pseudoaligned
+messages.MITF-X6-rep3.err.txt:[quant] processed 53,801,641 reads, 1,393,202 reads pseudoaligned
+messages.MITF-X6-rep3.err.txt:[quant] processed 53,801,641 reads, 46,476,680 reads pseudoaligned
+
+messages.MITF-X6-rep4.err.txt:[quant] processed 52,431,702 reads, 45,387,611 reads pseudoaligned
+messages.MITF-X6-rep4.err.txt:[quant] processed 52,431,702 reads, 1,472,981 reads pseudoaligned
+messages.MITF-X6-rep4.err.txt:[quant] processed 52,431,702 reads, 46,026,636 reads pseudoaligned

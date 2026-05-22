@@ -1,0 +1,31 @@
+Thu May 21 16:49:19 GMT 2026
+/hpcdata/Mimir/adrian/research/080/src
+the scratch dir is:
+/scratch/users/adrian/1673750-ScLx
+
+about to copy files into scratch
+Thu May 21 16:49:19 GMT 2026
+Thu May 21 16:49:35 GMT 2026
+
+about to call fastp
+MITF-X6-rep4-R1.fastq.gz
+MITF-X6-rep4-R2.fastq.gz
+Thu May 21 16:49:35 GMT 2026
+Thu May 21 16:53:25 GMT 2026
+
+about to copy results out of scratch to my dirs
+MITF-X6-rep4-R1.fastq.gz
+MITF-X6-rep4-R2.fastq.gz
+MITF-X6-rep4_part1.clean.R1.fq.gz
+MITF-X6-rep4_part1.clean.R2.fq.gz
+MITF-X6-rep4_part1.fastp.html
+MITF-X6-rep4_part1.fastp.json
+kallisto_output_MITF-X6-rep4_forward
+kallisto_output_MITF-X6-rep4_reverse
+kallisto_output_MITF-X6-rep4_unstranded
+Thu May 21 17:33:35 GMT 2026
+Thu May 21 17:33:36 GMT 2026
+
+about to remove scratch dir
+all done.
+Thu May 21 17:33:37 GMT 2026

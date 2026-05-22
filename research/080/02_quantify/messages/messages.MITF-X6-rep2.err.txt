@@ -1,0 +1,30 @@
+ERROR: igzip: Error invalid gzip header found: /hpcdata/Mimir/adrian/research/080/data/MITF-X6-rep2/MITF-X6-rep2-R2.fastq.gz
+
+real	0m0.022s
+user	0m0.016s
+sys	0m0.004s
+
+Error: file not found MITF-X6-rep2_part1.clean.R1.fq.gz
+Error: file not found MITF-X6-rep2_part1.clean.R2.fq.gz
+
+
+real	0m0.012s
+user	0m0.000s
+sys	0m0.004s
+
+Error: file not found MITF-X6-rep2_part1.clean.R1.fq.gz
+Error: file not found MITF-X6-rep2_part1.clean.R2.fq.gz
+
+
+real	0m0.009s
+user	0m0.000s
+sys	0m0.004s
+
+Error: file not found MITF-X6-rep2_part1.clean.R1.fq.gz
+Error: file not found MITF-X6-rep2_part1.clean.R2.fq.gz
+
+
+real	0m0.012s
+user	0m0.000s
+sys	0m0.004s
+cp: cannot stat '*fastp.html': No such file or directory
