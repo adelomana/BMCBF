@@ -81,8 +81,8 @@ p5 = p1 +  scale_fill_viridis(direction=-1, trans="log", breaks=my_breaks, optio
 print(p5)
 
 # importantly, store your fuctional enrichment in a form of table which will be a supplementary file of your paper
-storage_file = 'clusterProfiler_enrichments.h1.tsv'
-write.table(ck@compareClusterResult, storage_file, quote=FALSE, sep='\t')
+#storage_file = 'clusterProfiler_enrichments.h1.tsv'
+#write.table(ck@compareClusterResult, storage_file, quote=FALSE, sep='\t')
 
 #ggsave('/Users/adrian/scratch/h1.enrichment.svg')
 #dev.off()
