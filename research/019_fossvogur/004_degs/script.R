@@ -49,17 +49,13 @@ metadata = data.frame(labels)
 paths = file.path(dirnames, paste0("kallisto_output_c"), 'abundance.h5')
 metadata$path = paths
 
-# drop the 501-background KO13 samples (duplicate KO13 label issue)
-metadata <- metadata[!grepl("^501-", metadata$labels), ]
-nrow(metadata)  # should be 28
-
-# keep only siCTRL, KO24, KO13, C3_RD
-keep <- c("siCTRL", "KO24", "KO13", "C3_RD")
+# keep only 501, C1, KO24
+keep <- c("501", "C1", "KO24")
 pattern <- paste(keep, collapse = "|")
 metadata <- metadata[grepl(pattern, metadata$labels), ]
-nrow(metadata)  # should be 12
+nrow(metadata)  # should be 9
 
-metadata$treatment = c(rep('C3', 3), rep('KO13', 3), rep('KO24', 3), rep('CTRL', 3))
+metadata$treatment = c(rep('KO13', 3), rep('CTL', 3), rep('KO24', 3))
 
 View(metadata)
 
@@ -67,8 +63,8 @@ View(metadata)
 # 3. iterate contrasts
 #
 contrasts = list(
-  c('KO13', 'C3'),
-  c('KO24', 'CTRL')
+  c('KO13', 'CTL'),
+  c('KO24', 'CTL')
 )
 
 for (contrast in contrasts) {
@@ -78,7 +74,7 @@ for (contrast in contrasts) {
   print(c('working with', sample_flag, control_flag))
   
   # 3.1. define working metadata
-  rules = grepl(sample_flag, metadata$labels) | grepl(control_flag, metadata$labels)
+  rules = grepl(sample_flag, metadata$treatment) | grepl(control_flag, metadata$treatment)
   working_metadata <- metadata[rules, ]
   print('working metadata')
   print(working_metadata)
@@ -110,8 +106,8 @@ for (contrast in contrasts) {
   cat(blue('coefficient:', resultsNames(dds)[2]))
   res_shr <- lfcShrink(dds, coef = resultsNames(dds)[2], type = "apeglm")
   # visualize shrinkage
-  plotMA(res, ylim = c(-5, 5), main=paste('no shrink', resultsNames(dds)[2]))
-  plotMA(res_shr, ylim = c(-5, 5), main=paste('no shrink', resultsNames(dds)[2]))
+  plotMA(res, ylim = c(-5, 5), main=paste('without shrink', resultsNames(dds)[2]))
+  plotMA(res_shr, ylim = c(-5, 5), main=paste('with shrink', resultsNames(dds)[2]))
   
   # 3.6. Build a final table with:
   #    - padj from res0 (correct for the H0: LFC = 0 test)
@@ -129,22 +125,16 @@ for (contrast in contrasts) {
   )
   
   # add counts differences 
-  level_A <- unique(working_metadata[design_name])[[1]][1]   # typically sample         
-  level_B <- unique(working_metadata[design_name])[[1]][2]   # typically control
-  print('levels')
-  print(level_A)
-  print(level_B)
-  
   norm_counts <- counts(dds, normalized = TRUE)
-  idx_A <- which(colData(dds)[[design_name]] == level_A)
-  idx_B <- which(colData(dds)[[design_name]] == level_B)
+  idx_A <- which(colData(dds)[[design_name]] == sample_flag)
+  idx_B <- which(colData(dds)[[design_name]] == control_flag)
   print('indexes')
   print(idx_A)
   print(idx_B)
   
   median_A <- rowMedians(norm_counts[, idx_A, drop = FALSE])
   median_B <- rowMedians(norm_counts[, idx_B, drop = FALSE])
-  delta_counts <- median_B - median_A
+  delta_counts <- median_A - median_B
   names(delta_counts) <- rownames(norm_counts)
   full_results$delta_counts <- delta_counts[match(full_results$gene_id, names(delta_counts))]
   
@@ -198,8 +188,8 @@ for (contrast in contrasts) {
       `Gene symbol`                   = gene_name,
       `Description`                   = description2,
       `Log2 FC shr`                       = log2FC_shr,
-      `Expression control [TPM]`      = median_TPM_A,
-      `Expression treatment [TPM]`    = median_TPM_B,
+      `Expression treatment [TPM]`      = median_TPM_A,
+      `Expression control [TPM]`    = median_TPM_B,
       `Counts delta`                  = delta_counts,
       `Adjusted P`                    = padj
     )
@@ -211,8 +201,8 @@ for (contrast in contrasts) {
       `Gene symbol`                   = gene_name,
       `Description`                   = description2,
       `Log2 FC`                       = log2FC_shr,
-      `Expression control [TPM]`      = median_TPM_A,
-      `Expression treatment [TPM]`    = median_TPM_B,
+      `Expression treatment [TPM]`      = median_TPM_A,
+      `Expression control [TPM]`    = median_TPM_B,
       `Counts delta`                  = delta_counts,
       `Adjusted P`                    = padj
     )

@@ -1,3 +1,4 @@
+
 R version 4.5.1 (2025-06-13) -- "Great Square Root"
 Copyright (C) 2025 The R Foundation for Statistical Computing
 Platform: aarch64-apple-darwin20
@@ -50,10 +51,9 @@ The following objects are masked from ‘package:stats’:
 
 The following objects are masked from ‘package:base’:
 
-    anyDuplicated, aperm, append, as.data.frame, basename, cbind, colnames, dirname, do.call, duplicated, eval, evalq,
-    Filter, Find, get, grep, grepl, is.unsorted, lapply, Map, mapply, match, mget, order, paste, pmax, pmax.int, pmin,
-    pmin.int, Position, rank, rbind, Reduce, rownames, sapply, saveRDS, table, tapply, unique, unsplit, which.max,
-    which.min
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind, colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, is.unsorted, lapply, Map, mapply, match, mget, order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank, rbind, Reduce, rownames,
+    sapply, saveRDS, table, tapply, unique, unsplit, which.max, which.min
 
 
 Attaching package: ‘S4Vectors’
@@ -77,20 +77,19 @@ Attaching package: ‘MatrixGenerics’
 
 The following objects are masked from ‘package:matrixStats’:
 
-    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse, colCounts, colCummaxs, colCummins, colCumprods,
-    colCumsums, colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs, colMads, colMaxs, colMeans2, colMedians,
-    colMins, colOrderStats, colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds, colSums2, colTabulates,
-    colVarDiffs, colVars, colWeightedMads, colWeightedMeans, colWeightedMedians, colWeightedSds, colWeightedVars,
-    rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet, rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
-    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps, rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians,
-    rowMins, rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks, rowSdDiffs, rowSds, rowSums2, rowTabulates,
-    rowVarDiffs, rowVars, rowWeightedMads, rowWeightedMeans, rowWeightedMedians, rowWeightedSds, rowWeightedVars
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse, colCounts, colCummaxs, colCummins, colCumprods, colCumsums, colDiffs, colIQRDiffs,
+    colIQRs, colLogSumExps, colMadDiffs, colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats, colProds, colQuantiles, colRanges,
+    colRanks, colSdDiffs, colSds, colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads, colWeightedMeans, colWeightedMedians,
+    colWeightedSds, colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet, rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps, rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins, rowOrderStats,
+    rowProds, rowQuantiles, rowRanges, rowRanks, rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars, rowWeightedMads,
+    rowWeightedMeans, rowWeightedMedians, rowWeightedSds, rowWeightedVars
 
 Loading required package: Biobase
 Welcome to Bioconductor
 
-    Vignettes contain introductory material; view with 'browseVignettes()'. To cite Bioconductor, see
-    'citation("Biobase")', and for packages 'citation("pkgname")'.
+    Vignettes contain introductory material; view with 'browseVignettes()'. To cite Bioconductor, see 'citation("Biobase")', and for packages
+    'citation("pkgname")'.
 
 
 Attaching package: ‘Biobase’
@@ -212,19 +211,14 @@ package ‘dplyr’ was built under R version 4.5.2
 > paths = file.path(dirnames, paste0("kallisto_output_c"), 'abundance.h5')
 > metadata$path = paths
 > 
-> # drop the 501-background KO13 samples (duplicate KO13 label issue)
-> metadata <- metadata[!grepl("^501-", metadata$labels), ]
-> nrow(metadata)  # should be 28
-[1] 28
-> 
-> # keep only siCTRL, KO24, KO13, C3_RD
-> keep <- c("siCTRL", "KO24", "KO13", "C3_RD")
+> # keep only 501, C1, KO24
+> keep <- c("501", "C1", "KO24")
 > pattern <- paste(keep, collapse = "|")
 > metadata <- metadata[grepl(pattern, metadata$labels), ]
-> nrow(metadata)  # should be 12
-[1] 12
+> nrow(metadata)  # should be 9
+[1] 9
 > 
-> metadata$treatment = c(rep('C3', 3), rep('KO13', 3), rep('KO24', 3), rep('CTRL', 3))
+> metadata$treatment = c(rep('KO13', 3), rep('CTL', 3), rep('KO24', 3))
 > 
 > View(metadata)
 > 
@@ -232,8 +226,8 @@ package ‘dplyr’ was built under R version 4.5.2
 > # 3. iterate contrasts
 > #
 > contrasts = list(
-+   c('KO13', 'C3'),
-+   c('KO24', 'CTRL')
++   c('KO13', 'CTL'),
++   c('KO24', 'CTL')
 + )
 > 
 > for (contrast in contrasts) {
@@ -243,7 +237,7 @@ package ‘dplyr’ was built under R version 4.5.2
 +   print(c('working with', sample_flag, control_flag))
 +   
 +   # 3.1. define working metadata
-+   rules = grepl(sample_flag, metadata$labels) | grepl(control_flag, metadata$labels)
++   rules = grepl(sample_flag, metadata$treatment) | grepl(control_flag, metadata$treatment)
 +   working_metadata <- metadata[rules, ]
 +   print('working metadata')
 +   print(working_metadata)
@@ -275,8 +269,8 @@ package ‘dplyr’ was built under R version 4.5.2
 +   cat(blue('coefficient:', resultsNames(dds)[2]))
 +   res_shr <- lfcShrink(dds, coef = resultsNames(dds)[2], type = "apeglm")
 +   # visualize shrinkage
-+   plotMA(res, ylim = c(-5, 5), main=paste('no shrink', resultsNames(dds)[2]))
-+   plotMA(res_shr, ylim = c(-5, 5), main=paste('no shrink', resultsNames(dds)[2]))
++   plotMA(res, ylim = c(-5, 5), main=paste('without shrink', resultsNames(dds)[2]))
++   plotMA(res_shr, ylim = c(-5, 5), main=paste('with shrink', resultsNames(dds)[2]))
 +   
 +   # 3.6. Build a final table with:
 +   #    - padj from res0 (correct for the H0: LFC = 0 test)
@@ -294,15 +288,9 @@ package ‘dplyr’ was built under R version 4.5.2
 +   )
 +   
 +   # add counts differences 
-+   level_A <- unique(working_metadata[design_name])[[1]][1]   # typically sample         
-+   level_B <- unique(working_metadata[design_name])[[1]][2]   # typically control
-+   print('levels')
-+   print(level_A)
-+   print(level_B)
-+   
 +   norm_counts <- counts(dds, normalized = TRUE)
-+   idx_A <- which(colData(dds)[[design_name]] == level_A)
-+   idx_B <- which(colData(dds)[[design_name]] == level_B)
++   idx_A <- which(colData(dds)[[design_name]] == sample_flag)
++   idx_B <- which(colData(dds)[[design_name]] == control_flag)
 +   print('indexes')
 +   print(idx_A)
 +   print(idx_B)
@@ -356,12 +344,38 @@ package ‘dplyr’ was built under R version 4.5.2
 +   cat(blue(paste('responders:', dim(responders)[1],  sep=' ')), fill=TRUE)
 +   
 +   # store results
++   responders_clean <- responders %>%
++     select(
++       `ENSEMBL ID`                    = gene_id,
++       `Biotype`                       = biotype,
++       `Gene symbol`                   = gene_name,
++       `Description`                   = description2,
++       `Log2 FC shr`                       = log2FC_shr,
++       `Expression treatment [TPM]`      = median_TPM_A,
++       `Expression control [TPM]`    = median_TPM_B,
++       `Counts delta`                  = delta_counts,
++       `Adjusted P`                    = padj
++     )
++   
++   full_results_clean <- full_results %>%
++     select(
++       `ENSEMBL ID`                    = gene_id,
++       `Biotype`                       = biotype,
++       `Gene symbol`                   = gene_name,
++       `Description`                   = description2,
++       `Log2 FC`                       = log2FC_shr,
++       `Expression treatment [TPM]`      = median_TPM_A,
++       `Expression control [TPM]`    = median_TPM_B,
++       `Counts delta`                  = delta_counts,
++       `Adjusted P`                    = padj
++     )
++   
 +   dir.create(results_dir)
 +   filename = paste(results_dir, '/effect_', design_name, '_', sample_flag, '_vs_', control_flag, '.full.tsv', sep='')
-+   write.table(full_results, file=filename, quote=FALSE, sep='\t')
++   write.table(full_results_clean, file=filename, quote=FALSE, sep='\t', row.names = FALSE)
 +   
 +   filename = paste(results_dir, '/effect_', design_name, '_', sample_flag, '_vs_', control_flag, '.responders.tsv', sep='')
-+   write.table(responders, file=filename, quote=FALSE, sep='\t')
++   write.table(responders_clean, file=filename, quote=FALSE, sep='\t', row.names = FALSE)
 +   
 +   #
 +   # 7. visualization
@@ -429,24 +443,24 @@ package ‘dplyr’ was built under R version 4.5.2
 +   ggsave(filename, plot = p)
 +   
 + }
-[1] "working with" "KO13"         "C3"          
+[1] "working with" "KO13"         "CTL"         
 [1] "working metadata"
-        labels                                                                                                         path treatment
-7      C3_RD-1     /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/C3_RD-1_processed/kallisto_output_c/abundance.h5        C3
-8     C3_RD-13    /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/C3_RD-13_processed/kallisto_output_c/abundance.h5        C3
-9      C3_RD-7     /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/C3_RD-7_processed/kallisto_output_c/abundance.h5        C3
-10 KO13_VHN-11 /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/KO13_VHN-11_processed/kallisto_output_c/abundance.h5      KO13
-11  KO13_VHN-3  /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/KO13_VHN-3_processed/kallisto_output_c/abundance.h5      KO13
-12  KO13_VHN-7  /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/KO13_VHN-7_processed/kallisto_output_c/abundance.h5      KO13
+           labels                                                                                                             path treatment
+1 501-KO13_VHN-10 /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/501-KO13_VHN-10_processed/kallisto_output_c/abundance.h5      KO13
+2  501-KO13_VHN-2  /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/501-KO13_VHN-2_processed/kallisto_output_c/abundance.h5      KO13
+3  501-KO13_VHN-6  /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/501-KO13_VHN-6_processed/kallisto_output_c/abundance.h5      KO13
+4        C1_RD-10        /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/C1_RD-10_processed/kallisto_output_c/abundance.h5       CTL
+5         C1_RD-4         /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/C1_RD-4_processed/kallisto_output_c/abundance.h5       CTL
+6        C1-RD-16        /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/C1-RD-16_processed/kallisto_output_c/abundance.h5       CTL
 1 2 3 4 5 6 
 summarizing abundance
 summarizing counts
 summarizing length
 summarizing inferential replicates
 using counts and average transcript lengths from tximport
-[1] "and the reference is" "C3"                  
+[1] "and the reference is" "CTL"                 
 size before counts filtering: 39546
-size after counts filtering: 18234
+size after counts filtering: 18725
 estimating size factors
 using 'avgTxLength' from assays(dds), correcting for library size
 estimating dispersions
@@ -454,42 +468,39 @@ gene-wise dispersion estimates
 mean-dispersion relationship
 final dispersion estimates
 fitting model and testing
-coefficient: treatment_KO13_vs_C3
+coefficient: treatment_KO13_vs_CTL
 using 'apeglm' for LFC shrinkage. If used in published research, please cite:
     Zhu, A., Ibrahim, J.G., Love, M.I. (2018) Heavy-tailed prior distributions for
     sequence count data: removing the noise and preserving large differences.
     Bioinformatics. https://doi.org/10.1093/bioinformatics/bty895
-[1] "levels"
-[1] "C3"
-[1] "KO13"
 [1] "indexes"
 [1] 1 2 3
 [1] 4 5 6
-full results dim: 18234
-no responders: 17355
-DEGs: 6302
-responders: 879
+full results dim: 18725
+no responders: 16799
+DEGs: 8039
+responders: 1926
 using ntop=500 top features by variance
-Saving 10.9 x 6.94 in image
-Saving 10.9 x 6.94 in image
-[1] "working with" "KO24"         "CTRL"        
+Saving 13.2 x 6.93 in image
+Saving 13.2 x 6.93 in image
+[1] "working with" "KO24"         "CTL"         
 [1] "working metadata"
        labels                                                                                                        path treatment
+4    C1_RD-10   /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/C1_RD-10_processed/kallisto_output_c/abundance.h5       CTL
+5     C1_RD-4    /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/C1_RD-4_processed/kallisto_output_c/abundance.h5       CTL
+6    C1-RD-16   /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/C1-RD-16_processed/kallisto_output_c/abundance.h5       CTL
 16 KO24_VHN-1 /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/KO24_VHN-1_processed/kallisto_output_c/abundance.h5      KO24
 17 KO24_VHN-5 /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/KO24_VHN-5_processed/kallisto_output_c/abundance.h5      KO24
 18 KO24_VHN-9 /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/KO24_VHN-9_processed/kallisto_output_c/abundance.h5      KO24
-19   siCTRL_1   /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/siCTRL_1_processed/kallisto_output_c/abundance.h5      CTRL
-20   siCTRL_2   /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/siCTRL_2_processed/kallisto_output_c/abundance.h5      CTRL
-21   siCTRL_3   /Users/adrian/research/bmcbf/019_fossvogur/001_profiles/siCTRL_3_processed/kallisto_output_c/abundance.h5      CTRL
 1 2 3 4 5 6 
 summarizing abundance
 summarizing counts
 summarizing length
 summarizing inferential replicates
 using counts and average transcript lengths from tximport
-[1] "and the reference is" "CTRL"                
+[1] "and the reference is" "CTL"                 
 size before counts filtering: 39546
-size after counts filtering: 18959
+size after counts filtering: 19184
 estimating size factors
 using 'avgTxLength' from assays(dds), correcting for library size
 estimating dispersions
@@ -497,23 +508,19 @@ gene-wise dispersion estimates
 mean-dispersion relationship
 final dispersion estimates
 fitting model and testing
-coefficient: treatment_KO24_vs_CTRL
+coefficient: treatment_KO24_vs_CTL
 using 'apeglm' for LFC shrinkage. If used in published research, please cite:
     Zhu, A., Ibrahim, J.G., Love, M.I. (2018) Heavy-tailed prior distributions for
     sequence count data: removing the noise and preserving large differences.
     Bioinformatics. https://doi.org/10.1093/bioinformatics/bty895
-[1] "levels"
-[1] "KO24"
-[1] "CTRL"
 [1] "indexes"
-[1] 1 2 3
 [1] 4 5 6
-full results dim: 18959
-no responders: 17114
-DEGs: 6800
-responders: 1845
+[1] 1 2 3
+full results dim: 19184
+no responders: 16410
+DEGs: 11561
+responders: 2774
 using ntop=500 top features by variance
-Saving 10.9 x 6.94 in image
-Saving 10.9 x 6.94 in image
+Saving 13.2 x 6.93 in image
+Saving 13.2 x 6.93 in image
 There were 15 warnings (use warnings() to see them)
-
