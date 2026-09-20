@@ -1,0 +1,31 @@
+Sun Jun 28 15:33:01 GMT 2026
+/hpcdata/Mimir/adrian/research/073_bologna/src
+the scratch dir is:
+/scratch/users/adrian/1710532-tIkQ
+
+about to copy files into scratch
+Sun Jun 28 15:33:01 GMT 2026
+Sun Jun 28 15:33:47 GMT 2026
+
+about to call fastp
+D0BioP2_1.fq.gz
+D0BioP2_2.fq.gz
+Sun Jun 28 15:33:47 GMT 2026
+Sun Jun 28 15:37:27 GMT 2026
+
+about to copy results out of scratch to my dirs
+D0BioP2_1.fq.gz
+D0BioP2_2.fq.gz
+D0BioP2_part1.clean.R1.fq.gz
+D0BioP2_part1.clean.R2.fq.gz
+D0BioP2_part1.fastp.html
+D0BioP2_part1.fastp.json
+kallisto_output_D0BioP2_forward
+kallisto_output_D0BioP2_reverse
+kallisto_output_D0BioP2_unstranded
+Sun Jun 28 16:23:56 GMT 2026
+Sun Jun 28 16:23:57 GMT 2026
+
+about to remove scratch dir
+all done.
+Sun Jun 28 16:23:58 GMT 2026

@@ -1,0 +1,31 @@
+Thu May 21 16:49:17 GMT 2026
+/hpcdata/Mimir/adrian/research/080/src
+the scratch dir is:
+/scratch/users/adrian/1673744-K0Uy
+
+about to copy files into scratch
+Thu May 21 16:49:17 GMT 2026
+Thu May 21 16:49:23 GMT 2026
+
+about to call fastp
+EV-SKmel28-rep2-R1.fastq.gz
+EV-SKmel28-rep2-R2.fastq.gz
+Thu May 21 16:49:23 GMT 2026
+Thu May 21 16:54:25 GMT 2026
+
+about to copy results out of scratch to my dirs
+EV-SKmel28-rep2-R1.fastq.gz
+EV-SKmel28-rep2-R2.fastq.gz
+EV-SKmel28-rep2_part1.clean.R1.fq.gz
+EV-SKmel28-rep2_part1.clean.R2.fq.gz
+EV-SKmel28-rep2_part1.fastp.html
+EV-SKmel28-rep2_part1.fastp.json
+kallisto_output_EV-SKmel28-rep2_forward
+kallisto_output_EV-SKmel28-rep2_reverse
+kallisto_output_EV-SKmel28-rep2_unstranded
+Thu May 21 17:42:58 GMT 2026
+Thu May 21 17:42:59 GMT 2026
+
+about to remove scratch dir
+all done.
+Thu May 21 17:43:00 GMT 2026

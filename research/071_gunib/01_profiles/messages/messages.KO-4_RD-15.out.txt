@@ -1,0 +1,31 @@
+Thu Mar 12 11:06:12 GMT 2026
+/hpcdata/Mimir/adrian/research/071_gunib/src
+the scratch dir is:
+/scratch/users/adrian/1600258-soOs
+
+about to copy files into scratch
+Thu Mar 12 11:06:12 GMT 2026
+Thu Mar 12 11:13:19 GMT 2026
+
+about to call fastp
+novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_317_217.001.R1.fastq.gz
+novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_317_217.001.R2.fastq.gz
+Thu Mar 12 11:13:19 GMT 2026
+Thu Mar 12 11:45:17 GMT 2026
+
+about to copy results out of scratch to my dirs
+KO-4_RD-15_part1.clean.R1.fq.gz
+KO-4_RD-15_part1.clean.R2.fq.gz
+KO-4_RD-15_part1.fastp.html
+KO-4_RD-15_part1.fastp.json
+kallisto_output_KO-4_RD-15_forward
+kallisto_output_KO-4_RD-15_reverse
+kallisto_output_KO-4_RD-15_unstranded
+novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_317_217.001.R1.fastq.gz
+novaseq05_201016_A00394_0613_BHCN3LDSXY.s_1_317_217.001.R2.fastq.gz
+Thu Mar 12 14:38:27 GMT 2026
+Thu Mar 12 14:38:28 GMT 2026
+
+about to remove scratch dir
+all done.
+Thu Mar 12 14:38:31 GMT 2026
