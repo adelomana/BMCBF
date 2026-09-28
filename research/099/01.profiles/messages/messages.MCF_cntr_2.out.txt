@@ -1,0 +1,31 @@
+Thu Sep 24 16:30:08 GMT 2026
+/hpcdata/Mimir/adrian/research/099/src
+the scratch dir is:
+/scratch/users/adrian/1824965-VOM8
+
+about to copy files into scratch
+Thu Sep 24 16:30:08 GMT 2026
+Thu Sep 24 16:30:58 GMT 2026
+
+about to call fastp
+MCF_cntr_2_1.fq.gz
+MCF_cntr_2_2.fq.gz
+Thu Sep 24 16:30:58 GMT 2026
+Thu Sep 24 16:32:48 GMT 2026
+
+about to copy results out of scratch to my dirs
+kallisto_output_MCF_cntr_2_forward
+kallisto_output_MCF_cntr_2_reverse
+kallisto_output_MCF_cntr_2_unstranded
+MCF_cntr_2_1.fq.gz
+MCF_cntr_2_2.fq.gz
+MCF_cntr_2_part1.clean.R1.fq.gz
+MCF_cntr_2_part1.clean.R2.fq.gz
+MCF_cntr_2_part1.fastp.html
+MCF_cntr_2_part1.fastp.json
+Thu Sep 24 17:09:57 GMT 2026
+Thu Sep 24 17:09:58 GMT 2026
+
+about to remove scratch dir
+all done.
+Thu Sep 24 17:09:58 GMT 2026

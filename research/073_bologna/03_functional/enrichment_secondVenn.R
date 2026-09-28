@@ -19,7 +19,7 @@ setwd('/Users/adrian/research/bmcbf/073_bologna/results/degs/')
 #
 # 2. read files and generate lists of genes
 #
-df <- read.csv("first_sets.csv")          
+df <- read.csv("second_sets.csv")          
 
 
 # convert
@@ -30,8 +30,6 @@ r = bitr(df$right, fromType = 'ENSEMBL', toType = 'ENTREZID', OrgDb = 'org.Hs.eg
 length(l)
 length(m)
 length(r)
-
-#l = l[1:800]
 
 geneLists <- list(leftList = l, middleList = m, rightList = r)
 
@@ -45,7 +43,7 @@ my_breaks = 10**my_log_breaks
 p5 = p1 +  scale_fill_viridis(direction=-1, trans="log", breaks=my_breaks, option='cividis')
 print(p5)
 
-storage_file = 'clusterProfiler_enrichments.tsv'
+storage_file = '/Users/adrian/research/bmcbf/073_bologna/results/enrichment/clusterProfiler_enrichments.secondVenn.tsv'
 write.table(ck@compareClusterResult, storage_file, quote=FALSE, sep='\t')
 
 #ggsave('/Users/adrian/scratch/enrichment.svg')

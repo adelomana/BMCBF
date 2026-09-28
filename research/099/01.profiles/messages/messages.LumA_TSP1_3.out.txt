@@ -1,0 +1,31 @@
+Thu Sep 24 16:30:08 GMT 2026
+/hpcdata/Mimir/adrian/research/099/src
+the scratch dir is:
+/scratch/users/adrian/1824954-asiP
+
+about to copy files into scratch
+Thu Sep 24 16:30:08 GMT 2026
+Thu Sep 24 16:30:52 GMT 2026
+
+about to call fastp
+LumA_TSP1_3_1.fq.gz
+LumA_TSP1_3_2.fq.gz
+Thu Sep 24 16:30:53 GMT 2026
+Thu Sep 24 16:32:33 GMT 2026
+
+about to copy results out of scratch to my dirs
+kallisto_output_LumA_TSP1_3_forward
+kallisto_output_LumA_TSP1_3_reverse
+kallisto_output_LumA_TSP1_3_unstranded
+LumA_TSP1_3_1.fq.gz
+LumA_TSP1_3_2.fq.gz
+LumA_TSP1_3_part1.clean.R1.fq.gz
+LumA_TSP1_3_part1.clean.R2.fq.gz
+LumA_TSP1_3_part1.fastp.html
+LumA_TSP1_3_part1.fastp.json
+Thu Sep 24 17:07:23 GMT 2026
+Thu Sep 24 17:07:24 GMT 2026
+
+about to remove scratch dir
+all done.
+Thu Sep 24 17:07:24 GMT 2026

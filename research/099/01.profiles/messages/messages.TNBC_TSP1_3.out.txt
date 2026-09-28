@@ -1,0 +1,31 @@
+Thu Sep 24 17:06:25 GMT 2026
+/hpcdata/Mimir/adrian/research/099/src
+the scratch dir is:
+/scratch/users/adrian/1824981-iThY
+
+about to copy files into scratch
+Thu Sep 24 17:06:25 GMT 2026
+Thu Sep 24 17:06:29 GMT 2026
+
+about to call fastp
+TNBC_TSP1_3_1.fq.gz
+TNBC_TSP1_3_2.fq.gz
+Thu Sep 24 17:06:29 GMT 2026
+Thu Sep 24 17:08:11 GMT 2026
+
+about to copy results out of scratch to my dirs
+kallisto_output_TNBC_TSP1_3_forward
+kallisto_output_TNBC_TSP1_3_reverse
+kallisto_output_TNBC_TSP1_3_unstranded
+TNBC_TSP1_3_1.fq.gz
+TNBC_TSP1_3_2.fq.gz
+TNBC_TSP1_3_part1.clean.R1.fq.gz
+TNBC_TSP1_3_part1.clean.R2.fq.gz
+TNBC_TSP1_3_part1.fastp.html
+TNBC_TSP1_3_part1.fastp.json
+Thu Sep 24 17:38:51 GMT 2026
+Thu Sep 24 17:38:52 GMT 2026
+
+about to remove scratch dir
+all done.
+Thu Sep 24 17:38:52 GMT 2026
