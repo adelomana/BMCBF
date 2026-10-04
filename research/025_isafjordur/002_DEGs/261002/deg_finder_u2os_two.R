@@ -9,7 +9,7 @@ rm(list = ls())
 # BiocManager::install("DESeq2")
 
 #
-# 0. load libraries
+# 0. load libraries s
 #
 library(DESeq2)
 library(tximport)
@@ -19,13 +19,15 @@ library(crayon)
 library(ggplot2)
 library(stringr)
 library(ramify) # this is for clip, for the volcano
+library(dplyr)   # if not installed: install.packages("dplyr")
+
 
 #
 # 0. user-defined variables
 #
 setwd("~/scratch/")
 kallisto_dir = "/Users/adrian/research/bmcbf/025_isafjordur/results/000_quantification"
-results_dir = '/Users/adrian/research/bmcbf/025_isafjordur/results/002_DEGs'
+results_dir = '/Users/adrian/research/bmcbf/025_isafjordur/results/002_DEGs/261002/u2os'
 
 #
 # 1. generate gene to transcript mapping
@@ -33,6 +35,10 @@ results_dir = '/Users/adrian/research/bmcbf/025_isafjordur/results/002_DEGs'
 df = read.csv('/Users/adrian/software/kallisto/human_index_standard/annotation.tsv', sep='\t')
 t2g = df[, 2:3]
 dim(t2g)
+
+annotation_file = '/Users/adrian/software/kallisto/human_index_standard/annotation.tsv'
+full_annotation = read.csv(annotation_file, sep='\t')
+annotation <- full_annotation %>% distinct(ensembl_gene_id, .keep_all = TRUE)
 
 #
 # 2. define metadata
@@ -53,80 +59,192 @@ metadata$path = paths
 metadata$genotype = genotypes
 View(metadata)
 
+
 #
 # 3. contrasts
 #
-threshold = 20
-effect_size_threshold = log2(2)
-tpm_threshold = 1
+threshold = 10
 
 #
 # 3.1. contrast 
 #
-txi = tximport(metadata$path, type="kallisto", tx2gene=t2g, ignoreTxVersion=TRUE)
+txi = tximport(metadata$path, type="kallisto", tx2gene=t2g, ignoreTxVersion = TRUE)
 dds = DESeqDataSetFromTximport(txi, colData=metadata, design=~genotype) 
 dds$genotype = relevel(dds$genotype, ref="wt")
 
-# keep features with at least 20 counts median difference
+# keep features with at least 10 counts median in one sample
+cts <- counts(dds)
 cat(blue(paste('size before counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE)
-a = counts(dds)[ , 1:2]
-b = counts(dds)[ , 3:4]
-c = rowMedians(a) - rowMedians(b)
-keep = abs(c) >= threshold
-dds = dds[keep, ]
-cat(blue(paste('size after counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE)
-
-# keep features with at least a max median expression of 1 TPM.
-cat(blue(paste('size before counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE)
-subset = txi$abundance[names(dds), ]
-a = rowMedians(subset[ , 1:2])
-b = rowMedians(subset[ , 3:4])
-c = pmax(a, b)
-keep = c >= tpm_threshold
-dds = dds[keep, ]
+med_g1 <- matrixStats::rowMedians(cts[, 1:2])
+med_g2 <- matrixStats::rowMedians(cts[, 3:4])
+keep <- pmax(med_g1, med_g2) >= threshold   # threshold = 10
+dds  <- dds[keep, ]
 cat(blue(paste('size after counts filtering:', dim(dds)[1], sep=' ')), fill=TRUE)
 
 dds = DESeq(dds, test="LRT", reduced=~1)
+resultsNames(dds)
 
-res = results(dds, parallel=TRUE, alpha=0.05) # it does not seem to affect  https://www.biostars.org/p/209118/ 
-filtred_results = res[which(res$padj < 0.05 & abs(res$log2FoldChange) > effect_size_threshold), ]
-sorted_filtred_results = filtred_results[order(filtred_results[["padj"]]),]
-anti_results = res[which(res$padj > 0.05 | abs(res$log2FoldChange) < effect_size_threshold), ]
-cat(blue(paste('contrast wt vs control:', dim(filtred_results)[1], sep=' ')), fill=TRUE)
-write.table(sorted_filtred_results, file=paste(results_dir, '/effect_ko_vs_wt.u2os.two.for.tsv', sep=''), quote=FALSE, sep='\t')
-write.table(anti_results, file=paste(results_dir, '/effect_ko_vs_wt.u2os.two.anti.tsv', sep=''), quote=FALSE, sep='\t')
-write.table(res, file=paste(results_dir, '/effect_ko_vs_wt.u2os.two.full.tsv', sep=''), quote=FALSE, sep='\t')
+res = results(dds, name = "genotype_ko_vs_wt", alpha = 0.05)
+summary(res)
 
-plotPCA(rlog(dds), intgroup=c('genotype')) + ggtitle('effect ko vs wt | two')
+# 3.5 Shrink LFC for stable effect-size reporting
+res_shr <- lfcShrink(dds, coef = "genotype_ko_vs_wt", type = "apeglm", res = res)
+plotMA(res_shr, ylim = c(-5, 5), main=paste('shrunk egfl7'))
 
-#               
-# volcano
+# 3.6. Build a final table with:
+#    - padj from res0 (correct for the H0: LFC = 0 test)
+#    - shrunken LFC from res0_shr (recommended for reporting/thresholding)
+full_results <- data.frame(
+  gene_id = rownames(res),
+  baseMean = res$baseMean,
+  log2FC_MLE = res$log2FoldChange,
+  lfcSE = res$lfcSE,
+  stat = res$stat,
+  pvalue = res$pvalue,
+  padj = res$padj,
+  log2FC_shr = res_shr$log2FoldChange,
+  stringsAsFactors = FALSE
+)
+
+# add counts differences 
+design_name = 'genotype'
+level_A = 'ko'         
+level_B <- 'wt'
+print('levels')
+print(level_A)
+print(level_B)
+
+norm_counts <- counts(dds, normalized = TRUE)
+idx_A <- which(colData(dds)[[design_name]] == level_A)
+idx_B <- which(colData(dds)[[design_name]] == level_B)
+print('indexes')
+print(idx_A)
+print(idx_B)
+
+median_A <- rowMedians(norm_counts[, idx_A, drop = FALSE])
+median_B <- rowMedians(norm_counts[, idx_B, drop = FALSE])
+delta_counts <- median_B - median_A
+names(delta_counts) <- rownames(norm_counts)
+full_results$delta_counts <- delta_counts[match(full_results$gene_id, names(delta_counts))]
+
+tpm_mat <- txi$abundance
+median_TPM_A <- matrixStats::rowMedians(tpm_mat[, idx_A, drop = FALSE])
+median_TPM_B <- matrixStats::rowMedians(tpm_mat[, idx_B, drop = FALSE])
+names(median_TPM_A) <- rownames(tpm_mat)
+names(median_TPM_B) <- rownames(tpm_mat)
+full_results$median_TPM_A <- median_TPM_A[full_results$gene_id]
+full_results$median_TPM_B <- median_TPM_B[full_results$gene_id]
+
+# add gene names and descriptions
+tempo = sapply(strsplit(rownames(full_results), split='.',fixed=TRUE), function(x) (x[1]))
+rownames(full_results) = tempo
+length(tempo)
+sub = annotation[annotation$ensembl_gene_id %in% tempo, ]
+dim(sub)
+sub = sub[, c(3, 4, 5, 6)]
+sub$description2 = sapply(strsplit(sub$description, split='[Source',fixed=TRUE), function(x) (x[1]))
+rownames(sub) <- sub$ensembl_gene_id
+
+full_results$ensembl_id = sub[rownames(full_results), 'ensembl_gene_id']
+full_results$gene_name = sub[rownames(full_results), 'external_gene_name']
+full_results$biotype = sub[rownames(full_results), 'gene_biotype']
+full_results$description2 = sub[rownames(full_results), 'description2']
+
+
+# 6.4 Storing full and final “biologically relevant” subset (you define thresholds)
+responders <- subset(
+  full_results,
+  !is.na(padj) &
+    padj < 0.05 &
+    abs(log2FC_shr) >= 1 &
+    abs(delta_counts) >= 50
+)
+responders <- responders[order(responders$padj), ]
+
+# no response
+no_responders <- full_results[!full_results$gene_id %in% responders$gene_id, ]
+
+# report values
+dim(full_results)
+dim(no_responders)
+sum(full_results$padj < 0.05, na.rm = TRUE)
+dim(responders)
+
+# store results
+filename = paste(results_dir, '/effect_ko_vs_wt', '.full.tsv', sep='')
+write.table(full_results, file=filename, quote=FALSE, sep='\t')
+
+filename = paste(results_dir, '/effect_ko_vs_wt', '.responders.tsv', sep='')
+write.table(responders, file=filename, quote=FALSE, sep='\t')
+
+design_name = 'genotype'
+sample_flag = 'ko'
+control_flag = 'wt'
+
 #
-plotting_x = sorted_filtred_results$log2FoldChange
-y = sorted_filtred_results$padj
+# 7. visualization
+#
+
+# 7.1. a simple PCA
+plotPCA(rlog(dds), intgroup=c(design_name)) + ggtitle(paste(design_name, sample_flag, control_flag))
+
+# 7.2. a simple volcano plot
+plotting_x = responders$log2FC_shr
+y = responders$padj
 epsilon = min(y[y !=0])
-plotting_y = -log10(y + epsilon) 
-z = log10(rowMedians(txi$abundance[rownames(sorted_filtred_results), ]) + 1)
-df = data.frame(plotting_x=clip(plotting_x, .min=-6, .max=6), plotting_y=clip(plotting_y, .min=0, .max=20), plotting_z=clip(z, .min=0, .max=3))
+plotting_y = -log10(y + epsilon) ## why???
+df = data.frame(plotting_x=plotting_x, plotting_y=plotting_y)
 reds = df[df$plotting_x > 0, ]
 blues = df[df$plotting_x < 0, ]
 
-plotting_x = anti_results$log2FoldChange
-plotting_y = -log10(anti_results$padj)
-blacks = data.frame(plotting_x=clip(plotting_x, .min=-6, .max=6), plotting_y=clip(plotting_y, .min=0, .max=20))
+plotting_x = no_responders$log2FC_shr
+plotting_y = -log10(no_responders$padj)
+blacks = data.frame(plotting_x=plotting_x, plotting_y=plotting_y)
 
-ggplot() + 
+p <- ggplot() + 
+  geom_point(data=reds, aes(plotting_x, plotting_y), color = "red", size=1, shape=19, alpha=0.5, stroke=0) + 
+  geom_point(data=blues, aes(plotting_x, plotting_y), color = "blue", size=1, shape=19, alpha=0.5, stroke=0) +
+  geom_point(data=blacks, aes(plotting_x, plotting_y), color = "black", size=1, shape=19, alpha=0.1, stroke=0) +
+  labs(x='log2FC', y='-log10 adj P') + 
+  theme_linedraw() 
+filename = paste(results_dir, '/', design_name, '_', sample_flag, '_vs_', control_flag, '.simple_volcano.pdf', sep='')
+ggsave(filename, plot = p)
+
+#
+# 5.4. a rather elaborated volcano including TPM values
+#
+plotting_x = responders$log2FC_shr
+y = responders$padj
+epsilon = min(y[y !=0])
+plotting_y = -log10(y + epsilon) 
+plotting_z = log10(rowMeans(responders[, c('median_TPM_A', 'median_TPM_B')]))
+
+df = data.frame(plotting_x=clip(plotting_x, .min=-3, .max=3), 
+                plotting_y=clip(plotting_y, .min=0, .max=38),
+                plotting_z=clip(plotting_z, .min=0, .max=3))
+
+reds = df[df$plotting_x > 0, ]
+blues = df[df$plotting_x < 0, ]
+
+plotting_x = no_responders$log2FC_shr
+plotting_y = -log10(no_responders$padj)
+blacks = data.frame(plotting_x=clip(plotting_x, .min=-3, .max=3), plotting_y=clip(plotting_y, .min=0, .max=38))
+
+p <- ggplot() +  
   geom_point(data=reds, aes(x=plotting_x, y=plotting_y, color=plotting_z), , size=3, shape=19, alpha=2/3, stroke=0) + 
   geom_point(data=blues, aes(plotting_x, plotting_y, color=plotting_z), size=3, shape=19, alpha=2/3, stroke=0) +
-  geom_point(data=blacks, aes(plotting_x, plotting_y), color = "black", size=1, shape=19, alpha=0.2, stroke=0) +
-  labs(x=expression('Expression [log'[2]~'FC]'), y=expression('Significance [log'[10]~'adjusted P]'), color=expression('Expression [log'[10]~'TPM]'), title='KO vs WT | U2OS two') + 
+  geom_point(data=blacks, aes(plotting_x, plotting_y), color = "black", size=1, shape=19, alpha=1/3, stroke=0) +
+  labs(x=expression('Expression difference [log'[2]~'FC]'), y=expression('Significance [log'[10]~'adjusted P]'), color=expression('Expression average [log'[10]~'TPM]'), title=paste(design_name, sample_flag, control_flag)) + 
   theme_linedraw() +
-  geom_segment(aes(x=-1, xend=-1, y=-log10(0.05), yend=20), linetype=2) +
-  geom_segment(aes(x=1, xend=1, y=-log10(0.05), yend=20), linetype=2) +
-  geom_segment(aes(x=-6, xend=-1, y=-log10(0.05), yend=-log10(0.05)), linetype=2) +
-  geom_segment(aes(x=1, xend=6, y=-log10(0.05), yend=-log10(0.05)), linetype=2) +
-  xlim(-6, 6) +
-  scale_color_viridis_c(option = "cividis") +
-  theme(axis.text.x = element_text(size = 20), axis.text.y = element_text(size = 20), axis.title=element_text(size=24))
-ggsave('u2os.png')
-dev.off()
+  geom_segment(aes(x=-1, xend=-1, y=-log10(0.05), yend=50), linetype=2) +
+  geom_segment(aes(x=1, xend=1, y=-log10(0.05), yend=50), linetype=2) +
+  geom_segment(aes(x=-8, xend=-1, y=-log10(0.05), yend=-log10(0.05)), linetype=2) +
+  geom_segment(aes(x=1, xend=8, y=-log10(0.05), yend=-log10(0.05)), linetype=2) +
+  xlim(-3, 3) + 
+  ylim(-1, 38) +
+  scale_color_viridis_c(option = "cividis") 
+filename = paste(results_dir, '/', design_name, '_', sample_flag, '_vs_', control_flag, '.elaborated_volcano.pdf', sep='')
+ggsave(filename, plot = p)
+
+
+
