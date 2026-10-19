@@ -1,0 +1,31 @@
+Wed Oct 14 09:56:49 GMT 2026
+/hpcdata/Mimir/adrian/research/067_urmia/src/cell_lines
+the scratch dir is:
+/scratch/users/adrian/1847983-STn7
+
+about to copy files into scratch
+Wed Oct 14 09:56:49 GMT 2026
+Wed Oct 14 09:57:52 GMT 2026
+
+about to call fastp
+Ind5NT2_1.fq.gz
+Ind5NT2_2.fq.gz
+Wed Oct 14 09:57:52 GMT 2026
+Wed Oct 14 10:00:59 GMT 2026
+
+about to copy results out of scratch to my dirs
+Ind5NT2_1.fq.gz
+Ind5NT2_2.fq.gz
+Ind5NT2_part1.clean.R1.fq.gz
+Ind5NT2_part1.clean.R2.fq.gz
+Ind5NT2_part1.fastp.html
+Ind5NT2_part1.fastp.json
+kallisto_output_Ind5NT2_forward
+kallisto_output_Ind5NT2_reverse
+kallisto_output_Ind5NT2_unstranded
+Wed Oct 14 10:15:23 GMT 2026
+Wed Oct 14 10:15:24 GMT 2026
+
+about to remove scratch dir
+all done.
+Wed Oct 14 10:15:24 GMT 2026

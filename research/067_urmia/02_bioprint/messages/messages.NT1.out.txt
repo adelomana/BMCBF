@@ -1,0 +1,31 @@
+Wed Oct 14 09:17:29 GMT 2026
+/hpcdata/Mimir/adrian/research/067_urmia/src/bioprint
+the scratch dir is:
+/scratch/users/adrian/1847838-Xn19
+
+about to copy files into scratch
+Wed Oct 14 09:17:29 GMT 2026
+Wed Oct 14 09:17:53 GMT 2026
+
+about to call fastp
+NT1_1.fq.gz
+NT1_2.fq.gz
+Wed Oct 14 09:17:53 GMT 2026
+Wed Oct 14 09:21:00 GMT 2026
+
+about to copy results out of scratch to my dirs
+kallisto_output_NT1_forward
+kallisto_output_NT1_reverse
+kallisto_output_NT1_unstranded
+NT1_1.fq.gz
+NT1_2.fq.gz
+NT1_part1.clean.R1.fq.gz
+NT1_part1.clean.R2.fq.gz
+NT1_part1.fastp.html
+NT1_part1.fastp.json
+Wed Oct 14 10:01:11 GMT 2026
+Wed Oct 14 10:01:12 GMT 2026
+
+about to remove scratch dir
+all done.
+Wed Oct 14 10:01:13 GMT 2026
