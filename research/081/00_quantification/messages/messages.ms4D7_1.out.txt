@@ -1,0 +1,41 @@
+Tue Oct 20 22:16:25 GMT 2026
+/hpcdata/Mimir/adrian/research/081/src
+the scratch dir is:
+/scratch/users/adrian/1859660-bywH
+
+about to copy files into scratch
+Tue Oct 20 22:16:25 GMT 2026
+Tue Oct 20 22:18:07 GMT 2026
+
+about to call fastp
+MD5.txt
+ms4D7_1_MKRN250009498-1A_22MH3HLT4_L6_1.fq.gz
+ms4D7_1_MKRN250009498-1A_22MH3HLT4_L6_2.fq.gz
+ms4D7_1_MKRN250009498-1A_22MH3VLT4_L4_1.fq.gz
+ms4D7_1_MKRN250009498-1A_22MH3VLT4_L4_2.fq.gz
+Tue Oct 20 22:18:07 GMT 2026
+Tue Oct 20 22:22:18 GMT 2026
+
+about to copy results out of scratch to my dirs
+kallisto_output_ms4D7_1_forward
+kallisto_output_ms4D7_1_reverse
+kallisto_output_ms4D7_1_unstranded
+MD5.txt
+ms4D7_1_MKRN250009498-1A_22MH3HLT4_L6_1.fq.gz
+ms4D7_1_MKRN250009498-1A_22MH3HLT4_L6_2.fq.gz
+ms4D7_1_MKRN250009498-1A_22MH3VLT4_L4_1.fq.gz
+ms4D7_1_MKRN250009498-1A_22MH3VLT4_L4_2.fq.gz
+ms4D7_1_part1.clean.R1.fq.gz
+ms4D7_1_part1.clean.R2.fq.gz
+ms4D7_1_part1.fastp.html
+ms4D7_1_part1.fastp.json
+ms4D7_1_part2.clean.R1.fq.gz
+ms4D7_1_part2.clean.R2.fq.gz
+ms4D7_1_part2.fastp.html
+ms4D7_1_part2.fastp.json
+Tue Oct 20 22:47:26 GMT 2026
+Tue Oct 20 22:47:26 GMT 2026
+
+about to remove scratch dir
+all done.
+Tue Oct 20 22:47:27 GMT 2026

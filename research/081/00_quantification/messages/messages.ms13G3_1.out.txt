@@ -1,0 +1,33 @@
+Tue Oct 20 22:16:21 GMT 2026
+/hpcdata/Mimir/adrian/research/081/src
+the scratch dir is:
+/scratch/users/adrian/1859655-yeb0
+
+about to copy files into scratch
+Tue Oct 20 22:16:21 GMT 2026
+Tue Oct 20 22:18:01 GMT 2026
+
+about to call fastp
+MD5.txt
+ms13G3_1_MKRN250009501-1A_22MH3HLT4_L3_1.fq.gz
+ms13G3_1_MKRN250009501-1A_22MH3HLT4_L3_2.fq.gz
+Tue Oct 20 22:18:01 GMT 2026
+Tue Oct 20 22:21:30 GMT 2026
+
+about to copy results out of scratch to my dirs
+kallisto_output_ms13G3_1_forward
+kallisto_output_ms13G3_1_reverse
+kallisto_output_ms13G3_1_unstranded
+MD5.txt
+ms13G3_1_MKRN250009501-1A_22MH3HLT4_L3_1.fq.gz
+ms13G3_1_MKRN250009501-1A_22MH3HLT4_L3_2.fq.gz
+ms13G3_1_part1.clean.R1.fq.gz
+ms13G3_1_part1.clean.R2.fq.gz
+ms13G3_1_part1.fastp.html
+ms13G3_1_part1.fastp.json
+Tue Oct 20 22:44:06 GMT 2026
+Tue Oct 20 22:44:07 GMT 2026
+
+about to remove scratch dir
+all done.
+Tue Oct 20 22:44:07 GMT 2026

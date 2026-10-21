@@ -1,0 +1,41 @@
+Tue Oct 20 22:16:21 GMT 2026
+/hpcdata/Mimir/adrian/research/081/src
+the scratch dir is:
+/scratch/users/adrian/1859650-0otw
+
+about to copy files into scratch
+Tue Oct 20 22:16:21 GMT 2026
+Tue Oct 20 22:17:49 GMT 2026
+
+about to call fastp
+hSMOr173c_S2_MKRN250009514-1A_22MH3HLT4_L3_1.fq.gz
+hSMOr173c_S2_MKRN250009514-1A_22MH3HLT4_L3_2.fq.gz
+hSMOr173c_S2_MKRN250009514-1A_22MH55LT4_L4_1.fq.gz
+hSMOr173c_S2_MKRN250009514-1A_22MH55LT4_L4_2.fq.gz
+MD5.txt
+Tue Oct 20 22:17:49 GMT 2026
+Tue Oct 20 22:21:29 GMT 2026
+
+about to copy results out of scratch to my dirs
+hSMOr173c_S2_MKRN250009514-1A_22MH3HLT4_L3_1.fq.gz
+hSMOr173c_S2_MKRN250009514-1A_22MH3HLT4_L3_2.fq.gz
+hSMOr173c_S2_MKRN250009514-1A_22MH55LT4_L4_1.fq.gz
+hSMOr173c_S2_MKRN250009514-1A_22MH55LT4_L4_2.fq.gz
+hSMOr173c_S2_part1.clean.R1.fq.gz
+hSMOr173c_S2_part1.clean.R2.fq.gz
+hSMOr173c_S2_part1.fastp.html
+hSMOr173c_S2_part1.fastp.json
+hSMOr173c_S2_part2.clean.R1.fq.gz
+hSMOr173c_S2_part2.clean.R2.fq.gz
+hSMOr173c_S2_part2.fastp.html
+hSMOr173c_S2_part2.fastp.json
+kallisto_output_hSMOr173c_S2_forward
+kallisto_output_hSMOr173c_S2_reverse
+kallisto_output_hSMOr173c_S2_unstranded
+MD5.txt
+Tue Oct 20 22:37:15 GMT 2026
+Tue Oct 20 22:37:15 GMT 2026
+
+about to remove scratch dir
+all done.
+Tue Oct 20 22:37:16 GMT 2026

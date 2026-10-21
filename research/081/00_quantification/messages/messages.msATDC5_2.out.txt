@@ -1,0 +1,41 @@
+Tue Oct 20 22:16:25 GMT 2026
+/hpcdata/Mimir/adrian/research/081/src
+the scratch dir is:
+/scratch/users/adrian/1859664-fY8t
+
+about to copy files into scratch
+Tue Oct 20 22:16:25 GMT 2026
+Tue Oct 20 22:18:13 GMT 2026
+
+about to call fastp
+MD5.txt
+msATDC5_2_MKRN250009493-1A_22MH3HLT4_L7_1.fq.gz
+msATDC5_2_MKRN250009493-1A_22MH3HLT4_L7_2.fq.gz
+msATDC5_2_MKRN250009493-1A_22MH3VLT4_L4_1.fq.gz
+msATDC5_2_MKRN250009493-1A_22MH3VLT4_L4_2.fq.gz
+Tue Oct 20 22:18:13 GMT 2026
+Tue Oct 20 22:23:21 GMT 2026
+
+about to copy results out of scratch to my dirs
+kallisto_output_msATDC5_2_forward
+kallisto_output_msATDC5_2_reverse
+kallisto_output_msATDC5_2_unstranded
+MD5.txt
+msATDC5_2_MKRN250009493-1A_22MH3HLT4_L7_1.fq.gz
+msATDC5_2_MKRN250009493-1A_22MH3HLT4_L7_2.fq.gz
+msATDC5_2_MKRN250009493-1A_22MH3VLT4_L4_1.fq.gz
+msATDC5_2_MKRN250009493-1A_22MH3VLT4_L4_2.fq.gz
+msATDC5_2_part1.clean.R1.fq.gz
+msATDC5_2_part1.clean.R2.fq.gz
+msATDC5_2_part1.fastp.html
+msATDC5_2_part1.fastp.json
+msATDC5_2_part2.clean.R1.fq.gz
+msATDC5_2_part2.clean.R2.fq.gz
+msATDC5_2_part2.fastp.html
+msATDC5_2_part2.fastp.json
+Tue Oct 20 22:51:12 GMT 2026
+Tue Oct 20 22:51:12 GMT 2026
+
+about to remove scratch dir
+all done.
+Tue Oct 20 22:51:13 GMT 2026

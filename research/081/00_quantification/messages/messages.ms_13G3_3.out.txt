@@ -1,0 +1,41 @@
+Tue Oct 20 22:16:25 GMT 2026
+/hpcdata/Mimir/adrian/research/081/src
+the scratch dir is:
+/scratch/users/adrian/1859666-mdI0
+
+about to copy files into scratch
+Tue Oct 20 22:16:25 GMT 2026
+Tue Oct 20 22:18:04 GMT 2026
+
+about to call fastp
+MD5.txt
+ms_13G3_3_MKRN250009503-1A_22MH3HLT4_L3_1.fq.gz
+ms_13G3_3_MKRN250009503-1A_22MH3HLT4_L3_2.fq.gz
+ms_13G3_3_MKRN250009503-1A_22MH55LT4_L4_1.fq.gz
+ms_13G3_3_MKRN250009503-1A_22MH55LT4_L4_2.fq.gz
+Tue Oct 20 22:18:04 GMT 2026
+Tue Oct 20 22:21:58 GMT 2026
+
+about to copy results out of scratch to my dirs
+kallisto_output_ms_13G3_3_forward
+kallisto_output_ms_13G3_3_reverse
+kallisto_output_ms_13G3_3_unstranded
+MD5.txt
+ms_13G3_3_MKRN250009503-1A_22MH3HLT4_L3_1.fq.gz
+ms_13G3_3_MKRN250009503-1A_22MH3HLT4_L3_2.fq.gz
+ms_13G3_3_MKRN250009503-1A_22MH55LT4_L4_1.fq.gz
+ms_13G3_3_MKRN250009503-1A_22MH55LT4_L4_2.fq.gz
+ms_13G3_3_part1.clean.R1.fq.gz
+ms_13G3_3_part1.clean.R2.fq.gz
+ms_13G3_3_part1.fastp.html
+ms_13G3_3_part1.fastp.json
+ms_13G3_3_part2.clean.R1.fq.gz
+ms_13G3_3_part2.clean.R2.fq.gz
+ms_13G3_3_part2.fastp.html
+ms_13G3_3_part2.fastp.json
+Tue Oct 20 22:45:50 GMT 2026
+Tue Oct 20 22:45:50 GMT 2026
+
+about to remove scratch dir
+all done.
+Tue Oct 20 22:45:51 GMT 2026
