@@ -1,0 +1,31 @@
+Thu Nov  5 16:05:51 GMT 2026
+/hpcdata/Mimir/adrian/research/094/src/01_quantification
+the scratch dir is:
+/scratch/users/adrian/1882724-4oss
+
+about to copy files into scratch
+Thu Nov  5 16:05:51 GMT 2026
+Thu Nov  5 16:06:54 GMT 2026
+
+about to call fastp
+AZM_CPAD_2_1.fq.gz
+AZM_CPAD_2_2.fq.gz
+Thu Nov  5 16:06:54 GMT 2026
+Thu Nov  5 16:08:43 GMT 2026
+
+about to copy results out of scratch to my dirs
+AZM_CPAD_2_1.fq.gz
+AZM_CPAD_2_2.fq.gz
+AZM_CPAD_2_part1.clean.R1.fq.gz
+AZM_CPAD_2_part1.clean.R2.fq.gz
+AZM_CPAD_2_part1.fastp.html
+AZM_CPAD_2_part1.fastp.json
+kallisto_output_AZM_CPAD_2_forward
+kallisto_output_AZM_CPAD_2_reverse
+kallisto_output_AZM_CPAD_2_unstranded
+Thu Nov  5 16:35:18 GMT 2026
+Thu Nov  5 16:35:18 GMT 2026
+
+about to remove scratch dir
+all done.
+Thu Nov  5 16:35:19 GMT 2026

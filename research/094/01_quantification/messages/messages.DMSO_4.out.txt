@@ -1,0 +1,31 @@
+Thu Nov  5 16:05:51 GMT 2026
+/hpcdata/Mimir/adrian/research/094/src/01_quantification
+the scratch dir is:
+/scratch/users/adrian/1882729-kYip
+
+about to copy files into scratch
+Thu Nov  5 16:05:51 GMT 2026
+Thu Nov  5 16:07:02 GMT 2026
+
+about to call fastp
+DMSO_4_1.fq.gz
+DMSO_4_2.fq.gz
+Thu Nov  5 16:07:02 GMT 2026
+Thu Nov  5 16:09:27 GMT 2026
+
+about to copy results out of scratch to my dirs
+DMSO_4_1.fq.gz
+DMSO_4_2.fq.gz
+DMSO_4_part1.clean.R1.fq.gz
+DMSO_4_part1.clean.R2.fq.gz
+DMSO_4_part1.fastp.html
+DMSO_4_part1.fastp.json
+kallisto_output_DMSO_4_forward
+kallisto_output_DMSO_4_reverse
+kallisto_output_DMSO_4_unstranded
+Thu Nov  5 16:52:15 GMT 2026
+Thu Nov  5 16:52:16 GMT 2026
+
+about to remove scratch dir
+all done.
+Thu Nov  5 16:52:16 GMT 2026
